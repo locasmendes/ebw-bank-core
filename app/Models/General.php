@@ -11,6 +11,8 @@ class General extends Model
     use HasFactory;
 
     protected $fillable = [
+        'button_start_now',
+        'button_ask_for_yours',
         'telefone',
         'email',
         'linkedin',

@@ -15,6 +15,8 @@ use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
 
 class HomeResource extends Resource
 {
@@ -33,6 +35,18 @@ class HomeResource extends Resource
                                 FileUpload::make( 'banner' )->label( 'Banner' ),
                                 MarkdownEditor::make( 'banner_text_highlight' )->label( 'Texto destacado' ),
                                 MarkdownEditor::make( 'banner_text_small' )->label( 'Texto' ),
+                            ]),
+
+                        Section::make( 'Seção Digital' )                    
+                            ->schema([
+                                MarkdownEditor::make( 'digital_title_highlight' )->label( 'Título destacado' ),
+                                MarkdownEditor::make( 'digital_description' )->label( 'Descrição' ),
+                                Repeater::make( 'digital_items' )->label( 'Itens' )
+                                    ->schema([
+                                        FileUpload::make( 'digital_items_icon' )->label( 'Ícone' ),
+                                        TextInput::make( 'digital_items_title' )->label( 'Título' ),
+                                        TextInput::make( 'digital_items_text' )->label( 'Texto' ),
+                                    ])->createItemButtonLabel( 'Adicionar itens' )
                             ]),
                     ])
             ]);

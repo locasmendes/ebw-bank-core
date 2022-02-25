@@ -30,6 +30,22 @@ $utility-name: 'u-color-folk';
     }
 }
 
+.all\: {
+    &#{$utility-name} {
+        &-primary {
+            * {
+                color: $color-folk-primary !important;
+            }
+        }
+
+        &-white {
+            * {
+                color: $color-folk-white
+            }
+        }
+    }   
+}
+
 .hover\: {
     &#{$utility-name} {
         &-black {

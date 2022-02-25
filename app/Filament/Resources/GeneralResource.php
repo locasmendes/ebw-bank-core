@@ -34,6 +34,12 @@ class GeneralResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
+                        Section::make( 'Botões' )                    
+                            ->schema([
+                                TextInput::make( 'button_start_now' )->label( 'Comece agora' ),
+                                TextInput::make( 'button_ask_for_yours' )->label( 'Peça a sua' ),
+                            ]),
+
                         Section::make( 'Fale Conosco' )                    
                             ->schema([
                                 TextInput::make( 'telefone' )->label( 'Telefone' ),

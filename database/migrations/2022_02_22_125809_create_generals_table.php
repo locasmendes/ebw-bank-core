@@ -15,6 +15,8 @@ class CreateGeneralsTable extends Migration
     {
         Schema::create('generals', function (Blueprint $table) {
             $table->id();
+            $table->string( 'button_start_now' )->nullable();
+            $table->string( 'button_ask_for_yours' )->nullable();
             $table->string( 'telefone' )->nullable();
             $table->string( 'email' )->nullable();
             $table->string( 'linkedin' )->nullable();

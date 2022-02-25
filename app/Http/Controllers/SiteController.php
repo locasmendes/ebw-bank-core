@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\General;
-//use App\Models\Home;
+use App\Models\Home;
 //use App\Models\Purpose;
 
 class SiteController extends Controller
 {
     public function index(Request $request)
     {
-        //$home = Home::get();
+        $home = Home::first();
         $general = General::first();
         //$purpose = Purpose::get();
 
-        return view( 'site.home', compact([ 'general' ]) );
+        return view( 'site.home', compact([ 'general', 'home' ]) );
         //return view( 'site.home', compact([ 'home', 'general', 'purpose' ]) );
     }
 

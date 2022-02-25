@@ -3,7 +3,9 @@
 @section( 'content' )
 
 <!-- banner -->
-<section class="l-banner flex justify-center items-center py-24 md:py-0">
+<section 
+class="l-banner flex justify-center items-center py-24 md:py-0"
+style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) : '' }} );">
 
     <div class="container mx-auto px-4">
 
@@ -11,25 +13,44 @@
 
             <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:ml-32">
 
-                <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
+                <!-- <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
                     Venda na internet <br>
                     com segurança <br>
                     antifraude e <br>
                     <span class="font-bold u-color-folk-white">parcelamento <br>
                     em até 12x</span>
-                </p>
+                </p> -->
 
-                <p class="u-font-size-15 u-font-weight-medium text-center lg:text-left u-color-folk-primary mt-5">
+                <span class="l-banner__title leading-12 lg:leading-10 block u-font-weight-regular text-center lg:text-left all:u-color-folk-white">
+                    @if( !empty( $home ))
+                        @if( $home->banner_text_highlight )
+                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_highlight ) !!}
+                        @endif
+                    @endif
+                </span>
+
+                <!-- <p class="u-font-size-15 u-font-weight-medium text-center lg:text-left u-color-folk-primary mt-5">
                     EBW Pay foi pensado e desenvolvido <br>
                     para o micro e pequeno empreendedor.
-                </p>
+                </p> -->
 
+                <span class="block u-font-size-15 u-font-weight-medium text-center lg:text-left all:u-color-folk-primary mt-5">
+                    @if( !empty( $home ))
+                        @if( $home->banner_text_small )
+                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_small ) !!}
+                        @endif
+                    @endif
+                </span>
                 
-                <a
-                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-9 py-5 pl-7 pr-28"
-                href="#">
-                    comece agora
-                </a>
+                @if( !empty( $general ) )
+                    @if( $general->button_start_now ) 
+                        <a
+                        class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-9 py-5 pl-7 pr-28"
+                        href="{{ $general->button_start_now }}">
+                            comece agora
+                        </a>
+                    @endif
+                @endif
             </div>
         </div>
     </div>
@@ -48,14 +69,18 @@
                 <div class="flex flex-wrap">
 
                     <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:mt-20 mb-12 lg:mb-0 sm:px-4 lg:px-0">
-                        <h3 class="l-digital__title leading-10 font-bold">
+                        <!-- <h3 class="l-digital__title leading-10 font-bold">
                             Tudo o que você <br>
                             precisa para <br>
                             empreender no <br>
                             universo digital.
+                        </h3> -->
+
+                        <h3 class="l-digital__title leading-10 font-bold">
+                            {!! $home->digital_title_highlight !!}
                         </h3>
 
-                        <p class="u-font-size-14 u-font-weight-medium mt-7">
+                        <!-- <p class="u-font-size-14 u-font-weight-medium mt-7">
                             Toda a nossa infraestrutura de processamento <br> 
                             e captura de cartão permite que você faça <br>
                             suas vendas de forma segura e transparente, <br>
@@ -66,43 +91,82 @@
                             Você pode vender através do seu próprio site <br>
                             ou marketplace, por meio de uma integração <br>
                             simples e fácil de fazer.
+                        </p> -->
+
+                        <p class="u-font-size-14 u-font-weight-medium mt-7">
+                            @if( !empty( $home ) )
+                                @if( isset( $home->digital_description ) )
+                                    {!! $home->digital_description !!}
+                                @endif
+                            @endif
                         </p>
 
-                        <a
-                        class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                        href="#">
-                            comece agora
-                        </a>
+                        @if( !empty( $general ) )
+                            @if( $general->button_start_now ) 
+                                <a
+                                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
+                                href="{{ $general->button_start_now }}">
+                                    comece agora
+                                </a>
+                            @endif
+                        @else
+                            <a
+                            class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
+                            href="#">
+                                comece agora
+                            </a>
+                        @endif
                     </div>
 
                     <div class="w-full lg:w-4/12 lg:ml-32 sm:pl-4">
 
                         <div class="flex flex-wrap">
 
-                            <div class="l-digital__col-child w-full flex py-12">
+                            <!-- loop -->
+                            @if( !empty( $home ) )
+                                @if( isset( $home->digital_items ) )
+                                    @foreach( $home->digital_items as $item ) 
+                                        <div class="l-digital__col-child w-full flex py-12">
 
-                                <div class="w-1/3">
-                                    <img 
-                                    class=""
-                                    src="{{ asset( 'images/digital-icone-pagamento.png' ) }}"
-                                    alt="Links de Pagamento">
-                                </div>
+                                            <div class="w-1/3">
+                                                <!-- <img 
+                                                class=""
+                                                src="{{ asset( 'images/digital-icone-pagamento.png' ) }}"
+                                                alt="Links de Pagamento"> -->
 
-                                <div class="w-2/3">
-                                    <h6 class="font-bold">
-                                        Gere seus próprios <br>
-                                        links de pagamento
-                                    </h6>
+                                                <img 
+                                                class=""
+                                                src="{{ Storage::url( $item[ 'digital_items_icon' ] ) }}"
+                                                alt="{{ $item[ 'digital_items_title' ] }}">
+                                            </div>
 
-                                    <p class="u-font-size-13 u-font-weight-medium mt-1">
-                                        Enviar link de pagamento para <br>
-                                        receber parcelado, em até 12x <br>
-                                        com cartão de crédito
-                                    </p>
-                                </div>
-                            </div>
+                                            <div class="w-2/3">
+                                                <!-- <h6 class="font-bold">
+                                                    Gere seus próprios <br>
+                                                    links de pagamento
+                                                </h6> -->
 
-                            <div class="l-digital__col-child w-full flex py-12">
+                                                <h6 class="font-bold">
+                                                    {!! $item[ 'digital_items_title' ] !!}
+                                                </h6>
+
+                                                <!-- <p class="u-font-size-13 u-font-weight-medium mt-1">
+                                                    Enviar link de pagamento para <br>
+                                                    receber parcelado, em até 12x <br>
+                                                    com cartão de crédito
+                                                </p> -->
+
+                                                <p class="u-font-size-13 u-font-weight-medium mt-1">
+                                                    {!! $item[ 'digital_items_text' ] !!}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    @endforeach  
+                                @endif
+                            @endif
+                            <!-- end loop -->
+
+                            <!-- <div class="l-digital__col-child w-full flex py-12">
 
                                 <div class="w-1/3">
                                     <img 
@@ -146,7 +210,7 @@
                                         com cartão de crédito;
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
