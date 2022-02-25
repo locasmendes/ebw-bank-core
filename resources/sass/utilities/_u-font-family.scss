@@ -1,0 +1,7 @@
+$utility-name: 'u-font-family';
+
+.#{$utility-name} {
+    &-open-sans {
+        font-family: 'Open Sans', sans-serif !important;
+    }
+}

@@ -1,0 +1,17 @@
+$utility-name: 'u-opacity';
+
+.#{$utility-name} {
+    &\:08 {
+        opacity: .8;
+    }
+}
+
+.hover\: {
+    &#{$utility-name} {
+        &\:08 {
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+} 

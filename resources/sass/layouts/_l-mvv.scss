@@ -1,0 +1,35 @@
+$layout-name: 'l-mvv';
+
+.#{$layout-name} {
+    background-color: #242424;
+
+    &__title {
+        font-size: 1.5rem;
+        color: #C3C3C3;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.125rem;
+        }
+
+        &::before {
+            content: '';
+            width: 44px;
+            height: 44px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            background-image: url(../../images/mvv-icon.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.125rem;
+    }
+
+    &__text {
+        color: #AAA;
+    }
+}

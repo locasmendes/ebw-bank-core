@@ -1,0 +1,54 @@
+$utility-name: 'u-bg-folk';
+
+.#{$utility-name} {
+    &-light-gray {
+        background-color: $color-folk-light-gray !important;
+    }
+
+    &-light-black {
+        background-color: rgba(0, 0, 0, .9) !important;
+    }
+
+    &-light-gray {
+        background-color: $color-folk-light-gray !important;
+    }
+
+    &-none {
+        background: none !important;
+    }
+
+    &-primary {
+        background-color: $color-folk-primary !important;
+    }
+
+    &-white {
+        background-color: $color-folk-white !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .lg\: {
+        &#{$utility-name} {
+            &-none {
+                background: none !important;
+            }
+        }
+    }
+}
+
+
+.hover\: {
+    &#{$utility-name} {
+        &-none {
+            &:hover {
+                background: none !important;
+            }
+        }
+    
+        &-primary {
+            &:hover {
+                background-color: $color-folk-primary !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+$utility-name: 'u-font-size';
+
+.#{$utility-name} {
+    &-0 {
+        font-size: 0 !important;
+    }
+
+    &-8 {
+        font-size: .5rem !important;
+    }
+
+    &-9 {
+        font-size: .5625rem !important;
+    }
+
+    &-12 {
+        font-size: .75rem !important;
+    }
+    
+    &-13 {
+        font-size: .8125rem !important;
+    }
+    
+    &-14 {
+        font-size: .875rem !important;
+    }
+    
+    &-15 {
+        font-size: .9375rem !important;
+    }
+
+    &-18 {
+        font-size: 1.125rem !important;
+    }
+}
+
+.before\:\: {
+    &#{$utility-name} {
+        &-24 {
+            &::before {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+}

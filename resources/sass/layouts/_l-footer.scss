@@ -1,0 +1,30 @@
+$layout-name: 'l-footer';
+
+.#{$layout-name} {
+    border-bottom: 24px solid #DC5051;
+    background-color: #E9E9E9;
+    
+    &__text-medium {
+        font-size: 1.125rem;
+    }
+
+    &__text-large {
+        font-size: 1.375rem;
+    }
+
+    &__divider {
+        width: 100%;
+        height: 1px;
+        background-color: #C3C3C3;
+    }
+
+    &__map {
+        width: 100%;
+        height: 244px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

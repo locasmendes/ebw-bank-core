@@ -1,0 +1,15 @@
+$utility-name: 'u-h';
+
+.#{$utility-name} {
+    &-unset {
+        height: unset !important;
+    }
+}
+
+.lg\: {
+    &#{$utility-name} {
+        &-unset {
+            height: unset !important;
+        }
+    }
+}

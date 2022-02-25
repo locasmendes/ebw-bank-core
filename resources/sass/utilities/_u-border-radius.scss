@@ -1,0 +1,7 @@
+$utility-name: 'u-border-radius';
+
+.#{$utility-name} {
+    &-5 {
+        border-radius: 5px !important;
+    }
+}

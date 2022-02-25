@@ -1,0 +1,9 @@
+$layout-name: 'l-register';
+
+.#{$layout-name} {
+    &__text {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.25rem;
+        }
+    }
+}

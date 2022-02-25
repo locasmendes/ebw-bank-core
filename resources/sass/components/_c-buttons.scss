@@ -1,0 +1,51 @@
+$component-name: 'c-btn';
+
+.#{$component-name} {
+    &-pattern {
+        line-height: 100%;
+        transition: all .2s;
+        border: 1px solid;
+        border-radius: 25px;
+        font-size: .8125rem;
+        cursor: pointer;
+    }
+
+    &-icon-arrow {
+        &::before {
+            content: '\f054';
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+            transition: all .2s;
+            position: absolute;
+            font-size: 1rem;
+            font-family: 'Font Awesome 5 Free';
+        }
+
+        &:hover {
+            &::before {
+                right: 2rem;
+            }
+        }
+    }
+
+    &-submit {
+        border-radius: 30px;
+        background-color: #22AC73;
+
+        &:hover {
+            background-color: #45D499;
+        }
+    }
+}
+
+.focus\: {
+    &#{$component-name} {
+        &-reset {
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+$layout-name: 'l-digital';
+
+.#{$layout-name} {
+    &__title {
+        font-size: 2rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__col-child {
+        border-bottom: 1px solid #C3C3C3;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+}

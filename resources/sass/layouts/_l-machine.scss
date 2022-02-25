@@ -1,0 +1,23 @@
+$layout-name: 'l-machine';
+
+.#{$layout-name} {
+    background-image: url(../../images/machine-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    &__title {
+        font-size: 2rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.375rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.1875rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1rem;
+        }
+    }
+}

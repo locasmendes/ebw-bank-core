@@ -1,0 +1,54 @@
+$layout-name: 'l-portal';
+
+.#{$layout-name} {
+    background-image: url(../../images/portal-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -300px;
+
+    @media screen and (min-width: 1600px) {
+        background-position-x: 0;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.5rem;
+        }
+
+        &::before {
+            content: '';
+            width: 44px;
+            height: 44px;
+            bottom: 100%;
+            right: 45%;
+            position: absolute;
+            background-image: url(../../images/mvv-icon.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media screen and (min-width: 1600px) {
+                right: 55%;
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 8px;
+            top: 100%;
+            left: 0;
+            position: absolute;
+            background-color: $color-folk-white !important;
+        }
+    }
+
+    &__text {
+        font-size: 1.375rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1rem;
+        }
+    }
+}

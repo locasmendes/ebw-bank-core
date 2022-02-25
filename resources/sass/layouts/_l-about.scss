@@ -1,0 +1,11 @@
+$layout-name: 'l-about';
+
+.#{$layout-name} {
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__name {
+        font-size: 1.125rem;
+    }
+}

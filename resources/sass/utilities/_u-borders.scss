@@ -1,0 +1,13 @@
+$utility-name: 'u-border';
+
+.last\: {
+    &#{$utility-name} {
+        &-bottom {
+            &-none {
+                &:last-child {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}

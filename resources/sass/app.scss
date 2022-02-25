@@ -1,0 +1,32 @@
+@import 'base/normalize';
+
+//variables
+@import 'base/variables';
+
+//fontawesome 5
+@import '~@fortawesome/fontawesome-free/css/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/solid';
+@import '~@fortawesome/fontawesome-free/css/brands';
+
+//tailwind
+@import '~tailwindcss/dist/tailwind';
+
+//swiper
+//@import "~swiper/swiper";
+//@import "~swiper/components/navigation/navigation";
+//@import "~swiper/components/pagination/pagination";
+
+//utilities
+@import 'utilities/utilities';
+
+//components
+@import 'components/components';
+
+//swiper
+@import 'swiper/swiper';
+
+//layouts
+@import 'layouts/layouts';
+
+//generics
+@import 'base/generics';

@@ -1,0 +1,39 @@
+$layout-name: 'l-header';
+
+.#{$layout-name} {
+
+    &__nav-link {
+        font-size: .625rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__hamburger {
+        width: 50px;
+        height: 50px;
+        top: 1rem;
+        right: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        border-radius: 50%;
+        outline: none !important;
+        border: 0 !important;
+        overflow: hidden;
+        position: absolute;
+        background-color: $color-folk-primary !important;
+
+        &__icon {
+            &::before {
+                content: '\f0c9';
+                font-size: 1.5rem;
+                font-family: 'Font Awesome 5 Free';
+                color: $color-folk-white !important;
+
+                .active & {
+                    content: '\f00d';
+                }
+            }
+        }
+    }
+}

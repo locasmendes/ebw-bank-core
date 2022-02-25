@@ -1,0 +1,7 @@
+$utility-name: 'u-list-style';
+
+.#{$utility-name} {
+    &-outside {
+        list-style: outside;
+    }
+}
