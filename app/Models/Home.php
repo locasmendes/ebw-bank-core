@@ -16,7 +16,11 @@ class Home extends Model
         'banner_text_small',
         'digital_title_highlight',
         'digital_description',
-        'digital_items'
+        'digital_items',
+        'machine_title_highlight',
+        'machine_description',
+        'machine_text',
+        'machine_image'
     ];
 
     protected $casts = [

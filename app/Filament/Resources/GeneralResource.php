@@ -34,6 +34,12 @@ class GeneralResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
+                        Section::make( 'Seção MVV' )                    
+                            ->schema([
+                                TextInput::make( 'button_start_now' )->label( 'Comece agora' ),
+                                TextInput::make( 'button_ask_for_yours' )->label( 'Peça a sua' ),
+                            ]),
+
                         Section::make( 'Botões' )                    
                             ->schema([
                                 TextInput::make( 'button_start_now' )->label( 'Comece agora' ),
@@ -62,7 +68,7 @@ class GeneralResource extends Resource
                                         MarkdownEditor::make( 'endereco' )->label( 'Endereço' )
                                     ])->createItemButtonLabel( 'Adicionar endereço' )
                             
-                                    ]),
+                            ]),
 
                         Section::make( 'Menu rodapé' )                    
                             ->schema([

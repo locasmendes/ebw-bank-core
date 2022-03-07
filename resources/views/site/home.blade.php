@@ -77,7 +77,11 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
                         </h3> -->
 
                         <h3 class="l-digital__title leading-10 font-bold">
-                            {!! $home->digital_title_highlight !!}
+                            @if( !empty( $home) ) 
+                                @if( isset($home->digital_title_highlight) )
+                                    {!! $home->digital_title_highlight !!}
+                                @endif
+                            @endif
                         </h3>
 
                         <!-- <p class="u-font-size-14 u-font-weight-medium mt-7">
@@ -229,19 +233,35 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
 
             <div class="w-full md:w-10/12 lg:w-4/12 order-2 lg:order-1 flex lg:block flex-col items-center mt-12 lg:mt-0 px-4">
 
-                <h3 class="l-machine__title leading-12 lg:leading-10 font-bold text-center lg:text-left u-color-folk-purple">
+                <!-- <h3 class="l-machine__title leading-12 lg:leading-10 font-bold text-center lg:text-left u-color-folk-purple">
                     A única maquininha <br>
                     com taxas negociáveis <br>
                     e fidelização dos clientes.
+                </h3> -->
+
+                <h3 class="l-machine__title leading-12 lg:leading-10 font-bold text-center lg:text-left u-color-folk-purple">
+                    @if( !empty( $home ) )
+                        @if( isset( $home->machine_title_highlight ) )
+                            {!! $home->machine_title_highlight !!}
+                        @endif
+                    @endif
                 </h3>
 
-                <p class="l-machine__subtitle font-bold text-center lg:text-left u-color-folk-dark-cyan my-5 lg:my-0">
+                <!-- <p class="l-machine__subtitle font-bold text-center lg:text-left u-color-folk-dark-cyan my-5 lg:my-0">
                     Só com a Passou Ganhou do EBW Bank
                     seus clientes acumulam pontos e
                     você pode negociar suas taxas.
+                </p> -->
+
+                <p class="l-machine__subtitle font-bold text-center lg:text-left u-color-folk-dark-cyan my-5 lg:my-0">
+                    @if( !empty( $home ) )
+                        @if( isset( $home->machine_description ) )
+                            {!! $home->machine_description !!}
+                        @endif
+                    @endif
                 </p>
 
-                <p class="u-font-size-14 u-font-weight-medium text-center lg:text-left">
+                <!-- <p class="u-font-size-14 u-font-weight-medium text-center lg:text-left">
                     Toda venda acumula pontos para
                     seu cliente, que poderá trocá-los por
                     descontos nas próximas compras. 
@@ -251,19 +271,35 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
 
                     O programa de pontos aproxima o cliente
                     da sua loja, aumentando as suas vendas.
+                </p> -->
+
+                <p class="u-font-size-14 u-font-weight-medium text-center lg:text-left">
+                    @if( !empty( $home ) )
+                        @if( isset( $home->machine_text ) )
+                            {!! $home->machine_text !!}
+                        @endif
+                    @endif
                 </p>
 
                 <a
                 class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                href="#">
+                href="{{ $home->button_ask_for_yours ? $home->button_ask_for_yours : '#' }}">
                     peça a sua
                 </a>
             </div>
 
             <div class="w-full lg:w-6/12 order-1 lg:order-2 flex justify-center lg:justify-start items-end px-4">
-                <img
+                <!-- <img
                 src="{{ asset( 'images/machine-illustration-1.png' )}}"
-                alt="Maquininha EBW">
+                alt="Maquininha EBW"> -->
+
+                @if( !empty( $home ) )
+                    @if( isset( $home->machine_image ) )
+                        <img
+                        src="{{ Storage::url( $home->machine_image ) }}"
+                        alt="Maquininha EBW">
+                    @endif
+                @endif
             </div>
         </div>
     </div>

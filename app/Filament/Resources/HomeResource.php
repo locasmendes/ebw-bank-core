@@ -48,6 +48,14 @@ class HomeResource extends Resource
                                         TextInput::make( 'digital_items_text' )->label( 'Texto' ),
                                     ])->createItemButtonLabel( 'Adicionar itens' )
                             ]),
+
+                        Section::make( 'Seção Maquininha' )                    
+                            ->schema([
+                                MarkdownEditor::make( 'machine_title_highlight' )->label( 'Título destacado' ),
+                                MarkdownEditor::make( 'machine_description' )->label( 'Descrição' ),
+                                MarkdownEditor::make( 'machine_text' )->label( 'Texto' ),
+                                FileUpload::make( 'machine_image' )->label( 'Imagem' )
+                            ]),
                     ])
             ]);
     }

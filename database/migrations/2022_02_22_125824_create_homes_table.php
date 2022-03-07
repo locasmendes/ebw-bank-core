@@ -19,8 +19,12 @@ class CreateHomesTable extends Migration
             $table->string( 'banner_text_highlight' )->nullable();
             $table->string( 'banner_text_small' )->nullable();
             $table->string( 'digital_title_highlight' )->nullable();
-            $table->string( 'digital_description' )->nullable();
+            $table->longText( 'digital_description' )->nullable();
             $table->json( 'digital_items' )->nullable();
+            $table->string( 'machine_title_highlight' )->nullable();
+            $table->string( 'machine_description' )->nullable();
+            $table->longText( 'machine_text' )->nullable();
+            $table->string( 'machine_image' )->nullable();
             $table->timestamps();
         });
     }
