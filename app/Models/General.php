@@ -11,6 +11,8 @@ class General extends Model
     use HasFactory;
 
     protected $fillable = [
+        'mvvs',
+        'mvv_about_link',
         'button_start_now',
         'button_ask_for_yours',
         'telefone',
@@ -25,6 +27,7 @@ class General extends Model
     ];
 
     protected $casts = [
+        'mvvs'                => AsArrayObject::class,
         'mapas'               => AsArrayObject::class,
         'menu_footer_product' => AsArrayObject::class,
         'menu_footer_ebw'     => AsArrayObject::class,

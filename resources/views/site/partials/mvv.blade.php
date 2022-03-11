@@ -16,23 +16,36 @@
 
             <div class="w-full sm:w-10/12 flex flex-wrap mt-12">
 
-                <div class="w-full lg:w-4/12 my-5 lg:my-0 px-3">
+                <!-- loop -->
+                @if( !empty( $general ) )
+                    @if( isset( $general->mvvs ) )
+                        @foreach( $general->mvvs as $item ) 
+                            <div class="w-full lg:w-4/12 my-5 lg:my-0 px-3">
 
-                    <p class="l-mvv__subtitle font-bold text-center u-color-folk-white mb-2">
-                        Missão
-                    </p>
+                                <p class="l-mvv__subtitle font-bold text-center u-color-folk-white mb-2">
+                                    <!-- Missão -->
+                                    {{ $item[ 'mvv_title' ] }}
+                                </p>
 
-                    <p class="l-mvv__text u-font-size-13 u-font-weight-medium text-center">
-                        Contribuir para o desenvolvimento <br>
-                        dos empreendedores e líderes de <br>
-                        qualquer lugar do país e do mundo, <br>
-                        oferecendo soluções de ponta, com <br>
-                        qualificação, orientação e foco no <br>
-                        crescimento da economia.
-                    </p>
-                </div> 
+                                <!-- <p class="l-mvv__text u-font-size-13 u-font-weight-medium text-center">
+                                    Contribuir para o desenvolvimento <br>
+                                    dos empreendedores e líderes de <br>
+                                    qualquer lugar do país e do mundo, <br>
+                                    oferecendo soluções de ponta, com <br>
+                                    qualificação, orientação e foco no <br>
+                                    crescimento da economia.
+                                </p> -->
 
-                <div class="w-full lg:w-4/12 my-5 lg:my-0">
+                                <p class="l-mvv__text u-font-size-13 u-font-weight-medium text-center">
+                                    {{ $item[ 'mvv_description' ] }}
+                                </p>
+                            </div> 
+                        @endforeach
+                    @endif
+                @endif
+                <!-- end loop -->
+
+                <!-- <div class="w-full lg:w-4/12 my-5 lg:my-0">
 
                     <p class="l-mvv__subtitle font-bold text-center u-color-folk-white mb-2">
                         Visão
@@ -61,7 +74,7 @@
                         transparência. Nosso gerenciamento <br>
                         deve ser em equipe.
                     </p>
-                </div> 
+                </div>  -->
             </div>
 
             <div class="w-full flex justify-center mt-3">

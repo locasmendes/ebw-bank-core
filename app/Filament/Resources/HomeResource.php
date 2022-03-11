@@ -18,11 +18,18 @@ use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 
+use Filament\Navigation\NavigationItem;
+use Filament\Facades\Filament;
+
 class HomeResource extends Resource
 {
     protected static ?string $model = Home::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+
+    protected static ?string $label = 'Início';
+    
+    protected static ?string $pluralLabel = 'Início';
 
     public static function form(Form $form): Form
     {
@@ -56,6 +63,13 @@ class HomeResource extends Resource
                                 MarkdownEditor::make( 'machine_text' )->label( 'Texto' ),
                                 FileUpload::make( 'machine_image' )->label( 'Imagem' )
                             ]),
+
+                        Section::make( 'Seção Portal' )                    
+                            ->schema([
+                                MarkdownEditor::make( 'portal_description' )->label( 'Descrição' ),
+                                TextInput::make( 'portal_link' )->label( 'Link do Portal Empreendedor' ),
+                            ]),
+                        
                     ])
             ]);
     }
@@ -85,5 +99,40 @@ class HomeResource extends Resource
             'create' => Pages\CreateHome::route('/create'),
             'edit' => Pages\EditHome::route('/{record}/edit'),
         ];
+    }
+
+    public static function registerNavigationItems(): void
+    {
+        if (!static::shouldRegisterNavigation()) {
+            return;
+        }
+
+        if (!static::canViewAny()) {
+            return;
+        }
+
+        $routeBaseName = static::getRouteBaseName();
+
+        if (Home::first()) {
+            Filament::registerNavigationItems([
+                NavigationItem::make()
+                    ->group(static::getNavigationGroup())
+                    ->icon(static::getNavigationIcon())
+                    ->isActiveWhen(fn () => request()->routeIs("{$routeBaseName}*"))
+                    ->label(static::getNavigationLabel())
+                    ->sort(static::getNavigationSort())
+                    ->url(static::getUrl('edit', Home::first()->id ?? null)),
+            ]);
+        } else {
+            Filament::registerNavigationItems([
+                NavigationItem::make()
+                    ->group(static::getNavigationGroup())
+                    ->icon(static::getNavigationIcon())
+                    ->isActiveWhen(fn () => request()->routeIs("{$routeBaseName}*"))
+                    ->label(static::getNavigationLabel())
+                    ->sort(static::getNavigationSort())
+                    ->url(static::getUrl('create')),
+            ]);
+        }
     }
 }

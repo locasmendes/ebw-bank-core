@@ -18,6 +18,9 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Checkbox;
 
+use Filament\Navigation\NavigationItem;
+use Filament\Facades\Filament;
+
 class GeneralResource extends Resource
 {
     protected static ?string $model = General::class;
@@ -36,8 +39,12 @@ class GeneralResource extends Resource
                     ->schema([
                         Section::make( 'Seção MVV' )                    
                             ->schema([
-                                TextInput::make( 'button_start_now' )->label( 'Comece agora' ),
-                                TextInput::make( 'button_ask_for_yours' )->label( 'Peça a sua' ),
+                                Repeater::make( 'mvvs' )->label( 'Missão, Visão e Valores' )
+                                    ->schema([
+                                        TextInput::make( 'mvv_title' )->label( 'Título' ),
+                                        MarkdownEditor::make( 'mvv_description' )->label( 'Descrição' )
+                                    ])->createItemButtonLabel( 'Adicionar item' ),
+                                TextInput::make( 'mvv_about_link' )->label( 'Link Sobre nós' )
                             ]),
 
                         Section::make( 'Botões' )                    
@@ -122,5 +129,40 @@ class GeneralResource extends Resource
             'create' => Pages\CreateGeneral::route('/create'),
             'edit' => Pages\EditGeneral::route('/{record}/edit'),
         ];
+    }
+
+    public static function registerNavigationItems(): void
+    {
+        if (!static::shouldRegisterNavigation()) {
+            return;
+        }
+
+        if (!static::canViewAny()) {
+            return;
+        }
+
+        $routeBaseName = static::getRouteBaseName();
+
+        if (General::first()) {
+            Filament::registerNavigationItems([
+                NavigationItem::make()
+                    ->group(static::getNavigationGroup())
+                    ->icon(static::getNavigationIcon())
+                    ->isActiveWhen(fn () => request()->routeIs("{$routeBaseName}*"))
+                    ->label(static::getNavigationLabel())
+                    ->sort(static::getNavigationSort())
+                    ->url(static::getUrl('edit', General::first()->id ?? null)),
+            ]);
+        } else {
+            Filament::registerNavigationItems([
+                NavigationItem::make()
+                    ->group(static::getNavigationGroup())
+                    ->icon(static::getNavigationIcon())
+                    ->isActiveWhen(fn () => request()->routeIs("{$routeBaseName}*"))
+                    ->label(static::getNavigationLabel())
+                    ->sort(static::getNavigationSort())
+                    ->url(static::getUrl('create')),
+            ]);
+        }
     }
 }

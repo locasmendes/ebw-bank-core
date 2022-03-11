@@ -25,6 +25,8 @@ class CreateHomesTable extends Migration
             $table->string( 'machine_description' )->nullable();
             $table->longText( 'machine_text' )->nullable();
             $table->string( 'machine_image' )->nullable();
+            $table->longText( 'portal_description' )->nullable();
+            $table->string( 'portal_link' )->nullable();
             $table->timestamps();
         });
     }

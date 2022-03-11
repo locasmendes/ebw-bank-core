@@ -324,7 +324,7 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
                     Empreendedor
                 </h3>
 
-                <p class="l-portal__text font-bold u-color-folk-white">
+                <!-- <p class="l-portal__text font-bold u-color-folk-white">
                     Conteúdos em série, <br>
                     formatados em pequenos <br>
                     treinamentos essenciais <br>
@@ -336,11 +336,19 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
                     <br>
 
                     100% gratuito.
+                </p> -->
+
+                <p class="l-portal__text font-bold u-color-folk-white">
+                    @if( !empty( $home ) ) 
+                        @if( isset( $home->portal_description ) )
+                            {!! $home->portal_description !!}
+                        @endif
+                    @endif
                 </p>
 
                 <a
                 class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-16 md:pr-28"
-                href="#">
+                href="{{ $home->portal_link ? $home->portal_link : '#' }}">
                     portal do empreendedor
                 </a>
             </div>

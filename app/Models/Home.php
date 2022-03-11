@@ -20,7 +20,9 @@ class Home extends Model
         'machine_title_highlight',
         'machine_description',
         'machine_text',
-        'machine_image'
+        'machine_image',
+        'portal_description',
+        'portal_link'
     ];
 
     protected $casts = [

@@ -19,7 +19,7 @@ use App\Http\Controllers\SiteController;
 }); */
 
 Route::get('/', [SiteController::class, 'index'])->name( 'home' );
-//Route::get('/portal', [SiteController::class, 'portal'])->name( 'portal' );
+Route::get('/portal', [SiteController::class, 'portal'])->name( 'portal' );
 //Route::get('/single', [SiteController::class, 'single'])->name( 'single' );
 //Route::get('/ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );

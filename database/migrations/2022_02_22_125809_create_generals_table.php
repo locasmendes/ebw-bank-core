@@ -15,6 +15,8 @@ class CreateGeneralsTable extends Migration
     {
         Schema::create('generals', function (Blueprint $table) {
             $table->id();
+            $table->json( 'mvvs' )->nullable();
+            $table->string( 'mvv_about_link' )->nullable();
             $table->string( 'button_start_now' )->nullable();
             $table->string( 'button_ask_for_yours' )->nullable();
             $table->string( 'telefone' )->nullable();

@@ -22,5 +22,13 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('homolog123'),
             ]
         );
+
+        \App\Models\Home::firstOrCreate([
+            'banner_text_highlight' => '#'
+        ]);
+
+        \App\Models\General::firstOrCreate([
+            'mvv_about_link' => '#'
+        ]);
     }
 }

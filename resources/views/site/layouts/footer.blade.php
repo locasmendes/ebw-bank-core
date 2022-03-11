@@ -198,7 +198,7 @@
                                             <!-- Quem Somos -->
                                             <a 
                                             href="{{ $item[ 'menu_footer_ebw_link' ] }}"
-                                            @if( $item[ 'menu_footer_ebw_new_tab'] )
+                                            @if( $item[ 'menu_footer_ebw_new_tab' ] )
                                                 target="_blank"
                                             @endif
                                             >
