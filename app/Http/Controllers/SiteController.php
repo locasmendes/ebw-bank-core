@@ -6,15 +6,16 @@ use Illuminate\Http\Request;
 use App\Models\General;
 use App\Models\Home;
 use App\Models\Menu;
+use App\Models\About;
 //use App\Models\Purpose;
 
 class SiteController extends Controller
 {
     public function index(Request $request)
     {
-        $home = Home::first();
-        $general = General::first();
         $menu = Menu::first();
+        $general = General::first();
+        $home = Home::first();
         //$purpose = Purpose::get();
 
         return view( 'site.home', compact([ 'menu', 'general', 'home' ]) );
@@ -22,18 +23,24 @@ class SiteController extends Controller
     }
 
     public function portal() {
+        $menu = Menu::first();
         $general = General::get();
         
-        return view( 'site.portal', compact([ 'general' ]) );
+        return view( 'site.portal', compact([ 'menu', 'general' ]) );
     }
 
-    // public function single() {
-    //     return view( 'site.single' );
-    // }
+    public function single() {
+        $menu = Menu::first();
 
-    // public function ebwbank() {
-    //     return view( 'site.ebwbank' );
-    // }
+        return view( 'site.single', compact([ 'menu' ]) );
+    }
+
+    public function ebwbank() {
+        $menu = Menu::first();
+        $about = About:: first();
+
+        return view( 'site.ebwbank', compact([ 'menu', 'about' ]) );
+    }
 
     // public function cadastro() {
     //     return view( 'site.cadastro' );

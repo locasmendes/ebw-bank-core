@@ -20,6 +20,15 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/', [SiteController::class, 'index'])->name( 'home' );
 Route::get('/portal', [SiteController::class, 'portal'])->name( 'portal' );
-//Route::get('/single', [SiteController::class, 'single'])->name( 'single' );
-//Route::get('/ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
+Route::get('/single', [SiteController::class, 'single'])->name( 'single' );
+Route::get('/ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
+
+// $table->string('title');
+// $table->longText('content');
+// $table->string('slug')->unique();
+
+// $table->integer('user_id')->unsigned()->index()->comment('author of the post');
+// $table->foreign('user_id')->references('id')->on('users');
+
+// $table->timestamps();

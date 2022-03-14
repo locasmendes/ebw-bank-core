@@ -24,7 +24,7 @@
                             <!-- 0800 894 3000 <br>
                             cac@ebwbank.com.br -->
                             @if( !empty( $general ) )
-                                @if( $general->telefone )
+                                @if( isset($general->telefone) )
                                     {{ $general->telefone }}
                                 @endif
                             @endif
@@ -32,7 +32,7 @@
                             <br>
 
                             @if( !empty( $general ) )
-                                @if( $general->email )
+                                @if( isset($general->email) )
                                     {{ $general->email }}
                                 @endif
                             @endif
@@ -41,7 +41,7 @@
                         <ul class="l-social-media md:pl-12">
 
                             @if( !empty( $general ) )
-                                @if( $general->linkedin )
+                                @if( isset($general->linkedin) )
                                     <li class="l-social-media__item">    
                                         <a
                                         class="l-social-media__link l-social-media__linkedin"
@@ -55,7 +55,7 @@
                             @endif
 
                             @if( !empty( $general ) )
-                                @if( $general->instagram )
+                                @if( isset($general->instagram) )
                                     <li class="l-social-media__item mx-4">    
                                         <a
                                         class="l-social-media__link l-social-media__instagram"
@@ -69,7 +69,7 @@
                             @endif
 
                             @if( !empty( $general ) )
-                                @if( $general->facebook )
+                                @if( isset($general->facebook) )
                                     <li class="l-social-media__item">    
                                         <a
                                         class="l-social-media__link l-social-media__facebook"
@@ -92,7 +92,7 @@
                 <div class="flex flex-wrap">
 
                     @if( !empty( $general) )
-                        @if( $general->mapas )
+                        @if( isset($general->mapas) )
                             @foreach( $general->mapas as $address )
                                 <div class="w-full lg:w-6/12 mb-10 lg:mb-0 md:px-4">
 
@@ -160,7 +160,7 @@
                         </p>
 
                         @if( !empty( $general ) ) 
-                            @if( $general->menu_footer_product )
+                            @if( isset($general->menu_footer_product) )
                                 <ul>
                                     @foreach( $general->menu_footer_product as $item ) 
                                         <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
@@ -191,7 +191,7 @@
                         </p>
 
                         @if( !empty( $general ) )
-                            @if( $general->menu_footer_ebw )
+                            @if( isset($general->menu_footer_ebw) )
                                 <ul>
                                     @foreach( $general->menu_footer_ebw as $item )
                                         <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">

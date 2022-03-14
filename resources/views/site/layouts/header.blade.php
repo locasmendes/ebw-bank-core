@@ -73,7 +73,7 @@
                                 @endif
                             @else
                                 <a
-                                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
+                                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none py-5 pl-7 pr-28"
                                 href="#">
                                     comece agora
                                 </a>
