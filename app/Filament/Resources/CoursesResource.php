@@ -17,6 +17,10 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Checkbox;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\CheckboxList;
+
+use Filament\Forms\Components\BelongsToManyCheckboxList;
+use Illuminate\Database\Eloquent\Categories;
 
 class CoursesResource extends Resource
 {
@@ -40,14 +44,20 @@ class CoursesResource extends Resource
                                 MarkdownEditor::make( 'course_description' )->label( 'Descrição' ),
                             ]),
 
-                        // Section::make( 'Categorias' )                    
-                        //     ->schema([
-                        //         Checkbox::make( 'category_finance' )->label( 'Finanças' ),
-                        //         Checkbox::make( 'category_management' )->label( 'Gestão' ),
-                        //         Checkbox::make( 'category_leadership' )->label( 'Liderança' ),
-                        //         Checkbox::make( 'category_human_resources' )->label( 'RH' ),
-                        //         Checkbox::make( 'category_sales' )->label( 'Vendas' ),
-                        //     ]),
+                        Section::make( 'Categorias' )                    
+                            ->schema([
+                                // CheckboxList::make( 'categories ')->label( 'Categorias')
+                                //     ->options([
+                                //         'category_finance'         => 'Finanças',
+                                //         'category_management'      => 'Gestão',
+                                //         'category_leadership'      => 'Liderança',
+                                //         'category_human_resources' => 'RH',
+                                //         'category_sales'           => 'Vendas',
+                                //     ]),
+
+                                BelongsToManyCheckboxList::make( 'categories' )
+                                    ->relationship( 'categories', 'category_name', fn (Categories $query) => $query->withTrashed())
+                            ]),
                     ])
             ]);
     }
@@ -56,9 +66,9 @@ class CoursesResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('course_title')->label('Título'),
-                TextColumn::make('course_description')->label('Descrição'),
-                TextColumn::make('')->label('Categoria(s)'),
+                TextColumn::make( 'course_title' )->label( 'Título' ),
+                TextColumn::make( 'course_description' )->label( 'Descrição' ),
+                TextColumn::make( 'categories' )->label( 'Categoria' ),
             ])
             ->filters([
                 //

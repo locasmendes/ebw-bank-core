@@ -11,17 +11,33 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+
 class CategoriesResource extends Resource
 {
     protected static ?string $model = Categories::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    protected static ?string $label = 'Categoria';
+    
+    protected static ?string $pluralLabel = 'Categorias';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Grid::make()
+                    ->schema([
+                        Section::make( 'Seção Banner' )                    
+                            ->schema([
+                                TextInput::make( 'category_name' )->label( 'Nome' ),
+                                TextInput::make( 'category_slug' )->label( 'Slug' ),
+                            ]),
+                    ])
             ]);
     }
 
@@ -29,7 +45,8 @@ class CategoriesResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make( 'category_name' )->label( 'Nome'),
+                TextColumn::make( 'category_slug' )->label( 'Slug' ),
             ])
             ->filters([
                 //
