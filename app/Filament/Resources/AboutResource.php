@@ -20,11 +20,16 @@ class AboutResource extends Resource
 {
     protected static ?string $model = About::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-document-add';
 
     protected static ?string $label = 'Sobre EBWBank';
     
     protected static ?string $pluralLabel = 'Sobre EBWBank';
+
+    protected static ?string $navigationGroup = 'Páginas';
+
+    protected static ?int $navigationSort = 2;
+
 
     public static function form(Form $form): Form
     {

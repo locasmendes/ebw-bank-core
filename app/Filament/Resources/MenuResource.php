@@ -29,6 +29,11 @@ class MenuResource extends Resource
     
     protected static ?string $pluralLabel = 'Menu';
 
+    protected static ?string $navigationGroup = 'Configurações';
+
+    protected static ?int $navigationSort = 2;
+
+
     public static function form(Form $form): Form
     {
         return $form

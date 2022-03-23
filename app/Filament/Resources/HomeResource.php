@@ -25,11 +25,16 @@ class HomeResource extends Resource
 {
     protected static ?string $model = Home::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-document-add';
 
     protected static ?string $label = 'Início';
     
     protected static ?string $pluralLabel = 'Início';
+
+    protected static ?string $navigationGroup = 'Páginas';
+
+    protected static ?int $navigationSort = 1;
+
 
     public static function form(Form $form): Form
     {

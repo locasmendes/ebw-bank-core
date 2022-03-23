@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CoursesResource\Pages;
 use App\Filament\Resources\CoursesResource\RelationManagers;
-use App\Models\Courses;
+use App\Models\Course;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -20,17 +20,22 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\CheckboxList;
 
 use Filament\Forms\Components\BelongsToManyCheckboxList;
-use Illuminate\Database\Eloquent\Categories;
+use Filament\Forms\Components\BelongsToSelect;
 
 class CoursesResource extends Resource
 {
-    protected static ?string $model = Courses::class;
+    protected static ?string $model = Course::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-puzzle';
 
     protected static ?string $label = 'Aula';
     
     protected static ?string $pluralLabel = 'Aulas';
+
+    protected static ?string $navigationGroup = 'Cursos';
+
+    protected static ?int $navigationSort = 1;
+
 
     public static function form(Form $form): Form
     {
@@ -46,17 +51,8 @@ class CoursesResource extends Resource
 
                         Section::make( 'Categorias' )                    
                             ->schema([
-                                // CheckboxList::make( 'categories ')->label( 'Categorias')
-                                //     ->options([
-                                //         'category_finance'         => 'Finanças',
-                                //         'category_management'      => 'Gestão',
-                                //         'category_leadership'      => 'Liderança',
-                                //         'category_human_resources' => 'RH',
-                                //         'category_sales'           => 'Vendas',
-                                //     ]),
-
-                                BelongsToManyCheckboxList::make( 'categories' )
-                                    ->relationship( 'categories', 'category_name', fn (Categories $query) => $query->withTrashed())
+                                BelongsToSelect::make( 'categoryId' )->label( 'Categorias' )
+                                    ->relationship( 'category', 'category_name' )
                             ]),
                     ])
             ]);
@@ -67,20 +63,19 @@ class CoursesResource extends Resource
         return $table
             ->columns([
                 TextColumn::make( 'course_title' )->label( 'Título' ),
-                TextColumn::make( 'course_description' )->label( 'Descrição' ),
-                TextColumn::make( 'categories' )->label( 'Categoria' ),
+                TextColumn::make( 'category.category_name' )->label( 'Categoria' ),
             ])
             ->filters([
                 //
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
+    // public static function getRelations(): array
+    // {
+    //     return [
+    //         //
+    //     ];
+    // }
 
     public static function getPages(): array
     {

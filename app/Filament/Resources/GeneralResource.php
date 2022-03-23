@@ -31,6 +31,11 @@ class GeneralResource extends Resource
     
     protected static ?string $pluralLabel = 'Informações Gerais';
 
+    protected static ?string $navigationGroup = 'Configurações';
+
+    protected static ?int $navigationSort = 1;
+
+
     public static function form(Form $form): Form
     {
         return $form

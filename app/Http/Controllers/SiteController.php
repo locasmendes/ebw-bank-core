@@ -7,6 +7,8 @@ use App\Models\General;
 use App\Models\Home;
 use App\Models\Menu;
 use App\Models\About;
+use App\Models\Course;
+use App\Models\Category;
 //use App\Models\Purpose;
 
 class SiteController extends Controller
@@ -25,8 +27,10 @@ class SiteController extends Controller
     public function portal() {
         $menu = Menu::first();
         $general = General::get();
-        
-        return view( 'site.portal', compact([ 'menu', 'general' ]) );
+        $courses = Course::get();
+        $categories = Category::get();
+
+        return view( 'site.portal', compact([ 'menu', 'general', 'courses', 'categories' ]) );
     }
 
     public function single() {
@@ -41,6 +45,12 @@ class SiteController extends Controller
 
         return view( 'site.ebwbank', compact([ 'menu', 'about' ]) );
     }
+    //eager loading
+    // Category::with('courses')->get();
+    // foreach($categories as $category)
+         
+    //     foreach($category->courses as $course)
+    //         $course->name ...
 
     // public function cadastro() {
     //     return view( 'site.cadastro' );

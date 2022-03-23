@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        
 
         \App\Models\User::firstOrCreate(
             ['email' => 'fabio.leandro@evolutap.com.br'],
@@ -29,6 +30,11 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\General::firstOrCreate([
             'mvv_about_link' => '#'
+        ]);
+
+        \App\Models\Category::firstOrCreate([
+            'category_name' => 'Finanças',
+            'category_slug' => 'financas'
         ]);
     }
 }
