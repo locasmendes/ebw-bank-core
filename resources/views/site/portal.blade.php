@@ -169,7 +169,163 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
             <!-- end mobile -->
         </div>
 
-        <div class="flex flex-wrap justify-end">
+        <div class="flex justify-center">
+
+            <div class="w-full md:w-8/12 border-t u-border-color-gray pt-6 px-4">
+
+                <div class="flex flex-wrap">
+
+                    <!-- loop -->
+                    @foreach( $courses as $course )
+                        <div class="w-full md:w-4/12 my-4 px-4">
+
+                            <div class="l-training__card p-2">
+
+                                <div class="l-training__card-img flex justify-center items-center">
+                                    
+                                    <img
+                                    src="{{ asset( 'images/background-example.jpg' ) }}"
+                                    alt="Imagem de exemplo">
+                                </div>
+
+                                <div class="l-training__card-body py-4">
+
+                                    <h4 class="font-semibold">
+                                        <!-- Nome do post -->
+                                        {{ $course[ 'course_title' ] }}
+                                    </h4>
+
+                                    <p class="u-font-size-12 mb-2">
+                                        @foreach( $categories as $category )
+                                            @if( $course[ 'category_id' ] == $category[ 'id' ] )
+                                                <span class="font-semibold">Categoria: </span> {{ $category[ 'category_name' ] }}
+                                            @endif
+                                        @endforeach
+                                    </p>
+
+                                    <p class="u-font-size-12 mb-4">
+                                        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et est fringilla, aliquam ante nec, imperdiet eros. Suspendisse posuere tellus felis, ornare tincidunt purus gravida id [...] -->
+                                        {{ $course[ 'course_description' ] }}
+                                    </p>
+
+                                    <a
+                                    class="c-btn-pattern hover:u-opacity:08 u-border-color-primary inline-block u-font-size-9 font-bold uppercase text-white u-bg-folk-primary py-4 px-8"
+                                    href="#">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    <!-- end loop -->
+
+                    <!-- <div class="w-full md:w-4/12 my-4 px-4">
+
+                        <div class="l-training__card p-2">
+
+                            <div class="l-training__card-img flex justify-center items-center">
+                                
+                                <img
+                                src="{{ asset( 'images/background-example.jpg' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="l-training__card-body py-4">
+
+                                <h4 class="font-semibold">
+                                    Nome do post
+                                </h4>
+
+                                <p class="u-font-size-12 mb-2">
+                                    <span class="font-semibold">Categoria: </span> Liderança
+                                </p>
+
+                                <p class="u-font-size-12 mb-4">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et est fringilla, aliquam ante nec, imperdiet eros. Suspendisse posuere tellus felis, ornare tincidunt purus gravida id [...]
+                                </p>
+
+                                <a
+                                class="c-btn-pattern hover:u-opacity:08 u-border-color-primary inline-block u-font-size-9 font-bold uppercase text-white u-bg-folk-primary py-4 px-8"
+                                href="#">
+                                    Ler mais
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-4/12 my-4 px-4">
+
+                        <div class="l-training__card p-2">
+
+                            <div class="l-training__card-img flex justify-center items-center">
+                                
+                                <img
+                                src="{{ asset( 'images/background-example.jpg' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="l-training__card-body py-4">
+
+                                <h4 class="font-semibold">
+                                    Nome do post
+                                </h4>
+
+                                <p class="u-font-size-12 mb-2">
+                                    <span class="font-semibold">Categoria: </span> Liderança
+                                </p>
+
+                                <p class="u-font-size-12 mb-4">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et est fringilla, aliquam ante nec, imperdiet eros. Suspendisse posuere tellus felis, ornare tincidunt purus gravida id [...]
+                                </p>
+
+                                <a
+                                class="c-btn-pattern hover:u-opacity:08 u-border-color-primary inline-block u-font-size-9 font-bold uppercase text-white u-bg-folk-primary py-4 px-8"
+                                href="#">
+                                    Ler mais
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-4/12 my-4 px-4">
+
+                        <div class="l-training__card p-2">
+
+                            <div class="l-training__card-img flex justify-center items-center">
+                                
+                                <img
+                                src="{{ asset( 'images/background-example.jpg' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="l-training__card-body py-4">
+
+                                <h4 class="font-semibold">
+                                    Nome do post
+                                </h4>
+
+                                <p class="u-font-size-12 mb-2">
+                                    <span class="font-semibold">Categoria: </span> Liderança
+                                </p>
+
+                                <p class="u-font-size-12 mb-4">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et est fringilla, aliquam ante nec, imperdiet eros. Suspendisse posuere tellus felis, ornare tincidunt purus gravida id [...]
+                                </p>
+
+                                <a
+                                class="c-btn-pattern hover:u-opacity:08 u-border-color-primary inline-block u-font-size-9 font-bold uppercase text-white u-bg-folk-primary py-4 px-8"
+                                href="#">
+                                    Ler mais
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- course hidden -->
+        <div class="hidden flex-wrap justify-end">
 
             <div class="w-full md:w-10/12 border-t u-border-color-gray">
 
@@ -1046,9 +1202,11 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                     <!-- end loop -->
                 </div>
             </div>
-        </div>
+        </div> 
+        <!-- end course hidden -->
 
-        <div class="flex flex-wrap">
+        <!-- button hidden -->
+        <div class="hidden flex-wrap">
             <div class="w-full flex justify-center">
                 <a 
                 class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28" 
@@ -1057,6 +1215,7 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                 </a>
             </div>
         </div>
+        <!-- end button hidden -->
     </div>
 </section>
 

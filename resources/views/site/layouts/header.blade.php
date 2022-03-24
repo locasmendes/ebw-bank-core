@@ -10,7 +10,7 @@
                     
                     <a
                     class="py-4 pl-6 pr-4 md:pl-4 md:py-0" 
-                    href="#" >
+                    href="/" >
                         <img 
                         class="img-fluid" 
                         src="{{ asset( 'images/header-logo.png' ) }}" 

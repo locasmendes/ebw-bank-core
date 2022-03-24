@@ -13,8 +13,6 @@ class Category extends Model
         'category_name',
         'category_slug',
         'category_description',
-        'category_difficulty',
-        'category_time',
         'category_color'
     ];
 

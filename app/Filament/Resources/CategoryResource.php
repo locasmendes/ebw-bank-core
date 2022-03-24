@@ -24,11 +24,11 @@ class CategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-view-grid-add';
 
-    protected static ?string $label = 'Tema';
+    protected static ?string $label = 'Categoria';
     
-    protected static ?string $pluralLabel = 'Temas';
+    protected static ?string $pluralLabel = 'Categorias';
 
-    protected static ?string $navigationGroup = 'Cursos';
+    protected static ?string $navigationGroup = 'Blog';
 
     protected static ?int $navigationSort = 2;
 
@@ -42,13 +42,7 @@ class CategoryResource extends Resource
                         TextInput::make( 'category_name' )->label( 'Nome' ),
                         TextInput::make( 'category_slug' )->label( 'Slug' ),
                         MarkdownEditor::make( 'category_description' )->label( 'Descrição' ),   
-                        TextInput::make( 'category_time' )->label( 'Tempo estimado' ),
                         TextInput::make( 'category_color' )->type('color')->label( 'Cor da categoria' ),
-                        Select::make( 'category_difficulty' )->label( 'Dificuldades' )
-                            ->options([
-                                'basico'        => 'Básico',
-                                'intermediario' => 'Intermediário',
-                            ])
                     ])->columns(1)
             ]);
     }

@@ -52,7 +52,8 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
 </section>
 <!-- end banner -->
 
-<section class="l-single-content lg:hidden py-4">
+<!-- hidden -->
+<section class="l-single-content hidden py-4">
 
     <div class="container mx-auto px-4">
 
@@ -102,6 +103,7 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
         </div>
     </div>  
 </section>
+<!-- end hidden -->
 
 <section class="l-single">
 
@@ -109,7 +111,8 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
 
         <div class="flex flex-wrap justify-center">
 
-            <div class="w-4/12 hidden lg:flex flex-wrap flex-col items-end u-bg-folk-light-gray pl-4">
+            <!-- hidden -->
+            <div class="w-4/12 hidden flex-wrap flex-col items-end u-bg-folk-light-gray pl-4">
 
                 <div class="w-6/12">
                     
@@ -236,20 +239,24 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
                     </div>
                 </div>
             </div>
+            <!-- end hidden -->
 
             <div class="w-full lg:w-8/12 u-bg-folk-white px-4">
 
-                <!-- loop -->
-                <div class="w-full lg:w-9/12 u-bg-folk-white pt-12 pl-4 md:pl-12 pr-4">
-                    <p 
-                    class="l-single__number font-bold"
-                    style="color:#008A73">
-                        .02
-                    </p>
+                <div class="w-full u-bg-folk-white pt-12 lg:px-4">
+                    
+                    <img
+                    class="w-full"
+                    src="{{ asset( 'images/background-example.jpg' ) }}"
+                    alt="Imagem de exemplo">
 
-                    <h2 class="l-single__title leading-7 font-bold mb-8">
-                        Gestão estratégica
+                    <h2 class="l-single__title leading-7 font-bold mt-4">
+                        Nome do post 01
                     </h2>
+
+                    <p class="u-font-size-14 mb-8">
+                        <span class="font-semibold">Categoria:</span> Categoria
+                    </p>
 
                     <p class="u-font-size-12 u-font-family-open-sans mb-8">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus faucibus lectus vitae
@@ -272,9 +279,7 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
                         leo. Sed congue turpis ac odio venenatis, convallis condimentum sapien bibendum.
                     </p>
 
-                    <img
-                    class="w-full"
-                    src="{{ asset( 'images/single-illustration-1.png' ) }}">
+                    
 
                     <p class="u-font-size-12 u-font-family-open-sans mt-8">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus faucibus lectus vitae
@@ -299,9 +304,9 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
 
                     <div class="border-b u-border-color-gray my-5"></div>
                 </div>
-                <!-- end loop -->
-
-                <div class="w-full md:w-9/12 flex flex-col md:flex-row justify-between items-center md:items-start my-12 pl-4 md:pl-12 pr-4">
+                
+                <!-- hidden -->
+                <div class="w-full md:w-9/12 hidden flex-col md:flex-row justify-between items-center md:items-start my-12 pl-4 md:pl-12 pr-4">
 
                     <div class="my-4 md:my-0">
                         <p class="u-font-size-13 u-font-weight-medium text-center md:text-left md:pl-8">
@@ -327,6 +332,7 @@ style="background-image: url( {{ asset( 'images/single-banner.png' ) }})">
                         </a>
                     </div>
                 </div>
+                <!-- end hidden -->
             </div>
         </div>
     </div>
