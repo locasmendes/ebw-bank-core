@@ -80,121 +80,90 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+// (function() {
+//     if(document.querySelector( '.js-submenu-item' )) {
+//         const items = document.getElementsByClassName( 'js-submenu-item' )
+//         const sections = document.getElementsByClassName( 'js-section-item' )
+//         console.log('Items: ', items)
+//         items[0].classList.add( 'active' )
+//         items[0].style.backgroundColor = items[0].dataset.color
+//         for(const l of sections) {
+//             l.classList.add( 'block' )
+//             l.classList.remove( 'hidden' )
+//         }
+//         for(const i of items) {
+//             i.addEventListener( 'click', function() {
+//                 for(const j of items) {
+//                     j.classList.remove( 'active' )
+//                     j.style.background = 'none'
+//                 }
+//                 this.classList.add( 'active' )
+//                 this.style.background = this.dataset.color + '!important'
+//                 for(const k of sections) {
+//                     if(this.dataset.value == k.dataset.value) {
+//                         k.classList.add( 'block' )
+//                         k.classList.remove( 'hidden' )
+//                     } else if(this.dataset.value == 'all-categories' ) {
+//                         k.classList.add( 'block' )
+//                         k.classList.remove( 'hidden' )  
+//                     } else {
+//                         k.classList.remove( 'block' )
+//                         k.classList.add( 'hidden' )
+//                     }
+//                 }   
+//             })
+//         }
+//         for(const l of items) {
+//             l.addEventListener( 'onmouseout', function() {
+//                 if(!this.classList.contains( 'active' )) {
+//                     for(const m of items) {
+//                         m.style.color = m.dataset.color
+//                         m.style.background = 'none'
+//                     }
+//                     this.style.color = '#FFF'
+//                     this.style.backgroundColor = this.dataset.color
+//                 }
+//             })
+//         }
+//     }
+// })()
 (function () {
-  if (document.querySelector('.js-submenu-item')) {
-    (function () {
-      var items = document.getElementsByClassName('js-submenu-item');
-      var sections = document.getElementsByClassName('js-section-item');
-      console.log('Items: ', items);
-      items[0].classList.add('active');
-      items[0].style.backgroundColor = items[0].dataset.color;
+  var items = document.getElementsByClassName('js-submenu-item');
 
-      var _iterator = _createForOfIteratorHelper(sections),
-          _step;
+  var _iterator = _createForOfIteratorHelper(items),
+      _step;
 
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var l = _step.value;
-          l.classList.add('block');
-          l.classList.remove('hidden');
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var i = _step.value;
+      i.addEventListener('mouseover', function () {
+        this.style.backgroundColor = this.dataset.color;
+      });
+      i.addEventListener('mouseout', function () {
+        this.style.background = "none";
+      });
+      i.addEventListener('click', function () {
+        var _iterator2 = _createForOfIteratorHelper(items),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var j = _step2.value;
+            j.classList.remove('active');
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
         }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
 
-      var _iterator2 = _createForOfIteratorHelper(items),
-          _step2;
-
-      try {
-        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var i = _step2.value;
-          i.addEventListener('click', function () {
-            var _iterator4 = _createForOfIteratorHelper(items),
-                _step4;
-
-            try {
-              for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-                var j = _step4.value;
-                j.classList.remove('active');
-                j.style.background = 'none';
-              }
-            } catch (err) {
-              _iterator4.e(err);
-            } finally {
-              _iterator4.f();
-            }
-
-            this.classList.add('active');
-            this.style.background = this.dataset.color + '!important';
-
-            var _iterator5 = _createForOfIteratorHelper(sections),
-                _step5;
-
-            try {
-              for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                var k = _step5.value;
-
-                if (this.dataset.value == k.dataset.value) {
-                  k.classList.add('block');
-                  k.classList.remove('hidden');
-                } else if (this.dataset.value == 'all-categories') {
-                  k.classList.add('block');
-                  k.classList.remove('hidden');
-                } else {
-                  k.classList.remove('block');
-                  k.classList.add('hidden');
-                }
-              }
-            } catch (err) {
-              _iterator5.e(err);
-            } finally {
-              _iterator5.f();
-            }
-          });
-        }
-      } catch (err) {
-        _iterator2.e(err);
-      } finally {
-        _iterator2.f();
-      }
-
-      var _iterator3 = _createForOfIteratorHelper(items),
-          _step3;
-
-      try {
-        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-          var _l = _step3.value;
-
-          _l.addEventListener('onmouseout', function () {
-            if (!this.classList.contains('active')) {
-              var _iterator6 = _createForOfIteratorHelper(items),
-                  _step6;
-
-              try {
-                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                  var m = _step6.value;
-                  m.style.color = m.dataset.color;
-                  m.style.background = 'none';
-                }
-              } catch (err) {
-                _iterator6.e(err);
-              } finally {
-                _iterator6.f();
-              }
-
-              this.style.color = '#FFF';
-              this.style.backgroundColor = this.dataset.color;
-            }
-          });
-        }
-      } catch (err) {
-        _iterator3.e(err);
-      } finally {
-        _iterator3.f();
-      }
-    })();
+        this.classList.add('active');
+      });
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
   }
 })();
 

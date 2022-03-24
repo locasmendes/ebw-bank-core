@@ -51,6 +51,7 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
             <div class="w-10/12 lg:w-8/12 mb-16">
 
                 <ul class="l-submenu">
+
                     <li 
                     class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
                     style="border-color:#DD504D;color:#DD504D"
@@ -59,15 +60,20 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                         todas as categorias
                     </li>
 
-                    <li 
-                    class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
-                    style="border-color:#008A73;color:#008A73"
-                    data-color="#008A73"
-                    data-value="leadership">
-                        liderança
-                    </li>
+                    <!-- loop -->
+                    @foreach( $categories as $category )
+                        <li 
+                        class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
+                        style="border-color:{{ $category[ 'category_color' ] }};color:{{ $category[ 'category_color' ] }}"
+                        data-color="{{ $category[ 'category_color' ] }}"
+                        data-value="{{ $category[ 'category_name' ] }}">
+                            <!-- liderança -->
+                            {{ $category[ 'category_name'] }}
+                        </li>
+                    @endforeach
+                    <!-- end loop -->
 
-                    <li 
+                    <!-- <li 
                     class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
                     style="border-color:#37A1C7;color:#37A1C7"
                     data-color="#37A1C7"
@@ -97,7 +103,7 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                     data-color="#1D3167"
                     data-value="sales">
                         vendas
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- end desktop -->

@@ -53,9 +53,6 @@ class CategoryResource extends Resource
             ->columns([
                 TextColumn::make( 'category_name' )->label( 'Nome'),
                 TextColumn::make( 'category_slug' )->label( 'Slug' ),
-                TextColumn::make( 'category_time' )->label( 'Tempo estimado' ),
-                TextColumn::make( 'category_difficulty' )->label( 'Dificuldade' ),
-
             ])
             ->filters([
                 //
