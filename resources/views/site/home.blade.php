@@ -5,7 +5,7 @@
 <!-- banner -->
 <section 
 class="l-banner flex justify-center items-center py-24 md:py-0"
-style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) : '' }} );">
+style="background-image: url( {{ asset( 'images/banner-new.png' ) }} );">
 
     <div class="container mx-auto px-4">
 

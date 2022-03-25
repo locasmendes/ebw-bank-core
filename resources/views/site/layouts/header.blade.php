@@ -26,7 +26,7 @@
                                 @if( isset( $menu->menu ) )
                                     @foreach( $menu->menu as $item ) 
                                         <a 
-                                        class="l-header__nav-link u-font-weight-regular hover:u-font-weight-bold text-center md:text-left uppercase text-white my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2" 
+                                        class="l-header__nav-link font-bold text-center md:text-left uppercase my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2" 
                                         href="{{ $item[ 'menu_link' ] }}"
                                         @if( $item[ 'menu_new_tab' ] )
                                             target="_black"
