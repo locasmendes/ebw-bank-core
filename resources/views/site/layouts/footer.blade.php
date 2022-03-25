@@ -1,20 +1,20 @@
 <!-- footer -->
-<footer class="l-footer py-16">
+<footer class="l-footer pt-16 pb-10">
 
     <div class="container mx-auto px-4">
 
         <div class="flex flex-wrap justify-center">
 
-            <div class="w-full md:w-10/12">
+            <div class="w-full md:w-10/12 mb-10">
 
                 <div class="flex flex-wrap">
 
-                    <div class="w-full lg:w-6/12 flex md:block justify-center mb-8 lg:mb-0 px-4">
+                    <div class="w-full lg:w-4/12 flex md:block justify-center mb-8 lg:mb-0 px-4">
                         <img
                         src="{{ asset( 'images/footer-logo.png' ) }}">
                     </div>
 
-                    <div class="w-full lg:w-6/12 flex flex-col md:flex-row justify-around items-center px-4">
+                    <div class="w-full lg:w-8/12 flex flex-col md:flex-row justify-around items-center px-4">
                         
                         <p class="l-footer__text-medium font-bold mb-0">
                             Fale Conosco
@@ -55,8 +55,22 @@
                             @endif
 
                             @if( !empty( $general ) )
+                                @if( isset($general->facebook) )
+                                    <li class="l-social-media__item mx-1">    
+                                        <a
+                                        class="l-social-media__link l-social-media__facebook"
+                                        href="{{ $general->facebook }}"
+                                        target="_blank"
+                                        rel="noreferrer noopener">
+                                            Link Facebook
+                                        </a>
+                                    </li>
+                                @endif
+                            @endif
+
+                            @if( !empty( $general ) )
                                 @if( isset($general->instagram) )
-                                    <li class="l-social-media__item mx-4">    
+                                    <li class="l-social-media__item mx-1">    
                                         <a
                                         class="l-social-media__link l-social-media__instagram"
                                         href="{{ $general->instagram }}"
@@ -68,19 +82,25 @@
                                 @endif
                             @endif
 
-                            @if( !empty( $general ) )
-                                @if( isset($general->facebook) )
-                                    <li class="l-social-media__item">    
-                                        <a
-                                        class="l-social-media__link l-social-media__facebook"
-                                        href="{{ $general->facebook }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Facebook
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
+                            <li class="l-social-media__item mx-1">    
+                                <a
+                                class="l-social-media__link l-social-media__youtube"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Youtube
+                                </a>
+                            </li>
+
+                            <li class="l-social-media__item mx-1">    
+                                <a
+                                class="l-social-media__link l-social-media__twitter"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Twitter
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -235,20 +255,38 @@
                         </p>
                     </div>
                 </div>
-
-                <div class="flex flex-wrap">
-
-                    <div class="w-full my-10 px-4">
-                        <div class="l-footer__divider"></div>
-                    </div>
-
-                    <div class="w-full">
-                        <p class="u-font-size-12 u-font-weight-regular text-center">
-                            © EBW Bank - Um banco feito e pensado para o empreendedor.
-                        </p>
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center u-bg-folk-white py-6">
+
+        <div class="w-8/12 flex justify-around items-center mb-4 px-4">
+
+            <a 
+            class="w-3/12"
+            href="#">
+                <img
+                src="{{ asset( 'images/logo-cerci.png' )}}"
+                alt="Logo 1">
+            </a>
+
+            <a 
+            class="w-3/12"
+            href="#">
+                <img
+                src="{{ asset( 'images/logo-pci.png' )}}"
+                alt="Logo 1">
+            </a>
+        </div>
+    </div> 
+
+    <div class="flex">
+
+        <div class="w-full pt-10">
+            <p class="u-font-size-12 u-font-weight-regular text-center">
+                © EBW Bank - Um banco feito e pensado para o empreendedor.
+            </p>
         </div>
     </div>
 </footer>

@@ -8,6 +8,17 @@ $layout-name: 'l-social-media';
         border: 0;
     }
 
+    &__item {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-folk-primary;
+    }
+
     &__link {
         position: relative;
         font-size: 0;
@@ -15,7 +26,7 @@ $layout-name: 'l-social-media';
         &::before {
             font-size: 2rem;
             font-family: 'Font Awesome 5 Brands';
-            color: $color-folk-primary !important;
+            color: $color-folk-white !important;
         }
 
         &:hover {
@@ -29,15 +40,27 @@ $layout-name: 'l-social-media';
         }
     }
 
+    &__facebook {
+        &::before {
+            content: '\f39e';
+        }
+    }
+
     &__instagram {
         &::before {
             content: '\f16d';
         }
     }
 
-    &__facebook {
+    &__youtube {
         &::before {
-            content: '\f39e';
+            content: '\f167';
+        }
+    }
+
+    &__twitter {
+        &::before {
+            content: '\f099';
         }
     }
 }

@@ -66,155 +66,181 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
 
             <div class="w-full lg:w-10/12">
 
-                <div class="flex flex-wrap">
+                <h3 class="l-digital__title u-line-height-100 font-bold text-center u-color-folk-primary mb-12">
+                    Mais do que um banco digital, <br>
+                    o parceiro no desenvolvimento de empresas. <br> 
+                    Somos diferentes!
+                </h3>
 
-                    <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:mt-20 mb-12 lg:mb-0 sm:px-4 lg:px-0">
-                        <!-- <h3 class="l-digital__title leading-10 font-bold">
-                            Tudo o que você <br>
-                            precisa para <br>
-                            empreender no <br>
-                            universo digital.
-                        </h3> -->
+                <p class="l-digital__text font-normal text-center"> 
+                    Nascemos com o propósito de promover o progresso dos brasileiros. <br>
+                    Crescemos porque acreditamos que empreender faz a diferença.      
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end digital -->
 
-                        <h3 class="l-digital__title leading-10 font-bold">
-                            @if( !empty( $home) ) 
-                                @if( isset($home->digital_title_highlight) )
-                                    {!! $home->digital_title_highlight !!}
-                                @endif
-                            @endif
-                        </h3>
+<!-- press -->
+<section class="l-press pt-12 pb-32">
 
-                        <!-- <p class="u-font-size-14 u-font-weight-medium mt-7">
-                            Toda a nossa infraestrutura de processamento <br> 
-                            e captura de cartão permite que você faça <br>
-                            suas vendas de forma segura e transparente, <br>
-                            a partir de sua conta digital na EBW Bank.
-                        
-                            <br><br>
+    <div class="container mx-auto px-4">
 
-                            Você pode vender através do seu próprio site <br>
-                            ou marketplace, por meio de uma integração <br>
-                            simples e fácil de fazer.
-                        </p> -->
+        <div class="flex flex-wrap justify-center -mx-4">
+            
+            <div class="w-10/12 mb-12 px-4">
 
-                        <p class="u-font-size-14 u-font-weight-medium mt-7">
-                            @if( !empty( $home ) )
-                                @if( isset( $home->digital_description ) )
-                                    {!! $home->digital_description !!}
-                                @endif
-                            @endif
-                        </p>
+                <h3 class="l-press__title font-bold text-center uppercase u-color-folk-primary">
+                    imprensa
+                </h3>
 
-                        @if( !empty( $general ) )
-                            @if( $general->button_start_now ) 
-                                <a
-                                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                                href="{{ $general->button_start_now }}">
-                                    comece agora
-                                </a>
-                            @endif
-                        @else
-                            <a
-                            class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase text-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                            href="#">
-                                comece agora
-                            </a>
-                        @endif
-                    </div>
+                <p class="l-press__text font-normal text-center">
+                    O que estão falando sobre nós.
+                </p>
+            </div>
 
-                    <div class="w-full lg:w-4/12 lg:ml-32 sm:pl-4">
+            <div class="w-10/12 px-4">
 
-                        <div class="flex flex-wrap">
+                <div class="flex flex-wrap -mx-4">
 
-                            <!-- loop -->
-                            @if( !empty( $home ) )
-                                @if( isset( $home->digital_items ) )
-                                    @foreach( $home->digital_items as $item ) 
-                                        <div class="l-digital__col-child w-full flex py-12">
+                    <!-- loop -->
+                    <div class="w-4/12 my-4 px-4">
 
-                                            <div class="w-1/3">
-                                                <!-- <img 
-                                                class=""
-                                                src="{{ asset( 'images/digital-icone-pagamento.png' ) }}"
-                                                alt="Links de Pagamento"> -->
+                        <div>
 
-                                                <img 
-                                                class=""
-                                                src="{{ Storage::url( $item[ 'digital_items_icon' ] ) }}"
-                                                alt="{{ $item[ 'digital_items_title' ] }}">
-                                            </div>
-
-                                            <div class="w-2/3">
-                                                <!-- <h6 class="font-bold">
-                                                    Gere seus próprios <br>
-                                                    links de pagamento
-                                                </h6> -->
-
-                                                <h6 class="font-bold">
-                                                    {!! $item[ 'digital_items_title' ] !!}
-                                                </h6>
-
-                                                <!-- <p class="u-font-size-13 u-font-weight-medium mt-1">
-                                                    Enviar link de pagamento para <br>
-                                                    receber parcelado, em até 12x <br>
-                                                    com cartão de crédito
-                                                </p> -->
-
-                                                <p class="u-font-size-13 u-font-weight-medium mt-1">
-                                                    {!! $item[ 'digital_items_text' ] !!}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    @endforeach  
-                                @endif
-                            @endif
-                            <!-- end loop -->
-
-                            <!-- <div class="l-digital__col-child w-full flex py-12">
-
-                                <div class="w-1/3">
-                                    <img 
-                                    class=""
-                                    src="{{ asset( 'images/digital-icone-qrcode.png' ) }}"
-                                    alt="Pagar por QR Code">
-                                </div>
-
-                                <div class="w-2/3">
-                                    <h6 class="font-bold">
-                                        Gere QR CODES para <br>
-                                        receber rapidamente
-                                    </h6>
-
-                                    <p class="u-font-size-13 u-font-weight-medium mt-1">
-                                        Pagar por QR Code para
-                                        receber pelas suas vendas
-                                        com praticidade
-                                    </p>
-                                </div>
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
                             </div>
 
-                            <div class="l-digital__col-child w-full flex py-12">
+                            <div class="py-4">
 
-                                <div class="w-1/3">
-                                    <img 
-                                    class=""
-                                    src="{{ asset( 'images/digital-icone-receber.png' ) }}"
-                                    alt="Links de Pagamento">
-                                </div>
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
 
-                                <div class="w-2/3">
-                                    <h6 class="font-bold">
-                                        Escolha quando <br>
-                                        quer receber
-                                    </h6>
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end loop -->
 
-                                    <p class="u-font-size-13 u-font-weight-medium mt-1">
-                                        Enviar link de pagamento para <br>
-                                        receber parcelado, em até 12x <br>
-                                        com cartão de crédito;
-                                    </p>
-                                </div>
-                            </div> -->
+                    <div class="w-4/12 my-4 px-4">
+
+                        <div>
+
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="py-4">
+
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
+
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-4/12 my-4 px-4">
+
+                        <div>
+
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="py-4">
+
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
+
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-4/12 my-4 px-4">
+
+                        <div>
+
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="py-4">
+
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
+
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-4/12 my-4 px-4">
+
+                        <div>
+
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="py-4">
+
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
+
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-4/12 my-4 px-4">
+
+                        <div>
+
+                            <div class="l-press__card-img">
+                                <img
+                                src="{{ asset( 'images/image-example.png' ) }}"
+                                alt="Imagem de exemplo">
+                            </div>
+
+                            <div class="py-4">
+
+                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </h6>
+
+                                <p class="font-normal text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -222,140 +248,33 @@ style="background-image: url( {{ $home->banner ? Storage::url( $home->banner ) :
         </div>
     </div>
 </section>
-<!-- end digital -->
+<!-- end press -->
 
-<!-- machine -->
-<section class="l-machine pt-32 pb-64">
-
-    <div class="container mx-auto">
-
-        <div class="flex flex-wrap justify-center">
-
-            <div class="w-full md:w-10/12 lg:w-4/12 order-2 lg:order-1 flex lg:block flex-col items-center mt-12 lg:mt-0 px-4">
-
-                <!-- <h3 class="l-machine__title leading-12 lg:leading-10 font-bold text-center lg:text-left u-color-folk-purple">
-                    A única maquininha <br>
-                    com taxas negociáveis <br>
-                    e fidelização dos clientes.
-                </h3> -->
-
-                <h3 class="l-machine__title leading-12 lg:leading-10 font-bold text-center lg:text-left u-color-folk-purple">
-                    @if( !empty( $home ) )
-                        @if( isset( $home->machine_title_highlight ) )
-                            {!! $home->machine_title_highlight !!}
-                        @endif
-                    @endif
-                </h3>
-
-                <!-- <p class="l-machine__subtitle font-bold text-center lg:text-left u-color-folk-dark-cyan my-5 lg:my-0">
-                    Só com a Passou Ganhou do EBW Bank
-                    seus clientes acumulam pontos e
-                    você pode negociar suas taxas.
-                </p> -->
-
-                <p class="l-machine__subtitle font-bold text-center lg:text-left u-color-folk-dark-cyan my-5 lg:my-0">
-                    @if( !empty( $home ) )
-                        @if( isset( $home->machine_description ) )
-                            {!! $home->machine_description !!}
-                        @endif
-                    @endif
-                </p>
-
-                <!-- <p class="u-font-size-14 u-font-weight-medium text-center lg:text-left">
-                    Toda venda acumula pontos para
-                    seu cliente, que poderá trocá-los por
-                    descontos nas próximas compras. 
-
-                    <br>
-                    <br>
-
-                    O programa de pontos aproxima o cliente
-                    da sua loja, aumentando as suas vendas.
-                </p> -->
-
-                <p class="u-font-size-14 u-font-weight-medium text-center lg:text-left">
-                    @if( !empty( $home ) )
-                        @if( isset( $home->machine_text ) )
-                            {!! $home->machine_text !!}
-                        @endif
-                    @endif
-                </p>
-
-                <a
-                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                href="{{ $home->button_ask_for_yours ? $home->button_ask_for_yours : '#' }}">
-                    peça a sua
-                </a>
-            </div>
-
-            <div class="w-full lg:w-6/12 order-1 lg:order-2 flex justify-center lg:justify-start items-end px-4">
-                <!-- <img
-                src="{{ asset( 'images/machine-illustration-1.png' )}}"
-                alt="Maquininha EBW"> -->
-
-                @if( !empty( $home ) )
-                    @if( isset( $home->machine_image ) )
-                        <img
-                        src="{{ Storage::url( $home->machine_image ) }}"
-                        alt="Maquininha EBW">
-                    @endif
-                @endif
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end machine -->
-
-<!-- mvv -->
-@include( 'site.partials.mvv' )
-<!-- end mvv -->
-
-<!-- portal -->
-<section class="l-portal py-32">
+<!-- investor -->
+<section class="l-investor py-20">    
 
     <div class="container mx-auto px-4">
 
-        <div class="flex">
+        <div class="flex flex-wrap justify-center -mx-4">
 
-            <div class="w-full md:w-8/12 lg:w-4/12 md:ml-28">
-
-                <h3 class="l-portal__title leading-12 md:leading-10 relative font-bold u-color-folk-white pb-10 mb-16">
-                    Portal do <br>
-                    Empreendedor
-                </h3>
-
-                <!-- <p class="l-portal__text font-bold u-color-folk-white">
-                    Conteúdos em série, <br>
-                    formatados em pequenos <br>
-                    treinamentos essenciais <br>
-                    para o empreendedor <br>
-                    superar os desafios <br>
-                    e turbinar seu negócio.
-
-                    <br>
-                    <br>
-
-                    100% gratuito.
-                </p> -->
-
-                <p class="l-portal__text font-bold u-color-folk-white">
-                    @if( !empty( $home ) ) 
-                        @if( isset( $home->portal_description ) )
-                            {!! $home->portal_description !!}
-                        @endif
-                    @endif
-                </p>
+            <div class="w-10/12 flex justify-between px-4">
 
                 <a
-                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-16 md:pr-28"
-                href="{{ $home->portal_link ? $home->portal_link : '#' }}">
-                    portal do empreendedor
+                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary py-5 pl-7 pr-16"
+                href="#">
+                    quero ser <span class="font-bold">sócio investidor</span>
+                </a>
+
+                <a
+                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary py-5 pl-7 pr-16"
+                href="#">
+                    saiba porque investir na <span class="font-bold">EBW</span>
                 </a>
             </div>
-        </div>
+        </div>  
     </div>
 </section>
-<!-- end portal -->
+<!-- end investor -->
 
 @endsection
 

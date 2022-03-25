@@ -39,6 +39,11 @@
         @stack('css')
     </head>
     <body>
+        @php
+            $menu = App\Models\Menu::class::first(); 
+            $general = App\Models\General::class::first();
+        @endphp
+
         @include('site.layouts.header')
 
         @yield('content')

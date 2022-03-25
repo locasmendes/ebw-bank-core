@@ -1,0 +1,7 @@
+$utility-name: 'u-line-height';
+
+.#{$utility-name} {
+    &-100 {
+        line-height: 100% !important;
+    }
+}

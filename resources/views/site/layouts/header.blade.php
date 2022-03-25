@@ -1,8 +1,3 @@
-@php
-    $menu = App\Models\Menu::class::first(); 
-    $general = App\Models\General::class::first();
-@endphp
-
 <header class="l-header w-full top-0 left-0 absolute antialiased select-none px-4 lg:px-6 py-5">
 
     <div class="container mx-auto px-4">

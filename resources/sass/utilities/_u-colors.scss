@@ -38,10 +38,9 @@ $utility-name: 'u-color-folk';
             }
         }
 
-        &-white {
-            * {
-                color: $color-folk-white
-            }
+        &-white,
+        &-white * {
+            color: $color-folk-white
         }
     }   
 }
