@@ -15,35 +15,31 @@ class SiteController extends Controller
 {
     public function index(Request $request)
     {
-        $menu = Menu::first();
-        $general = General::first();
         $home = Home::first();
-        //$purpose = Purpose::get();
 
-        return view( 'site.home', compact([ 'menu', 'general', 'home' ]) );
-        //return view( 'site.home', compact([ 'home', 'general', 'purpose' ]) );
+        return view( 'site.home', compact([ 'home' ]) );
+    }
+
+    public function passedwon() {
+        return view( 'site.passed-won' );
     }
 
     public function portal() {
-        $menu = Menu::first();
-        $general = General::get();
+        $general = General::first();
         $courses = Course::get();
         $categories = Category::get();
 
-        return view( 'site.portal', compact([ 'menu', 'general', 'courses', 'categories' ]) );
+        return view( 'site.portal', compact([ 'general', 'courses', 'categories' ]) );
     }
 
     public function single() {
-        $menu = Menu::first();
-
-        return view( 'site.single', compact([ 'menu' ]) );
+        return view( 'site.single' );
     }
 
     public function ebwbank() {
-        $menu = Menu::first();
         $about = About:: first();
 
-        return view( 'site.ebwbank', compact([ 'menu', 'about' ]) );
+        return view( 'site.ebwbank', compact([ 'about' ]) );
     }
     //eager loading
     // Category::with('courses')->get();

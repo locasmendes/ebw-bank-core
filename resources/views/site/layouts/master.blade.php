@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <title>EBW</title>
+        <title>EBW Bank</title>
         <base href="{{ url()->current() }}">
         @stack('css')
     </head>

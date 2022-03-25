@@ -19,9 +19,10 @@ use App\Http\Controllers\SiteController;
 }); */
 
 Route::get('/', [SiteController::class, 'index'])->name( 'home' );
+Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
+Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name( 'ebwbank' );
 Route::get('/portal-do-empreendedor', [SiteController::class, 'portal'])->name( 'portal' );
 Route::get('/single', [SiteController::class, 'single'])->name( 'single' );
-Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
 // Route::get('/cursos/{category:category_slug}/{course:course_slug}')->name()

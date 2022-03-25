@@ -30,4 +30,8 @@
     if( document.querySelector( '.js-swiper-container-categories' )) {
         const swiperCategories = new Swiper( '.js-swiper-container-categories' )
     }   
+
+    if( document.querySelector( '.js-swiper-banner' ) ) {
+        const swiperBanner = new Swiper( '.js-swiper-banner' ) 
+    }
 })()

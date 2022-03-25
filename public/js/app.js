@@ -260,6 +260,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   if (document.querySelector('.js-swiper-container-categories')) {
     var swiperCategories = new Swiper('.js-swiper-container-categories');
   }
+
+  if (document.querySelector('.js-swiper-banner')) {
+    var swiperBanner = new Swiper('.js-swiper-banner');
+  }
 })();
 
 /***/ }),
