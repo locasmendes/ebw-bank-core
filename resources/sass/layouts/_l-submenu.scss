@@ -27,7 +27,9 @@ $layout-name: 'l-submenu';
         }
 
         &.active {
-            color: $color-folk-white !important;
+            &::before {
+                content: '';
+            }
         }
     }
 }

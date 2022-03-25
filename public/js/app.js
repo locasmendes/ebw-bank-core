@@ -129,13 +129,29 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 // })()
 (function () {
   var items = document.getElementsByClassName('js-submenu-item');
+  var posts = document.getElementsByClassName('js-posts');
+  items[0].classList.add('active');
 
-  var _iterator = _createForOfIteratorHelper(items),
+  var _iterator = _createForOfIteratorHelper(posts),
       _step;
 
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var i = _step.value;
+      var n = _step.value;
+      n.classList.add('active');
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  var _iterator2 = _createForOfIteratorHelper(items),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var i = _step2.value;
       i.addEventListener('mouseover', function () {
         this.style.backgroundColor = this.dataset.color;
       });
@@ -143,27 +159,49 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         this.style.background = "none";
       });
       i.addEventListener('click', function () {
-        var _iterator2 = _createForOfIteratorHelper(items),
-            _step2;
+        var _iterator3 = _createForOfIteratorHelper(items),
+            _step3;
 
         try {
-          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-            var j = _step2.value;
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var j = _step3.value;
             j.classList.remove('active');
           }
         } catch (err) {
-          _iterator2.e(err);
+          _iterator3.e(err);
         } finally {
-          _iterator2.f();
+          _iterator3.f();
+        }
+
+        var _iterator4 = _createForOfIteratorHelper(posts),
+            _step4;
+
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            var k = _step4.value;
+
+            if (this.dataset.value == k.dataset.value) {
+              k.classList.add('active');
+            } else if (this.dataset.value == 'all-categories') {
+              this.classList.add('active');
+              k.classList.add('active');
+            } else {
+              k.classList.remove('active');
+            }
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
         }
 
         this.classList.add('active');
       });
     }
   } catch (err) {
-    _iterator.e(err);
+    _iterator2.e(err);
   } finally {
-    _iterator.f();
+    _iterator2.f();
   }
 })();
 

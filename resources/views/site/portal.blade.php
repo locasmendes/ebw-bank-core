@@ -72,38 +72,6 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                         </li>
                     @endforeach
                     <!-- end loop -->
-
-                    <!-- <li 
-                    class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
-                    style="border-color:#37A1C7;color:#37A1C7"
-                    data-color="#37A1C7"
-                    data-value="finances">
-                        finanças
-                    </li>
-
-                    <li 
-                    class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
-                    style="border-color:#E75B4B;color:#E75B4B"
-                    data-color="#E75B4B"
-                    data-value="management">
-                        gestão
-                    </li>
-
-                    <li 
-                    class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
-                    style="border-color:#008A73;color:#008A73"
-                    data-color="#008A73"
-                    data-value="rh">
-                        rh
-                    </li>
-
-                    <li 
-                    class="l-submenu__item u-font-size-9 font-bold uppercase py-4 px-8 js-submenu-item"
-                    style="border-color:#008A73;color:#1D3167"
-                    data-color="#1D3167"
-                    data-value="sales">
-                        vendas
-                    </li> -->
                 </ul>
             </div>
             <!-- end desktop -->
@@ -183,7 +151,15 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
 
                     <!-- loop -->
                     @foreach( $courses as $course )
-                        <div class="w-full md:w-4/12 my-4 px-4">
+                        @foreach( $categories as $category )
+                            @if( $course[ 'category_id' ] == $category[ 'id' ] )
+                                @php $category_current = $category[ 'category_name' ] @endphp
+                            @endif
+                        @endforeach
+
+                        <div 
+                        class="l-training__posts w-full md:w-4/12 my-4 px-4 js-posts"
+                        data-value="{{ $category_current }}">
 
                             <div class="l-training__card p-2">
 
@@ -202,11 +178,7 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
                                     </h4>
 
                                     <p class="u-font-size-12 mb-2">
-                                        @foreach( $categories as $category )
-                                            @if( $course[ 'category_id' ] == $category[ 'id' ] )
-                                                <span class="font-semibold">Categoria: </span> {{ $category[ 'category_name' ] }}
-                                            @endif
-                                        @endforeach
+                                        <span class="font-semibold">Categoria: </span> {{ $category_current }}
                                     </p>
 
                                     <p class="u-font-size-12 mb-4">

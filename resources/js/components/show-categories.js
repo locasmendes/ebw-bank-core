@@ -56,7 +56,13 @@
 
 (function() {
     const items = document.getElementsByClassName( 'js-submenu-item' )
+    const posts = document.getElementsByClassName( 'js-posts' )
 
+    items[0].classList.add( 'active' )
+
+    for( const n of posts )
+        n.classList.add( 'active' )
+        
     for( const i of items ) {
         i.addEventListener( 'mouseover', function() {
             this.style.backgroundColor = this.dataset.color
@@ -70,6 +76,17 @@
 
             for( const j of items) 
                 j.classList.remove( 'active' )
+
+            for( const k of posts ) {
+                if( this.dataset.value == k.dataset.value ) {
+                    k.classList.add( 'active' )
+                } else if( this.dataset.value == 'all-categories' ) {
+                    this.classList.add( 'active' )
+                    k.classList.add( 'active' )
+                } else {
+                    k.classList.remove( 'active' )
+                }
+            } 
 
             this.classList.add( 'active' )
         })
