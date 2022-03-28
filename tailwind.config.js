@@ -9,6 +9,8 @@ module.exports = {
         extend: {
             colors: {
                 ebw: {
+                    primary: "#d63733",
+                    secondary: "#1c120e",
                     form: "#afafb4",
                     title: "#5b5b5e",
                     input: "#c3c5ca",

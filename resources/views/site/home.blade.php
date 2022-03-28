@@ -5,55 +5,12 @@
 <!-- -->
 <!-- banner -->
 <section 
-class="l-banner flex justify-center items-center py-24 md:py-0"
-style="background-image: url( {{ asset( 'images/banner-new.png' ) }} );">
+class="l-banner pt-52"
+style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
     <div class="container mx-auto px-4">
-
-        <div class="flex flex-wrap">
-
-            <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:ml-32">
-
-                <!-- <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
-                    Venda na internet <br>
-                    com segurança <br>
-                    antifraude e <br>
-                    <span class="font-bold u-color-folk-white">parcelamento <br>
-                    em até 12x</span>
-                </p> -->
-
-                <span class="l-banner__title leading-12 lg:leading-10 block u-font-weight-regular text-center lg:text-left all:u-color-folk-white">
-                    @if( !empty( $home ))
-                        @if( $home->banner_text_highlight )
-                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_highlight ) !!}
-                        @endif
-                    @endif
-                </span>
-
-                <!-- <p class="u-font-size-15 u-font-weight-medium text-center lg:text-left u-color-folk-primary mt-5">
-                    EBW Pay foi pensado e desenvolvido <br>
-                    para o micro e pequeno empreendedor.
-                </p> -->
-
-                <span class="block u-font-size-15 u-font-weight-medium text-center lg:text-left all:u-color-folk-primary mt-5">
-                    @if( !empty( $home ))
-                        @if( $home->banner_text_small )
-                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_small ) !!}
-                        @endif
-                    @endif
-                </span>
-                
-                @if( !empty( $general ) )
-                    @if( $general->button_start_now ) 
-                        <a
-                        class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-9 py-5 pl-7 pr-28"
-                        href="{{ $general->button_start_now }}">
-                            comece agora
-                        </a>
-                    @endif
-                @endif
-            </div>
-        </div>
+        <img class="mb-10" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
+        <a href="#" class="inline-block bg-ebw-primary px-8 py-3 text-2xl font-bold uppercase tracking-wider text-white rounded-full">Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white text-lg"></i></a>
     </div>
 </section>
 <!-- end banner -->
@@ -67,15 +24,16 @@ style="background-image: url( {{ asset( 'images/banner-new.png' ) }} );">
 
             <div class="w-full lg:w-10/12">
 
-                <h3 class="l-digital__title u-line-height-100 font-bold text-center u-color-folk-primary mb-12">
+                <h3 class="l-digital__title leading-tight font-bold text-center u-color-folk-primary mb-10">
                     Mais do que um banco digital, <br>
                     o parceiro no desenvolvimento de empresas. <br> 
                     Somos diferentes!
                 </h3>
 
-                <p class="l-digital__text font-normal text-center"> 
+                <p class="text-3xl text-black font-normal text-center leading-snug"> 
                     Nascemos com o propósito de promover o progresso dos brasileiros. <br>
-                    Crescemos porque acreditamos que empreender faz a diferença.      
+                    Crescemos porque acreditamos que empreender faz a diferença.   <br>
+                    E fazer a diferença está em nosso DNA.   
                 </p>
             </div>
         </div>
@@ -106,144 +64,25 @@ style="background-image: url( {{ asset( 'images/banner-new.png' ) }} );">
                 <div class="flex flex-wrap -mx-4">
 
                     <!-- loop -->
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
+                    @foreach (array_fill(0, 6, 'a') as $item)
+                        <div class="w-4/12 my-4 px-4">
+                            <a href="#" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
                                 <img
                                 src="{{ asset( 'images/image-example.png' ) }}"
                                 alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
+                                <div class="pt-5 pb-10">
+                                    <h6 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </h6>
+                                    <p class="text-ebw-title text-lg leading-tight text-center">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                    </p>
+                                </div>
+                            </a>
                         </div>
-                    </div>
+                        
+                    @endforeach
                     <!-- end loop -->
-
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
-                                <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
-                                alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
-                                <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
-                                alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
-                                <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
-                                alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
-                                <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
-                                alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-4/12 my-4 px-4">
-
-                        <div>
-
-                            <div class="l-press__card-img">
-                                <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
-                                alt="Imagem de exemplo">
-                            </div>
-
-                            <div class="py-4">
-
-                                <h6 class="l-press__card-title u-line-height-100 font-bold text-center mb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </h6>
-
-                                <p class="font-normal text-center">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
