@@ -29,12 +29,12 @@
 //                         k.classList.remove( 'hidden' )
 //                     } else if(this.dataset.value == 'all-categories' ) {
 //                         k.classList.add( 'block' )
-//                         k.classList.remove( 'hidden' )  
+//                         k.classList.remove( 'hidden' )
 //                     } else {
 //                         k.classList.remove( 'block' )
 //                         k.classList.add( 'hidden' )
 //                     }
-//                 }   
+//                 }
 //             })
 //         }
 
@@ -45,7 +45,7 @@
 //                         m.style.color = m.dataset.color
 //                         m.style.background = 'none'
 //                     }
-        
+
 //                     this.style.color = '#FFF'
 //                     this.style.backgroundColor = this.dataset.color
 //                 }
@@ -54,41 +54,39 @@
 //     }
 // })()
 
-(function() {
-    const items = document.getElementsByClassName( 'js-submenu-item' )
-    const posts = document.getElementsByClassName( 'js-posts' )
+(function () {
+    const items = document.getElementsByClassName("js-submenu-item");
+    const posts = document.getElementsByClassName("js-posts");
+    if (document.querySelector(".js-submenu-item")) {
+        items[0].classList.add("active");
 
-    items[0].classList.add( 'active' )
+        for (const n of posts) n.classList.add("active");
 
-    for( const n of posts )
-        n.classList.add( 'active' )
-        
-    for( const i of items ) {
-        i.addEventListener( 'mouseover', function() {
-            this.style.backgroundColor = this.dataset.color
-        })
+        for (const i of items) {
+            i.addEventListener("mouseover", function () {
+                this.style.backgroundColor = this.dataset.color;
+            });
 
-        i.addEventListener( 'mouseout', function() {
-            this.style.background = "none"
-        })
+            i.addEventListener("mouseout", function () {
+                this.style.background = "none";
+            });
 
-        i.addEventListener( 'click', function(){
+            i.addEventListener("click", function () {
+                for (const j of items) j.classList.remove("active");
 
-            for( const j of items) 
-                j.classList.remove( 'active' )
-
-            for( const k of posts ) {
-                if( this.dataset.value == k.dataset.value ) {
-                    k.classList.add( 'active' )
-                } else if( this.dataset.value == 'all-categories' ) {
-                    this.classList.add( 'active' )
-                    k.classList.add( 'active' )
-                } else {
-                    k.classList.remove( 'active' )
+                for (const k of posts) {
+                    if (this.dataset.value == k.dataset.value) {
+                        k.classList.add("active");
+                    } else if (this.dataset.value == "all-categories") {
+                        this.classList.add("active");
+                        k.classList.add("active");
+                    } else {
+                        k.classList.remove("active");
+                    }
                 }
-            } 
 
-            this.classList.add( 'active' )
-        })
+                this.classList.add("active");
+            });
+        }
     }
-})()
+})();

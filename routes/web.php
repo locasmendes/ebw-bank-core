@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PreRegistrationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 
@@ -18,11 +19,14 @@ use App\Http\Controllers\SiteController;
     return view('welcome');
 }); */
 
-Route::get('/', [SiteController::class, 'index'])->name( 'home' );
-Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name( 'ebwbank' );
-Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name( 'ebwbank' );
-Route::get('/portal-do-empreendedor', [SiteController::class, 'portal'])->name( 'portal' );
-Route::get('/single', [SiteController::class, 'single'])->name( 'single' );
+Route::get('/', [SiteController::class, 'index'])->name('home');
+Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name('ebwbank');
+Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name('ebwbank');
+Route::get('/portal-do-empreendedor', [SiteController::class, 'portal'])->name('portal');
+Route::get('/single', [SiteController::class, 'single'])->name('single');
+Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');
+Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name('pre-registratation.store');
+
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
 // Route::get('/cursos/{category:category_slug}/{course:course_slug}')->name()

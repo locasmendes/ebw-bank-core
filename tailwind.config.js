@@ -6,7 +6,18 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                ebw: {
+                    form: "#afafb4",
+                    title: "#5b5b5e",
+                    input: "#c3c5ca",
+                },
+            },
+            fontSize: {
+                "5.5xl": "3.25rem",
+            },
+        },
     },
     variants: {
         extend: {},
