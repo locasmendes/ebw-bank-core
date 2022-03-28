@@ -2,6 +2,7 @@
 
 @section( 'content' )
 
+<!-- -->
 <!-- banner -->
 <section 
 class="l-banner flex justify-center items-center py-24 md:py-0"
