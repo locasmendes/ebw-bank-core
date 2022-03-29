@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "/js/app.js": "/js/app.js?id=738865f2c3133dec5004de50cef97ac3",
     "/css/app.css": "/css/app.css?id=0e51dd260dfac4e27a3e3ad1cead940f",
+=======
+    "/js/app.js": "/js/app.js?id=f1922f92f4dec498efbb074391618e47",
+    "/css/app.css": "/css/app.css?id=9bd0c97070b495f81553be23c4a5874a",
+>>>>>>> bfe383dff52974995ee69d9105254d4ff621e8c8
     "/images/background-example.jpg": "/images/background-example.jpg?id=59c22599d6b7b3ae680d3b11f132a8fb",
     "/images/background-pre-registration.jpg": "/images/background-pre-registration.jpg?id=2c616ceea1cadb09ddced58bfe88194b",
     "/images/banner-blog.jpg": "/images/banner-blog.jpg?id=3da4a6f9d1d13dcb13ea23abc578af15",

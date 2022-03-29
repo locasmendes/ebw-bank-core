@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <header class="absolute top-0 left-0 right-0 p-0 lg:px-6 lg:py-5 z-50">
+=======
+<header class="absolute top-0 left-0 right-0 z-50 p-0 lg:px-4 lg:px-6 lg:py-5">
+>>>>>>> bfe383dff52974995ee69d9105254d4ff621e8c8
     
     <nav class="container mx-auto lg:px-4">
         
@@ -11,19 +15,19 @@
             <ul class="flex-none lg:flex-1 flex flex-col lg:flex-row items-center justify-center">
                 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('home') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white {!! Request::is( 'conheca-o-ebwbank' )? '' : 'lg:u-color-folk-black' !!}" href="{{ route('home') }}">
                         Home
                     </a>
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('conheca-ebw') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white {!! Request::is( 'conheca-o-ebwbank' )? '' : 'lg:u-color-folk-black' !!}" href="{{ route('conheca-ebw') }}">
                         A EBW
                     </a>
                 </li>
 
                 <li class="l-dropdown relative my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white {!! Request::is( 'conheca-o-ebwbank' )? '' : 'lg:u-color-folk-black' !!}" href="#">
                         Para seu negócio
                     </a>
 
@@ -46,13 +50,13 @@
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('partner-investor') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white {!! Request::is( 'conheca-o-ebwbank' )? '' : 'lg:u-color-folk-black' !!}" href="{{ route('partner-investor') }}">
                         Seja um investidor
                     </a>
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('portal') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white {!! Request::is( 'conheca-o-ebwbank' )? '' : 'lg:u-color-folk-black' !!}" href="{{ route('portal') }}">
                         Blog
                     </a>
                 </li>
