@@ -22,10 +22,27 @@
                     </a>
                 </li>
 
-                <li class="my-8 mx-4">
+                <li class="relative my-8 mx-4">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
                         Para seu negócio
                     </a>
+
+                    <ul class="l-dropdown-menu">
+                        
+                        <li class="l-dropdown-menu__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+
+                            <a class="font-medium text-white" href="#">
+                                Venda pela internet
+                            </a>
+                        </li>
+
+                        <li class="l-dropdown-menu__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+
+                            <a class="font-medium text-white" href="#">
+                                Peça sua maquininha
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="my-8 mx-4">

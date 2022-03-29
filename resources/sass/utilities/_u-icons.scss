@@ -13,6 +13,12 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__arrow-right {
+        &::before {
+            content: '\f105';
+        }
+    }
+
     //icons
     &__linkedin {
         &::before {
