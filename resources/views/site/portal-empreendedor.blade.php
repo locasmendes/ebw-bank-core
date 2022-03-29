@@ -12,7 +12,7 @@
         <div class="l-training pt-20 pb-16 ">
             <div class="container mx-auto px-6">
                 <h2 class="text-ebw-third text-center font-semiBold tracking-wide text-5xl mb-10 -mx-6">Principais conteúdos para turbinar seu negócio</h2>
-                <div class="flex -mx-6">
+                <div class="flex -mx-6 justify-center">
                     <div class="px-6">
                         <a 
                         href="{{ route('portal', ['categoria' => 'todas']) }}"
