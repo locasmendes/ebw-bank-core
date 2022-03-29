@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PartnerInvestorsExport;
 use App\Models\PartnerInvestor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PartnerInvestorController extends Controller
 {
@@ -30,5 +33,45 @@ class PartnerInvestorController extends Controller
         PartnerInvestor::create($data);
 
         return \redirect()->back()->with('success', true);
+    }
+
+    public function export(Request $request)
+    {
+        $request->validate([
+            'start_date' => 'date|nullable',
+            'final_date' => 'date|nullable',
+        ]);
+
+        $partnerInvestor = PartnerInvestor::query()
+            ->tap(function ($query) use ($request) {
+                if (!is_null($request->input('start_date'))) {
+                    $query->whereDate('created_at', '>=', Carbon::createFromDate($request->input('start_date')));
+                }
+                if (!is_null($request->input('final_date'))) {
+                    $query->whereDate('created_at', '<=', Carbon::createFromDate($request->input('final_date')));
+                }
+            })
+            ->limit(1)
+            ->exists();
+
+        if (!$partnerInvestor) {
+            return redirect()->back()->with('invalid-date', true);
+        }
+
+        $filaname = function () use ($request) {
+            $filename = 'socio-investidores-ebw';
+
+            if (!is_null($request->input('start_date'))) {
+                $filename .= '-de-' . Carbon::createFromDate($request->input('start_date'))->format('d_m_Y');
+            }
+            if (!is_null($request->input('final_date'))) {
+                $filename .= '-ate-' . Carbon::createFromDate($request->input('final_date'))->format('d_m_Y');
+            }
+            return $filename . '.xlsx';
+        };
+
+        return Excel::download(new PartnerInvestorsExport($request->input('start_date'), $request->input('final_date')), $filaname());
+
+        return redirect()->back();
     }
 }

@@ -18,4 +18,9 @@ class PreRegistration extends Model
         'allow_infomation_whatsapp_sms',
         'allow_infomation_email'
     ];
+
+    protected $casts = [
+        'allow_infomation_whatsapp_sms' => 'boolean',
+        'allow_infomation_email' => 'boolean'
+    ];
 }

@@ -27,8 +27,10 @@ Route::get('/portal-do-empreendedor', [SiteController::class, 'portal'])->name('
 Route::get('/single', [SiteController::class, 'single'])->name('single');
 Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');
 Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name('pre-registratation.store');
+Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
 Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->name('partner-investor');
 Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
+Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
 
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
