@@ -38,7 +38,7 @@
 
                         <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="passou-ganhou">
+                            <a class="font-medium text-white" href="http://homolog-ebw-passou-ganhou.evolutap.com.br/produtos">
                                 Peça sua maquininha
                             </a>
                         </li>
