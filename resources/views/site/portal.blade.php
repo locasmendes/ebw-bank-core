@@ -3,7 +3,7 @@
 @section( 'content' )
 
 <!-- banner -->
-<section 
+{{-- <section 
 class="l-mini-banner relative flex justify-center items-center"
 style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
 
@@ -27,7 +27,10 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
             </div>
         </div>
     </div>
-</section>
+</section> --}}
+<div>
+    <img src="{{ asset('images/banner-blog.jpg') }}" class="w-full" alt="Bem vindo ao BLOG do Empreendedorismo EBW Bank">
+</div>
 <!-- end banner -->
 
 <section class="l-training py-16">

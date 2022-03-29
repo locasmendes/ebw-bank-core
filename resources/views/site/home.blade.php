@@ -65,20 +65,21 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             <div class="w-full md:w-10/12 px-4">
 
                 <div class="flex flex-wrap -mx-4">
-
+                    
                     <!-- loop -->
-                    @foreach (array_fill(0, 6, 'a') as $item)
+                    @foreach ($posts as $post)
                         <div class="w-full md:w-6/12 lg:w-4/12 my-4 px-4">
-                            <a href="{{ route('single') }}" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
+                            <a href="{{ route('portal.show', ['id' => $post->id, 'slug' => \Illuminate\Support\Str::slug($post->title)]) }}" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
                                 <img
-                                src="{{ asset( 'images/image-example.png' ) }}"
+                                src="{{ asset(Storage::url($post->image)) }}"
+                                class="h-64 object-conver object-center w-full"
                                 alt="Imagem de exemplo">
                                 <div class="pt-5 pb-10">
-                                    <h6 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </h6>
+                                    <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
+                                       {{ $post->title }}
+                                    </h3>
                                     <p class="text-ebw-title text-lg leading-tight text-center">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                                        {{ \Illuminate\Support\Str::words(strip_tags($post->body), 25, '...') }}
                                     </p>
                                 </div>
                             </a>

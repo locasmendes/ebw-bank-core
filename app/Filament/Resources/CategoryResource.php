@@ -25,12 +25,12 @@ class CategoryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-view-grid-add';
 
     protected static ?string $label = 'Categoria';
-    
+
     protected static ?string $pluralLabel = 'Categorias';
 
     protected static ?string $navigationGroup = 'Blog';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 1;
 
 
     public static function form(Form $form): Form
@@ -39,10 +39,10 @@ class CategoryResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
-                        TextInput::make( 'category_name' )->label( 'Nome' ),
-                        TextInput::make( 'category_slug' )->label( 'Slug' ),
-                        MarkdownEditor::make( 'category_description' )->label( 'Descrição' ),   
-                        TextInput::make( 'category_color' )->type('color')->label( 'Cor da categoria' ),
+                        TextInput::make('category_name')->label('Nome'),
+                        TextInput::make('category_slug')->label('Slug'),
+                        MarkdownEditor::make('category_description')->label('Descrição'),
+                        TextInput::make('category_color')->type('color')->label('Cor da categoria'),
                     ])->columns(1)
             ]);
     }
@@ -51,8 +51,8 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make( 'category_name' )->label( 'Nome'),
-                TextColumn::make( 'category_slug' )->label( 'Slug' ),
+                TextColumn::make('category_name')->label('Nome'),
+                TextColumn::make('category_slug')->label('Slug'),
             ])
             ->filters([
                 //

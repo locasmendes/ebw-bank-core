@@ -24,13 +24,17 @@ class CoursesResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-puzzle';
 
     protected static ?string $label = 'Post';
-    
+
     protected static ?string $pluralLabel = 'Posts';
 
     protected static ?string $navigationGroup = 'Blog';
 
     protected static ?int $navigationSort = 1;
 
+    public static function canViewAny(): bool
+    {
+        return false;
+    }
 
     public static function form(Form $form): Form
     {
@@ -38,17 +42,17 @@ class CoursesResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
-                        Section::make( 'Post' )                    
+                        Section::make('Post')
                             ->schema([
-                                FileUpload::make( 'course_image' )->label( 'Thumbnail' ),
-                                TextInput::make( 'course_title' )->label( 'Título' ),                                
-                                MarkdownEditor::make( 'course_description' )->label( 'Descrição' ),
+                                FileUpload::make('course_image')->label('Thumbnail'),
+                                TextInput::make('course_title')->label('Título'),
+                                MarkdownEditor::make('course_description')->label('Descrição'),
                             ]),
 
-                        Section::make( 'Categorias' )                    
+                        Section::make('Categorias')
                             ->schema([
-                                BelongsToSelect::make( 'categoryId' )->label( 'Categoria' )
-                                    ->relationship( 'category', 'category_name' )
+                                BelongsToSelect::make('categoryId')->label('Categoria')
+                                    ->relationship('category', 'category_name')
                             ]),
                     ])
             ]);
@@ -58,8 +62,8 @@ class CoursesResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make( 'course_title' )->label( 'Título' ),
-                TextColumn::make( 'category.category_name' )->label( 'Categoria' ),
+                TextColumn::make('course_title')->label('Título'),
+                TextColumn::make('category.category_name')->label('Categoria'),
             ])
             ->filters([
                 //

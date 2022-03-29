@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PartnerInvestorController;
+use App\Http\Controllers\PortalEmpreendedorController;
 use App\Http\Controllers\PreRegistrationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
@@ -23,8 +24,8 @@ use App\Http\Controllers\SiteController;
 Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name('conheca-ebw');
 Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name('ebwbank');
-Route::get('/portal-do-empreendedor', [SiteController::class, 'portal'])->name('portal');
-Route::get('/single', [SiteController::class, 'single'])->name('single');
+Route::get('/portal-do-empreendedor', [PortalEmpreendedorController::class, 'index'])->name('portal');
+Route::get('/portal-do-empreendedor/{id}/{slug}', [PortalEmpreendedorController::class, 'show'])->name('portal.show');
 Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');
 Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name('pre-registratation.store');
 Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
