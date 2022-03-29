@@ -9,6 +9,7 @@ $layout-name: "l-banner";
 
     @media screen and (max-width: 991px) {
         min-height: 400px;
+        background-position: center;
     }
 
     &__title {

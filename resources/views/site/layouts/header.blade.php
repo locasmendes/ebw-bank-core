@@ -1,37 +1,56 @@
-<header class="absolute top-0 left-0 right-0">
-    <nav class="container mx-auto px-4 pt-10">
-        <div class="flex justify-between items-center">
-            <a href="{{ route('home') }}">
+<header class="absolute top-0 left-0 right-0 p-0 lg:px-4 lg:px-6 lg:py-5">
+    
+    <nav class="container mx-auto lg:px-4">
+        
+        <div class="h-screen lg:u-h-unset hidden lg:flex flex-col lg:flex-row justify-center lg:justify-between items-center u-bg-folk-light-black lg:u-bg-folk-none js-navbar">
+
+            <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
                 <img src="{{ asset('images/haeder-logo-black.png') }}" alt="EBW Bank Logo">
             </a>
-            <ul class="flex-1 flex items-center justify-end">
-                <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('home') }}">
+
+            <ul class="flex-none lg:flex-1 flex flex-col lg:flex-row items-center justify-center">
+                
+                <li class="my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('home') }}">
                         Home
                     </a>
                 </li>
-                <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('conheca-ebw') }}">
+
+                <li class="my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('conheca-ebw') }}">
                         A EBW
                     </a>
                 </li>
-                <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="#">
+
+                <li class="my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
                         Para seu negócio
                     </a>
                 </li>
-                <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('partner-investor') }}">
+
+                <li class="my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('partner-investor') }}">
                         Seja um investidor
                     </a>
                 </li>
-                <li class="mx-4">
-                    <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
-                        <i class="fas fa-search text-white text-4xl"></i>
-                    </div>
+
+                <li class="my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
+                        Blog
+                    </a>
                 </li>
             </ul>
+
+            <div class="my-8 mx-4">
+                <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
+                    <i class="fas fa-search text-white text-2xl"></i>
+                </div>
+            </div>
         </div>
+
+        <button class="l-header__hamburger lg:hidden z-50 js-hamburger">
+            <span class="l-header__hamburger__icon"></span>
+        </button>    
     </nav>
 </header>
 

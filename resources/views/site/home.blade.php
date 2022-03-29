@@ -8,9 +8,12 @@
 class="l-banner pt-52"
 style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
-    <div class="container mx-auto px-4">
+    <div class="container flex flex-col items-center lg:block mx-auto px-4">
         <img class="mb-10" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
-        <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary px-8 py-3 text-2xl font-bold uppercase tracking-wider text-white rounded-full">Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white text-lg"></i></a>
+        
+        <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary px-8 py-3 text-2xl font-bold uppercase tracking-wider text-white rounded-full">
+            Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white text-lg"></i>
+        </a>
     </div>
 </section>
 <!-- end banner -->
@@ -30,7 +33,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                     Somos diferentes!
                 </h3>
 
-                <p class="text-3xl text-black font-normal text-center leading-snug"> 
+                <p class="l-digital__text leading-snug font-normal text-center text-black"> 
                     Nascemos com o propósito de promover o progresso dos brasileiros. <br>
                     Crescemos porque acreditamos que empreender faz a diferença.   <br>
                     E fazer a diferença está em nosso DNA.   
@@ -48,7 +51,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
         <div class="flex flex-wrap justify-center -mx-4">
             
-            <div class="w-10/12 mb-12 px-4">
+            <div class="w-full md:w-10/12 mb-12 px-4">
 
                 <h3 class="l-press__title font-bold text-center uppercase u-color-folk-primary">
                     imprensa
@@ -59,13 +62,13 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                 </p>
             </div>
 
-            <div class="w-10/12 px-4">
+            <div class="w-full md:w-10/12 px-4">
 
                 <div class="flex flex-wrap -mx-4">
 
                     <!-- loop -->
                     @foreach (array_fill(0, 6, 'a') as $item)
-                        <div class="w-4/12 my-4 px-4">
+                        <div class="w-full md:w-6/12 lg:w-4/12 my-4 px-4">
                             <a href="{{ route('single') }}" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
                                 <img
                                 src="{{ asset( 'images/image-example.png' ) }}"
@@ -80,7 +83,6 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                                 </div>
                             </a>
                         </div>
-                        
                     @endforeach
                     <!-- end loop -->
                 </div>
@@ -97,16 +99,16 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
         <div class="flex flex-wrap justify-center -mx-4">
 
-            <div class="w-10/12 flex justify-between px-4">
+            <div class="w-full lg:w-10/12 flex flex-col lg:flex-row justify-between px-4">
 
                 <a
-                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary py-5 pl-7 pr-16"
+                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 pr-16"
                 href="{{ route('partner-investor') }}">
                     quero ser <span class="font-bold">sócio investidor</span>
                 </a>
 
                 <a
-                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary py-5 pl-7 pr-16"
+                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 pr-16"
                 href="{{ route('conheca-ebw') }}">
                     saiba porque investir na <span class="font-bold">EBW</span>
                 </a>

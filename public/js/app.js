@@ -62,7 +62,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
     $('[name="phone"]').mask(SPMaskBehavior, spOptions);
-<<<<<<< HEAD
 
     var cpfMaskBehavior = function cpfMaskBehavior(val) {
       if ($('[name="person-type"]').length) {
@@ -70,12 +69,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return val.replace(/\D/g, "").length >= 12 ? "00.000.000/0000-00" : "000.000.000-009";
-=======
-    console.log($('[name="person-type"]:checked').val());
-
-    var cpfMaskBehavior = function cpfMaskBehavior(val) {
-      return $('[name="person-type"]:checked').val() === "pf" ? "000.000.000-00" : "00.000.000/0000-00";
->>>>>>> 9f427a4afaa3a742482b7586986b4db61c0353e6
     };
 
     var cpfOptions = {
@@ -95,7 +88,6 @@ __webpack_require__.r(__webpack_exports__);
   \************************************************/
 /***/ (() => {
 
-<<<<<<< HEAD
 (function () {// const navbar = document.querySelector( '.js-navbar' )
   // const hamburger = document.querySelector( '.js-hamburger' )
   // const body = document.querySelector( 'body' )
@@ -105,18 +97,6 @@ __webpack_require__.r(__webpack_exports__);
   //     navbar.classList.toggle( 'flex' )
   //     body.classList.toggle( 'overflow-hidden' )
   // })
-=======
-(function () {
-  var navbar = document.querySelector('.js-navbar');
-  var hamburger = document.querySelector('.js-hamburger');
-  var body = document.querySelector('body');
-  hamburger.addEventListener('click', function () {
-    this.classList.toggle('active');
-    navbar.classList.toggle('hidden');
-    navbar.classList.toggle('flex');
-    body.classList.toggle('overflow-hidden');
-  });
->>>>>>> 9f427a4afaa3a742482b7586986b4db61c0353e6
 })();
 
 /***/ }),

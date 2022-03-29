@@ -9,7 +9,9 @@ $utility-name: 'u-h';
 .lg\: {
     &#{$utility-name} {
         &-unset {
-            height: unset !important;
+            @media screen and (min-width: 992px) {
+                height: unset !important;
+            }
         }
     }
 }
