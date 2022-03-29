@@ -31,14 +31,14 @@
                         
                         <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="#">
+                            <a class="font-medium text-white" href="http://homolog-ebw-passou-ganhou.evolutap.com.br/venda-pela-internet">
                                 Venda pela internet
                             </a>
                         </li>
 
                         <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="#">
+                            <a class="font-medium text-white" href="passou-ganhou">
                                 Peça sua maquininha
                             </a>
                         </li>
