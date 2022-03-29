@@ -11,17 +11,17 @@
                     </a>
                 </li>
                 <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('home') }}">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('conheca-ebw') }}">
                         A EBW
                     </a>
                 </li>
                 <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('home') }}">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="#">
                         Para seu negócio
                     </a>
                 </li>
                 <li class="mx-4">
-                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('home') }}">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('partner-investor') }}">
                         Seja um investidor
                     </a>
                 </li>

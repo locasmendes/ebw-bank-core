@@ -1,25 +1,25 @@
-$component-name: 'c-btn';
+$component-name: "c-btn";
 
 .#{$component-name} {
     &-pattern {
         line-height: 100%;
-        transition: all .2s;
+        transition: all 0.2s;
         border: 1px solid;
-        border-radius: 25px;
-        font-size: .8125rem;
+        border-radius: 999px;
+        font-size: 0.8125rem;
         cursor: pointer;
     }
 
     &-icon-arrow {
         &::before {
-            content: '\f054';
+            content: "\f054";
             top: 50%;
             right: 1.5rem;
             transform: translateY(-50%);
-            transition: all .2s;
+            transition: all 0.2s;
             position: absolute;
             font-size: 1rem;
-            font-family: 'Font Awesome 5 Free';
+            font-family: "Font Awesome 5 Free";
         }
 
         &:hover {
@@ -31,10 +31,10 @@ $component-name: 'c-btn';
 
     &-submit {
         border-radius: 30px;
-        background-color: #22AC73;
+        background-color: #22ac73;
 
         &:hover {
-            background-color: #45D499;
+            background-color: #45d499;
         }
     }
 }

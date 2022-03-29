@@ -9,7 +9,7 @@
     </div>
     <section class="bg-ebw-form pt-36 pb-32">
         <div class="max-w-3xl mx-auto px-3">
-            <h2 class="text-4xl text-ebw-title leading-snug text-center mb-10">Preencha o formulário e faça<br>seu pré-cadastro na lista de espera!</h2>
+            <h2 class="text-5xl text-ebw-title leading-snug text-center mb-10 tracking-wider">Preencha o formulário e faça<br>seu pré-cadastro na lista de espera!</h2>
             <div class="border-white border-opacity-50 border-2 p-8">
                 <form action="{{ route('pre-registratation.store') }}" method="POST">
                     @csrf
