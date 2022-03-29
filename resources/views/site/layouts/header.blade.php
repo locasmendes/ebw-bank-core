@@ -52,7 +52,7 @@
                 </li>
 
                 <li class="my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('portal') }}">
                         Blog
                     </a>
                 </li>
