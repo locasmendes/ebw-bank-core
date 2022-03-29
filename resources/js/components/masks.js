@@ -15,11 +15,16 @@ import "jquery-mask-plugin";
         };
 
         $('[name="phone"]').mask(SPMaskBehavior, spOptions);
-        console.log($('[name="person-type"]:checked').val());
+
         const cpfMaskBehavior = function (val) {
-            return $('[name="person-type"]:checked').val() === "pf"
-                ? "000.000.000-00"
-                : "00.000.000/0000-00";
+            if ($('[name="person-type"]').length) {
+                return $('[name="person-type"]:checked').val() === "pf"
+                    ? "000.000.000-00"
+                    : "00.000.000/0000-00";
+            }
+            return val.replace(/\D/g, "").length >= 12
+                ? "00.000.000/0000-00"
+                : "000.000.000-009";
         };
         const cpfOptions = {
             onKeyPress: function (val, e, field, options) {

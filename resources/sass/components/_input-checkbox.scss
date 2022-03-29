@@ -49,7 +49,7 @@
         height: 20px;
         background-color: #c3c5ca;
         border-radius: 50%;
-        margin-right: 15px;
+        margin-right: 8px;
         position: relative;
         &::before {
             content: "";
@@ -60,10 +60,10 @@
             opacity: 0;
             transition: 0.2s;
             display: block;
-            width: 17px;
-            height: 17px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background-color: #e23226;
+            background-color: rgba(226, 50, 38, 0.6);
         }
     }
     input:checked + span {

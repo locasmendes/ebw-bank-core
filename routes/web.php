@@ -28,6 +28,7 @@ Route::get('/single', [SiteController::class, 'single'])->name('single');
 Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');
 Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name('pre-registratation.store');
 Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->name('partner-investor');
+Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
 
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
