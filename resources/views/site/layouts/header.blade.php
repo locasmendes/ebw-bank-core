@@ -1,4 +1,4 @@
-<header class="absolute top-0 left-0 right-0 p-0 lg:px-4 lg:px-6 lg:py-5">
+<header class="absolute top-0 left-0 right-0 z-50 p-0 lg:px-4 lg:px-6 lg:py-5">
     
     <nav class="container mx-auto lg:px-4">
         
