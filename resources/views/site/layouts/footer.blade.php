@@ -261,10 +261,10 @@
 
     <div class="flex flex-wrap justify-center u-bg-folk-white pb-6 pt-20">
 
-        <div class="w-8/12 flex justify-center items-center mb-4 px-4">
+        <div class="w-full lg:w-8/12 flex flex-col lg:flex-row justify-center items-center mb-4 px-4">
 
             <a 
-            class="w-3/12 mx-5"
+            class="w-6/12 lg:w-3/12 my-4 lg:my-0 mx-5"
             href="#">
                 <img
                 src="{{ asset( 'images/logo-cerci.png' )}}"
@@ -272,7 +272,7 @@
             </a>
 
             <a 
-            class="w-3/12 mx-5"
+            class="w-6/12 lg:w-3/12 my-4 lg:my-0 mx-5"
             href="#">
                 <img
                 src="{{ asset( 'images/logo-pci.png' )}}"

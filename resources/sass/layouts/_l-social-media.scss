@@ -17,6 +17,10 @@ $layout-name: 'l-social-media';
         justify-content: center;
         align-items: center;
         background-color: $color-folk-primary;
+
+        &:hover {
+            opacity: .8;
+        }
     }
 
     &__link {
@@ -27,10 +31,6 @@ $layout-name: 'l-social-media';
             font-size: 2rem;
             font-family: 'Font Awesome 5 Brands';
             color: $color-folk-white !important;
-        }
-
-        &:hover {
-            opacity: .8;
         }
     }
 

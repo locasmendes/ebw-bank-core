@@ -5,9 +5,17 @@ $layout-name: 'l-digital';
     
     &__title {
         font-size: 2.625rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.75rem;
+        }
     }
 
     &__text {
-        font-size: 1.75rem;
+        font-size: 1.375rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.125rem;
+        }
     }
 }
