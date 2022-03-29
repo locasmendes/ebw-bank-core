@@ -17,7 +17,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => 'Lorem ipsum is simply dummy text of the printing and typesetting industry',
-            'category_id' => \rand(1, 2),
+            'category_id' => \rand(1, 5),
             'image' => 'czFEqK4m5GgUStHR6W8rFnW71teAyW-metaYmFja2dyb3VuZC1leGFtcGxlLmpwZw==-.jpg',
             'body' => $this->faker->randomHtml
         ];
