@@ -14,20 +14,18 @@ style="background-image: url( {{ asset( 'images/banner-new.png' ) }} );">
 
             <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:ml-32">
 
-                <!-- <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
-                    Venda na internet <br>
-                    com segurança <br>
-                    antifraude e <br>
-                    <span class="font-bold u-color-folk-white">parcelamento <br>
-                    em até 12x</span>
-                </p> -->
+                <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
+                    Pra quem pensa
+                    diferente, 
+                    o agora é digital
+                </p>
 
                 <span class="l-banner__title leading-12 lg:leading-10 block u-font-weight-regular text-center lg:text-left all:u-color-folk-white">
-                    @if( !empty( $home ))
+                    {{-- @if( !empty( $home ))
                         @if( $home->banner_text_highlight )
                             {!! \Illuminate\Support\Str::markdown( $home->banner_text_highlight ) !!}
                         @endif
-                    @endif
+                    @endif --}}
                 </span>
 
                 <!-- <p class="u-font-size-15 u-font-weight-medium text-center lg:text-left u-color-folk-primary mt-5">
