@@ -16,7 +16,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->title,
+            'title' => 'Lorem ipsum is simply dummy text of the printing and typesetting industry',
             'category_id' => \rand(1, 2),
             'image' => 'czFEqK4m5GgUStHR6W8rFnW71teAyW-metaYmFja2dyb3VuZC1leGFtcGxlLmpwZw==-.jpg',
             'body' => $this->faker->randomHtml
