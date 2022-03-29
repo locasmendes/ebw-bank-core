@@ -1,17 +1,14 @@
-$layout-name: 'l-banner';
+$layout-name: "l-banner";
 
 .#{$layout-name} {
-    height: 620px;
+    min-height: 620px;
+    height: 100vh;
     background-image: url(../../images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
 
-    @media screen and (min-width: 1600px) {
-        height: 900px;
-    }
-    
     @media screen and (max-width: 991px) {
-        height: 100%;
+        min-height: 400px;
     }
 
     &__title {

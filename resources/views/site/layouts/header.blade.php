@@ -1,4 +1,41 @@
-<header class="l-header w-full top-0 left-0 absolute antialiased select-none px-4 lg:px-6 py-5">
+<header class="absolute top-0 left-0 right-0">
+    <nav class="container mx-auto px-4 pt-10">
+        <div class="flex justify-between items-center">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/haeder-logo-black.png') }}" alt="EBW Bank Logo">
+            </a>
+            <ul class="flex-1 flex items-center justify-end">
+                <li class="mx-4">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('home') }}">
+                        Home
+                    </a>
+                </li>
+                <li class="mx-4">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('conheca-ebw') }}">
+                        A EBW
+                    </a>
+                </li>
+                <li class="mx-4">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="#">
+                        Para seu negócio
+                    </a>
+                </li>
+                <li class="mx-4">
+                    <a class="font-bold text-2xl uppercase p-2 inline-block" href="{{ route('partner-investor') }}">
+                        Seja um investidor
+                    </a>
+                </li>
+                <li class="mx-4">
+                    <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
+                        <i class="fas fa-search text-white text-4xl"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+{{-- <header class="l-header w-full top-0 left-0 absolute antialiased select-none px-4 lg:px-6 py-5">
 
     <div class="container mx-auto px-4">
 
@@ -13,7 +50,7 @@
                     href="/" >
                         <img 
                         class="img-fluid" 
-                        src="{{ asset( 'images/header-logo.png' ) }}" 
+                        src="{{ asset( 'images/haeder-logo-black.png' ) }}" 
                         alt="">
                     </a>
                     
@@ -39,29 +76,6 @@
                             @endif
                             <!-- end loop -->
 
-                            <!-- <a 
-                            class="l-header__nav-link u-font-weight-regular hover:u-font-weight-bold text-center md:text-left uppercase text-white my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2"
-                            href="#" >
-                                Vantagens
-                            </a>
-                            
-                            <a 
-                            class="l-header__nav-link u-font-weight-regular hover:u-font-weight-bold text-center md:text-left uppercase text-white my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2"
-                            href="#" >
-                                Passou Ganhou
-                            </a>
-                            
-                            <a 
-                            class="l-header__nav-link u-font-weight-regular hover:u-font-weight-bold text-center md:text-left uppercase text-white my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2"
-                            href="#">
-                                Conheça o EBWBank
-                            </a>
-
-                            <a 
-                            class="l-header__nav-link u-font-weight-regular hover:u-font-weight-bold text-center md:text-left uppercase text-white my-3 md:my-0 mx-2 lg:mx-3 px-4 md:px-0 py-2"
-                            href="/portal" >
-                                Portal do Empreendedor
-                            </a> -->
 
                             @if( !empty( $general ) )
                                 @if( isset($general->button_start_now) ) 
@@ -88,4 +102,4 @@
             <span class="l-header__hamburger__icon"></span>
         </button>
     </div>
-</header>
+</header> --}}
