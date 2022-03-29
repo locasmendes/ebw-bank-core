@@ -1,9 +1,21 @@
 $layout-name: 'l-header';
 
 .#{$layout-name} {
+    
+    &__logo {
+        width: 170px;
 
-    &__nav-link {
-        font-size: .625rem;
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+    }
+
+    &__nav-link {   
+        font-size: .875rem;
+        
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
 
         @media screen and (max-width: 991px) {
             font-size: 1.25rem;

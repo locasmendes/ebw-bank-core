@@ -9,54 +9,8 @@ class="l-banner pt-52"
 style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
     <div class="container mx-auto px-4">
-<<<<<<< HEAD
-
-        <div class="flex flex-wrap">
-
-            <div class="w-full lg:w-4/12 flex lg:block flex-col items-center lg:ml-32">
-
-                <p class="l-banner__title leading-12 lg:leading-10 u-font-weight-regular text-center lg:text-left u-color-folk-white">
-                    Pra quem pensa
-                    diferente, 
-                    o agora é digital
-                </p>
-
-                <span class="l-banner__title leading-12 lg:leading-10 block u-font-weight-regular text-center lg:text-left all:u-color-folk-white">
-                    {{-- @if( !empty( $home ))
-                        @if( $home->banner_text_highlight )
-                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_highlight ) !!}
-                        @endif
-                    @endif --}}
-                </span>
-
-                <!-- <p class="u-font-size-15 u-font-weight-medium text-center lg:text-left u-color-folk-primary mt-5">
-                    EBW Pay foi pensado e desenvolvido <br>
-                    para o micro e pequeno empreendedor.
-                </p> -->
-
-                <span class="block u-font-size-15 u-font-weight-medium text-center lg:text-left all:u-color-folk-primary mt-5">
-                    @if( !empty( $home ))
-                        @if( $home->banner_text_small )
-                            {!! \Illuminate\Support\Str::markdown( $home->banner_text_small ) !!}
-                        @endif
-                    @endif
-                </span>
-                
-                @if( !empty( $general ) )
-                    @if( $general->button_start_now ) 
-                        <a
-                        class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-9 py-5 pl-7 pr-28"
-                        href="{{ $general->button_start_now }}">
-                            comece agora
-                        </a>
-                    @endif
-                @endif
-            </div>
-        </div>
-=======
         <img class="mb-10" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
         <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary px-8 py-3 text-2xl font-bold uppercase tracking-wider text-white rounded-full">Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white text-lg"></i></a>
->>>>>>> b0d90e1774064f61b885f0a21bad5370547fb311
     </div>
 </section>
 <!-- end banner -->
