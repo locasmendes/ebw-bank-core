@@ -17,6 +17,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\MarkdownEditor;
+use Illuminate\Support\Str;
+use Closure;
 
 class CategoryResource extends Resource
 {
@@ -39,10 +41,19 @@ class CategoryResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
-                        TextInput::make('category_name')->label('Nome'),
-                        TextInput::make('category_slug')->label('Slug'),
+                        TextInput::make('category_name')
+                            ->label('Nome')
+                            ->reactive()
+                            ->afterStateUpdated(function (Closure $set, $state) {
+                                $set('category_slug', Str::slug($state));
+                            })
+                            ->required(),
+                        TextInput::make('category_slug')
+                            ->label('Slug')
+                            ->required(),
                         MarkdownEditor::make('category_description')->label('Descrição'),
-                        TextInput::make('category_color')->type('color')->label('Cor da categoria'),
+                        TextInput::make('category_color')->type('color')->label('Cor da categoria')
+                            ->required(),
                     ])->columns(1)
             ]);
     }

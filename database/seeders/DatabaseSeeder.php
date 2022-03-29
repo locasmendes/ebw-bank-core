@@ -13,8 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call([
+            PostSeeder::class
+        ]);
         // \App\Models\User::factory(10)->create();
-        
+
 
         \App\Models\User::firstOrCreate(
             ['email' => 'fabio.leandro@evolutap.com.br'],
