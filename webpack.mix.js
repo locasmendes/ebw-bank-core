@@ -17,4 +17,5 @@ mix.js("resources/js/app.js", "public/js")
         require("tailwindcss"),
         require("autoprefixer"),
     ])
-    .copyDirectory("resources/images", "public/images");
+    .copyDirectory("resources/images", "public/images")
+    .version();
