@@ -10,55 +10,55 @@
 
             <ul class="flex-none lg:flex-1 flex flex-col lg:flex-row items-center justify-center">
                 
-                <li class="my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-4">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('home') }}">
                         Home
                     </a>
                 </li>
 
-                <li class="my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-4">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('conheca-ebw') }}">
                         A EBW
                     </a>
                 </li>
 
-                <li class="relative my-8 mx-4">
+                <li class="l-dropdown relative my-4 lg:my-8 mx-4">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
                         Para seu negócio
                     </a>
 
-                    <ul class="l-dropdown-menu">
+                    <ul class="l-dropdown__menu">
                         
-                        <li class="l-dropdown-menu__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+                        <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="#">
+                            <a class="font-medium text-white" href="http://homolog-ebw-passou-ganhou.evolutap.com.br/venda-pela-internet">
                                 Venda pela internet
                             </a>
                         </li>
 
-                        <li class="l-dropdown-menu__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+                        <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="#">
+                            <a class="font-medium text-white" href="http://homolog-ebw-passou-ganhou.evolutap.com.br/produtos">
                                 Peça sua maquininha
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-4">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('partner-investor') }}">
                         Seja um investidor
                     </a>
                 </li>
 
-                <li class="my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="#">
+                <li class="my-4 lg:my-8 mx-4">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block u-color-folk-white lg:u-color-folk-black" href="{{ route('portal') }}">
                         Blog
                     </a>
                 </li>
             </ul>
 
-            <div class="my-8 mx-4">
+            <div class="my-4 lg:my-8 mx-4">
                 <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
                     <i class="fas fa-search text-white text-2xl"></i>
                 </div>
