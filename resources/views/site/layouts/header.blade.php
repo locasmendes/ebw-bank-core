@@ -1,27 +1,28 @@
-<header class="absolute top-0 left-0 right-0 z-50 px-6 py-5"
+<header
+class="absolute top-0 left-0 right-0 z-50 px-6 py-5"
 x-data="{openMenu: false}">
     <nav class="container mx-auto px-4 hidden xl:block">
         <div class="flex justify-between items-center">
             <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
-                <img src="{{ asset('images/haeder-logo-black.png') }}" alt="EBW Bank Logo">
+                <img src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
             </a>
 
             <ul class="flex-1 flex flex-row items-center justify-center">
                 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-black" href="{{ route('home') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
                         Home
                     </a>
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-black" href="{{ route('conheca-ebw') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
                         A EBW
                     </a>
                 </li>
 
                 <li class="l-dropdown relative my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-black" href="#">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
                         Para seu negócio
                     </a>
 
@@ -44,13 +45,13 @@ x-data="{openMenu: false}">
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-black" href="{{ route('partner-investor') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('partner-investor') }}">
                         Seja um investidor
                     </a>
                 </li>
 
                 <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-black" href="{{ route('portal') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
                         Blog
                     </a>
                 </li>

@@ -7,7 +7,7 @@
         <div class="container mx-auto px-5">
             <div class="flex justify-end">
                 <div class="2xl:w-1/2 xl:w-7/12">
-                    <h1 class="font-poppins text-right xl:text-5xl sm:text-4xl text-3xl text-ebw-medium-grey leading-snug mb-8">
+                    <h1 class="font-poppins text-right xl:text-5xl sm:text-4xl text-2xl text-ebw-medium-grey leading-snug mb-8">
                         Venda na internet com<br>
                         <span class="font-poppins font-bold text-ebw-medium-grey">segurança, antifraude</span> e<br>
                         parcelamento em até 12x

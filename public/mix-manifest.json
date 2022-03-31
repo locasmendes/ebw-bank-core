@@ -1,13 +1,8 @@
 {
-<<<<<<< HEAD
-    "/js/app.js": "/js/app.js?id=f86a35d694af6f8aaeef9b2c6bc37c4a",
-    "/css/app.css": "/css/app.css?id=2e40326c16981ca3228d65120dde78ef",
-=======
-    "/js/app.js": "/js/app.js?id=738865f2c3133dec5004de50cef97ac3",
-    "/css/app.css": "/css/app.css?id=b86d9121f3410fe8635446d149df6ada",
+    "/js/app.js": "/js/app.js?id=9c8dedcbd132c1581ac88158bdb7363f",
+    "/css/app.css": "/css/app.css?id=e5ff5eb2db9ec3927539df6ab8d26522",
     "/images/american-express-brand.png": "/images/american-express-brand.png?id=292b5cfb7bc9a1ce04de994153e6c55e",
     "/images/aura-brand.png": "/images/aura-brand.png?id=0118f98d7d47abcf62f73835712d5748",
->>>>>>> 4acc8f87a4b3a6497775e016fe1fd566f9bc500f
     "/images/background-example.jpg": "/images/background-example.jpg?id=59c22599d6b7b3ae680d3b11f132a8fb",
     "/images/background-pre-registration.jpg": "/images/background-pre-registration.jpg?id=2c616ceea1cadb09ddced58bfe88194b",
     "/images/banner-blog.jpg": "/images/banner-blog.jpg?id=3da4a6f9d1d13dcb13ea23abc578af15",
@@ -17,22 +12,16 @@
     "/images/banner-new.png": "/images/banner-new.png?id=8b3c711d65270f10277ba9c8f45e03bf",
     "/images/banner-text.png": "/images/banner-text.png?id=68f80c7ae0e12d886cdab0113b398f50",
     "/images/banner.png": "/images/banner.png?id=ace7e4e4c1a40930d8ae3878d7f161ce",
-<<<<<<< HEAD
+    "/images/business-background.png": "/images/business-background.png?id=85647f6028c58e25eabe7a65e469caa7",
     "/images/digital-icone-pagamento.png": "/images/digital-icone-pagamento.png?id=4b907dafb9afc181cdb979aa9df89ff9",
     "/images/digital-icone-qrcode.png": "/images/digital-icone-qrcode.png?id=361541adef175f08891ab97db301dda4",
     "/images/digital-icone-receber.png": "/images/digital-icone-receber.png?id=c7699b2267a0de7b6d68122c45271cf0",
-=======
-    "/images/business-background.png": "/images/business-background.png?id=85647f6028c58e25eabe7a65e469caa7",
-    "/images/digital-icone-pagamento.png": "/images/digital-icone-pagamento.png?id=34d03cfdf9c88b1fdfa5f0df96de1c19",
-    "/images/digital-icone-qrcode.png": "/images/digital-icone-qrcode.png?id=9c0381df608adae0795d51aa70adf1a1",
-    "/images/digital-icone-receber.png": "/images/digital-icone-receber.png?id=8aa441bfd86386f5fde3202c931cfc38",
     "/images/diners-club-international-brand.png": "/images/diners-club-international-brand.png?id=7c2619dd2858d934ae7e4d475d7a8ce5",
     "/images/disclosure-background.png": "/images/disclosure-background.png?id=dff99eff9023e93fdef4b5e8157c7a21",
     "/images/disclosure-brand.png": "/images/disclosure-brand.png?id=7d2ecd8fc4cbe9a6ce4aaba78450d444",
     "/images/ebw-background-left.png": "/images/ebw-background-left.png?id=c51d6cfc3c8310b6557d7988c96bbc69",
     "/images/ebw-background-right.png": "/images/ebw-background-right.png?id=917edc5a3dbb61f0062a159c28ac183a",
     "/images/ebw-brand.png": "/images/ebw-brand.png?id=6dde282effbf1ad4d6f88be38574a857",
->>>>>>> 4acc8f87a4b3a6497775e016fe1fd566f9bc500f
     "/images/eduardo.png": "/images/eduardo.png?id=ebe710f829ec411b3124b06eb6217d3f",
     "/images/elo-brand.png": "/images/elo-brand.png?id=789875546b325b8fe302acfcd09e01a8",
     "/images/footer-logo.png": "/images/footer-logo.png?id=01d5c355c4ee8e3a4cb13f2e09b4cf48",
