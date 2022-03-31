@@ -5,6 +5,7 @@ use App\Http\Controllers\PortalEmpreendedorController;
 use App\Http\Controllers\PreRegistrationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\VendaInternetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ use App\Http\Controllers\SiteController;
 Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('/conheca-o-ebwbank', [SiteController::class, 'ebwbank'])->name('conheca-ebw');
 Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name('ebwbank');
+Route::get('/venda-pela-internet', [VendaInternetController::class, 'index'])->name('venda-internet');
 Route::get('/portal-do-empreendedor', [PortalEmpreendedorController::class, 'index'])->name('portal');
 Route::get('/portal-do-empreendedor/{id}/{slug}', [PortalEmpreendedorController::class, 'show'])->name('portal.show');
 Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');

@@ -15,6 +15,9 @@ module.exports = {
         "text-ebw-fourth",
     ],
     theme: {
+        fontFamily: {
+            poppins: "Poppins",
+        },
         extend: {
             colors: {
                 ebw: {
@@ -22,6 +25,7 @@ module.exports = {
                     red: "#e23226",
                     secondary: "#1c120e",
                     third: "#494949",
+                    "medium-grey": "#424040",
                     fourth: "#dc514c",
                     form: "#afafb4",
                     title: "#5b5b5e",
@@ -40,7 +44,9 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            justifyContent: ["even"],
+        },
     },
     plugins: [],
 };
