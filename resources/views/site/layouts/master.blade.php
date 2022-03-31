@@ -41,6 +41,11 @@
         @stack('css')
     </head>
     <body>
+        <style>
+            [x-cloak] {
+                display: none;
+            }
+        </style>
         @php
             $menu = App\Models\Menu::class::first(); 
             $general = App\Models\General::class::first();

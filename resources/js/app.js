@@ -6,7 +6,7 @@ import Rellax from "rellax";
     window.Swiper = Swiper;
     window.Rellax = Rellax;
 
-    require("./components/menu-toggle");
+    // require("./components/menu-toggle");
     require("./components/single-content-items");
     require("./components/swiper");
     require("./components/show-categories");
