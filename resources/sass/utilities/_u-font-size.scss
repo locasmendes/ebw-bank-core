@@ -5,12 +5,24 @@ $utility-name: 'u-font-size';
         font-size: 0 !important;
     }
 
+    &-7 {
+        font-size: .4375rem !important;
+    }
+
     &-8 {
         font-size: .5rem !important;
     }
 
     &-9 {
         font-size: .5625rem !important;
+    }
+
+    &-10 {
+        font-size: .625rem !important;
+    }
+
+    &-11 {
+        font-size: .6875rem !important;
     }
 
     &-12 {
@@ -27,6 +39,10 @@ $utility-name: 'u-font-size';
     
     &-15 {
         font-size: .9375rem !important;
+    }
+
+    &-17 {
+        font-size: 1.0625rem !important;
     }
 
     &-18 {

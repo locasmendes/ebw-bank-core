@@ -1,6 +1,14 @@
 $utility-name: 'u-bg-folk';
 
 .#{$utility-name} {
+    &-cyan {
+        background-color: $color-folk-cyan !important;
+    }
+
+    &-dark-purple {
+        background-color: $color-folk-dark-purple !important;
+    }
+
     &-light-gray {
         background-color: $color-folk-light-gray !important;
     }
@@ -13,12 +21,20 @@ $utility-name: 'u-bg-folk';
         background-color: $color-folk-light-gray !important;
     }
 
+    &-light-purple {
+        background-color: $color-folk-light-purple !important;
+    }
+
     &-none {
         background: none !important;
     }
 
     &-primary {
         background-color: $color-folk-primary !important;
+    }
+
+    &-red {
+        background-color: $color-folk-red !important;
     }
 
     &-white {
@@ -36,18 +52,35 @@ $utility-name: 'u-bg-folk';
     }
 }
 
-
 .hover\: {
     &#{$utility-name} {
+        &-cyan {
+            &:hover {
+                background-color: $color-folk-cyan !important;
+            }
+        }
+
+        &-light-purple {
+            &:hover {
+                background-color: $color-folk-light-purple !important;
+            }
+        }
+
         &-none {
             &:hover {
                 background: none !important;
             }
         }
-    
+
         &-primary {
             &:hover {
                 background-color: $color-folk-primary !important;
+            }
+        }
+        
+        &-purple {
+            &:hover {
+                background-color: $color-folk-purple !important;
             }
         }
     }

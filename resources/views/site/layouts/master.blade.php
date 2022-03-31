@@ -39,7 +39,7 @@
         <base href="{{ url()->current() }}">
         @stack('css')
     </head>
-    <body>
+    <body class="{!! Request::is( 'passou-ganhou' ) ? 'page-passed-won' : '' !!}">
         @php
             $menu = App\Models\Menu::class::first(); 
             $general = App\Models\General::class::first();
