@@ -30,6 +30,21 @@ style="background-image: url( {{ asset( 'images/portal-banner.png' ) }} )">
 </section>
 <!-- end banner -->
 
+<!-- manifest -->
+<section class="l-manifest">
+
+    <div class="container mx-auto px-4">
+
+        <div class="flex -mx-4">
+
+            <div class="w-full px-4">
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end manifest -->
+
 <!-- mvv -->
 @include( 'site.partials.mvv' )
 <!-- end mvv -->

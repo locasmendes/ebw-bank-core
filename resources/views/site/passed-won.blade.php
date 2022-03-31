@@ -90,4 +90,9 @@
 </section>
 <!-- end banner mobile -->
 
+
+<div class="l-content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nobis dolore tempore eveniet, maiores dolores hic ratione consectetur incidunt vel alias cumque quaerat exercitationem impedit inventore! Impedit laborum ipsum dolores!
+</div>
+
 @endsection
