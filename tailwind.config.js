@@ -19,16 +19,23 @@ module.exports = {
             colors: {
                 ebw: {
                     primary: "#d63733",
+                    red: "#e23226",
                     secondary: "#1c120e",
                     third: "#494949",
                     fourth: "#dc514c",
                     form: "#afafb4",
                     title: "#5b5b5e",
                     input: "#c3c5ca",
+                    grey: "#d5d5d5",
+                    "dark-grey": "#282728",
+                    "light-grey": "#d8dade",
                 },
             },
             fontSize: {
                 "5.5xl": "3.25rem",
+            },
+            boxShadow: {
+                custom: "0 0 40px 20px rgb(0 0 0 / 30%)",
             },
         },
     },
