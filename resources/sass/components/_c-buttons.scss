@@ -8,6 +8,26 @@ $component-name: "c-btn";
         border-radius: 25px;
         font-size: 0.8125rem;
         cursor: pointer;
+
+        &__arrow-right {
+            &::before {
+                content: '\f054';
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
+                transition: all .2s;
+                position: absolute;
+                font-size: 1rem;
+                font-weight: 300;
+                font-family: 'Font Awesome 5 Free';
+            }
+
+            &:hover {
+                &::before {
+                    right: 40px;
+                }
+            }
+        }
     }
 
     &-icon-arrow {

@@ -9,12 +9,20 @@ $utility-name: 'u-color-folk';
         color: $color-folk-blue !important;
     }
 
+    &-cyan {
+        color: $color-folk-cyan !important;
+    }
+
     &-dark-cyan {
         color: $color-folk-dark-cyan !important;
     }
 
     &-gray {
         color: $color-folk-gray !important;
+    }
+
+    &-pink {
+        color: $color-folk-pink !important;
     }
 
     &-primary {
@@ -32,6 +40,11 @@ $utility-name: 'u-color-folk';
 
 .all\: {
     &#{$utility-name} {
+        &-pink ,
+        &-pink * {
+            color: $color-folk-pink !important;
+        }
+
         &-primary {
             * {
                 color: $color-folk-primary !important;
@@ -51,6 +64,18 @@ $utility-name: 'u-color-folk';
             &:hover {
                 color: $color-folk-black !important;
             }
+        }
+
+        &-cyan {
+            &:hover {
+                color: $color-folk-cyan !important;
+            }
+        }
+
+        &-dark-silver {
+            &:hover {
+                color: $color-folk-dark-silver !important;
+            }            
         }
     
         &-primary {

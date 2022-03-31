@@ -40,7 +40,8 @@
         <base href="{{ url()->current() }}">
         @stack('css')
     </head>
-    <body>
+        
+    <body class="{!! Request::is( 'passou-ganhou' ) ? 'page-passed-won' : '' !!}">
         <style>
             [x-cloak] {
                 display: none;

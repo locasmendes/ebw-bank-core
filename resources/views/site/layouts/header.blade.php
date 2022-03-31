@@ -36,7 +36,7 @@ x-data="{openMenu: false}">
 
                         <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="http://homolog-ebw-passou-ganhou.evolutap.com.br/produtos">
+                            <a class="font-medium text-white" href="{{ route('ebwbank') }}">
                                 Peça sua maquininha
                             </a>
                         </li>
@@ -101,7 +101,7 @@ x-data="{openMenu: false}">
                     </a>
                 </li>
                 <li class="mb-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('conheca-ebw') }}">
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('ebwbank') }}">
                         Peça sua maquininha
                     </a>
                 </li>

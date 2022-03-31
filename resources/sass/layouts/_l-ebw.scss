@@ -1,0 +1,13 @@
+$layout-name: 'l-ebw';
+
+.#{$layout-name} {
+    &__background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    &__title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,49 @@
+$layout-name: 'l-business';
+
+.#{$layout-name} {
+    background-image: url(../../images/business-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 575px) {
+        background: #E7DED6;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.6875rem;
+        }
+    }
+
+    &__card {
+        height: 100%;
+        padding: 1rem;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $color-folk-white;
+    }
+
+    &__card-body {
+        padding: 1rem;
+    }
+
+    &__category {
+        font-size: .9375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__phone {
+        font-size: 1.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.5rem;
+        }
+    }
+}
