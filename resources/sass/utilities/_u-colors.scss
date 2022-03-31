@@ -72,7 +72,7 @@ $utility-name: 'u-color-folk';
 .lg\: {
     &#{$utility-name} {
         &-black {
-            @media screen and (min-width: 992px) {
+            @media screen and (min-width: 1024px) {
                 color: $color-folk-black !important;
             }
         }

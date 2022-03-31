@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
+        "alpinejs": "^3.9.5",
         "jquery": "^3.6.0",
         "jquery-mask-plugin": "^1.14.16",
         "rellax": "^1.12.1"

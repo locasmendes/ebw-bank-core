@@ -1,4 +1,4 @@
-//require('./bootstrap');
+require("./bootstrap");
 import Swiper from "swiper";
 import Rellax from "rellax";
 

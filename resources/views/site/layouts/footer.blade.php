@@ -15,30 +15,31 @@
                     </div>
 
                     <div class="w-full lg:w-8/12 flex flex-col md:flex-row justify-around items-center px-4">
-                        
-                        <p class="l-footer__text-medium font-bold mb-0">
-                            Fale Conosco
-                        </p>
-
-                        <p class="u-font-size-13 u-font-weight-regular text-center md:text-left my-5 md:my-0">
-                            <!-- 0800 894 3000 <br>
-                            cac@ebwbank.com.br -->
-                            @if( !empty( $general ) )
-                                @if( isset($general->telefone) )
-                                    {{ $general->telefone }}
+                        <div class="flex xl:flex-row flex-col">
+                            <p class="l-footer__text-medium font-bold  px-3 leading-none xl:mb-0 mb-3">
+                                Fale Conosco
+                            </p>
+    
+                            <p class="u-font-size-13 u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
+                                <!-- 0800 894 3000 <br>
+                                cac@ebwbank.com.br -->
+                                @if( !empty( $general ) )
+                                    @if( isset($general->telefone) )
+                                        {{ $general->telefone }}
+                                    @endif
                                 @endif
-                            @endif
-
-                            <br>
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->email) )
-                                    {{ $general->email }}
+    
+                                <br>
+    
+                                @if( !empty( $general ) )
+                                    @if( isset($general->email) )
+                                        {{ $general->email }}
+                                    @endif
                                 @endif
-                            @endif
-                        </p>
+                            </p>    
+                        </div>
 
-                        <ul class="l-social-media md:pl-12">
+                        <ul class="l-social-media xl:pl-12 pl-5 pt-5 md:pt-0">
 
                             @if( !empty( $general ) )
                                 @if( isset($general->linkedin) )
