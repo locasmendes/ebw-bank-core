@@ -37,7 +37,9 @@ class NotifyCRMPreRegistrationReceived
             'documentNumber' => $preRegistration->cpf_cnpj,
             'whatsappOptIn' => $preRegistration->allow_infomation_whatsapp_sms ? 'yes' : 'no',
             'emailOptIn' => $preRegistration->allow_infomation_email ? 'yes' : 'no',
-            'value' => 0
+            'value' => 0,
+            'serviceId' => '41d26f1a-b263-44ca-bc71-20f4c58f320b',
+            'landingPageId' => 'e999f6cc-3ffe-4d70-8e39-aba44ff89e5f'
         ]);
 
         if ($response->successful()) {

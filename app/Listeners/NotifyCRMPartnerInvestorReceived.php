@@ -38,7 +38,9 @@ class NotifyCRMPartnerInvestorReceived
             'documentNumber' => $partnerInvestor->cpf_cnpj,
             'whatsappOptIn' => $partnerInvestor->allow_infomation_whatsapp_sms ? 'yes' : 'no',
             'emailOptIn' => $partnerInvestor->allow_infomation_email ? 'yes' : 'no',
-            'value' => PartnerInvestor::INVESTMENTS[$partnerInvestor->investment] * 1000
+            'value' => PartnerInvestor::INVESTMENTS[$partnerInvestor->investment] * 1000,
+            'serviceId' => '7cde190d-e0c3-42d1-8f37-aefb9676d384',
+            'landingPageId' => '6c73a5db-f7ca-4dec-9bba-1c10f097f2ce'
         ]);
 
         if ($response->successful()) {
