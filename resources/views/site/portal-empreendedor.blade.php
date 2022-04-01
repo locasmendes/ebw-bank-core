@@ -2,8 +2,12 @@
 
 @section( 'content' )
 
-<div>
-    <img src="{{ asset('images/banner-blog.jpg') }}" class="w-full" alt="Bem vindo ao BLOG do Empreendedorismo EBW Bank">
+<div class="bg-ebw-grey relative min-h-screen pt-20 md:pb-60 pb-40 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center flex justify-center items-center" style="background-image: url({{ asset('images/banner-blog.jpg') }})">
+    <div class="container px-5">
+        <h1 class="2xl:text-8xl sm:text-4xl text-2xl text-center text-black">
+            Bem vindo ao <span class="text-ebw-fourth font-bold">BLOG</span> <span class="text-ebw-fourth ">do Empreendedorismo</span> <span class="font-bold text-black">EBW Bank</span>
+        </h1>
+    </div>
 </div>
 <!-- end banner -->
 
