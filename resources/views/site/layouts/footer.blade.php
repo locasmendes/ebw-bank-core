@@ -319,11 +319,11 @@ x-init="
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
 
-                        <p class="font-bold mb-3 text-xl">
-                            Suporte
-                        </p>
+                        <a href="{{ route('privacidade') }}" class="font-bold mb-3 text-xl">
+                            Política de privacidade
+                        </a>
 
-                        <ul>
+                        {{-- <ul>
                             <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <!-- Quem Somos -->
                                 <a 
@@ -348,7 +348,7 @@ x-init="
                                  Política de privacidade
                                 </a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>

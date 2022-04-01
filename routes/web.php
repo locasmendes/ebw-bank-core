@@ -25,7 +25,7 @@ use App\Http\Controllers\VendaInternetController;
 Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('/aebw', [SiteController::class, 'ebwbank'])->name('conheca-ebw');
 Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name('ebwbank');
-Route::get('/produtos', [SiteController::class, 'products'])->name('products');
+Route::get('/peca-sua-maquininha', [SiteController::class, 'products'])->name('products');
 Route::get('/venda-pela-internet', [VendaInternetController::class, 'index'])->name('venda-internet');
 Route::get('/portal-do-empreendedor', [PortalEmpreendedorController::class, 'index'])->name('portal');
 Route::get('/portal-do-empreendedor/{id}/{slug}', [PortalEmpreendedorController::class, 'show'])->name('portal.show');

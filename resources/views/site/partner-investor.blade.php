@@ -2,9 +2,9 @@
 
 @section( 'content' )
 
-    <div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/background-pre-registration.jpg') }})">
+    <div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/banner-socio-investidor.jpg') }})">
         <div class="container mx-auto px-6">
-            <h1 class="text-white text-5.5xl text-center"><span class="font-bold text-white">Faça parte.</span> Conta digital e cartão de crédito EBW Bank</h1>
+            <h1 class="text-5.5xl text-center leading-tight"><span class="font-bold">Faça parte.</span> Conta digital e <br>cartão de crédito EBW Bank</h1>
         </div>
     </div>
     <section class="bg-ebw-form pt-36 pb-32">

@@ -176,7 +176,7 @@
                     <div class="w-10/12 md:w-4/12 lg:w-4/12 mt-10 mb-4">
                         <a 
                         class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12" 
-                        href="https://ebwbank.com.br"
+                        href="{{ route('conheca-ebw') }}"
                         target="_blank"
                         rel="noreferrer noopener">
                             CONHEÇA A EBW BANK
