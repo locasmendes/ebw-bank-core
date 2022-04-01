@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\PartnerInvestorReceived;
+use App\Models\PartnerInvestor;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Http;
@@ -35,9 +36,9 @@ class NotifyCRMPartnerInvestorReceived
             'email' => $partnerInvestor->email,
             'mobile' => $partnerInvestor->phone,
             'documentNumber' => $partnerInvestor->cpf_cnpj,
-            // 'whatsappOptIn' => $partnerInvestor->allow_infomation_whatsapp_sms ? 'yes' : 'no',
-            // 'emailOptIn' => $partnerInvestor->allow_infomation_email ? 'yes' : 'no',
-            'value' => 1500000
+            'whatsappOptIn' => $partnerInvestor->allow_infomation_whatsapp_sms ? 'yes' : 'no',
+            'emailOptIn' => $partnerInvestor->allow_infomation_email ? 'yes' : 'no',
+            'value' => PartnerInvestor::INVESTMENTS[$partnerInvestor->investment] * 1000
         ]);
 
         if ($response->successful()) {

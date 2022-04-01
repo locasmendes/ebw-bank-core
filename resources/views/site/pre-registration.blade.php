@@ -38,7 +38,8 @@
                             name="name" 
                             id="name" 
                             autocomplete="off"
-                            placeholder="Nome">
+                            placeholder="Nome"
+                            value="{{ old('name') ?? '' }}">
                             @error('name')
                                 <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                     <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
@@ -54,7 +55,8 @@
                             id="phone" 
                             autocomplete="off" 
                             required
-                            placeholder="(00) 00000-0000">
+                            placeholder="(00) 00000-0000"
+                            value="{{ old('phone') ?? '' }}">
                             @error('phone')
                                 <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                     <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
@@ -70,7 +72,8 @@
                             id="email" 
                             autocomplete="off" 
                             required
-                            placeholder="contato@email.com.br">
+                            placeholder="contato@email.com.br"
+                            value="{{ old('email') ?? '' }}">
                             @error('email')
                                 <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                     <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
@@ -86,7 +89,8 @@
                             id="cpf-cnpj" 
                             autocomplete="off" 
                             required
-                            placeholder="000.000.000-00 / 00.000.000/0001-00">
+                            placeholder="000.000.000-00 / 00.000.000/0001-00"
+                            value="{{ old('cpf-cnpj') ?? '' }}">
                             @error('cpf-cnpj')
                                 <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                     <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>

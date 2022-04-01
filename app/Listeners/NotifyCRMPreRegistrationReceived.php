@@ -37,7 +37,7 @@ class NotifyCRMPreRegistrationReceived
             'documentNumber' => $preRegistration->cpf_cnpj,
             'whatsappOptIn' => $preRegistration->allow_infomation_whatsapp_sms ? 'yes' : 'no',
             'emailOptIn' => $preRegistration->allow_infomation_email ? 'yes' : 'no',
-            'value' => 1500000
+            'value' => 0
         ]);
 
         if ($response->successful()) {

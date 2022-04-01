@@ -24,7 +24,7 @@ class PartnerInvestorController extends Controller
             'phone' => 'required|string',
             'email' => 'required|email',
             'cpf-cnpj' => 'required|string',
-            'investment' => 'required|string',
+            'investment' => 'required|string'
         ]);
 
         $data = collect($validate)->mapWithKeys(function ($item, $key) {
