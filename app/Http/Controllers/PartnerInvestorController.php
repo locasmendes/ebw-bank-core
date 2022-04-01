@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PartnerInvestorReceived;
 use App\Exports\PartnerInvestorsExport;
 use App\Models\PartnerInvestor;
 use Illuminate\Http\Request;
@@ -30,7 +31,9 @@ class PartnerInvestorController extends Controller
             return [Str::replace('-', '_', $key) => $item];
         })->toArray();
 
-        PartnerInvestor::create($data);
+        $partnerInvestor = PartnerInvestor::create($data);
+
+        PartnerInvestorReceived::dispatch($partnerInvestor);
 
         return \redirect()->back()->with('success', true);
     }
