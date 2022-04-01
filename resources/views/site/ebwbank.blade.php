@@ -5,7 +5,7 @@
 @section( 'content' )
 
     <!-- banner -->
-    <div class="bg-ebw-grey relative xl:pt-72 md:pt-56 pt-40 pb-10 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
+    <div class="bg-ebw-grey relative min-h-screen xl:pt-72 md:pt-56 pt-40 pb-10 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full"></div>
         <div class="container mx-auto px-5">
             <ul>

@@ -2,7 +2,7 @@
 
 @section( 'content' )
 
-    <div class="bg-ebw-grey relative xl:pt-72 md:pt-56 pt-40 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
+    <div class="bg-ebw-grey relative min-h-screen xl:pt-72 md:pt-56 pt-40 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full sm:w-1/2"></div>
         <div class="container mx-auto px-5">
             <div class="flex justify-end">
