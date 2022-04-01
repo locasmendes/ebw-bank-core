@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PreRegistrationReceived;
 use App\Exports\PreRegistrationsExport;
 use App\Models\PreRegistration;
 use Illuminate\Http\Request;
@@ -38,7 +39,9 @@ class PreRegistrationController extends Controller
             return [Str::replace('-', '_', $key) => $item];
         })->toArray();
 
-        PreRegistration::create($data);
+        $preRegistration = PreRegistration::create($data);
+
+        PreRegistrationReceived::dispatch($preRegistration);
 
         return \redirect()->back()->with('success', true);
     }
