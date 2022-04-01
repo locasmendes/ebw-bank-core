@@ -1,5 +1,5 @@
 <header
-class="absolute top-0 left-0 right-0 z-50 px-6 py-5"
+class="{{ Request::is( 'produtos' ) ? '' : 'absolute' }} top-0 left-0 right-0 z-50 px-6 py-5"
 x-data="{openMenu: false}">
     <nav class="container mx-auto px-4 hidden xl:block">
         <div class="flex justify-start items-center">
@@ -37,7 +37,7 @@ x-data="{openMenu: false}">
 
                         <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
-                            <a class="font-medium text-white" href="{{ route('ebwbank') }}">
+                            <a class="font-medium text-white" href="{{ route('products') }}">
                                 Peça sua maquininha
                             </a>
                         </li>
