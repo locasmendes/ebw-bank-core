@@ -206,23 +206,9 @@ x-init="
                                         <!-- São Paulo -->
                                         {{ $address[ 'estado' ] }}
                                     </p>
-                                    
-                                    <!-- <iframe 
-                                    class="l-footer__map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.878205588231!2d-46.69945838538264!3d-23.60870056922646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50cd2866b565%3A0x2f097e58e08f7278!2sWTC%20Events%20Center!5e0!3m2!1spt-BR!2sbr!4v1638794187902!5m2!1spt-BR!2sbr" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy"></iframe> -->
-
                                     <div class="l-footer__map">
                                         {!! $address[ 'mapa' ] !!}
                                     </div>
-
-                                    <!-- <p class="u-font-size-13 u-font-weight-regular mt-12">
-                                        World Trade Center <br>
-                                        Av. das Nações Unidas, 12551- 19° Andar <br>
-                                        Sala 1912 - CEP: 04578-903.
-                                    </p> -->
 
                                     <p class="u-font-size-13 u-font-weight-regular mt-12">
                                         {!! $address[ 'endereco' ] !!}
@@ -232,40 +218,26 @@ x-init="
                         @endif
                     @endif
 
-                    <!-- <div class="w-full lg:w-6/12 mb-10 lg:mb-0 md:px-4">
-
-                        <p class="l-footer__text-large font-bold mb-5">
-                            Distrito Federal
-                        </p>
-
-                        <iframe 
-                        class="l-footer__map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.056257145434!2d-47.886045285554815!3d-15.800987377325734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3adffaaaa80d%3A0xcd93d19bd1cd5b51!2sPrime%20Business%20Convenience!5e0!3m2!1spt-BR!2sbr!4v1638795529181!5m2!1spt-BR!2sbr" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy"></iframe>
-
-                        <p class="u-font-size-13 u-font-weight-regular mt-12">
-                            Ed. Prime Business <br>
-                            Setor Bancário Sul, Q 2 Salas 09/10 <br>
-                            Asa Sul - CEP: 70.070-120.
-                        </p>
-                    </div>
-
-                    <div class="w-full my-10 px-4">
-                        <div class="l-footer__divider"></div>
-                    </div> -->
+                  
                 </div>
 
                 <div class="flex flex-wrap ">
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
 
-                        <p class="font-bold mb-3 text-xl">
-                            Produtos
+                        <p class="font-bold mb-3 text-xl uppercase">
+                            Para seu negócio
                         </p>
+                        <ul>
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('venda-internet') }}">Venda pela Internet</a>
+                            </li>
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('pre-registratation') }}">Peça sua maquininha</a>
+                            </li>
+                        </ul>
 
-                        @if( !empty( $general ) ) 
+                        {{-- @if( !empty( $general ) ) 
                             @if( isset($general->menu_footer_product) )
                                 <ul>
                                     @foreach( $general->menu_footer_product as $item ) 
@@ -283,12 +255,10 @@ x-init="
                                         </li>
                                     @endforeach
 
-                                    <!-- <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
-                                        Passou Ganhou
-                                    </li> -->
+                            
                                 </ul>
                             @endif
-                        @endif
+                        @endif --}}
                     </div>
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
@@ -296,8 +266,19 @@ x-init="
                         <p class="font-bold mb-3 text-xl">
                             EBW Bank
                         </p>
+                        <ul>
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('conheca-ebw') }}">A EBW</a>
+                            </li>
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('partner-investor') }}">Seja um Investidor</a>
+                            </li>
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('portal') }}">Blog</a>
+                            </li>
+                        </ul>
 
-                        @if( !empty( $general ) )
+                        {{-- @if( !empty( $general ) )
                             @if( isset($general->menu_footer_ebw) )
                                 <ul>
                                     @foreach( $general->menu_footer_ebw as $item )
@@ -333,7 +314,7 @@ x-init="
                                     </li> -->
                                 </ul>
                             @endif
-                        @endif
+                        @endif --}}
                     </div>
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
@@ -357,6 +338,14 @@ x-init="
                                 class="text-lg"
                                 href="mailto:cac@ebwbank.com.br">
                                    E-mail
+                                </a>
+                            </li>
+                            <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <!-- Quem Somos -->
+                                <a 
+                                class="text-lg"
+                                href="{{ route('privacidade') }}">
+                                 Política de privacidade
                                 </a>
                             </li>
                         </ul>
