@@ -5,15 +5,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta property="og:locale" content="pt_BR">
-        <meta property="og:url" content="Link do Site">
-        <meta property="og:title" content="Título">
-        <meta property="og:site_name" content="EBW">
-        <meta property="og:description" content="Descrição do site">
-        <meta property="og:image" content="">
-        <meta property="og:image:type" content="image/png">
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="EBW Bank" />
+        <meta property="og:description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
+        <meta property="og:url" content="https://ebwbank.com.br/" />
+        <meta property="og:site_name" content="EBW Bank" />
+        <meta property="article:publisher" content="https://www.facebook.com/ebwbank/" />
+        <meta property="article:modified_time" content="2021-03-15T18:59:18+00:00" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:label1" content="Est. tempo de leitura" />
+        <meta name="twitter:data1" content="4 minutos" />
+    	<meta name="description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
+        <meta name="keywords" content="banco, ebw bank, fintech, investimentos, " />
+        
         <meta name="robots" content="noindex,nofollow">
         <meta name="googlebot" content="noindex,nofollow">
         <link rel="canonical" href="{{ url()->current() }}">

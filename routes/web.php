@@ -34,6 +34,7 @@ Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export']
 Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->name('partner-investor');
 Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
 Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
+Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
 
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 

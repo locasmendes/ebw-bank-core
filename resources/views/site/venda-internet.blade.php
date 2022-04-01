@@ -14,7 +14,7 @@
                     </h1>
                     <p class="text-right text-black xl:text-3xl sm:text-2xl text-xl leading-tight mb-8">EBW Pay foi pensado e desenvolvido<br>para o micro e pequeno empreendedor</p>
                     <div class="flex justify-end">
-                        <a href="#" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow bg-ebw-primary border-ebw-primary border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-3 pl-10 pr-28 rounded-full">
+                        <a href="{{ route('pre-registratation') }}" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow bg-ebw-primary border-ebw-primary border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-3 pl-10 pr-28 rounded-full">
                             Comece agora
                         </a>
                     </div>
@@ -32,7 +32,7 @@
                     <p class="font-poppins text-xl mb-6">Toda a nossa infraestrutura de processamento e captura de cartão permite que você faça suas vendas de forma segura e transparente, a partir de sua conta digital na EBW Bank.</p>
                     <p class="font-poppins text-xl mb-16">Você pode vender através do seu próprio site ou marketplace, por meio de uma integração simples e fácil de fazer.</p>
                     <div class="">
-                        <a href="#" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow bg-ebw-fourth border-ebw-fourth border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-4 pl-10 sm:pr-28 pr-20 rounded-full">
+                        <a href="{{ route('pre-registratation') }}" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow bg-ebw-fourth border-ebw-fourth border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-4 pl-10 sm:pr-28 pr-20 rounded-full">
                             Comece agora
                         </a>
                     </div>

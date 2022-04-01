@@ -136,9 +136,11 @@
                 @endif
             </div>
             <div class="flex justify-center pt-10">
-                <button type="submit" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow u-border-color-primary relative inline-block font-normal uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none py-4 pl-10 pr-14 rounded-full">
+                <a
+                href="{{ route('conheca-ebw') }}"
+                class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow u-border-color-primary relative inline-block font-normal uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none py-4 pl-10 pr-14 rounded-full">
                    Saiba porque investir na <span class="font-bold text-white">EBW</span>
-                </button>
+                </a>
             </div>
         </div>
     </section>

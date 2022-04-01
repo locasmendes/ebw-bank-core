@@ -10,6 +10,7 @@ use App\Models\About;
 use App\Models\Course;
 use App\Models\Category;
 use App\Models\Post;
+use Illuminate\Support\Facades\Cookie;
 
 //use App\Models\Purpose;
 
@@ -37,6 +38,11 @@ class SiteController extends Controller
         $about = About::first();
 
         return view('site.ebwbank', compact(['about']));
+    }
+
+    public function privacidade()
+    {
+        return view('site.privacidade');
     }
     //eager loading
     // Category::with('courses')->get();
