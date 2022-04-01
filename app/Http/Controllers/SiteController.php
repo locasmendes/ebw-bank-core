@@ -30,14 +30,18 @@ class SiteController extends Controller
         return view('site.passed-won');
     }
 
-
-
     public function ebwbank()
     {
         $about = About::first();
 
         return view('site.ebwbank', compact(['about']));
     }
+
+    public function products()
+    {
+        return view( 'site.products' );
+    }
+
     //eager loading
     // Category::with('courses')->get();
     // foreach($categories as $category)
