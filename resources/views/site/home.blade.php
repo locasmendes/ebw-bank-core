@@ -5,14 +5,14 @@
 <!-- -->
 <!-- banner -->
 <section 
-class="l-banner pt-52"
+class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center bg-75% pt-52"
 style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
-    <div class="container flex flex-col items-center lg:block mx-auto px-4">
-        <img class="mb-10" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
+    <div class="container lg:block mx-auto px-4">
+        <img class="mb-10 xl:w-auto sm:w-112 w-72" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
         
-        <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary px-8 py-3 text-2xl font-bold uppercase tracking-wider text-white rounded-full">
-            Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white text-lg"></i>
+        <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary sm:px-8 px-4 sm:py-3 py-2 xl:text-2xl sm:text-xl text-sm font-bold uppercase tracking-wider text-white rounded-full">
+            Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white sm:text-lg text-sm"></i>
         </a>
     </div>
 </section>
@@ -75,10 +75,10 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                                 class="h-64 object-conver object-center w-full"
                                 alt="Imagem de exemplo">
                                 <div class="pt-5 pb-10">
-                                    <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
+                                    <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4 break-words">
                                        {{ $post->title }}
                                     </h3>
-                                    <p class="text-ebw-title text-lg leading-tight text-center">
+                                    <p class="text-ebw-title text-lg leading-tight text-center break-words">
                                         {{ \Illuminate\Support\Str::words(strip_tags($post->body), 25, '...') }}
                                     </p>
                                 </div>
@@ -103,13 +103,13 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             <div class="w-full lg:w-10/12 flex flex-col lg:flex-row justify-between px-4">
 
                 <a
-                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 pr-16"
+                class="c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
                 href="{{ route('partner-investor') }}">
                     quero ser <span class="font-bold">sócio investidor</span>
                 </a>
 
                 <a
-                class="c-btn-pattern c-btn-icon-arrow hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 pr-16"
+                class="c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
                 href="{{ route('conheca-ebw') }}">
                     saiba porque investir na <span class="font-bold">EBW</span>
                 </a>

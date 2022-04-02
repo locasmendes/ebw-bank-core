@@ -5,10 +5,19 @@ $layout-name: 'l-press';
 
     &__title {
         font-size: 2.625rem;
+        @media screen and (max-width: 991px) {
+            font-size: 2.4rem;;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 2rem;;
+        }
     }
 
     &__text {
         font-size: 1.5rem;
+        @media screen and (max-width: 576px) {
+            font-size: 1.3rem;
+        }
     }
 
     &__card-img {

@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
     purge: [
         "./resources/**/*.blade.php",
@@ -18,7 +19,18 @@ module.exports = {
         fontFamily: {
             poppins: "Poppins",
         },
+        backgroundPosition: {
+            ...defaultTheme.backgroundPosition,
+            "75%": "75%",
+        },
         extend: {
+            minHeight: {
+                "620px": "620px",
+                "400px": "400px",
+            },
+            spacing: {
+                112: "28rem",
+            },
             colors: {
                 ebw: {
                     primary: "#d63733",

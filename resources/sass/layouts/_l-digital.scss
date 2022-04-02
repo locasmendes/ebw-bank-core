@@ -9,6 +9,9 @@ $layout-name: 'l-digital';
         @media screen and (max-width: 991px) {
             font-size: 1.75rem;
         }
+        @media screen and (max-width: 576px) {
+            font-size: 1.25rem;
+        }
     }
 
     &__text {

@@ -9,7 +9,7 @@ x-init="
     }
 ">
     <div
-    class="fixed bottom-0 left-0 right-0 bg-ebw-third py-4"
+    class="fixed bottom-0 left-0 right-0 bg-ebw-third py-4 z-10"
     x-show="open"
     x-cloak
     x-transition:enter="transition-all duration-300"
@@ -19,25 +19,27 @@ x-init="
     x-transition:leave-start="transform translate-y-0"
     x-transition:leave-end="transform translate-y-full"
     >
-        <div class="container mx-auto flex items-center justify-center">
-            <p class="text-sm text-white mr-6">Nosso site salva seu histórico de uso para proporcionar uma melhor experiência. Ao continuar navegando você concorda com a nossa política de cookies e privacidade</p>
-            <button
-            class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white mx-1 hover:bg-opacity-80 transition-all"
-            type="button"
-            x-on:click="createCookie">
-                Ok, Entendi!
-            </button>
-            <button 
-            class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white mx-1 hover:bg-opacity-80 transition-all" 
-            type="button"
-            x-on:click="open = false">
-                Fechar
-            </button>
-            <a target="_blank" class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white mx-1 hover:bg-opacity-80 transition-all" href="{{ route('privacidade') }}">Política de Privacidade</a>
+        <div class="container mx-auto flex lg:flex-row flex-col items-center justify-center px-4">
+            <p class="text-sm text-white sm:mr-6 leading-tight lg:text-left text-center lg:mb-0 mb-3 ">Nosso site salva seu histórico de uso para proporcionar uma melhor experiência. Ao continuar navegando você concorda com a nossa política de cookies e privacidade</p>
+            <div class="flex 2xl:w-auto xl:w-1/3 lg:w-8/12 sm:flex-nowrap flex-wrap justify-center">
+                <button
+                class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all"
+                type="button"
+                x-on:click="createCookie">
+                    Ok, Entendi!
+                </button>
+                <button 
+                class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all" 
+                type="button"
+                x-on:click="open = false">
+                    Fechar
+                </button>
+                <a target="_blank" class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all" href="{{ route('privacidade') }}">Política de Privacidade</a>
+            </div>
         </div>
         <button 
         type="button" 
-        class="absolute right-5 top-1/2 transform -translate-y-1/2 p-3"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 p-3 hidden sm:block"
         x-on:click="open = false">
             <i class="fas fa-times text-lg text-ebw-form"></i>
         </button>
