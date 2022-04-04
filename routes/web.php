@@ -3,6 +3,7 @@
 use App\Http\Controllers\PartnerInvestorController;
 use App\Http\Controllers\PortalEmpreendedorController;
 use App\Http\Controllers\PreRegistrationController;
+use App\Http\Controllers\SejaInvestidorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\VendaInternetController;
@@ -31,11 +32,15 @@ Route::get('/portal-do-empreendedor', [PortalEmpreendedorController::class, 'ind
 Route::get('/portal-do-empreendedor/{id}/{slug}', [PortalEmpreendedorController::class, 'show'])->name('portal.show');
 Route::get('/pre-cadastro', [PreRegistrationController::class, 'index'])->name('pre-registratation');
 Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name('pre-registratation.store');
-Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
 Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->name('partner-investor');
 Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
-Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
+Route::get('/seja-um-investidor', [SejaInvestidorController::class, 'index'])->name('seja-investidor');
 Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
+    Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
+});
 
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
