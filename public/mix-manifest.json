@@ -1,6 +1,10 @@
 {
     "/js/app.js": "/js/app.js?id=500d0a0b47118dc6813d7081fce7361e",
+<<<<<<< HEAD
     "/css/app.css": "/css/app.css?id=00a0e1e98d97edd12e1c7b2e871dc982",
+=======
+    "/css/app.css": "/css/app.css?id=037b3ccfda3bd30cac2d29e30d49c835",
+>>>>>>> db685b9ff7b1bf2ae9255fa49d942c1ff48f0dbe
     "/images/american-express-brand.png": "/images/american-express-brand.png?id=292b5cfb7bc9a1ce04de994153e6c55e",
     "/images/aura-brand.png": "/images/aura-brand.png?id=0118f98d7d47abcf62f73835712d5748",
     "/images/background-example.jpg": "/images/background-example.jpg?id=59c22599d6b7b3ae680d3b11f132a8fb",

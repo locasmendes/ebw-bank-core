@@ -4,9 +4,9 @@
 
 @section( 'content' )
 
-    <div class="bg-ebw-grey relative min-h-screen xl:pt-72 md:pt-56 pt-40 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
+    <div class="bg-ebw-grey flex relative h-screen pt-20 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full sm:w-1/2"></div>
-        <div class="container mx-auto px-5">
+        <div class="container flex flex-col justify-end mx-auto px-5">
             <div class="flex justify-end">
                 <div class="2xl:w-1/2 xl:w-7/12">
                     <h1 class="font-poppins text-right xl:text-5xl sm:text-4xl text-2xl text-ebw-medium-grey leading-snug mb-8">
@@ -27,7 +27,7 @@
 
 
     <section class="pt-20">
-        <div class="container mx-auto border-b-2 border-ebw-input pb-20 px-5">
+        <div class="container mx-auto border-b-2 border-ebw-input pb-4 px-5">
             <div class="flex flex-wrap">
                 <div class="2xl:w-1/3 lg:w-1/2 pt-8 2xl:px-0 md:px-10 sm:px-6 px-4 lg:mb-0 mb-16">
                     <h2 class="2xl:text-5xl md:text-4xl text-3xl font-bold tracking-wider font-poppins leading-tight mb-10">Tudo o que você precisa para empreender no universo digital.</h2>
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto pt-20 2xl:px-5 px-10 pb-20">
+        <div class="container mx-auto pt-20 2xl:px-5 px-10 pb-12">
             <h2 class="font-poppins font-bold 2xl:text-5xl md:text-4xl text-3xl mb-12">Por que somos a melhor opção para o empreendedor?</h2>
 
             <div class="flex flex-wrap justify-between">
