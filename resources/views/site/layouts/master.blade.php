@@ -45,7 +45,7 @@
         <base href="{{ url()->current() }}">
         @stack('css')
     </head>
-        
+        {{--  page-{{ Request::path() === '/' ? 'home' : Request::path() }} --}}
     <body class="{!! Request::is( 'passou-ganhou' ) ? 'page-passed-won' : '' !!}">
         <style>
             [x-cloak] {
