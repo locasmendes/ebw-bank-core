@@ -227,15 +227,16 @@ x-init="
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
 
-                        <p class="font-bold mb-3 text-xl uppercase">
+                        <p class="font-bold mb-3 text-xl">
                             Para seu negócio
                         </p>
+
                         <ul>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('venda-internet') }}">Venda pela Internet</a>
                             </li>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
-                                <a class="text-lg" href="{{ route('pre-registratation') }}">Peça sua maquininha</a>
+                                <a class="text-lg" href="{{ route('products') }}">Peça sua maquininha</a>
                             </li>
                         </ul>
 

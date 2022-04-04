@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto pt-20 2xl:px-5 px-10 pb-20">
+        <div class="container mx-auto pt-20 2xl:px-5 px-10 pb-12">
             <h2 class="font-poppins font-bold 2xl:text-5xl md:text-4xl text-3xl mb-12">Por que somos a melhor opção para o empreendedor?</h2>
 
             <div class="flex flex-wrap justify-between">
