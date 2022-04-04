@@ -9,7 +9,7 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
 {{-- style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );" --}}
 >
     <div class="container lg:block mx-auto px-4">
-        <h1 class="text-size-14.25 text-ebw-medium-grey">
+        <h1 class="text-size-3.56 text-ebw-medium-grey">
             <span class="text-ebw-medium-grey font-bold ">Diferente</span> é fazer parte de uma das <span>fintechs</span> que mais crescem no país.<br><span>Seja um sócio investidor!</span>
         </h1>
         {{-- <x-btn-primary href="#" data-set="oi" >

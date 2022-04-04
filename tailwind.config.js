@@ -22,7 +22,8 @@ module.exports = {
         },
         fontSize: {
             ...defaultTheme.fontSize,
-            "size-14.25": "3.56rem",
+            "size-1.375": "1.375rem",
+            "size-3.56": "3.56rem",
             "5.5xl": "3.25rem",
         },
         extend: {
