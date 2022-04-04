@@ -17,6 +17,13 @@ module.exports = {
         "text-ebw-fourth",
     ],
     theme: {
+        screens: {
+            sm: "576px",
+            md: "768px",
+            lg: "992px",
+            xl: "1200px",
+            "2xl": "1400px",
+        },
         fontFamily: {
             poppins: "Poppins",
         },
@@ -24,6 +31,8 @@ module.exports = {
             ...defaultTheme.fontSize,
             "size-1.375": "1.375rem",
             "size-3.56": "3.56rem",
+            "size-2.75": "2.75rem",
+            "size-4.06": "4.06rem",
             "5.5xl": "3.25rem",
         },
         extend: {
@@ -37,13 +46,18 @@ module.exports = {
             backgroundPosition: {
                 "75%": "75%",
             },
+            lineHeight: {
+                tightest: "1.15",
+            },
             colors: {
                 ebw: {
                     primary: "#d63733",
                     red: "#e23226",
                     secondary: "#1c120e",
                     third: "#494949",
+                    "third-grey": "#585a59",
                     "medium-grey": "#424040",
+                    "another-grey": "#727276",
                     fourth: "#dc514c",
                     form: "#afafb4",
                     title: "#5b5b5e",
@@ -51,6 +65,7 @@ module.exports = {
                     grey: "#d5d5d5",
                     "dark-grey": "#282728",
                     "light-grey": "#d8dade",
+                    "lightest-grey": "#e9e9e9",
                 },
             },
             boxShadow: {
