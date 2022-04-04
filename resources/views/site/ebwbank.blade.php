@@ -5,9 +5,9 @@
 @section( 'content' )
 
     <!-- banner -->
-    <div class="bg-ebw-grey relative min-h-screen xl:pt-72 md:pt-56 pt-40 pb-10 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
+    <div class="bg-ebw-grey relative h-screen flex  bg-no-repeat bg-cover bg-center pt-20" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full"></div>
-        <div class="container mx-auto px-5">
+        <div class="container flex items-center mx-auto px-5">
             <ul>
                 <li class="text-ebw-dark-grey xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">olhar, perceber e pensar.</span></li>
                 <li class="text-ebw-dark-grey xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">se relacionar.</span></li>
