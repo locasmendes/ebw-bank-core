@@ -12,10 +12,10 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
 >
     <div class="container lg:block mx-auto px-4">
         <div class="w-1/2">
-            <h1 class="text-size-3.56 text-ebw-medium-grey leading-tightest">
-                <span class="text-ebw-medium-grey font-bold ">Diferente</span> é fazer parte de uma das <span class="text-ebw-medium-grey font-bold">fintechs</span> que mais crescem no país.<br>
+            <h1 class="2xl:text-size-3.56 xl:text-5xl text-4xl text-ebw-medium-grey leading-tightest">
+                <span class="text-ebw-medium-grey font-bold">Diferente</span> é fazer parte de uma das <span class="text-ebw-medium-grey font-bold">fintechs</span> que mais crescem no país.<br>
             </h1>
-            <h2 class="text-size-3.56 text-ebw-primary font-bold leading-none mb-16">Seja um sócio investidor!</h2>
+            <h2 class="2xl:text-size-3.56 xl:text-5xl text-4xl text-ebw-primary font-bold leading-none mb-16">Seja um sócio investidor!</h2>
         </div>
         {{-- <x-btn-primary href="#" data-set="oi" >
             <x-slot name="icon">
@@ -23,7 +23,7 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
             </x-slot>
             Quero investir
         </x-btn-primary> --}}
-        <a href="#" class="relative inline-block bg-ebw-primary sm:pl-10 pl-4 pr-32 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm font-bold uppercase tracking-wide text-white rounded-full leading-none">
+        <a href="#form-investidor" class="scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 pr-32 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm font-bold uppercase tracking-wide text-white rounded-full leading-none">
             Quero investir <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
         </a>
     </div>
@@ -92,7 +92,7 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
         </div>
     </div>
 </section>
-<section class="bg-ebw-form pt-20 pb-32">
+<section class="bg-ebw-form pt-20 pb-32" id="form-investidor">
     <div class="max-w-6xl mx-auto px-3">
         <h2 class="text-5xl text-white leading-snug text-center mb-10 tracking-wider">Quero ser sócio investidor</h2>
         <div class="border-white border-opacity-50 border-2 px-8 pt-16 pb-16">
