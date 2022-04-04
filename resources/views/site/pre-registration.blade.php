@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', 'Pré Cadastro')
+
 @section( 'content' )
 
     <div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/banner-socio-investidor.jpg') }})">

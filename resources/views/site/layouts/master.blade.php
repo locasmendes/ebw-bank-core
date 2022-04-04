@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="EBW Bank" />
+        <meta property="og:title" content="@yield('title', 'EBW Bank') - EBW Bank" />
         <meta property="og:description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
         <meta property="og:url" content="https://ebwbank.com.br/" />
         <meta property="og:site_name" content="EBW Bank" />
@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <title>EBW Bank</title>
+        <title>@yield('title', 'EBW Bank') - EBW Bank</title>
         <base href="{{ url()->current() }}">
         @stack('css')
     </head>

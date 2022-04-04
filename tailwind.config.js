@@ -66,6 +66,7 @@ module.exports = {
                     "dark-grey": "#282728",
                     "light-grey": "#d8dade",
                     "lightest-grey": "#e9e9e9",
+                    search: "#071e57",
                 },
             },
             boxShadow: {

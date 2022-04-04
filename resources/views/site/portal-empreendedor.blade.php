@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', 'Portal do Empreendedor')
+
 @section( 'content' )
 
 <div class="bg-ebw-grey relative min-h-screen pt-20 md:pb-60 pb-40 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center flex justify-center items-center" style="background-image: url({{ asset('images/banner-blog.jpg') }})">

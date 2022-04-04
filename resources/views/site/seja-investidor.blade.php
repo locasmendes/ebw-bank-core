@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master' )
 
+@section('title', 'Seja um investidor')
+
 @section( 'content' )
 
 <!-- -->

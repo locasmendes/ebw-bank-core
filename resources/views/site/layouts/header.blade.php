@@ -1,143 +1,188 @@
-<header
-class="{{ Request::is( 'peca-sua-maquininha' ) ? '' : 'absolute' }} top-0 left-0 right-0 z-50 px-6 py-5"
-x-data="{openMenu: false}">
-    <nav class="container mx-auto px-4 hidden xl:block">
-        <div class="flex justify-center items-center">
-            <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
-                <img src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
-            </a>
-
-            <ul class="pl-20 flex flex-row items-center justify-center">
-                
-                <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
-                        Home
-                    </a>
-                </li>
-
-                <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
-                        A EBW
-                    </a>
-                </li>
-
-                <li class="l-dropdown relative my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
-                        Para seu negócio
-                    </a>
-
-                    <ul class="l-dropdown__menu">
-                        
-                        <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
-
-                            <a class="font-medium text-white" href="{{ route('venda-internet') }}">
-                                Venda pela internet
-                            </a>
-                        </li>
-
-                        <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
-
-                            <a class="font-medium text-white" href="{{ route('products') }}">
-                                Peça sua maquininha
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('partner-investor') }}">
-                        Seja um investidor
-                    </a>
-                </li>
-
-                <li class="my-4 lg:my-8 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
-                        Blog
-                    </a>
-                </li>
-            </ul>
-
-            {{-- <div class="my-4 lg:my-8 mx-4">
-                <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
-                    <i class="fas fa-search text-white text-2xl"></i>
-                </div>
-            </div> --}}
-        </div>
-
-    </nav>
-
-    <nav
-    class="fixed bg-black bg-opacity-95 inset-0 flex justify-center items-center"
-    x-show="openMenu"
+<div x-data="{openMenu: false, openSearch: false}">
+    <div 
+    class="fixed inset-0 bg-ebw-dark-grey flex-center z-50 flex justify-center items-center"
+    x-show="openSearch"
     x-cloak
-    x-transition:enter="transition-opacity duration-300"
+    x-transition:enter="transition-opacity duration-500"
     x-transition:enter-start="opacity-0"
     x-transition:enter-end="opacity-100"
-    x-transition:leave="transition-opacity duration-300"
+    x-transition:leave="transition-opacity duration-500"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-    >
-        <div class="flex flex-col justify-center items-center">
-            <a class="l-header__logo flex justify-center mb-6" href="{{ route('home') }}">
-                <img src="{{ asset('images/header-logo.png') }}" alt="EBW Bank Logo">
-            </a>
-
-            <ul class="flex-1 flex flex-col items-center justify-center">
-                
-                <li class="my-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('home') }}">
-                        Home
-                    </a>
-                </li>
-
-                <li class="my-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('conheca-ebw') }}">
-                        A EBW
-                    </a>
-                </li>
-                <li class="text-center text-white text-opacity-75">Para seu negócio</li>
-                <li class="mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('venda-internet') }}">
-                        Venda pela internet
-                    </a>
-                </li>
-                <li class="mb-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('ebwbank') }}">
-                        Peça sua maquininha
-                    </a>
-                </li>
-
-
-                <li class="my-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('partner-investor') }}">
-                        Seja um investidor
-                    </a>
-                </li>
-
-                <li class="my-1 mx-4">
-                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('portal') }}">
-                        Blog
-                    </a>
-                </li>
-            </ul>
-
-            {{-- <div class="mx-4">
-                <div class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6">
-                    <i class="fas fa-search text-white text-2xl"></i>
-                </div>
-            </div> --}}
+    x-on:keyup.escape.window="openSearch = false"
+    x-init="
+        $watch('openSearch', (value) => {
+            if(value) {
+                document.querySelector('body').overflowY = 'hidden'
+            } else {
+                document.querySelector('body').overflowY = 'auto'
+            }
+        })
+    ">
+        <button 
+        type="submit" 
+        class="absolute right-10 top-10  w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
+        x-on:click="openSearch = false">
+            <i class="fas fa-times text-white text-xl group-hover:text-ebw-primary transition-colors duration-300"></i>
+        </button>
+        <div class="max-w-2xl w-full">
+            <div class="flex relative">
+                <form action="{{ route('search') }}" class="w-full">
+                    <input type="text" class="bg-transparent w-full text-4xl border-b-2 border-ebw-third-grey py-2 shadow-none outline-none text-white text-center px-12" autocomplete="off" aria-autocomplete="off" name="s">
+                    <button type="submit" class="absolute top-1/2 transform -translate-y-1/2 right-0  w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white">
+                        <i class="fas fa-arrow-right text-white text-xl group-hover:text-ebw-primary transition-colors duration-300"></i>
+                    </button>
+                </form>
+            </div>
         </div>
+    </div>
+    <header
+    class="{{ Request::is( 'peca-sua-maquininha') || Request::is('search') ? '' : 'absolute' }} top-0 left-0 right-0 z-40 px-6 py-5">
+        <nav class="container mx-auto px-4 hidden xl:block">
+            <div class="flex justify-between items-center">
+                <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
+                    <img src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
+                </a>
+    
+                <ul class="2xl:pl-20 lg:pl-8 flex flex-row items-center justify-center">
+                    
+                    <li class="my-4 lg:my-8 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
+                            Home
+                        </a>
+                    </li>
+    
+                    <li class="my-4 lg:my-8 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
+                            A EBW
+                        </a>
+                    </li>
+    
+                    <li class="l-dropdown relative my-4 lg:my-8 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
+                            Para seu negócio
+                        </a>
+    
+                        <ul class="l-dropdown__menu">
+                            
+                            <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+    
+                                <a class="font-medium text-white" href="{{ route('venda-internet') }}">
+                                    Venda pela internet
+                                </a>
+                            </li>
+    
+                            <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+    
+                                <a class="font-medium text-white" href="{{ route('products') }}">
+                                    Peça sua maquininha
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="my-4 lg:my-8 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('partner-investor') }}">
+                            Seja um investidor
+                        </a>
+                    </li>
+    
+                    <li class="my-4 lg:my-8 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="my-4 lg:my-8 mx-4">
+                    <button
+                    type="button"
+                    class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
+                    x-on:click="openSearch = true">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    
+        <nav
+        class="fixed bg-black bg-opacity-95 inset-0 flex justify-center items-center"
+        x-show="openMenu"
+        x-cloak
+        x-transition:enter="transition-opacity duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition-opacity duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        >
+            <div class="flex flex-col justify-center items-center">
+                <a class="l-header__logo flex justify-center mb-6" href="{{ route('home') }}">
+                    <img src="{{ asset('images/header-logo.png') }}" alt="EBW Bank Logo">
+                </a>
+    
+                <ul class="flex-1 flex flex-col items-center justify-center">
+                    
+                    <li class="my-1 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('home') }}">
+                            Home
+                        </a>
+                    </li>
+    
+                    <li class="my-1 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('conheca-ebw') }}">
+                            A EBW
+                        </a>
+                    </li>
+                    <li class="text-center text-white text-opacity-75">Para seu negócio</li>
+                    <li class="mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('venda-internet') }}">
+                            Venda pela internet
+                        </a>
+                    </li>
+                    <li class="mb-1 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('ebwbank') }}">
+                            Peça sua maquininha
+                        </a>
+                    </li>
+    
+    
+                    <li class="my-1 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('partner-investor') }}">
+                            Seja um investidor
+                        </a>
+                    </li>
+    
+                    <li class="my-1 mx-4">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('portal') }}">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+    
+                <div class="mx-4">
+                    <button
+                    type="button"
+                    class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
+                    x-on:click="openSearch = true">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+    
+        </nav>
+        <button
+        class="l-header__hamburger xl:hidden z-50 flex justify-center items-center"
+        x-on:click="openMenu = !openMenu">
+            <span
+            class="fas fa-bars text-xl text-white"
+            x-bind:class="openMenu ? 'fa-times' : 'fa-bars' "
+            ></span>
+        </button>    
+    </header>
+    
+</div>
 
-    </nav>
-    <button
-    class="l-header__hamburger xl:hidden z-50 flex justify-center items-center"
-    x-on:click="openMenu = !openMenu">
-        <span
-        class="fas fa-bars text-xl text-white"
-        x-bind:class="openMenu ? 'fa-times' : 'fa-bars' "
-        ></span>
-    </button>    
-</header>
 
 {{-- <header class="l-header w-full top-0 left-0 absolute antialiased select-none px-4 lg:px-6 py-5">
 

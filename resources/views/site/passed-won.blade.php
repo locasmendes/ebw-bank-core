@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', 'Passou Ganhou')
+
 @section( 'content' )
 
 <!-- banner desktop -->
