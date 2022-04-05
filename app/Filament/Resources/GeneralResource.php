@@ -20,6 +20,8 @@ use Filament\Forms\Components\Checkbox;
 
 use Filament\Navigation\NavigationItem;
 use Filament\Facades\Filament;
+use Filament\Forms\Components\Tabs;
+use Filament\Forms\Components\Tabs\Tab;
 
 class GeneralResource extends Resource
 {
@@ -28,7 +30,7 @@ class GeneralResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     protected static ?string $label = 'Informações Gerais';
-    
+
     protected static ?string $pluralLabel = 'Informações Gerais';
 
     protected static ?string $navigationGroup = 'Configurações';
@@ -40,72 +42,34 @@ class GeneralResource extends Resource
     {
         return $form
             ->schema([
-                Grid::make()
-                    ->schema([
-                        Section::make( 'Seção MVV' )                    
+                Tabs::make('tabs')
+                    ->tabs([
+                        Tab::make('Fale Conosco')
                             ->schema([
-                                Repeater::make( 'mvvs' )->label( 'Missão, Visão e Valores' )
-                                    ->schema([
-                                        TextInput::make( 'mvv_title' )->label( 'Título' ),
-                                        MarkdownEditor::make( 'mvv_description' )->label( 'Descrição' )
-                                    ])->createItemButtonLabel( 'Adicionar item' ),
-                                TextInput::make( 'mvv_about_link' )->label( 'Link Sobre nós' )
+                                TextInput::make('contact_phone')->label('Telefone'),
+                                TextInput::make('contact_email')->email()->label('E-mail'),
                             ]),
 
-                        Section::make( 'Botões' )                    
+                        Tab::make('Redes Sociais')
                             ->schema([
-                                TextInput::make( 'button_start_now' )->label( 'Comece agora' ),
-                                TextInput::make( 'button_ask_for_yours' )->label( 'Peça a sua' ),
+                                TextInput::make('social_linkedin')->label('Linkedin'),
+                                TextInput::make('social_instagram')->label('Instagram'),
+                                TextInput::make('social_facebook')->label('Facebook'),
+                                TextInput::make('social_youtube')->label('Youtube'),
+                                TextInput::make('social_twitter')->label('Twitter')
                             ]),
 
-                        Section::make( 'Fale Conosco' )                    
+                        Tab::make('Endereços')
                             ->schema([
-                                TextInput::make( 'telefone' )->label( 'Telefone' ),
-                                TextInput::make( 'email' )->email()->label( 'E-mail' ),
+                                Repeater::make('maps')->label('Endereço')
+                                    ->schema([
+                                        TextInput::make('estado')->label('Estado'),
+                                        TextInput::make('mapa')->label('Iframe Mapa'),
+                                        MarkdownEditor::make('endereco')->label('Endereço')
+                                    ])->createItemButtonLabel('Adicionar endereço')
+
                             ]),
-
-                        Section::make( 'Redes Sociais' )                    
-                            ->schema([
-                                TextInput::make( 'linkedin' )->label( 'Linkedin' ),
-                                TextInput::make( 'instagram' )->label( 'Instagram' ),
-                                TextInput::make( 'facebook' )->label( 'Facebook' )
-                            ]),
-                                
-                        Section::make( 'Endereços' )                    
-                            ->schema([
-                                Repeater::make( 'mapas' )->label( 'Endereço' )
-                                    ->schema([
-                                        TextInput::make( 'estado' )->label( 'Estado' ),
-                                        TextInput::make( 'mapa' )->label( 'Mapa' ),
-                                        MarkdownEditor::make( 'endereco' )->label( 'Endereço' )
-                                    ])->createItemButtonLabel( 'Adicionar endereço' )
-                            
-                            ]),
-
-                        Section::make( 'Menu rodapé' )                    
-                            ->schema([
-                                Repeater::make( 'menu_footer_product' )->label( 'Produtos' )
-                                    ->schema([
-                                        TextInput::make( 'menu_footer_product_item' )->label( 'Item' ),
-                                        TextInput::make( 'menu_footer_product_link' )->label( 'Link' ),
-                                        Checkbox::make( 'menu_footer_product_new_tab' )->label( 'Abrir em uma nova guia' )
-                                    ])->createItemButtonLabel( 'Adicionar item no menu' )->columns(2),
-
-                                Repeater::make( 'menu_footer_ebw' )->label( 'EBW Bank' )
-                                    ->schema([
-                                        TextInput::make( 'menu_footer_ebw_item' )->label( 'Item' ),
-                                        TextInput::make( 'menu_footer_ebw_link' )->label( 'Link' ),
-                                        Checkbox::make( 'menu_footer_ebw_new_tab' )->label( 'Abrir em uma nova guia' )
-                                    ])->createItemButtonLabel( 'Adicionar item no menu' )->columns(2),
-
-                                Repeater::make( 'menu_footer_support' )->label( 'Suporte' )
-                                    ->schema([
-                                        TextInput::make( 'menu_footer_support_item' )->label( 'Item' ),
-                                        TextInput::make( 'menu_footer_support_link' )->label( 'Link' ),
-                                    ])->createItemButtonLabel( 'Adicionar item no menu' )->columns(2)
-                        
-                            ])
-                    ])
+                    ])->columnSpan(12)
             ]);
     }
 

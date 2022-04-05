@@ -5,19 +5,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+            	
+        <meta name="description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
+        <meta name="keywords" content="banco, ebw bank, fintech, investimentos, " />
+        <meta name="title" content="@yield('title', 'EBW Bank') - EBW Bank">
+        
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="@yield('title', 'EBW Bank') - EBW Bank" />
         <meta property="og:description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
         <meta property="og:url" content="https://ebwbank.com.br/" />
         <meta property="og:site_name" content="EBW Bank" />
-        <meta property="article:publisher" content="https://www.facebook.com/ebwbank/" />
-        <meta property="article:modified_time" content="2021-03-15T18:59:18+00:00" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:label1" content="Est. tempo de leitura" />
-        <meta name="twitter:data1" content="4 minutos" />
-    	<meta name="description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
-        <meta name="keywords" content="banco, ebw bank, fintech, investimentos, " />
+        <meta property="og:image" content="{{ asset('images/ebw-share.jpg')  }}">
+       
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{{ url()->current() }}">
+        <meta property="twitter:title" content="@yield('title', 'EBW Bank') - EBW Bank">
+        <meta property="twitter:description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas.">
+        <meta property="twitter:image" content="{{ asset('images/ebw-share.jpg')  }}">
+
         
         <meta name="robots" content="noindex,nofollow">
         <meta name="googlebot" content="noindex,nofollow">
@@ -52,11 +58,6 @@
                 display: none;
             }
         </style>
-        @php
-            $menu = App\Models\Menu::class::first(); 
-            $general = App\Models\General::class::first();
-        @endphp
-
         @include('site.layouts.header')
 
         @yield('content')

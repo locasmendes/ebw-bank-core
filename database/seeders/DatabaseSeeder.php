@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,30 +16,19 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PostSeeder::class
+            GeneralSeeder::class,
+            // PostSeeder::class,
+            CategorySeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 
 
-        \App\Models\User::firstOrCreate(
+        User::firstOrCreate(
             ['email' => 'fabio.leandro@evolutap.com.br'],
             [
                 'name'     => 'Fabio de Melo',
                 'password' => bcrypt('homolog123'),
             ]
         );
-
-        \App\Models\Home::firstOrCreate([
-            'banner_text_highlight' => '#'
-        ]);
-
-        \App\Models\General::firstOrCreate([
-            'mvv_about_link' => '#'
-        ]);
-
-        \App\Models\Category::firstOrCreate([
-            'category_name' => 'Finanças',
-            'category_slug' => 'financas'
-        ]);
     }
 }

@@ -97,27 +97,25 @@ x-init="
                                 Fale Conosco
                             </p>
     
-                            <p class="u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
+                            <div class="u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
                                 <!-- 0800 894 3000 <br>
                                 cac@ebwbank.com.br -->
-                                @if( !empty( $general ) )
-                                    @if( isset($general->telefone) )
-                                        <a href="tel:{{ $general->telefone }}">
-                                            {{ $general->telefone }}
-                                        </a>
-                                    @endif
+                            
+                                @if( $general?->contact_phone )
+                                    <a href="tel:{{ str($general->contact_phone)->replace(' ', '') }}">
+                                        {{ $general->contact_phone }}
+                                    </a>
                                 @endif
+                           
     
                                 <br>
     
-                                @if( !empty( $general ) )
-                                    @if( isset($general->email) )
-                                        <a href="mailto:{{ $general->email }}">
-                                            {{ $general->email }}
-                                        </a>
-                                    @endif
+                                @if( $general?->contact_email )
+                                    <a href="mailto:{{ $general->contact_email }}">
+                                        {{ $general->contact_email }}
+                                    </a>
                                 @endif
-                            </p>    
+                            </div>    
                         </div>
 
                         <ul class="l-social-media xl:pl-12 pl-5 pt-5 md:pt-0">
@@ -177,9 +175,8 @@ x-init="
 
                 <div class="flex flex-wrap pb-16 mb-12 border-b-2 border-ebw-form">
 
-                    @if( !empty( $general) )
-                        @if( isset($general->mapas) )
-                            @foreach( $general->mapas as $address )
+                        @if( isset($general?->maps) )
+                            @foreach( $general->maps as $address )
                                 <div class="w-full lg:w-6/12 mb-10 lg:mb-0 md:px-4">
 
                                     <p class="l-footer__text-large font-bold mb-5">
@@ -196,7 +193,6 @@ x-init="
                                 </div>
                             @endforeach
                         @endif
-                    @endif
 
                   
                 </div>
