@@ -21,7 +21,7 @@ module.exports = {
             sm: "576px",
             md: "768px",
             lg: "992px",
-            xl: "1200px",
+            xl: "1140px",
             "2xl": "1400px",
         },
         fontFamily: {
@@ -48,6 +48,7 @@ module.exports = {
             },
             lineHeight: {
                 tightest: "1.15",
+                "super-tight": "0.85",
             },
             colors: {
                 ebw: {

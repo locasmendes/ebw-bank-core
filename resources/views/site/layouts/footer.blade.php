@@ -21,7 +21,7 @@ x-init="
     >
         <div class="container mx-auto flex lg:flex-row flex-col items-center justify-center">
             <p class="text-sm text-white sm:mr-6 leading-tight lg:text-left text-center lg:mb-0 mb-3 ">Nosso site salva seu histórico de uso para proporcionar uma melhor experiência. Ao continuar navegando você concorda com a nossa política de cookies e privacidade</p>
-            <div class="flex 2xl:w-auto xl:w-1/3 lg:w-8/12 sm:flex-nowrap flex-wrap justify-center">
+            <div class="flex 2xl:w-auto xl:w-5/12 lg:w-8/12 sm:flex-nowrap flex-wrap justify-center">
                 <button
                 class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all"
                 type="button"
@@ -80,13 +80,15 @@ x-init="
 
         <div class="flex flex-wrap justify-center">
 
-            <div class="w-full md:w-10/12 mb-10">
+            <div class="mb-10 w-full">
 
                 <div class="flex flex-wrap">
 
                     <div class="w-full lg:w-4/12 flex md:block justify-center mb-8 lg:mb-0 px-4">
                         <img
-                        src="{{ asset( 'images/footer-logo.png' ) }}">
+                        loading="lazy"
+                        src="{{ asset( 'images/footer-logo.png' ) }}"
+                        alt="Logo EBW Bank">
                     </div>
 
                     <div class="w-full lg:w-8/12 flex flex-col md:flex-row justify-around items-center px-4">
@@ -119,76 +121,52 @@ x-init="
                         </div>
 
                         <ul class="l-social-media xl:pl-12 pl-5 pt-5 md:pt-0">
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->linkedin) )
-                                    <li class="mx-1">    
-                                        <a
-                                        class="l-social-media__item l-social-media__link l-social-media__linkedin"
-                                        href="{{ $general->linkedin }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Linkedin
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->facebook) )
-                                    <li class="mx-1">    
-                                        <a
-                                        class="l-social-media__item l-social-media__link l-social-media__facebook"
-                                        href="{{ $general->facebook ?? 'https://www.facebook.com/ebwbank/' }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Facebook
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->instagram) )
-                                    <li class="mx-1">    
-                                        <a
-                                        class="l-social-media__item l-social-media__link l-social-media__instagram"
-                                        href="{{ $general->instagram }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Instagram
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->youtube) )
-                                    <li class="mx-1">    
-                                        <a
-                                        class="l-social-media__item l-social-media__link l-social-media__youtube"
-                                        href="{{ $general->youtube }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Youtube
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
-
-                            @if( !empty( $general ) )
-                                @if( isset($general->twitter) )
-                                    <li class="mx-1">    
-                                        <a
-                                        class="l-social-media__item l-social-media__link l-social-media__twitter"
-                                        href="{{ $general->twitter }}"
-                                        target="_blank"
-                                        rel="noreferrer noopener">
-                                            Link Twitter
-                                        </a>
-                                    </li>
-                                @endif
-                            @endif
+                            <li class="mx-1">    
+                                <a
+                                class="l-social-media__item l-social-media__link l-social-media__linkedin"
+                                href="{{ $general?->linkedin ?? '#' }}"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Linkedin
+                                </a>
+                            </li>
+                            <li class="mx-1">    
+                                <a
+                                class="l-social-media__item l-social-media__link l-social-media__facebook"
+                                href="{{ $general?->facebook ?? '#' }}"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Facebook
+                                </a>
+                            </li>
+                            <li class="mx-1">    
+                                <a
+                                class="l-social-media__item l-social-media__link l-social-media__instagram"
+                                href="{{ $general?->instagram ?? '#' }}"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Instagram
+                                </a>
+                            </li>
+                            <li class="mx-1">    
+                                <a
+                                class="l-social-media__item l-social-media__link l-social-media__youtube"
+                                href="{{ $general?->youtube ?? '#' }}"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Youtube
+                                </a>
+                            </li>
+                            <li class="mx-1">    
+                                <a
+                                class="l-social-media__item l-social-media__link l-social-media__twitter"
+                                href="{{ $general?->twitter ?? '#' }}"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                    Link Twitter
+                                </a>
+                            </li>
+                          
                         </ul>
                     </div>
 
@@ -366,8 +344,9 @@ x-init="
             target="_blank"
             rel="noopener noreferrer">
                 <img
+                loading="lazy"
                 src="{{ asset( 'images/logo-cerci.png' )}}"
-                alt="Logo 1">
+                alt="Logo Cerci">
             </a>
 
             <a 
@@ -376,8 +355,9 @@ x-init="
             target="_blank"
             rel="noreferrer noopenner">
                 <img
+                loading="lazy"
                 src="{{ asset( 'images/logo-pci.png' )}}"
-                alt="Logo 1">
+                alt="Logo PCI">
             </a>
         </div>
     </div> 

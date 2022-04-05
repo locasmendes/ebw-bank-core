@@ -9,11 +9,11 @@
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full"></div>
         <div class="container flex items-center mx-auto px-5">
             <ul>
-                <li class="text-ebw-dark-grey 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">olhar, perceber e pensar.</span></li>
-                <li class="text-ebw-dark-grey 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">se relacionar.</span></li>
-                <li class="text-ebw-dark-grey 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">ser e fazer.</span></li>
-                <li class="text-ebw-dark-grey 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4">Diferente na forma de <span class="font-bold">exister.</span></li>
-                <li class="text-ebw-dark-grey 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-tight xl:mb-10 md:mb-6 mb-4"><span class="font-bold">EBW Bank é assim, diferente.</span></li>
+                <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">olhar, perceber e pensar.</span></li>
+                <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">se relacionar.</span></li>
+                <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">ser e fazer.</span></li>
+                <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">exister.</span></li>
+                <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4"><span class="font-bold">EBW Bank é assim, diferente.</span></li>
             </ul>
         </div>
     </div>

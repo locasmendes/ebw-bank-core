@@ -21,7 +21,7 @@
     ">
         <button 
         type="submit" 
-        class="absolute right-10 top-10  w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
+        class="absolute right-10 top-10 w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
         x-on:click="openSearch = false">
             <i class="fas fa-times text-white text-xl group-hover:text-ebw-primary transition-colors duration-300"></i>
         </button>
@@ -37,7 +37,7 @@
         </div>
     </div>
     <header
-    class="{{ Request::is( 'peca-sua-maquininha') || Request::is('search') ? '' : 'absolute' }} top-0 left-0 right-0 z-40 px-6 py-5">
+    class="{{ Request::is( 'peca-sua-maquininha') || Request::is('search') ? '' : 'absolute' }} top-0 left-0 right-0 z-40 py-5">
         <nav class="container mx-auto px-4 hidden xl:block">
             <div class="flex justify-between items-center">
                 <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
@@ -46,19 +46,19 @@
     
                 <ul class="2xl:pl-20 lg:pl-8 flex flex-row items-center justify-center">
                     
-                    <li class="my-4 lg:my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
                             Home
                         </a>
                     </li>
     
-                    <li class="my-4 lg:my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
                             A EBW
                         </a>
                     </li>
     
-                    <li class="l-dropdown relative my-4 lg:my-8 mx-4">
+                <li class="l-dropdown relative my-4 lg:my-8 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
                             Para seu negócio
                         </a>
@@ -81,23 +81,23 @@
                         </ul>
                     </li>
     
-                    <li class="my-4 lg:my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('partner-investor') }}">
                             Seja um investidor
                         </a>
                     </li>
     
-                    <li class="my-4 lg:my-8 mx-4">
+                <li class="my-4 lg:my-8 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
                             Blog
                         </a>
                     </li>
                 </ul>
     
-                <div class="my-4 lg:my-8 mx-4">
+            <div class="my-4 lg:my-8 mx-3">
                     <button
                     type="button"
-                    class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
+                    class="w-44 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
                     x-on:click="openSearch = true">
                         <i class="fas fa-search text-white text-2xl"></i>
                     </button>
@@ -123,44 +123,44 @@
     
                 <ul class="flex-1 flex flex-col items-center justify-center">
                     
-                    <li class="my-1 mx-4">
+                <li class="my-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('home') }}">
                             Home
                         </a>
                     </li>
     
-                    <li class="my-1 mx-4">
+                <li class="my-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('conheca-ebw') }}">
                             A EBW
                         </a>
                     </li>
                     <li class="text-center text-white text-opacity-75">Para seu negócio</li>
-                    <li class="mx-4">
+                <li class="mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('venda-internet') }}">
                             Venda pela internet
                         </a>
                     </li>
-                    <li class="mb-1 mx-4">
+                <li class="mb-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('ebwbank') }}">
                             Peça sua maquininha
                         </a>
                     </li>
     
     
-                    <li class="my-1 mx-4">
+                <li class="my-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('partner-investor') }}">
                             Seja um investidor
                         </a>
                     </li>
     
-                    <li class="my-1 mx-4">
+                <li class="my-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('portal') }}">
                             Blog
                         </a>
                     </li>
                 </ul>
     
-                <div class="mx-4">
+            <div class="mx-3">
                     <button
                     type="button"
                     class="w-56 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
