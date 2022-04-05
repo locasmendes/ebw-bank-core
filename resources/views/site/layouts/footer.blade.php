@@ -19,7 +19,7 @@ x-init="
     x-transition:leave-start="transform translate-y-0"
     x-transition:leave-end="transform translate-y-full"
     >
-        <div class="container mx-auto flex lg:flex-row flex-col items-center justify-center px-4">
+        <div class="container mx-auto flex lg:flex-row flex-col items-center justify-center">
             <p class="text-sm text-white sm:mr-6 leading-tight lg:text-left text-center lg:mb-0 mb-3 ">Nosso site salva seu histórico de uso para proporcionar uma melhor experiência. Ao continuar navegando você concorda com a nossa política de cookies e privacidade</p>
             <div class="flex 2xl:w-auto xl:w-1/3 lg:w-8/12 sm:flex-nowrap flex-wrap justify-center">
                 <button

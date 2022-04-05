@@ -12,4 +12,5 @@ import Rellax from "rellax";
     require("./components/show-categories");
     require("./components/rellax");
     require("./components/masks");
+    require("./components/scroller");
 })(document, Swiper, Rellax);
