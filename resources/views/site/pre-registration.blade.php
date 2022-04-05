@@ -6,12 +6,12 @@
 
     <div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/banner-socio-investidor.jpg') }})">
         <div class="container mx-auto px-6">
-            <h1 class="text-5.5xl text-center leading-tight"><span class="font-bold">Faça parte.</span> Conta digital e <br>cartão de crédito EBW Bank</h1>
+            <h1 class="md:text-5.5xl text-4xl text-center leading-tight"><span class="font-bold">Faça parte.</span> Conta digital e <br>cartão de crédito EBW Bank</h1>
         </div>
     </div>
-    <section class="bg-ebw-form pt-36 pb-32">
-        <div class="max-w-4xl mx-auto px-10">
-            <h2 class="text-5xl text-ebw-title leading-snug text-center mb-10 tracking-wide">Preencha o formulário e faça<br>seu pré-cadastro na lista de espera!</h2>
+    <section class="bg-ebw-form md:pt-36 pt-20 md:pb-32 pb-20">
+        <div class="max-w-4xl mx-auto md:px-10 px-4">
+            <h2 class="lg:text-5xl md:text-4xl text-3xl text-ebw-title leading-snug text-center mb-10 tracking-wide">Preencha o formulário e faça<br>seu pré-cadastro na lista de espera!</h2>
             <div class="border-white border-opacity-50 border-2 p-8">
                 @if (session()->has('success'))
                     <h2 class="text-4xl leading-tight font-bold text-center text-white mb-10">
