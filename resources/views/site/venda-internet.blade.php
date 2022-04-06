@@ -15,7 +15,7 @@
                         parcelamento em até <span class="font-bold 2xl:text-size-5.5 sm:text-6xl text-4xl">12x</span> 
                     </h1>
                     <p class="text-right text-black 2xl:text-3xl sm:text-2xl text-normal leading-tight 2xl:mb-32 xl:mb-20 mb-16"><b>EBW Pay</b> foi pensado e desenvolvido<br>para o micro e pequeno empreendedor</p>
-                    <div class="flex justify-center">
+                    <div class="flex justify-end 2xl:pr-40 md:pr-24 sm:pr-12">
                         <a href="{{ route('pre-registratation') }}" class="shadow-custom-small outline-none c-btn-pattern sm:text-xl text-lg c-btn-icon-arrow bg-ebw-primary border-ebw-primary border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-3 pl-10 sm:pr-28 pr-20 rounded-full">
                             Comece agora
                         </a>
