@@ -33,6 +33,7 @@ module.exports = {
             "size-3.56": "3.56rem",
             "size-2.75": "2.75rem",
             "size-4.06": "4.06rem",
+            "size-5.5": "5.5rem",
             "5.5xl": "3.25rem",
         },
         extend: {
@@ -45,6 +46,8 @@ module.exports = {
             },
             spacing: {
                 112: "28rem",
+                135: "33.5rem",
+                166: "41.5rem",
             },
             backgroundPosition: {
                 "75%": "75%",
@@ -74,7 +77,8 @@ module.exports = {
                 },
             },
             boxShadow: {
-                custom: "0 0 40px 20px rgb(0 0 0 / 30%)",
+                custom: "0 0 65px 50px rgb(0 0 0 / 35%)",
+                "custom-small": "4px 4px 8px 2px rgb(0 0 0 / 40%)",
             },
         },
     },

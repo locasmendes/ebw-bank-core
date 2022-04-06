@@ -5,12 +5,12 @@
 @section( 'content' )
 
     <!-- banner -->
-    <div class="bg-ebw-grey relative h-screen flex  bg-no-repeat bg-cover bg-center pt-20" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
+    <div class="bg-ebw-grey relative md:h-screen sm:h-150 h-135 lg:min-h-620px min-h-400px flex  bg-no-repeat bg-cover bg-center pt-20" style="background-image: url({{ asset('images/banner-a-ebw.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full"></div>
-        <div class="container flex items-center mx-auto px-5">
+        <div class="container flex items-start 2xl:pt-40 xl:pt-32 lg:pt-16 sm:pt-24 pt-10 mx-auto px-5">
             <ul>
                 @foreach ($aEbwSettings['banner_texts'] as $item)
-                    <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">{!! text_to_html($item['text']) !!}</li>
+                    <li class="text-ebw-dark-grey md:text-3xl sm:text-xl text-normal leading-none sm:mb-4 mb-3 font-light bold-as-black-primary">{!! text_to_html($item['text']) !!}</li>
                 @endforeach
                 {{-- <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">se relacionar.</span></li>
                 <li class="text-ebw-dark-grey sm:text-2xl text-xl leading-super-tight mb-4">Diferente na forma de <span class="font-bold">ser e fazer.</span></li>

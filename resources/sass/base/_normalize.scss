@@ -3,15 +3,19 @@
     color: #333;
 }
 
-b {
+body b {
     font-weight: 700;
     color: inherit;
 }
 
-span {
+body span {
     color: inherit;
 }
 
-p {
+body p {
     color: inherit;
+}
+body .bold-as-black-primary b{
+    font-weight: 900;
+    color: #ec2f30;
 }
