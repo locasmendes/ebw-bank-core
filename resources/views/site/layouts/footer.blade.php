@@ -257,8 +257,6 @@ x-init="
                                             </a>
                                         </li>
                                     @endforeach
-
-                            
                                 </ul>
                             @endif
                         @endif --}}

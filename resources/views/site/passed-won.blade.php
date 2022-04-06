@@ -5,7 +5,7 @@
 @section( 'content' )
 
 <!-- banner desktop -->
-<section class="overflow-hidden hidden lg:block">
+{{-- <section class="overflow-hidden hidden lg:block">
 
     <div class="flex">
 
@@ -26,7 +26,7 @@
                     </a>
                     <!-- end estatico e temporario -->
 
-                    {{-- @if( !empty($home) )
+                    @if( !empty($home) )
                         @if( isset($home->banners) )
                             @foreach( $home->banners as $banners ) 
                                 <a 
@@ -40,17 +40,17 @@
                                 </a>
                             @endforeach
                         @endif
-                    @endif --}}
+                    @endif
                 </div>
             </div>
             <!-- end swiper -->
         </div>
     </div>
-</section>
+</section> --}}
 <!-- end banner desktop -->
 
 <!-- banner mobile -->
-<section class="overflow-hidden lg:hidden">
+{{-- <section class="overflow-hidden lg:hidden">
 
     <div class="flex">
 
@@ -71,7 +71,7 @@
                     </a>
                     <!-- end estatico e temporario -->
 
-                    {{-- @if( isset($home->banners) )
+                    @if( isset($home->banners) )
                         @foreach( $home->banners as $banners )
                             <a 
                             class="swiper-slide" 
@@ -83,21 +83,190 @@
                                 @endif
                             </a>
                         @endforeach
-                    @endif --}}
+                    @endif
                 </div>
             </div>
             <!-- end swiper -->
         </div>
     </div>
-</section>
+</section> --}}
 <!-- end banner mobile -->
+
+<!-- new banner -->
+<section
+class="l-passed-won-banner flex items-end"
+style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
+
+    <div class="container mx-auto px-4">
+
+        <div class="flex -mx-4">
+
+            <div class="w-full px-4 pb-20">
+                
+                <img
+                class="l-passed-won-banner__brand"
+                src="{{ asset( 'images/passou-ganhou-white-brand.png' ) }}"
+                alt="">
+
+                <p class="font-normal text-3xl text-white">
+                    Soluções inteligentes, <br>
+                    benefícios exclusivos <br>
+                    e claro, as melhores taxas.
+                </p>
+
+                <div class="flex">
+
+                    <div class="w-10/12 md:w-4/12 lg:w-3/12 mt-10 mb-4">
+                        <a 
+                        class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12" 
+                        href="#">
+                            peça a sua
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner -->
 
 <!-- machine -->
 @include( 'site.sections.machine' )
 <!-- end machine -->
 
+<!-- items -->
+<section class="l-items py-20" id="vantagens">
+
+    <div class="container mx-auto px-4">
+
+        <div class="flex -mx-4">
+
+            <div class="w-full lg:w-8/12 lg:mb-20 px-4">
+
+                <h3 class="leading-7 md:leading-10 text-4xl lg:text-5xl font-bold u-color-folk-cyan mb-3">
+                    Sem Complicação.
+                </h3>
+
+                <p class="text-base lg:text-2xl font-normal u-color-folk-purple">
+                    Com a gente não tem essa de metas de venda, <br>
+                    plano de fidelidade e nem domicílio bancário.
+                </p>
+
+                <div class="flex flex-wrap">
+
+                    <!-- loop -->
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-split-pagamento.png' ) }}"
+                        alt="Split de Pagamento">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Split de pagamento
+                        </p>
+                    </div>
+                    <!-- end loop -->
+
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-conta-pagamento.png' ) }}"
+                        alt="Conta de Pagamento">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Conta pagamento
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-transacao.png' ) }}"
+                        alt="Acompanhamento em tempo real de transações">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Acompanhamento em <br>
+                            tempo real de transações
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-consultoria-empresarial.png' ) }}"
+                        alt="Consultoria empresarial e atendimento personalizado">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Consultoria empresarial e <br>
+                            atendimento personalizado
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-suporte-whatsapp.png' ) }}"
+                        alt="Suporte instantâneo via WhatsApp">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Suporte instantâneo via <br>
+                            WhatsApp
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-6/12 flex items-center my-6">
+
+                        <img
+                        src="{{ asset( 'images/icon-contrato-fidelidade.png' ) }}"
+                        alt="Sem contrato de fidelização">
+
+                        <p class="font-bold u-color-folk-purple pl-6">
+                            Sem contrato de fidelização
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+
+            <div class="w-full lg:w-8/12 px-4">
+
+                <div class="flex flex-wrap -mx-4">
+
+                    <div class="w-full md:w-6/12 px-4">
+
+                        <div class="flex justify-center">
+
+                            <div class="w-full lg:w-full mt-10 mb-4">
+                                <a
+                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12"
+                                href="#">
+                                    peça sua maquininha
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="l-items__text text-center">
+                            <span class="font-bold u-color-folk-cyan">Sem taxa de adesão.</span>
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-6/12 pl-4 pr-4 lg:pr-20">
+                        <img
+                        src="{{ asset( 'images/passou-ganhou-brand.png' ) }}"
+                        alt="Passou Ganhou">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- end items -->
+
 <!-- order -->
-<section class="l-order u-bg-folk-dark-purple pb-12">
+<section class="l-order u-bg-folk-dark-purple mt-64 pb-12">
 
     <div class="container mx-auto px-4"> 
 
@@ -114,36 +283,54 @@
 
                     <div class="w-full md:w-5/12 lg:w-3/12 mt-12 lg:mr-4 px-4">
 
-                        <p class="l-order__text font-bold text-center u-color-folk-white">
-                            Peça pelo site
-                        </p>
-
                         <div class="flex justify-center">
 
                             <div class="w-full mt-4 mb-4">
                                 <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-6 px-12"
+                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-4 px-12"
                                 href="#">
                                     peça agora
                                 </a>
+
+                                <p class="text-lg font-bold text-center text-white mt-2">
+                                    Peça pelo site
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="w-full md:w-6/12 lg:w-4/12 mt-12 lg:ml-4 px-4">
 
-                        <p class="l-order__text font-bold text-center u-color-folk-white">
-                            Solicite por WhatsApp
-                        </p>
-
                         <div class="flex justify-center">
 
                             <div class="w-full 2xl:w-10/12 mt-4 mb-4">
                                 <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-6 px-12"
+                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-4 px-12"
                                 href="#">
                                     chama no whats
                                 </a>
+
+                                <p class="text-lg font-bold text-center text-white mt-2">
+                                    Solicite por WhatsApp
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-5/12 lg:w-3/12 mt-12 lg:mr-4 px-4">
+
+                        <div class="flex justify-center">
+
+                            <div class="w-full mt-4 mb-4">
+                                <a
+                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-4 px-12"
+                                href="#">
+                                    0800 894 3000
+                                </a>
+
+                                <p class="text-lg font-bold text-center text-white mt-2">
+                                    Solicite por telefone
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -206,7 +393,7 @@
                 alt="JCB">
             </div>
 
-            <div class="w-full px-4">
+            <div class="w-full hidden px-4">
                 <p class="u-font-size-10 font-normal text-center u-color-folk-pink">
                     Bandeiras: MasterCard, Visa e Elo nas funções crédito e débito nos chips: Amex, <br>
                     Dinners, Aura e JCB Produtos: Crédito à vista, Crédito parcelado emissor e Débito
@@ -218,7 +405,7 @@
 <!-- end flags -->
 
 <!-- disclosure -->
-<section class="l-disclosure flex items-center py-32">
+<section class="l-disclosure hidden items-center py-32">
 
     <div class="container mx-auto px-4">
 
@@ -264,130 +451,73 @@
 </section>
 <!-- end disclosure -->
 
-<!-- items -->
-<section class="l-items py-20" id="vantagens">
+<!-- app -->
+<section class="l-app relative pt-10 pb-20">
 
-    <div class="container mx-auto px-4">
+    <div class="container relative z-10 mx-auto px-4">
 
-        <div class="flex -mx-4">
+        <div class="flex flex-wrap -mx-4">
 
-            <div class="w-full lg:w-8/12 mb-20 px-4">
+            <div class="w-full px-4">
 
-                <h3 class="l-items__title leading-7 md:leading-normal mb-12">
-                    <span class="font-bold u-color-folk-purple">
-                        Quem é PASSOU GANHOU sai na frente. <br>
-                        Não tem essa de plano de fidelidade ou metas de venda. <br>
-                        É o atendimento sem complicação que você merece. 
-                    </span> <br>
+                <img
+                class="w-16 block mx-auto mb-10"
+                src="{{ asset( 'images/g-white.png' ) }}"
+                alt="Passou Ganhou">
 
-                    <span class="font-bold u-color-folk-cyan">
-                        Programa de pontos e benefícios EM BREVE!
-                    </span>
-                </h3>
+                <div class="flex flex-wrap justify-between -mx-4">  
 
-                <div class="flex flex-wrap">
+                    <div class="w-full md:w-5/12 px-4">
 
-                    <!-- loop -->
-                    <div class="w-full md:w-6/12 flex items-center my-6">
+                        <p class="text-4xl font-normal text-white">
+                            Transforme seus <br>
+                            clientes em fãs com <br>
 
-                        <img
-                        src="{{ asset( 'images/icon-split-pagamento.png' ) }}"
-                        alt="Split de Pagamento">
+                            <span class="flex items-center text-white mt-3">
+                                o App
+                                <img
+                                class="w-48 ml-3"
+                                src="{{ asset( 'images/passou-ganhou-white-brand.png' ) }}"
+                                alt="Passou Ganhou">
+                            </span>
 
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Split de pagamento
-                        </p>
-                    </div>
-                    <!-- end loop -->
-
-                    <div class="w-full md:w-6/12 flex items-center my-6">
-
-                        <img
-                        src="{{ asset( 'images/icon-conta-pagamento.png' ) }}"
-                        alt="Conta de Pagamento">
-
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Conta pagamento
+                            em breve  <br>
+                            lançamento nacional
                         </p>
                     </div>
 
-                    <div class="w-full md:w-6/12 flex items-center my-6">
+                    <div class="w-full md:w-5/12 mt-10 lg:mt-0 px-4">
 
-                        <img
-                        src="{{ asset( 'images/icon-transacao.png' ) }}"
-                        alt="Acompanhamento em tempo real de transações">
-
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Acompanhamento em <br>
-                            tempo real de transações
+                        <p class="text-4xl font-bold u-color-folk-cyan mb-8">
+                            Mostre seus produtos em <br>
+                            uma das maiores vitrines <br>
+                            de negócios do país
                         </p>
-                    </div>
 
-                    <div class="w-full md:w-6/12 flex items-center my-6">
-
-                        <img
-                        src="{{ asset( 'images/icon-consultoria-empresarial.png' ) }}"
-                        alt="Consultoria empresarial e atendimento personalizado">
-
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Consultoria empresarial <br>
-                            e atendimento personalizado
+                        <p class="text-2xl font-normal text-white">
+                            Seus clientes compram com a 
+                            PASSOU GANHOU e acumulam 
+                            pontos para trocar por descontos.
                         </p>
-                    </div>
-
-                    <div class="w-full md:w-6/12 flex items-center my-6">
-
-                        <img
-                        src="{{ asset( 'images/icon-suporte-whatsapp.png' ) }}"
-                        alt="Suporte instantâneo via WhatsApp">
-
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Suporte instantâneo <br>
-                            via WhatsApp
-                        </p>
-                    </div>
-
-                    <div class="w-full md:w-6/12 flex items-center my-6">
-
-                        <img
-                        src="{{ asset( 'images/icon-contrato-fidelidade.png' ) }}"
-                        alt="Sem contrato de fidelização">
-
-                        <p class="font-bold u-color-folk-purple pl-6">
-                            Sem contrato <br>
-                            de fidelização
-                        </p>
-                    </div>
+                    </div>                    
                 </div>
-            </div>
-        </div>
-
-        <div class="flex">
-
-            <div class="w-full">
 
                 <div class="flex justify-center">
 
-                    <div class="w-10/12 md:w-4/12 lg:w-4/12 mt-10 mb-4">
-                        <a
-                        class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12"
-                        href="#">
+                    <div class="w-full md:w-6/12 lg:w-4/12 2xl:w-10/12 mt-10 mb-4">
+                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-4 px-12" href="#">
                             peça sua maquininha
                         </a>
                     </div>
                 </div>
-
-                <p class="l-items__text text-center">
-                    <span class="font-bold u-color-folk-cyan">Sem taxa de adesão.</span>
-                </p>
             </div>
         </div>
     </div>
 </section>
-<!-- end items -->
+<!-- end app -->
 
 <!-- ebw -->
-<section class="l-ebw">
+{{-- <section class="l-ebw">
 
     <div>
         <div class="flex flex-wrap">
@@ -461,7 +591,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- end ebw -->
 
 <!-- business -->
@@ -482,7 +612,7 @@
                     Negocie suas taxas. 
                 </h4>
 
-                <p class="u-font-size-15 font-bold text-center u-color-folk-purple">
+                <p class="text-sm font-bold text-center">
                     Com a PASSOU GANHOU, você tem o atendimento personalizado <br>
                     que você merece e as taxas ideais para o seu negócio prosperar. 
                 </p>
@@ -502,13 +632,13 @@
                             Vendas
                         </p>
 
-                        <p class="l-business__phone font-bold u-color-folk-purple mb-4">
+                        <p class="l-business__phone font-black mb-4">
                             (61) 9.9604-4061
                         </p>
 
                         <p class="u-font-size-13 font-normal u-color-folk-purple">
                             Horário de atendimento: <br>
-                            <span class="font-bold">Segunda a sexta das 8h às 18h</span>
+                            <span class="font-black">Segunda a sexta das 8h às 18h</span>
                         </p>
                     </div>
 
@@ -547,13 +677,13 @@
                             Suporte
                         </p>
 
-                        <p class="l-business__phone font-bold u-color-folk-purple mb-4">
+                        <p class="l-business__phone font-black mb-4">
                             (61) 9.9604-1988    
                         </p>
 
                         <p class="u-font-size-13 font-normal u-color-folk-purple">
                             Horário de atendimento: <br>
-                            <span class="font-bold">Segunda a sexta das 8h às 18h</span>
+                            <span class="font-black">Segunda a sexta das 8h às 18h</span>
                         </p>
                     </div>
 
@@ -593,13 +723,13 @@
                             Fale conosco
                         </p>
 
-                        <p class="l-business__phone font-bold u-color-folk-purple mb-4">
+                        <p class="l-business__phone font-black mb-4">
                             0800-894-3000
                         </p>
 
                         <p class="u-font-size-13 font-normal u-color-folk-purple">
                             Horário de atendimento: <br>
-                            <span class="font-bold">
+                            <span class="font-black">
                                 Segunda a Sexta - 8h às 18h <br>
                                 Sábado - 8h às 13h
                             </span>

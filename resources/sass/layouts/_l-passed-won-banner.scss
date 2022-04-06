@@ -1,0 +1,15 @@
+$layout-name: 'l-passed-won-banner';
+
+.#{$layout-name} {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 991px) {
+        background-position: center center;
+    }
+
+    &__brand {
+        width: 310px;
+    }
+}

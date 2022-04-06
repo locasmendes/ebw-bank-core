@@ -1,6 +1,10 @@
 $layout-name: 'l-machine-passed-won';
 
 .#{$layout-name} {
+    &__image-g {
+        width: 100px;
+    }
+    
     &__title {
         font-size: 1.25rem;
 

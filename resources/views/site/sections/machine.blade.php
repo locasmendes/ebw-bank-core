@@ -6,6 +6,11 @@
 
             <div class="w-full mb-16">
 
+                <img
+                class="l-machine-passed-won__image-g block mx-auto mb-4"
+                src="{{ asset( 'images/g-green.png' ) }}"
+                alt="">
+
                 <p class="l-machine-passed-won__title font-bold text-center u-color-folk-purple">
                     A maquininha <span class="u-color-folk-cyan">ideal</span> para o micro, pequeno, médio e gigante.
                 </p>
@@ -33,10 +38,9 @@
                                 </h4>
 
                                 <p class="u-font-size-12 font-normal text-center">
-                                    Maquininha leve e portátil
-                                    Não precisa de celular
-                                    Bateria de longa duração
-                                    Envio de comprovante por SMS
+                                    Leve e portátil, <br>
+                                    com baterias de <br>
+                                    longa duração
                                 </p>
                             </div>
                         </div>
@@ -62,11 +66,9 @@
                                 </h4>
 
                                 <p class="u-font-size-12 font-normal text-center">
-                                    Imprime comprovante
-                                    Permite pagamento por aproximação
-                                    Portabilidade absoluta: ideal para
-                                    pagamento dentro e fora
-                                    do estabelecimento.
+                                    Pra quem quer <br>
+                                    vender dentro e fora do <br>
+                                    estabelecimento
                                 </p>
                             </div>
                         </div>
@@ -91,13 +93,9 @@
                                 </h4>
 
                                 <p class="u-font-size-12 font-normal text-center">
-                                    Design compacto e moderno
-                                    Permite pagamento por
-                                    QRCode e Aproximação
-                                    Imprime comprovante com
-                                    muita agilidade
-                                    Conectividade total:
-                                    4G, Wi-Fi e Bluetooth
+                                    Para quem <br>
+                                    gosta de vender <br>
+                                    com tecnologia
                                 </p>
                             </div>
                         </div>
@@ -122,18 +120,9 @@
                                 </h4>
 
                                 <p class="u-font-size-12 font-normal text-center">
-                                    Utilizado para Transferência Eletrônica
-                                    de Fundos (TEF) ou soluções de
-                                    pagamentos proprietárias como
-                                    bancos ou cooperativas.
-                                    Processador de alta performance
-                                    Leitores de tarja magnéticos
-                                    e smart card
-                                    Possui opção de cabo
-                                    DUAL (SERIAL + USB)
-                                    Desenvolvida com a mais alta
-                                    tecnologia para garantir total
-                                    segurança e confiabilidade ao cliente.
+                                    Agilidade e <br>
+                                    transparência <br>
+                                    para o seu PDV
                                 </p>
                             </div>
                         </div>
