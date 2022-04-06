@@ -84,6 +84,9 @@ module.exports = {
                     green: "#49a696",
                     rosinha: "#cfb6da",
                     whatsapp: "#01b194",
+                    "grey-400": "#999999",
+                    "grey-500": "#828181",
+                    "grey-200": "#46cbae",
                 },
             },
             boxShadow: {
