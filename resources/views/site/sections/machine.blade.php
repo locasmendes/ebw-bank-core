@@ -1,4 +1,4 @@
-<section class="l-machine-passed-won pt-24 2xl:pt-20 pb-44"><!-- pt-12 -->
+<section class="l-machine-passed-won pt-10 2xl:pt-20"><!-- pt-12 -->
 
     <div class="container mx-auto px-4">
 
@@ -24,10 +24,10 @@
 
                         <div class="l-machine-passed-won__card">
 
-                            <div class="l-machine-passed-won__card-img">
+                            <div class="l-machine-passed-won__card-img flex justify-center mb-4">
                                 <img
                                 src="{{ asset( 'images/machine-enjoy.png' ) }}"
-                                alt="">
+                                alt="Enjoy">
                             </div>
 
                             <div class="l-machine-passed-won__card-body">
@@ -51,7 +51,7 @@
 
                         <div class="l-machine-passed-won__card">
 
-                            <div class="l-machine-passed-won__card-img">
+                            <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
                                 src="{{ asset( 'images/machine-revolution.png' ) }}"
@@ -78,7 +78,7 @@
 
                         <div class="l-machine-passed-won__card">
 
-                            <div class="l-machine-passed-won__card-img">
+                            <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
                                 src="{{ asset( 'images/machine-ultra.png' ) }}"
@@ -105,7 +105,7 @@
 
                         <div class="l-machine-passed-won__card">
 
-                            <div class="l-machine-passed-won__card-img">
+                            <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
                                 src="{{ asset( 'images/machine-tef.png' ) }}"
