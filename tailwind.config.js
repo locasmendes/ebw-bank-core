@@ -40,6 +40,9 @@ module.exports = {
                 "620px": "620px",
                 "400px": "400px",
             },
+            maxWidth: {
+                xs: "20.3rem",
+            },
             spacing: {
                 112: "28rem",
             },

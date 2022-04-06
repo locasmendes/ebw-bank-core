@@ -24,6 +24,9 @@ use App\Http\Controllers\VendaInternetController;
     return view('welcome');
 }); */
 
+// Route::get('/', function () {
+//     dd(image_url('images/eduardo.png'));
+// });
 Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('/aebw', [SiteController::class, 'ebwbank'])->name('conheca-ebw');
 Route::get('/passou-ganhou', [SiteController::class, 'passedwon'])->name('ebwbank');

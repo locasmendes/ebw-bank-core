@@ -12,10 +12,10 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
 >
     <div class="container lg:block mx-auto px-4">
         <div class="sm:w-7/12 lg:w-1/2">
-            <h1 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-medium-grey leading-tightest">
+            <h1 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-medium-grey 2xl:leading-none xl:leading-none md:leading-none sm:leading-none leading-none">
                 <span class="text-ebw-medium-grey font-bold">Diferente</span> é fazer parte de uma das <span class="text-ebw-medium-grey font-bold">fintechs</span> que mais crescem no país.<br>
             </h1>
-            <h2 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-primary font-bold leading-none mb-16">Seja um sócio investidor!</h2>
+            <h2 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-primary font-bold 2xl:leading-none xl:leading-none sm:leading-none leading-none mb-16">Seja um sócio investidor!</h2>
         </div>
         {{-- <x-btn-primary href="#" data-set="oi" >
             <x-slot name="icon">
@@ -23,7 +23,7 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
             </x-slot>
             Quero investir
         </x-btn-primary> --}}
-        <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 pr-32 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm font-bold uppercase tracking-wide text-white rounded-full leading-none">
+        <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 pr-32 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm font-bold uppercase tracking-wide text-white rounded-full leading-none hover:bg-opacity-90 transition-opacity duration-150">
             Quero investir <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
         </a>
     </div>
@@ -35,12 +35,14 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
         <h2 class="xl:text-size-2.75 sm:text-4xl text-3xl text-center text-ebw-secondary leading-none tracking-wide mb-16">Quem investe na EBW Bank tem história pra contar!</h2>
 
         <div class="flex flex-wrap -mx-8">
-            @foreach (array_fill(0, 6, '') as $item)
+            @foreach ($sejaInvestidorSettings['who_invest'] as $item)
                 <article class="xl:w-1/3 md:w-1/2 w-full px-5 mb-16">
-                    <img src="{{ asset('images/historia-card.jpg') }}" class="mb-9 w-full" alt="Nome da pessoa">
-                    <h3 class="uppercase text-center text-2xl leading-none text-ebw-secondary font-bold">Francisco Pereira</h3>
-                    <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">Investidor</h4>
-                    <p class="text-xl leading-tight text-ebw-third-grey">Por ser um projeto arrojado, sempre gostei de novos e grandes desafios, acreditei e confiei desde o início nesse propósito que com o passar dos dias foi acontecendo com muita seriedade e transparência. Vejo o progresso do banco por acompanhar de perto suas iniciativas e a forma como estão sendo desenvolvidas através do grande know how e  competência dos líderes envolvidos nesta visão.</p>
+                    <img src="{{ image_url($item['investor_image']) }}" class="mb-9 w-full" alt="{{ $item['investor_name'] }}">
+                    <h3 class="uppercase text-center text-2xl leading-none text-ebw-secondary font-bold">{{ $item['investor_name'] }}</h3>
+                    <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">{{ $item['investor_occupation'] }}</h4>
+                    <p class="text-xl leading-tight text-ebw-third-grey">
+                        {{ $item['investor_comment'] }}
+                    </p>
                     <div class="pt-2 flex justify-end">
                         <button type="button" class="w-14 h-14 rounded-full bg-ebw-primary flex justify-center items-center pt-1 hover:bg-opacity-90 transition-opacity duration-150">
                             <span class="triangle-down"></span>
@@ -53,7 +55,7 @@ class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-
 </section>
 
 <div class="bg-ebw-title pt-28 pb-32 px-5 flex justify-center items-center">
-    <a href="#" class="relative inline-block bg-ebw-primary sm:pl-10 pl-4 sm:pr-20 pr-12 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm uppercase tracking-wide text-white rounded-full leading-none">
+    <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 sm:pr-20 pr-12 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm uppercase tracking-wide text-white rounded-full leading-none">
         Quero ser <span class="text-white font-bold">sócio investidor</span> <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
     </a>
 </div>

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\GeneralResource\Pages;
 use App\Filament\Resources\GeneralResource\RelationManagers;
 use App\Models\General;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -22,6 +23,7 @@ use Filament\Navigation\NavigationItem;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Tabs\Tab;
+use Illuminate\Database\Eloquent\Model;
 
 class GeneralResource extends Resource
 {

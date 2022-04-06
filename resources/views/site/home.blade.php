@@ -3,7 +3,6 @@
 @section('title', 'Home')
 
 @section( 'content' )
-
 <!-- -->
 <!-- banner -->
 <section 
@@ -30,15 +29,17 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             <div class="w-full lg:w-10/12">
 
                 <h3 class="l-digital__title leading-tight font-bold text-center u-color-folk-primary mb-10">
-                    Mais do que um banco digital, <br>
+                    {!! text_to_html($homeSettings['faixa_title']) !!}
+                    {{-- Mais do que um banco digital, <br>
                     o parceiro no desenvolvimento de empresas. <br> 
-                    Somos diferentes!
+                    Somos diferentes! --}}
                 </h3>
 
                 <p class="l-digital__text leading-snug font-normal text-center text-black"> 
-                    Nascemos com o propósito de promover o progresso dos brasileiros. <br>
+                    {!! text_to_html($homeSettings['faixa_subtitle']) !!}
+                    {{-- Nascemos com o propósito de promover o progresso dos brasileiros. <br>
                     Crescemos porque acreditamos que empreender faz a diferença.   <br>
-                    E fazer a diferença está em nosso DNA.   
+                    E fazer a diferença está em nosso DNA.    --}}
                 </p>
             </div>
         </div>
@@ -60,7 +61,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                 </h3>
 
                 <p class="l-press__text font-normal text-center">
-                    O que estão falando sobre nós.
+                   {!! $homeSettings['imprensa_subtitle'] !!}
                 </p>
             </div>
 
@@ -105,7 +106,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
                 <a
                 class="mx-12 c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
-                href="{{ route('partner-investor') }}">
+                href="{{ route('seja-investidor') }}">
                     quero ser <span class="font-bold">sócio investidor</span>
                 </a>
 

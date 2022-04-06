@@ -18,12 +18,17 @@ class SiteController extends Controller
 {
     public function index(Request $request)
     {
-        $home = Home::first();
+
+
         $posts = Post::query()
             ->limit(6)
+            ->whereHas('category', function ($q) {
+                $q->where('category_slug',  'imprensa');
+            })
+            ->orderBy('id', 'desc')
             ->get();
 
-        return view('site.home', compact(['home', 'posts']));
+        return view('site.home', compact(['posts']));
     }
 
     public function passedwon()
@@ -33,9 +38,9 @@ class SiteController extends Controller
 
     public function ebwbank()
     {
-        $about = About::first();
+        // $about = About::first();
 
-        return view('site.ebwbank', compact(['about']));
+        return view('site.ebwbank');
     }
 
     public function privacidade()

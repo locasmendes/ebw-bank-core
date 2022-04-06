@@ -248,7 +248,7 @@ x-init="
                                 <a class="text-lg" href="{{ route('conheca-ebw') }}">A EBW</a>
                             </li>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
-                                <a class="text-lg" href="{{ route('partner-investor') }}">Seja um Investidor</a>
+                                <a class="text-lg" href="{{ route('seja-investidor') }}">Seja um Investidor</a>
                             </li>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('portal') }}">Blog</a>

@@ -1,6 +1,16 @@
 .first-letter\:pl-16::first-letter {
     padding-left: 4rem;
 }
+.p-first-letter\:pl-16 {
+    p::first-letter {
+        padding-left: 4rem;
+    }
+}
+.p-mb-4 {
+    p {
+        margin-bottom: 1rem;
+    }
+}
 .first-letter\:pl-10::first-letter {
     padding-left: 2.625rem;
 }

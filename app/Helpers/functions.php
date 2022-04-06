@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 if (!function_exists('hexToRgb')) {
@@ -33,5 +34,47 @@ if (!function_exists('str')) {
         }
 
         return Str::of($string);
+    }
+}
+
+if (!function_exists('text_to_html')) {
+    function text_to_html($string = '')
+    {
+        if ($string === '') {
+            return '';
+        }
+        $text = $string;
+        if (Str::containsAll($text, ['**', '**'])) {
+            $count = Str::substrCount($text, '**');
+
+            for ($i = 0; $i < $count / 2; $i++) {
+                $text = Str::replaceFirst('**', '<b>', $text);
+                $text = Str::replaceFirst('**', '</b>', $text);
+            }
+        }
+        if (Str::containsAll($text, ['_', '_'])) {
+            $count = Str::substrCount($text, '_');
+
+            for ($i = 0; $i < $count / 2; $i++) {
+                $text = Str::replaceFirst('_', '<i>', $text);
+                $text = Str::replaceFirst('_', '</i>', $text);
+            }
+        }
+        return $text;
+    }
+}
+
+if (!function_exists('image_url')) {
+    function image_url($path = '')
+    {
+        if ($path === '') {
+            return '';
+        }
+
+        if (Str::startsWith($path, 'images/')) {
+            return asset($path);
+        }
+
+        return asset(Storage::url($path));
     }
 }

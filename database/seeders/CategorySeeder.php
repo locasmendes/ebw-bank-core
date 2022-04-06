@@ -34,5 +34,9 @@ class CategorySeeder extends Seeder
             'category_name' => 'Vendas',
             'category_slug' => 'vendas'
         ]);
+        Category::firstOrCreate([
+            'category_name' => 'Imprensa',
+            'category_slug' => 'imprensa'
+        ]);
     }
 }

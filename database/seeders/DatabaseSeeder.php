@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             GeneralSeeder::class,
             // PostSeeder::class,
-            CategorySeeder::class
+            CategorySeeder::class,
+            PagesSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 
