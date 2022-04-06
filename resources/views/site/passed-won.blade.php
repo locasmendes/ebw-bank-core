@@ -637,7 +637,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             </a>
                         </div>
                         <div class="mb-4">
-                            <a href="https://wa.me/556199604198" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-grey-200 bg-ebw-grey-200border-ebw-grey-200 hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
+                            <a href="https://wa.me/556199604198" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
                                 Chame pelo WhatsApp!
                             </a>
                         </div>
