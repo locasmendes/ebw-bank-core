@@ -5,13 +5,14 @@ $layout-name: 'l-items';
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: 180%;
+    background-size: 1050px 908px;
 
     @media screen and (max-width: 991px) {
         background: #E7DED6;
     }
 
     @media screen and (min-width: 1600px) {
-        background-position-x: right;
+        background-position-x: 140%;
     }
 
     &__text {

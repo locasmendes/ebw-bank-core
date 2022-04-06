@@ -8,7 +8,7 @@
 <!-- banner -->
 <section 
 class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center pt-52 bg-ebw-grey flex items-end pb-24"
-{{-- style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );" --}}
+style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
 >
     <div class="container lg:block mx-auto px-4">
         <div class="sm:w-7/12 lg:w-1/2">

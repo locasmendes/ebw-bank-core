@@ -2,18 +2,18 @@
 
     <div class="container mx-auto px-4">
 
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap border-b-2 border-ebw-for-grey pb-16">
 
-            <div class="w-full mb-16">
+            <div class="w-full mb-20">
 
                 <img
                 class="l-machine-passed-won__image-g block mx-auto mb-4"
                 src="{{ asset( 'images/g-green.png' ) }}"
-                alt="">
+                alt="Logo Passou Ganhou">
 
-                <p class="l-machine-passed-won__title font-bold text-center u-color-folk-purple">
+                <h2 class="text-4xl font-poppins font-bold text-center u-color-folk-purple tracking-wide">
                     A maquininha <span class="u-color-folk-cyan">ideal</span> para o micro, pequeno, médio e gigante.
-                </p>
+                </h2>
             </div>
 
             <div class="w-full">
@@ -33,12 +33,12 @@
 
                             <div class="l-machine-passed-won__card-body">
 
-                                <h4 class="l-machine-passed-won__card-title font-bold text-center u-color-folk-cyan">
+                                <h4 class="font-poppins text-xl uppercase font-extrabold text-center mb-3 u-color-folk-cyan">
                                     Passou Ganhou<br>
-                                    <span class="u-color-folk-purple">Enjoy</span>
+                                    <span class="u-color-folk-purple text-3xl font-bold">Enjoy</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
+                                <p class="text-lg text-ebw-secondary font-poppins leading-snug  text-center">
                                     Leve e portátil, <br>
                                     com baterias de <br>
                                     longa duração
@@ -62,12 +62,12 @@
 
                             <div class="l-machine-passed-won__card-body">
 
-                                <h4 class="l-machine-passed-won__card-title font-bold text-center u-color-folk-cyan">
+                                <h4 class="font-poppins text-xl uppercase font-extrabold text-center mb-3 u-color-folk-cyan">
                                     Passou Ganhou<br>
-                                    <span class="u-color-folk-purple">Revolution</span>
+                                    <span class="u-color-folk-purple text-3xl font-bold">Revolution</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
+                                <p class="text-lg text-ebw-secondary font-poppins leading-snug  text-center">
                                     Pra quem quer <br>
                                     vender dentro e fora do <br>
                                     estabelecimento
@@ -90,12 +90,12 @@
 
                             <div class="l-machine-passed-won__card-body">
 
-                                <h4 class="l-machine-passed-won__card-title font-bold text-center u-color-folk-cyan">
+                                <h4 class="font-poppins text-xl uppercase font-extrabold text-center mb-3 u-color-folk-cyan">
                                     Passou Ganhou<br>
-                                    <span class="u-color-folk-purple">Ultra</span>
+                                    <span class="u-color-folk-purple text-3xl font-bold">Ultra</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
+                                <p class="text-lg text-ebw-secondary font-poppins leading-snug  text-center">
                                     Para quem <br>
                                     gosta de vender <br>
                                     com tecnologia
@@ -118,12 +118,12 @@
 
                             <div class="l-machine-passed-won__card-body">
 
-                                <h4 class="l-machine-passed-won__card-title font-bold text-center u-color-folk-cyan">
+                                <h4 class="font-poppins text-xl uppercase font-extrabold text-center mb-3 u-color-folk-cyan">
                                     Passou Ganhou<br>
-                                    <span class="u-color-folk-purple">TEF</span>
+                                    <span class="u-color-folk-purple text-3xl font-bold">TEF</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
+                                <p class="text-lg text-ebw-secondary font-poppins leading-snug  text-center">
                                     Agilidade e <br>
                                     transparência <br>
                                     para o seu PDV

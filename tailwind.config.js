@@ -30,6 +30,7 @@ module.exports = {
         fontSize: {
             ...defaultTheme.fontSize,
             "size-1.375": "1.375rem",
+            "size-1.3": "1.3rem",
             "size-3.56": "3.56rem",
             "size-2.75": "2.75rem",
             "size-4.06": "4.06rem",
@@ -49,6 +50,7 @@ module.exports = {
                 135: "33.5rem",
                 166: "41.5rem",
             },
+            width: {},
             backgroundPosition: {
                 "75%": "75%",
             },
@@ -74,6 +76,14 @@ module.exports = {
                     "light-grey": "#d8dade",
                     "lightest-grey": "#e9e9e9",
                     search: "#071e57",
+                    "for-grey": "#cbcbcb",
+                    purple: "#471e59",
+                    "purple-200": "#3b104f",
+                    cyan: "#00A996",
+                    "purple-300": "#662480",
+                    green: "#49a696",
+                    rosinha: "#cfb6da",
+                    whatsapp: "#01b194",
                 },
             },
             boxShadow: {

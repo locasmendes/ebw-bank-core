@@ -1,6 +1,6 @@
 @extends( 'site.layouts.master ' )
 
-@section('title', 'Passou Ganhou')
+@section('title', 'Peça sua Maquininha')
 
 @section( 'content' )
 
@@ -20,7 +20,7 @@
                     <a
                     class="swiper-slide"
                     href="#">
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/banner-image-desktop-1.png' ) }}"
                         alt="Imagem de exemplo">
                     </a>
@@ -33,7 +33,7 @@
                                 class="swiper-slide" 
                                 href="{{ $banners['banner_link'] == true ? $banners['banner_link'] : '#' }}">
                                     @if( isset($banners['banner_desktop']) )
-                                        <img
+                                        <img loading="lazy"
                                         src="{{ Storage::url( $banners['banner_desktop'] ) }}"
                                         alt="">
                                     @endif
@@ -65,7 +65,7 @@
                     <a
                     class="swiper-slide"
                     href="/#">
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/banner-image-mobile-1.png' ) }}"
                         alt="Imagem de exemplo">
                     </a>
@@ -77,7 +77,7 @@
                             class="swiper-slide" 
                             href="{{ $banners['banner_link'] == true ? $banners['banner_link'] : '#' }}">
                                 @if( isset($banners['banner_mobile']) )
-                                    <img
+                                    <img loading="lazy"
                                     src="{{ Storage::url( $banners['banner_mobile'] ) }}"
                                     alt="">
                                 @endif
@@ -94,8 +94,9 @@
 
 <!-- new banner -->
 <section
-class="l-passed-won-banner flex items-end"
+class="l-passed-won-banner flex items-end relative"
 style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
+    <div class="shadow-custom absolute top-0 left-0 right-0 w-full sm:w-1/2"></div>
 
     <div class="container mx-auto px-4">
 
@@ -103,22 +104,22 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="w-full px-4 pb-20">
                 
-                <img
-                class="l-passed-won-banner__brand"
+                <img loading="lazy"
+                class="mb-3"
                 src="{{ asset( 'images/passou-ganhou-white-brand.png' ) }}"
-                alt="">
+                alt="Passou Ganhou">
 
-                <p class="font-normal text-3xl text-white">
-                    Soluções inteligentes, <br>
+                <h1 class="text-5xl text-white leading-tight">
+                    <b>Soluções inteligentes,</b> <br>
                     benefícios exclusivos <br>
                     e claro, as melhores taxas.
-                </p>
+                </h1>
 
                 <div class="flex">
 
                     <div class="w-10/12 md:w-4/12 lg:w-3/12 mt-10 mb-4">
                         <a 
-                        class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12" 
+                        class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block text-size-1.3 rounded-full tracking-wide font-black uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12" 
                         href="#">
                             peça a sua
                         </a>
@@ -135,19 +136,19 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 <!-- end machine -->
 
 <!-- items -->
-<section class="l-items py-20" id="vantagens">
+<section class="l-items" id="vantagens">
 
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 pt-20 border-b-2 border-ebw-for-grey pb-32">
 
         <div class="flex -mx-4">
 
             <div class="w-full lg:w-8/12 lg:mb-20 px-4">
 
-                <h3 class="leading-7 md:leading-10 text-4xl lg:text-5xl font-bold u-color-folk-cyan mb-3">
+                <h3 class="lg:text-6xl text-4xl font-poppins font-bold u-color-folk-cyan mb-3">
                     Sem Complicação.
                 </h3>
 
-                <p class="text-base lg:text-2xl font-normal u-color-folk-purple">
+                <p class="text-4xl font-poppins text-ebw-purple mb-16">
                     Com a gente não tem essa de metas de venda, <br>
                     plano de fidelidade e nem domicílio bancário.
                 </p>
@@ -157,11 +158,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     <!-- loop -->
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-split-pagamento.png' ) }}"
                         alt="Split de Pagamento">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Split de pagamento
                         </p>
                     </div>
@@ -169,22 +170,22 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-conta-pagamento.png' ) }}"
                         alt="Conta de Pagamento">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Conta pagamento
                         </p>
                     </div>
 
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-transacao.png' ) }}"
                         alt="Acompanhamento em tempo real de transações">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Acompanhamento em <br>
                             tempo real de transações
                         </p>
@@ -192,11 +193,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-consultoria-empresarial.png' ) }}"
                         alt="Consultoria empresarial e atendimento personalizado">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Consultoria empresarial e <br>
                             atendimento personalizado
                         </p>
@@ -204,11 +205,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-suporte-whatsapp.png' ) }}"
                         alt="Suporte instantâneo via WhatsApp">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Suporte instantâneo via <br>
                             WhatsApp
                         </p>
@@ -216,11 +217,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 flex items-center my-6">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/icon-contrato-fidelidade.png' ) }}"
                         alt="Sem contrato de fidelização">
 
-                        <p class="font-bold u-color-folk-purple pl-6">
+                        <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
                             Sem contrato de fidelização
                         </p>
                     </div>
@@ -238,22 +239,23 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                         <div class="flex justify-center">
 
-                            <div class="w-full lg:w-full mt-10 mb-4">
+                            <div class="w-full flex mt-10 mb-4">
                                 <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-12"
+                                class="c-btn-pattern group  border-0 relative block text-xl rounded-full font-bold font-poppins uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-8"
                                 href="#">
                                     peça sua maquininha
+                                    <i class="fas fa-chevron-right ml-3 text-ebw-purple-300 group-hover:text-ebw-cyan"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <p class="l-items__text text-center">
-                            <span class="font-bold u-color-folk-cyan">Sem taxa de adesão.</span>
+                        <p class="text-3xl">
+                            <span class="font-bold u-color-folk-cyan font-poppins">Sem taxa de adesão.</span>
                         </p>
                     </div>
 
                     <div class="w-full md:w-6/12 pl-4 pr-4 lg:pr-20">
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/passou-ganhou-brand.png' ) }}"
                         alt="Passou Ganhou">
                     </div>
@@ -274,65 +276,57 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="w-full -mt-24 md:-mt-44 px-4">
                 
-                <img
-                class="mx-auto block"
+                <img loading="lazy"
+                class="mx-auto block mb-12"
                 src="{{ asset( 'images/machine-collection.png' ) }}"
                 alt="Máquinas Passou Ganhou">
 
                 <div class="flex flex-wrap justify-around lg:justify-center -mx-4">
 
-                    <div class="w-full md:w-5/12 lg:w-3/12 mt-12 lg:mr-4 px-4">
+                    <div class="mt-4 mb-4 mx-6">
+                        <div class="flex justify-center my-4">
+                            <a
+                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full inline-block relative text-2xl font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-12 pr-20"
+                            href="#">
+                                peça agora
+                            </a>
 
-                        <div class="flex justify-center">
-
-                            <div class="w-full mt-4 mb-4">
-                                <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-4 px-12"
-                                href="#">
-                                    peça agora
-                                </a>
-
-                                <p class="text-lg font-bold text-center text-white mt-2">
-                                    Peça pelo site
-                                </p>
-                            </div>
                         </div>
+
+                        <p class="text-lg font-bold text-center text-white mt-2">
+                            Peça pelo site
+                        </p>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-4/12 mt-12 lg:ml-4 px-4">
-
-                        <div class="flex justify-center">
-
-                            <div class="w-full 2xl:w-10/12 mt-4 mb-4">
+                    <div class="mt-4 mb-4 mx-6">
+                        <div class="flex justify-center my-4">
+                            <div>
                                 <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-4 px-12"
+                                class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full relative inline-block text-2xl font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-5 pl-12 pr-28"
                                 href="#">
                                     chama no whats
                                 </a>
 
-                                <p class="text-lg font-bold text-center text-white mt-2">
-                                    Solicite por WhatsApp
-                                </p>
                             </div>
                         </div>
+
+                        <p class="text-lg font-bold text-center text-white mt-2">
+                            Solicite por WhatsApp
+                        </p>
                     </div>
 
-                    <div class="w-full md:w-5/12 lg:w-3/12 mt-12 lg:mr-4 px-4">
-
-                        <div class="flex justify-center">
-
-                            <div class="w-full mt-4 mb-4">
-                                <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-4 px-12"
-                                href="#">
-                                    0800 894 3000
-                                </a>
-
-                                <p class="text-lg font-bold text-center text-white mt-2">
-                                    Solicite por telefone
-                                </p>
-                            </div>
+                    <div class="mt-4 mb-4 mx-6">
+                        <div class="flex justify-center my-4">
+                            <a
+                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full tracking-wider relative inline-block text-2xl font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-8 pr-16"
+                            href="tel:08008943000">
+                                0800 894 3000
+                            </a>
                         </div>
+
+                        <p class="text-lg font-bold text-center text-white mt-2">
+                            Solicite por telefone
+                        </p>
                     </div>
                 </div>
             </div>
@@ -350,44 +344,44 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="lg:w-11/12 mb-12">
 
-                <h6 class="l-flags__text font-bold text-center u-color-folk-dark-cyan">
+                <h6 class="font-bold tracking-wide text-center text-ebw-green font-poppins text-lg">
                     Todas as bandeiras que você precisa
                 </h6>
             </div>
 
             <div class="lg:w-11/12 2xl:w-9/12 flex flex-wrap justify-around md:justify-between items-center mb-12 px-4">
                 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/mastercard-brand.png' ) }}"
                 alt="Master Card">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/visa-brand.png' ) }}"
                 alt="Visa">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/elo-brand.png' ) }}"
                 alt="Elo">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/american-express-brand.png' ) }}"
                 alt="American Express">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/diners-club-international-brand.png' ) }}"
                 alt="Diners Club International">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/aura-brand.png' ) }}"
                 alt="Aura">
 
-                <img
+                <img loading="lazy"
                 class="m-4 m:my-0"
                 src="{{ asset( 'images/jcb-brand.png' ) }}"
                 alt="JCB">
@@ -434,7 +428,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-10/12 lg:w-4/12 px-4">
 
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/disclosure-brand.png' )}}"
                         alt="Passou Ganhou EBW">
 
@@ -460,7 +454,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="w-full px-4">
 
-                <img
+                <img loading="lazy"
                 class="w-16 block mx-auto mb-10"
                 src="{{ asset( 'images/g-white.png' ) }}"
                 alt="Passou Ganhou">
@@ -475,7 +469,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                             <span class="flex items-center text-white mt-3">
                                 o App
-                                <img
+                                <img loading="lazy"
                                 class="w-48 ml-3"
                                 src="{{ asset( 'images/passou-ganhou-white-brand.png' ) }}"
                                 alt="Passou Ganhou">
@@ -504,8 +498,8 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                 <div class="flex justify-center">
 
-                    <div class="w-full md:w-6/12 lg:w-4/12 2xl:w-10/12 mt-10 mb-4">
-                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block u-font-size-18 font-bold uppercase u-color-folk-purple hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-4 px-12" href="#">
+                    <div class="pt-10">
+                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block text-xl font-poppins font-extrabold rounded-full uppercase u-color-folk-purple bg-ebw-cyan hover:bg-opacity-80 transition-opacity duration-150 hover:u-bg-folk-light-purple py-4 pl-8 pr-12" href="#">
                             peça sua maquininha
                         </a>
                     </div>
@@ -530,7 +524,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 2xl:w-5/12 md:ml-20 lg:ml-0 lg:mr-20 px-4">
                         
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/ebw-brand.png' )}}"
                         alt="EBW">
 
@@ -562,7 +556,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                     <div class="w-full md:w-6/12 2xl:w-5/12 md:ml-20 px-4">
                         
-                        <img
+                        <img loading="lazy"
                         src="{{ asset( 'images/ebw-brand.png' )}}"
                         alt="EBW">
 
@@ -603,16 +597,16 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="w-full mb-10">
 
-                <img
+                <img loading="lazy"
                 class="mx-auto block"
                 src="{{ asset( 'images/icon-business.png' ) }}"
                 alt="Negocie as suas taxas">
 
-                <h4 class="l-business__title font-bold text-center u-color-folk-cyan my-4">
+                <h4 class="l-business__title font-bold text-center u-color-folk-cyan my-4 font-poppins">
                     Negocie suas taxas. 
                 </h4>
 
-                <p class="text-sm font-bold text-center">
+                <p class="text-lg font-bold text-center">
                     Com a PASSOU GANHOU, você tem o atendimento personalizado <br>
                     que você merece e as taxas ideais para o seu negócio prosperar. 
                 </p>
@@ -620,145 +614,97 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
         </div>
 
         <div class="flex flex-wrap justify-center -mx-4">
-
             <!-- loop -->
             <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
-
-                <div class="l-business__card">
-
-                    <div class="l-business__card-body">
-
+                <div class="l-business__card p-6">
+                    <div class="l-business__card-body mb-8">
                         <p class="l-business__category font-bold u-color-folk-cyan my-4">
                             Vendas
                         </p>
-
                         <p class="l-business__phone font-black mb-4">
                             (61) 9.9604-4061
                         </p>
-
-                        <p class="u-font-size-13 font-normal u-color-folk-purple">
+                        <p class="text-lg text-black font-poppins">
                             Horário de atendimento: <br>
-                            <span class="font-black">Segunda a sexta das 8h às 18h</span>
+                            <span class="font-bold">Segunda a sexta das 8h às 18h</span>
                         </p>
                     </div>
-
                     <div class="l-business__card-footer">
-
-                        <div class="flex flex-wrap">
-
-                            <div class="w-full">
-                                <p class="c-btn-pattern before::thumbnail:u-icon-img-email hover:before::thumbnail:u-icon-img-email border u-border-color-lilac relative flex justify-center items-center u-font-size-12 font-normal u-color-folk-purple hover:u-color-folk-white hover:u-bg-folk-light-purple py-4 pl-6 pr-10">
-                                    vendas@passouganhou.com.br
-                                </p>
-                            </div>
-
-                            <div class="w-full my-4">
-                                <a 
-                                class="c-btn-pattern u-border-color-lilac relative block u-font-size-12 font-bold text-center u-color-folk-white u-bg-folk-cyan py-4 pl-6 pr-10" 
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Chame pelo WhatsApp!
-                                </a>
-                            </div>
+                        <div class="mb-4">
+                            <a href="mailto:vendas@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                                <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
+                                <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">vendas@passouganhou.com.br</span>
+                            </a>
+                        </div>
+                        <div class="mb-4">
+                            <a href="https://wa.me/556199604198" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
+                                Chame pelo WhatsApp!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
+                <div class="l-business__card p-6">
+                    <div class="l-business__card-body mb-8">
+                        <p class="l-business__category font-bold u-color-folk-cyan my-4">
+                            Suporte
+                        </p>
+                        <p class="l-business__phone font-black mb-4">
+                            (61) 9.9604-1988
+                        </p>
+                        <p class="text-lg text-black font-poppins">
+                            Horário de atendimento: <br>
+                            <span class="font-bold">Segunda a sexta das 8h às 18h</span>
+                        </p>
+                    </div>
+                    <div class="l-business__card-footer">
+                        <div class="mb-4">
+                            <a href="mailto:suporte@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                                <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
+                                <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">suporte@passouganhou.com.br</span>
+                            </a>
+                        </div>
+                        <div class="mb-4">
+                            <a href="https://wa.me/5561996041988" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
+                                Chame pelo WhatsApp!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
+                <div class="l-business__card p-6">
+                    <div class="l-business__card-body mb-8">
+                        <p class="l-business__category font-bold u-color-folk-cyan my-4">
+                            Fale conosco
+                        </p>
+                        <p class="l-business__phone font-black mb-4">
+                            0800-894-3000
+                        </p>
+                        <p class="text-lg text-black font-poppins">
+                            Horário de atendimento: <br>
+                            <span class="font-bold">Segunda a Sexta - 8h às 18h Sábado - 8h às 13h</span>
+                        </p>
+                    </div>
+                    <div class="l-business__card-footer">
+                        <div class="mb-4">
+                            <a href="emailto:cac@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                                <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
+                                <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">cac@passouganhou.com.br</span>
+                            </a>
+                        </div>
+                        <div class="mb-4">
+                            <a href="tel:0800894300" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
+                                Ligue 0800-894-300
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>    
             <!-- end loop -->
             
-            <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
-
-                <div class="l-business__card">
-
-                    <div class="l-business__card-body">
-
-                        <p class="l-business__category font-bold u-color-folk-cyan my-4">
-                            Suporte
-                        </p>
-
-                        <p class="l-business__phone font-black mb-4">
-                            (61) 9.9604-1988    
-                        </p>
-
-                        <p class="u-font-size-13 font-normal u-color-folk-purple">
-                            Horário de atendimento: <br>
-                            <span class="font-black">Segunda a sexta das 8h às 18h</span>
-                        </p>
-                    </div>
-
-                    <div class="l-business__card-footer">
-
-                        <div class="flex flex-wrap">
-
-                            <div class="w-full">
-                                <a 
-                                class="c-btn-pattern before::thumbnail:u-icon-img-email hover:before::thumbnail:u-icon-img-email border u-border-color-lilac relative flex justify-center items-center u-font-size-12 font-normal u-color-folk-purple hover:u-color-folk-white hover:u-bg-folk-light-purple py-4 pl-6 pr-10" 
-                                href="malito:suporte@passouganhou.com.br">
-                                    suporte@passouganhou.com.br
-                                </a>
-                            </div>
-
-                            <div class="w-full my-4">
-                                <a 
-                                class="c-btn-pattern u-border-color-lilac relative block u-font-size-12 font-bold text-center u-color-folk-white u-bg-folk-cyan py-4 pl-6 pr-10" 
-                                href="https://wa.me/5561996044061"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Chame pelo WhatsApp!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-6/12 lg:w-4/12  my-4 lg:my-0 px-4">
-
-                <div class="l-business__card">
-
-                    <div class="l-business__card-body">
-
-                        <p class="l-business__category font-bold u-color-folk-cyan my-4">
-                            Fale conosco
-                        </p>
-
-                        <p class="l-business__phone font-black mb-4">
-                            0800-894-3000
-                        </p>
-
-                        <p class="u-font-size-13 font-normal u-color-folk-purple">
-                            Horário de atendimento: <br>
-                            <span class="font-black">
-                                Segunda a Sexta - 8h às 18h <br>
-                                Sábado - 8h às 13h
-                            </span>
-                        </p>
-                    </div>
-
-                    <div class="l-business__card-footer">
-
-                        <div class="flex flex-wrap">
-
-                            <div class="w-full">
-                                <a 
-                                class="c-btn-pattern before::thumbnail:u-icon-img-email hover:before::thumbnail:u-icon-img-email border u-border-color-lilac relative flex justify-center items-center u-font-size-12 font-normal u-color-folk-purple hover:u-color-folk-white hover:u-bg-folk-light-purple py-4 pl-6 pr-10" 
-                                href="malito:cac@passouganhou.com.br">
-                                    cac@passouganhou.com.br
-                                </a>
-                            </div>
-
-                            <div class="w-full my-4">
-                                <a 
-                                class="c-btn-pattern u-border-color-lilac relative block u-font-size-12 font-bold text-center u-color-folk-white u-bg-folk-cyan py-4 pl-6 pr-10" 
-                                href="#">
-                                    Ligue 0800-894-3000
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
