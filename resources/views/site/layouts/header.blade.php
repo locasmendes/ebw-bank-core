@@ -37,7 +37,7 @@
         </div>
     </div>
     <header
-    class="{{ Request::is( 'peca-sua-maquininha') || Request::is('search') ? '' : 'absolute' }} top-0 left-0 right-0 z-40 py-5">
+    class="absolute top-0 left-0 right-0 z-40 py-5">
         <nav class="container mx-auto px-4 hidden xl:block">
             <div class="flex justify-between items-center">
                 <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
@@ -141,10 +141,10 @@
                         </a>
                     </li>
                 <li class="mb-1 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('ebwbank') }}">
-                            Peça sua maquininha
-                        </a>
-                    </li>
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('products') }}">
+                        Peça sua maquininha
+                    </a>
+                </li>
     
     
                 <li class="my-1 mx-3">
