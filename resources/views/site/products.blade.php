@@ -4,7 +4,7 @@
 
 @section( 'content' )
 
-<section class="l-machine pt-24 2xl:pt-20 pb-44"><!-- pt-12 -->
+<section class="l-machine pt-10 2xl:pt-20 pb-44"><!-- pt-12 -->
 
     <div class="container mx-auto px-4">
 
@@ -21,13 +21,14 @@
 
                 <div class="flex flex-wrap">
 
-                    <div class="w-full md:w-6/12 lg:w-3/12">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
-                            <div class="l-machine__card-img">
+                            <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-enjoy.png' ) }}"
                                 alt="Passou Ganhou Enjoy">
                             </div>
@@ -35,27 +36,27 @@
                             <div class="l-machine__card-body">
 
                                 <h4 class="l-machine__card-title font-bold text-center u-color-folk-cyan">
-                                    Passou Ganhou<br>
                                     <span class="u-color-folk-purple">Enjoy</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
-                                    Maquininha leve e portátil
-                                    Não precisa de celular
-                                    Bateria de longa duração
-                                    Envio de comprovante por SMS
+                                <p class="text-sm font-normal">
+                                    • Maquininha leve e portátil <br>
+                                    • Não precisa de celular <br>
+                                    • Bateria de longa duração <br> 
+                                    • Envio de comprovante por SMS.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
-                            <div class="l-machine__card-img">
+                            <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-revolution.png' ) }}"
                                 alt="Passou Ganhou Revolution">
                             </div>
@@ -63,28 +64,26 @@
                             <div class="l-machine__card-body">
 
                                 <h4 class="l-machine__card-title font-bold text-center u-color-folk-cyan">
-                                    Passou Ganhou<br>
                                     <span class="u-color-folk-purple">Revolution</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
-                                    Imprime comprovante
-                                    Permite pagamento por aproximação
-                                    Portabilidade absoluta: ideal para
-                                    pagamento dentro e fora
-                                    do estabelecimento.
+                                <p class="text-sm font-normal">
+                                    • Imprime comprovante <br>
+                                    • Permite pagamento por aproximacão <br>
+                                    • Portabilidade absoluta: ideal para pagamento dentro e fora do estabelecimento.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
-                            <div class="l-machine__card-img">
+                            <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-ultra.png' ) }}"
                                 alt="Passou Ganhou Ultra">
                             </div>
@@ -92,30 +91,28 @@
                             <div class="l-machine__card-body">
 
                                 <h4 class="l-machine__card-title font-bold text-center u-color-folk-cyan">
-                                    Passou Ganhou<br>
                                     <span class="u-color-folk-purple">Ultra</span>
                                 </h4>
 
-                                <p class="u-font-size-12 font-normal text-center">
-                                    Design compacto e moderno
-                                    Permite pagamento por
-                                    QRCode e Aproximação
-                                    Imprime comprovante com
-                                    muita agilidade
-                                    Conectividade total:
-                                    4G, Wi-Fi e Bluetooth
+                                <p class="text-sm font-normal">
+                                    • Design compacto e moderno <br>
+                                    • Permite pagamento por QRCode e aproximação <br>
+                                    • Imprime comprovante com muita agilidade <br>
+                                    • Conectividade total: 4G, Wi-Fi <br>
+                                    e Bluetooth.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
-                            <div class="l-machine__card-img">
+                            <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-tef.png' ) }}"
                                 alt="Passou Ganhou TEF">
                             </div>
@@ -123,7 +120,6 @@
                             <div class="l-machine__card-body">
 
                                 <h4 class="l-machine__card-title font-bold text-center u-color-folk-cyan">
-                                    Passou Ganhou<br>
                                     <span class="u-color-folk-purple">TEF</span>
                                 </h4>
 

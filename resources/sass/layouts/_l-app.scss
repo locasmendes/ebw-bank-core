@@ -1,0 +1,19 @@
+$layout-name: 'l-app';
+
+.#{$layout-name} {
+    background-image: url(../../images/app-baground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        background-color: #79318E;
+        z-index: 1;
+    }
+}
