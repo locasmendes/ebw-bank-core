@@ -38,8 +38,6 @@ class SiteController extends Controller
 
     public function ebwbank()
     {
-        // $about = About::first();
-
         return view('site.ebwbank');
     }
 
