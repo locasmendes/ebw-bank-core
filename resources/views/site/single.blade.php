@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', $post->title)
+
 @section( 'content' )
 
 <!-- banner -->

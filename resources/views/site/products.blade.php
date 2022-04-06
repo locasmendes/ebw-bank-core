@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', 'Peça sua maquininha')
+
 @section( 'content' )
 
 <section class="l-machine pt-24 2xl:pt-20 pb-44"><!-- pt-12 -->

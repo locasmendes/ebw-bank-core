@@ -1,6 +1,6 @@
 @extends( 'site.layouts.master ' )
 
-
+@section('title', 'A EBW')
 
 @section( 'content' )
 

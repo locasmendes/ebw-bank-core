@@ -1,6 +1,12 @@
 .first-letter\:pl-16::first-letter {
     padding-left: 4rem;
 }
+.first-letter\:pl-10::first-letter {
+    padding-left: 2.625rem;
+}
+.first-letter\:pl-8::first-letter {
+    padding-left: 2rem;
+}
 .page-passed-won {
     :not(.l-header, .l-footer) {
         .container {

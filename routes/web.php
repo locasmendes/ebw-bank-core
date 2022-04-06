@@ -3,6 +3,7 @@
 use App\Http\Controllers\PartnerInvestorController;
 use App\Http\Controllers\PortalEmpreendedorController;
 use App\Http\Controllers\PreRegistrationController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SejaInvestidorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
@@ -36,6 +37,7 @@ Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->na
 Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
 Route::get('/seja-um-investidor', [SejaInvestidorController::class, 'index'])->name('seja-investidor');
 Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
+Route::get('/search', [SearchController::class, 'index'])->name('search');
 
 Route::middleware('auth')->group(function () {
     Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');

@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master' )
 
+@section('title', 'Venda pela internet')
+
 @section( 'content' )
 
     <div class="bg-ebw-grey flex relative h-screen pt-20 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">

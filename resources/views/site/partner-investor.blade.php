@@ -1,5 +1,7 @@
 @extends( 'site.layouts.master ' )
 
+@section('title', 'Sócio Investidor')
+
 @section( 'content' )
 
     <div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/banner-socio-investidor.jpg') }})">
@@ -7,9 +9,9 @@
             <h1 class="text-5.5xl text-center leading-tight"><span class="font-bold">Faça parte.</span> Conta digital e <br>cartão de crédito EBW Bank</h1>
         </div>
     </div>
-    <section class="bg-ebw-form pt-36 pb-32">
+    <section class="bg-ebw-form pt-20 pb-32" id="form-investidor">
         <div class="max-w-6xl mx-auto px-3">
-            <h2 class="text-5xl text-ebw-title leading-snug text-center mb-10 tracking-wider">Quero ser sócio investidor</h2>
+            <h2 class="xl:text-5xl lg:text-4xl sm:text-3xl text-2xl text-white leading-snug text-center mb-10 tracking-wider">Quero ser sócio investidor</h2>
             <div class="border-white border-opacity-50 border-2 px-8 pt-16 pb-16">
                 @if (session()->has('success'))
                     <h2 class="text-4xl leading-tight font-bold text-center text-white mb-10">
@@ -19,10 +21,10 @@
                     <form action="{{ route('partner-investor.store') }}" method="POST">
                         @csrf
                         <div>
-                            <h3 class="text-black text-3xl tracking-wide mb-8">Cadastre-se agora mesmo</h3>
+                            <h3 class="text-black sm:text-3xl text-2xl leading-none tracking-wide mb-8">Cadastre-se agora mesmo</h3>
                         </div>
-                        <div class="flex -mx-5">
-                            <div class="w-7/12 px-5">
+                        <div class="flex flex-wrap -mx-5">
+                            <div class="md:w-7/12 w-full px-5">
                                 <div class="bg-ebw-input relative p-2 mb-3">
                                     <label for="name" class="block text-lg text-black">Nome</label>
                                     <input 
@@ -90,14 +92,8 @@
                                         </div>
                                     @enderror   
                                 </div>
-            
-                                <div class="flex justify-start pt-8">
-                                    <button type="submit" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none py-4 pl-10 pr-20 rounded-full">
-                                        Enviar
-                                    </button>
-                                </div>
                             </div>
-                            <div class="w-5/12 px-5">
+                            <div class="md:w-5/12 w-full px-5">
                                 <h3 class="font-bold text-black text-2xl leading-none uppercase mb-8">Quanto desejo investir</h3>
                                 <label class="text-black text-xl mb-6 input-checkbox" for="above-500">
                                     <input type="radio" name="investment" id="above-500" checked value="Acima de R$ 500 mil">
@@ -130,7 +126,13 @@
                                 Até R$ 20 mil
                                 </label>
                             </div>
-                        </div>
+                            <div class="w-full px-5">
+                                <div class="flex justify-start pt-8">
+                                    <button type="submit" class="shadow-none outline-none c-btn-pattern text-xl c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none py-4 pl-10 pr-20 rounded-full">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 @endif
