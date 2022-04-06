@@ -21,13 +21,14 @@
 
                 <div class="flex flex-wrap">
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-end px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
                             <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-enjoy.png' ) }}"
                                 alt="Passou Ganhou Enjoy">
                             </div>
@@ -48,13 +49,14 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-end px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
                             <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-revolution.png' ) }}"
                                 alt="Passou Ganhou Revolution">
                             </div>
@@ -74,13 +76,14 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-end px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
                             <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-ultra.png' ) }}"
                                 alt="Passou Ganhou Ultra">
                             </div>
@@ -102,13 +105,14 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-end px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 flex items-center px-4">
 
                         <div class="l-machine__card">
 
                             <div class="l-machine__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-tef.png' ) }}"
                                 alt="Passou Ganhou TEF">
                             </div>
