@@ -26,6 +26,7 @@
 
                             <div class="l-machine-passed-won__card-img flex justify-center mb-4">
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-enjoy.png' ) }}"
                                 alt="Enjoy">
                             </div>
@@ -54,6 +55,7 @@
                             <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-revolution.png' ) }}"
                                 alt="Passou Ganhou Revolution">
                             </div>
@@ -81,6 +83,7 @@
                             <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-ultra.png' ) }}"
                                 alt="Passou Ganhou Ultra">
                             </div>
@@ -108,6 +111,7 @@
                             <div class="l-machine-passed-won__card-img flex justify-center mb-4">
 
                                 <img
+                                class="w-40"
                                 src="{{ asset( 'images/machine-tef.png' ) }}"
                                 alt="Passou Ganhou TEF">
                             </div>
