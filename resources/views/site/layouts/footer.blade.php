@@ -235,8 +235,13 @@ x-init="
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('venda-internet') }}">Venda pela Internet</a>
                             </li>
+
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('products') }}">Peça sua maquininha</a>
+                            </li>
+
+                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                                <a class="text-lg" href="{{ route('ebwbank') }}">Passou Ganhou</a>
                             </li>
                         </ul>
 
