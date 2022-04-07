@@ -105,14 +105,14 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             <div class="flex flex-col lg:flex-row justify-center">
 
                 <a
-                class="mx-12 c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
-                href="{{ route('seja-investidor') }}">
+                class="mx-12 c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block text-lg uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
+                href="{{ route('seja-investidor') }}#form-investidor">
                     quero ser <span class="font-bold">sócio investidor</span>
                 </a>
 
                 <a
-                class="mx-12 c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block font-normal uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
-                href="{{ route('conheca-ebw') }}">
+                class="mx-12 c-btn-pattern c-btn-icon-arrow rounded-full hover:u-opacity:08 u-border-color-primary relative inline-block text-lg uppercase all:u-color-folk-white u-bg-folk-primary my-4 lg:my-0 py-5 pl-7 sm:pr-16 pr-12"
+                href="{{ route('seja-investidor') }}">
                     saiba porque investir na <span class="font-bold">EBW</span>
                 </a>
             </div>
