@@ -41,11 +41,22 @@ Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->n
 Route::get('/seja-um-investidor', [SejaInvestidorController::class, 'index'])->name('seja-investidor');
 Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
 Route::get('/search', [SearchController::class, 'index'])->name('search');
+Route::get('/cadastro-peca-minha-maquininha', [SiteController::class, 'register'])->name('cadastro-peca-minha-maquininha');
+Route::post('/cadastro-peca-minha-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
 
 Route::middleware('auth')->group(function () {
     Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
     Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
 });
+
+Route::middleware('auth')
+    ->group(function () {
+        Route::post('cadastro-peca-minha-maquininha/export', [RegisterController::class, 'export'])
+            ->name('cadastro-peca-minha-maquininha.export');
+
+        Route::get('cadastro-peca-minha-maquininha/document/{hash}', [RegisterController::class, 'document'])
+            ->name('cadastro-peca-minha-maquininha.documento');
+    });
 
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
