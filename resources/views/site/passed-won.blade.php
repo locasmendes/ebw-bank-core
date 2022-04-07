@@ -144,13 +144,14 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
             <div class="w-full lg:w-8/12 lg:mb-20 px-4">
 
-                <h3 class="lg:text-6xl text-4xl font-poppins font-bold u-color-folk-cyan mb-3">
+                <h3 class="xl:text-6xl lg:text-5xl text-4xl font-poppins font-bold u-color-folk-cyan mb-3">
                     Sem Complicação.
                 </h3>
 
-                <p class="text-4xl font-poppins text-ebw-purple mb-16">
-                    Com a gente não tem essa de metas de venda, <br>
-                    plano de fidelidade e nem domicílio bancário.
+                <p class="xl:text-4xl text-3xl font-poppins text-ebw-purple mb-16 xl:leading-tight leading-tight">
+                    Com a gente não tem essa de<br>
+                    metas de venda, plano de fidelidade<br>
+                     e nem domicílio bancário.
                 </p>
 
                 <div class="flex flex-wrap">
@@ -222,16 +223,16 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                         alt="Sem contrato de fidelização">
 
                         <p class="font-bold text-ebw-purple-200 text-lg font-poppins leading-snug pl-6">
-                            Sem contrato de fidelização
+                            Sem contrato<br>de fidelização
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex -mx-4">
 
-            <div class="w-full lg:w-8/12 px-4">
+            <div class="xl:w-8/12 lg:w-10/12 w-full px-4">
 
                 <div class="flex flex-wrap -mx-4">
 
@@ -241,7 +242,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
 
                             <div class="w-full flex mt-10 mb-4">
                                 <a
-                                class="c-btn-pattern group  border-0 relative block text-xl rounded-full font-bold font-poppins uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-8"
+                                class="c-btn-pattern group  border-0 relative block sm:text-xl text-base rounded-full font-bold font-poppins uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-8"
                                 href="#">
                                     peça sua maquininha
                                     <i class="fas fa-chevron-right ml-3 text-ebw-purple-300 group-hover:text-ebw-cyan"></i>
@@ -249,7 +250,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             </div>
                         </div>
 
-                        <p class="text-3xl">
+                        <p class="sm:text-3xl text-2xl">
                             <span class="font-bold u-color-folk-cyan font-poppins">Sem taxa de adesão.</span>
                         </p>
                     </div>
@@ -286,7 +287,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     <div class="mt-4 mb-4 mx-6">
                         <div class="flex justify-center my-4">
                             <a
-                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full inline-block relative text-2xl font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-12 pr-20"
+                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full inline-block relative sm:text-2xl text-lg font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-12 pr-20"
                             href="#">
                                 peça agora
                             </a>
@@ -302,7 +303,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                         <div class="flex justify-center my-4">
                             <div>
                                 <a
-                                class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full relative inline-block text-2xl font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-5 pl-12 pr-28"
+                                class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full relative inline-block sm:text-2xl text-lg font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-5 sm:pl-12 pl-10 sm:pr-28 pr-14"
                                 href="#">
                                     chama no whats
                                 </a>
@@ -318,7 +319,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     <div class="mt-4 mb-4 mx-6">
                         <div class="flex justify-center my-4">
                             <a
-                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full tracking-wider relative inline-block text-2xl font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-8 pr-16"
+                            class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full tracking-wider relative inline-block sm:text-2xl text-lg font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-8 pr-16"
                             href="tel:08008943000">
                                 0800 894 3000
                             </a>
@@ -459,11 +460,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                 src="{{ asset( 'images/g-white.png' ) }}"
                 alt="Passou Ganhou">
 
-                <div class="flex flex-wrap justify-between -mx-4">  
+                <div class="flex flex-wrap justify-center -mx-4">  
 
-                    <div class="w-full md:w-5/12 px-4">
+                    <div class="w-full 2xl:w-4/12  lg:w-5/12 md:w-1/2 px-4 flex md:justify-start justify-center">
 
-                        <p class="text-4xl font-normal text-white">
+                        <p class="xl:text-4xl text-3xl font-normal text-white">
                             Transforme seus <br>
                             clientes em fãs com <br>
 
@@ -471,7 +472,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                                 o App
                                 <img loading="lazy"
                                 class="w-48 ml-3"
-                                src="{{ asset( 'images/passou-ganhou-white-brand.png' ) }}"
+                                src="{{ asset( 'images/passou-ganhou-white-brand-small.png' ) }}"
                                 alt="Passou Ganhou">
                             </span>
 
@@ -480,17 +481,17 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                         </p>
                     </div>
 
-                    <div class="w-full md:w-5/12 mt-10 lg:mt-0 px-4">
+                    <div class="w-full 2xl:w-4/12  lg:w-5/12 md:w-1/2 mt-10 lg:mt-0 px-4 flex md:items-start items-center flex-col">
 
-                        <p class="text-4xl font-bold u-color-folk-cyan mb-8">
+                        <p class="xl:text-4xl sm:text-3xl text-2xl font-bold u-color-folk-cyan mb-8">
                             Mostre seus produtos em <br>
                             uma das maiores vitrines <br>
                             de negócios do país
                         </p>
 
-                        <p class="text-2xl font-normal text-white">
-                            Seus clientes compram com a 
-                            PASSOU GANHOU e acumulam 
+                        <p class="sm:text-2xl text-xl font-normal text-white">
+                            Seus clientes compram com a <br>
+                            PASSOU GANHOU e acumulam <br>
                             pontos para trocar por descontos.
                         </p>
                     </div>                    
@@ -499,7 +500,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                 <div class="flex justify-center">
 
                     <div class="pt-10">
-                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block text-xl font-poppins font-extrabold rounded-full uppercase u-color-folk-purple bg-ebw-cyan hover:bg-opacity-80 transition-opacity duration-150 hover:u-bg-folk-light-purple py-4 pl-8 pr-12" href="#">
+                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block sm:text-xl text-base font-poppins font-extrabold rounded-full uppercase u-color-folk-purple bg-ebw-cyan hover:bg-opacity-80 transition-opacity duration-150 hover:u-bg-folk-light-purple py-4 pl-8 pr-12" href="#">
                             peça sua maquininha
                         </a>
                     </div>
@@ -616,7 +617,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
         <div class="flex flex-wrap justify-center -mx-4">
             <!-- loop -->
             <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
-                <div class="l-business__card p-6">
+                <div class="l-business__card sm:p-6 p-4">
                     <div class="l-business__card-body mb-8">
                         <p class="l-business__category font-bold u-color-folk-cyan my-4">
                             Vendas
@@ -631,7 +632,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     </div>
                     <div class="l-business__card-footer">
                         <div class="mb-4">
-                            <a href="mailto:vendas@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                            <a href="mailto:vendas@passouganhou.com.br" class="flex w-full leading-none break-all px-4 justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
                                 <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
                                 <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">vendas@passouganhou.com.br</span>
                             </a>
@@ -645,7 +646,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                 </div>
             </div>    
             <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
-                <div class="l-business__card p-6">
+                <div class="l-business__card sm:p-6 p-4">
                     <div class="l-business__card-body mb-8">
                         <p class="l-business__category font-bold u-color-folk-cyan my-4">
                             Suporte
@@ -660,7 +661,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     </div>
                     <div class="l-business__card-footer">
                         <div class="mb-4">
-                            <a href="mailto:suporte@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                            <a href="mailto:suporte@passouganhou.com.br" class="flex w-full break-all px-4 leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
                                 <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
                                 <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">suporte@passouganhou.com.br</span>
                             </a>
@@ -674,7 +675,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                 </div>
             </div>    
             <div class="w-full md:w-6/12 lg:w-4/12 my-4 lg:my-0 px-4">
-                <div class="l-business__card p-6">
+                <div class="l-business__card sm:p-6 p-4">
                     <div class="l-business__card-body mb-8">
                         <p class="l-business__category font-bold u-color-folk-cyan my-4">
                             Fale conosco
@@ -689,7 +690,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     </div>
                     <div class="l-business__card-footer">
                         <div class="mb-4">
-                            <a href="emailto:cac@passouganhou.com.br" class="flex w-full leading-none justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
+                            <a href="emailto:cac@passouganhou.com.br" class="flex w-full leading-none break-all px-4 justify-center items-center border-2 border-ebw-rosinha bg-opacity-0 hover:bg-opacity-20 bg-ebw-rosinha transition-opacity duration-300 rounded-full py-5">
                                 <i class="far fa-envelope text-ebw-purple-300 text-lg"></i>
                                 <span class="text-ebw-purple-200 font-poppins font-medium tracking-wide ml-3">cac@passouganhou.com.br</span>
                             </a>

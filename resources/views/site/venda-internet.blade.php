@@ -4,19 +4,19 @@
 
 @section( 'content' )
 
-    <div class="bg-ebw-grey flex relative h-screen sm:min-h-620px min-h-400px pt-20 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
+    <div class="bg-ebw-grey flex relative h-screen lg:min-h-820px sm:min-h-620px min-h-400px pt-20 pb-20 2xl:px-0 xl:px-8 lg:px-0 md:px-5 bg-no-repeat bg-cover bg-center" style="background-image: url({{ asset('images/banner-venda-internet.jpg') }})">
         <div class="shadow-custom absolute top-0 left-0 right-0 w-full sm:w-1/2"></div>
         <div class="flex flex-col justify-center mx-auto 2xl:px-20 sm:px-8 px-3 w-full 2xl:py-20 xl:pt-20">
             <div class="flex justify-end">
-                <div class="2xl:w-1/2 xl:w-7/12 w-full">
-                    <h1 class="text-right 2xl:text-6xl xl:text-5xl sm:text-4xl text-2xl text-black xl:leading-none sm:leading-none leading-none 2xl:mb-16 xl:mb-12 mb-10">
+                <div class="xl:w-7/12 w-full">
+                    <h1 class="text-right xl:text-5xl sm:text-4xl text-2xl text-black xl:leading-none sm:leading-none leading-none 2xl:mb-16 xl:mb-12 mb-10">
                         Venda na internet com<br>
                         <span class="font-bold">segurança, antifraude</span> e<br>
                         parcelamento em até <span class="font-bold 2xl:text-size-5.5 sm:text-6xl text-4xl">12x</span> 
                     </h1>
                     <p class="text-right text-black 2xl:text-3xl sm:text-2xl text-normal leading-tight 2xl:mb-32 xl:mb-20 mb-16"><b>EBW Pay</b> foi pensado e desenvolvido<br>para o micro e pequeno empreendedor</p>
                     <div class="flex justify-end 2xl:pr-40 md:pr-24 sm:pr-12">
-                        <a href="{{ route('pre-registratation') }}" class="shadow-custom-small outline-none c-btn-pattern sm:text-xl text-lg c-btn-icon-arrow bg-ebw-primary border-ebw-primary border-2 relative inline-block font-bold uppercase text-white hover:text-ebw-primary bg-ebw hover:bg-transparent py-3 pl-10 sm:pr-28 pr-20 rounded-full">
+                        <a href="{{ route('pre-registratation') }}" class="shadow-custom-small outline-none c-btn-pattern sm:text-xl text-lg c-btn-icon-arrow bg-ebw-primary border-ebw-primary border-2 relative inline-block font-bold uppercase text-white bg-ebw hover:bg-opacity-70 py-3 pl-10 sm:pr-28 pr-20 rounded-full">
                             Comece agora
                         </a>
                     </div>

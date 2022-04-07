@@ -10,9 +10,16 @@ $layout-name: 'l-items';
     @media screen and (max-width: 991px) {
         background: #E7DED6;
     }
+    @media screen and (max-width: 1400px) {
+        background-position-x: 320%;
+    }
+    @media screen and (max-width: 1400px) {
+        background-position-x: 320%;
+    }
 
-    @media screen and (min-width: 1600px) {
-        background-position-x: 140%;
+@media screen and (max-width: 1140px) {
+        background-position-x: 370%;
+        background-size: 850px 735px;
     }
 
     &__text {
