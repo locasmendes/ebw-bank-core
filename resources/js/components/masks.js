@@ -33,5 +33,8 @@ import "jquery-mask-plugin";
         };
 
         $('[name="cpf-cnpj"]').mask(cpfMaskBehavior, cpfOptions);
+        $('[name="cpf"]').mask("000.000.000-00");
+        $('[name="cep"]').mask("00000-000");
+        $('[name="telefone"]').mask(SPMaskBehavior, spOptions);
     });
 })(jQuery);

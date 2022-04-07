@@ -5,11 +5,14 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SubmissionResource\Pages;
 use App\Filament\Resources\SubmissionResource\RelationManagers;
 use App\Models\Submission;
+use Faker\Provider\ar_EG\Text;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 
 class SubmissionResource extends Resource
 {
@@ -17,15 +20,60 @@ class SubmissionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    protected static ?string $label = 'Cadastro';
+    protected static ?string $label = 'Peça sua Maquininha';
 
-    protected static ?string $pluralLabel = 'Cadastros';
+    protected static ?string $pluralLabel = 'Peça sua Maquininha';
+
+    protected static ?string $navigationGroup = 'Formulários';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                //                 name
+                // rg
+                // cpf
+                // email
+                // cep
+                // rua_quadra
+                // numero
+                // bairro
+                // cidade
+                // uf
+                // telefone
+                TextInput::make('name')
+                    ->label('Nome')
+                    ->disabled(),
+                TextInput::make('rg')
+                    ->label('RG')
+                    ->disabled(),
+                TextInput::make('cpf')
+                    ->label('CPF')
+                    ->disabled(),
+                TextInput::make('email')
+                    ->label('Email')
+                    ->disabled(),
+                TextInput::make('cep')
+                    ->label('CEP')
+                    ->disabled(),
+                TextInput::make('rua_quadra')
+                    ->label('Rua Quadra')
+                    ->disabled(),
+                TextInput::make('numero')
+                    ->label('Número')
+                    ->disabled(),
+                TextInput::make('bairro')
+                    ->label('Bairro')
+                    ->disabled(),
+                TextInput::make('cidade')
+                    ->label('Cidade')
+                    ->disabled(),
+                TextInput::make('uf')
+                    ->label('UF')
+                    ->disabled(),
+                TextInput::make('telefone')
+                    ->label('Telefone')
+                    ->disabled(),
             ]);
     }
 
@@ -33,7 +81,8 @@ class SubmissionResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('email')
             ])
             ->filters([
                 //
@@ -46,6 +95,12 @@ class SubmissionResource extends Resource
             //
         ];
     }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
 
     public static function getPages(): array
     {

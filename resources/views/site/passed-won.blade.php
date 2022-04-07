@@ -243,7 +243,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             <div class="w-full flex mt-10 mb-4">
                                 <a
                                 class="c-btn-pattern group  border-0 relative block sm:text-xl text-base rounded-full font-bold font-poppins uppercase u-color-folk-purple hover:u-color-folk-cyan u-bg-folk-cyan hover:u-bg-folk-purple py-4 px-8"
-                                href="#">
+                                href="{{ route('cadastro-peca-minha-maquininha') }}">
                                     peça sua maquininha
                                     <i class="fas fa-chevron-right ml-3 text-ebw-purple-300 group-hover:text-ebw-cyan"></i>
                                 </a>

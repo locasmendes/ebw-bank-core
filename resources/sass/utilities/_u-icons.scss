@@ -10,6 +10,7 @@ $utility-name: 'u-icon';
     &__free {
         &::before {
             font-family: 'Font Awesome 5 Free';
+            font-weight: 800;
         }
     }
 
@@ -23,6 +24,145 @@ $utility-name: 'u-icon';
     &__linkedin {
         &::before {
             content: '\f0e1';
+        }
+    }
+    &__address-card {
+        &::before {
+            content: '\f2bb';
+        }
+    }
+
+    &__building {
+        &::before {
+            content: '\f1ad';
+        }
+    }
+
+    &__city {
+        &::before {
+            content: '\f64f';
+        }
+    }
+
+    &__email {
+        &::before {
+            content: '\f0e0';
+        }
+    }
+
+    &__globe-americas {
+        &::before {
+            content: '\f57d';
+        }
+    }
+
+    &__home {
+        &::before {
+            content: '\f015';
+        }
+    }
+
+    &__id-card {
+        &::before {
+            content: '\f2c2';
+        }
+    }
+
+    &__location-arrow {
+        &::before {
+            content: '\f124';
+        }
+    }
+
+    &__phone {
+        &::before {
+            content: '\f095';
+        }
+    }
+
+    &__road {
+        &::before {
+            content: '\f018';
+        }
+    }
+
+    &__user {
+        &::before {
+            content: '\f007';
+        }
+    }
+
+    &__whatsapp {
+        &::before {
+            content: '\f232';
+        }
+    }
+
+    &__linkedin {
+        &::before {
+            content: '\f0e1';
+        }
+    }
+
+    &__instagram {
+        &::before {
+            content: '\f16d';
+        }
+    }
+
+    &__facebook {
+        &::before {
+            content: '\f39e';
+        }
+    }
+}
+
+.before\:\: {
+    &thumbnail\: {
+        &#{$utility-name} {
+            &-img {
+                &-email {
+                    &::before {
+                        content: '';
+                        width: 14px;
+                        height: 10px;
+                        margin-right: .5rem;
+                        display: block;
+                        background-image: url(../../images/icon-email.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hover\: {
+    &before\:\: {
+        &thumbnail\: {
+            &#{$utility-name} {
+                &-img {
+                    &-email {
+                        &::before {
+                            content: '';
+                            width: 14px;
+                            height: 10px;
+                            margin-right: .5rem;
+                            display: block;
+                            background-image: url(../../images/icon-email.png);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            &::before {
+                                filter: brightness(10);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

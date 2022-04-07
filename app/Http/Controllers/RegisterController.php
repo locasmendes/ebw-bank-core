@@ -13,6 +13,11 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class RegisterController extends Controller
 {
+    public function index()
+    {
+        return view('site.register');
+    }
+
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -55,7 +60,7 @@ class RegisterController extends Controller
 
         $submission = Submission::create($data);
 
-        return redirect()->to(route('cadastro'))->with('submission-succeeded', true);
+        return redirect()->back()->with('submission-succeeded', true);
     }
 
 
@@ -82,7 +87,19 @@ class RegisterController extends Controller
             return redirect()->back()->with('invalid-date', true);
         }
 
-        return Excel::download(new SubmissionsExport($request->input('start_date'), $request->input('final_date')), 'cadastros-ebw.xlsx');
+        $filaname = function () use ($request) {
+            $filename = 'pre-cadastros-ebw';
+
+            if (!is_null($request->input('start_date'))) {
+                $filename .= '-de-' . Carbon::createFromDate($request->input('start_date'))->format('d_m_Y');
+            }
+            if (!is_null($request->input('final_date'))) {
+                $filename .= '-ate-' . Carbon::createFromDate($request->input('final_date'))->format('d_m_Y');
+            }
+            return $filename . '.xlsx';
+        };
+
+        return Excel::download(new SubmissionsExport($request->input('start_date'), $request->input('final_date')), $filaname());
 
         return redirect()->back();
     }
@@ -109,7 +126,7 @@ class RegisterController extends Controller
                 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
             }
 
-            return view('test.image', \compact(['base64', 'type']));
+            return view('documents.image', \compact(['base64', 'type']));
         } catch (DecryptException $e) {
             return \abort(422);
         }

@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div class="flex justify-around flex-wrap md:px-20 px:10 pt-10">
-                <a href="#" class="flex md:mb-0 mb-4  leading-none uppercase justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-40 transition-opacity duration-300 text-white rounded-full py-4 font-black text-xl px-16">
+                <a href="{{ route('cadastro-peca-minha-maquininha') }}" class="flex md:mb-0 mb-4  leading-none uppercase justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-40 transition-opacity duration-300 text-white rounded-full py-4 font-black text-xl px-16">
                     Peça já a sua
                 </a>
                 <a href="{{ route('conheca-ebw') }}" class="flex md:mb-0 mb-4  leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-40 transition-opacity duration-300 text-white rounded-full py-4 font-black text-xl px-8">

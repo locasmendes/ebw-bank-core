@@ -57,6 +57,16 @@ $component-name: "c-btn";
             background-color: #45d499;
         }
     }
+
+    &-submit-2 {
+        border-radius: 10px;
+        background-image: linear-gradient(to right, $color-folk-purple, $color-folk-cyan);
+        cursor: pointer;
+
+        &:hover {
+            background: $color-folk-cyan;
+        }
+    }
 }
 
 .focus\: {

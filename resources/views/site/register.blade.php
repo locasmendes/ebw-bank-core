@@ -2,7 +2,13 @@
 
 @section( 'content' )
 
-<section class="l-register py-20">
+<div class="bg-cover bg-center pt-56 pb-16 bg-no-repeat" style="background-image:url({{ asset('images/banner-socio-investidor.jpg') }})">
+    <div class="container mx-auto px-6">
+        <h1 class="md:text-5.5xl text-4xl text-center leading-tight"><span class="font-bold">A maquininha</span> ideal para<br>o micro, pequeno, médio e gigante.</h1>
+    </div>
+</div>
+
+<section class="l-register pb-20 pt-12">
 
     <div class="container mx-auto px-4">
 
@@ -16,14 +22,13 @@
 
                       
                         @if (session('submission-succeeded'))
-                            <h1>Dados enviados com sucesso</h1>
+                            <h1 class="text-ebw-primary text-5xl font-bold mb-4">Dados enviados com sucesso</h1>
                         @else
-                            <p class="u-font-18 font-light">
-                                Peça agora a sua máquina Passou Ganhou! <br>
-                                Primeiro precisamos dos seus dados
-                            </p>
+                            <h2 class="text-4xl mb-8 font-bold text-center text-ebw-cyan">
+                                Preencha o formulário para adquirir sua maquininha!
+                            </h2>
                             
-                            <form action="{{ route('cadastro.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('cadastro-peca-minha-maquininha.store') }}" method="POST" enctype="multipart/form-data">
                                 @method('POST')
                                 @csrf
 
@@ -55,7 +60,7 @@
 
                                     <div class="w-full md:w-6/12 relative flex mt-4 px-4 pb-4">
                                         
-                                        <span class="u-icon__free u-icon__address-card before::u-font-size-30 before::u-color-folk-dark-silver!"></span>
+                                        <span class="u-icon__free u-icon__address-card before::u-font-size-30 before::u-color-folk-dark-silver"></span>
                                         
                                         <label
                                         class="w-full flex flex-col pl-4" 
@@ -114,7 +119,7 @@
                                     
                                             <input
                                             class="l-register__input-field font-medium"
-                                            type="text"
+                                            type="email"
                                             name="email"
                                             id="email"
                                             value="{{ old('email') ? old('email') : '' }}"
@@ -313,7 +318,7 @@
                                                     id="documento">
 
                                                     <label
-                                                    class="block u-font-size-14 font-light text-center u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-purple py-4"
+                                                    class="block u-font-size-14 font-light text-center u-color-folk-white bg-ebw-cyan hover:bg-ebw-purple-300 transition-colors duration-300 cursor-pointer py-4"
                                                     for="documento">
                                                         Selecionar arquivo
                                                     </label>
@@ -331,7 +336,7 @@
 
                                             <div class="w-full md:w-2/12">
                                                 <input
-                                                class="c-btn-submit w-full u-font-size-12 font-mediu u-color-folk-white py-4"
+                                                class="c-btn-submit-2 w-full text-lg font-medium u-color-folk-white py-4 tracking-wide"
                                                 type="submit"
                                                 value="CONCLUIR">
                                             </div>

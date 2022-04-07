@@ -103,3 +103,24 @@ $utility-name: 'u-color-folk';
         }
     }
 }
+.before\:\: {
+    &#{$utility-name} {
+        &-cyan {
+            &::before {
+                color: $color-folk-cyan !important;
+            }
+        }
+
+        &-dark-silver {
+            &::before {
+                color: $color-folk-dark-silver !important;
+            }
+        }
+
+        &-purple {
+            &::before {
+                color: $color-folk-purple !important;
+            }
+        }
+    }
+}
