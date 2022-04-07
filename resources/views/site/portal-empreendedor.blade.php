@@ -52,7 +52,7 @@
                             <a href="{{ route('portal.show', ['id' => $post->id, 'slug' => \Illuminate\Support\Str::slug($post->title)]) }}" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
                                 <img
                                 src="{{ asset(Storage::url($post->image)) }}"
-                                class="h-64 object-conver object-center w-full"
+                                class="h-64 object-cover object-center w-full"
                                 alt="Imagem de exemplo">
                                 <div class="pt-5 pb-10">
                                     <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4 break-all">

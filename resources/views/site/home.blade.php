@@ -74,7 +74,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                             <img
                             loading="lazy"
                             src="{{ asset(Storage::url($post->image)) }}"
-                            class="h-64 object-conver object-center w-full"
+                            class="h-64 object-cover object-center w-full"
                             alt="Imagem de exemplo">
                             <div class="pt-5 pb-10">
                                 <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4 break-words">
