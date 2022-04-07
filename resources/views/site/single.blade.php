@@ -6,9 +6,9 @@
 
 <!-- banner -->
 <div class="relative">
-    <img src="{{ asset('images/background-pre-registration.jpg') }}" class="w-full" alt="">
-    <div class="absolute left-1/2 -translate-x-1/2 bottom-20 transform">
-        <h1 class="text-white text-6xl text-center font-bold">Blog EBW Bank</h1>
+    <img src="{{ asset('images/background-pre-registration.jpg') }}" class="w-full object-fit object-center xl:min-h-400px sm:min-h-300px min-h-240px" alt="Background Blog">
+    <div class="absolute left-1/2 -translate-x-1/2 bottom-20 transform w-full px-5">
+        <h1 class="text-white xl:text-6xl sm:text-5xl text-3xl text-center font-bold">Blog EBW Bank</h1>
     </div>
 </div>
 
@@ -40,7 +40,7 @@
 </section>
 
 <!-- mvv -->
-@include( 'site.partials.mvv' )
+{{-- @include( 'site.partials.mvv' ) --}}
 <!-- end mvv -->
 
 @endsection

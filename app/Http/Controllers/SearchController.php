@@ -66,7 +66,6 @@ class SearchController extends Controller
             ->get();
 
         return view('site.search', \compact(['pages', 's', 'posts', 'recentPosts']));
-        // dd($this->getPages($request->s));
     }
 
     private function getPages($search)

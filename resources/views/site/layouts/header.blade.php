@@ -172,6 +172,8 @@
     
         </nav>
         <button
+        type="button"
+        aria-label="Open Menu"
         class="l-header__hamburger xl:hidden z-50 flex justify-center items-center"
         x-on:click="openMenu = !openMenu">
             <span

@@ -6,8 +6,10 @@
 
 <div class="shadow-md w-full h-1 hidden xl:block"></div>
 
-<div class="container mx-auto px-8 pt-16 pb-20">
-    <h1 class="md:text-4xl text-3xl text-center mb-10">Resultados da pesquisa <span class="text-ebw-primary font-bold">"{{ $s }}"</span> </h1>
+<div class="container mx-auto px-8 pt-40 pb-20">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="md:text-4xl sm:text-3xl text-2xl text-center mb-10">Resultados da pesquisa <br><span class="text-ebw-primary font-bold">"{{ $s }}"</span> </h1>
+    </div>
     <div class="flex flex-wrap -mx-8">
         <div class="lg:w-8/12 lg:px-16 px-8">
             @if (!$pages->isEmpty())
