@@ -29,22 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        function text_to_html($string = '')
-        {
-            if ($string === '') {
-                return '';
-            }
-            if (Str::containsAll($string, ['**', '**'])) {
-                $count = Str::substrCount($string, '**');
 
-
-                for ($i = 0; $i < $count / 2; $i++) {
-                    $text = Str::replaceFirst('**', '<b>', $string);
-                    $text = Str::replaceFirst('**', '</b>', $text);
-                }
-                return $text;
-            }
-        }
         Http::macro('ebw_crm', function () {
             return Http::asForm()->withToken(\config('ebw-crm.auth_token'))->baseUrl(\config('ebw-crm.base_url'));
         });
