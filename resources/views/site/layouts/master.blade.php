@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
             	
         <meta name="description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas." />
-        <meta name="keywords" content="banco, ebw bank, fintech, investimentos, " />
+        <meta name="keywords" content="banco, ebw bank, fintech, investimentos, ebw, bank, pay, ebw pay, soluções de pagamento, empreendedores, maquininha de cartão" />
         <meta name="title" content="@yield('title', 'EBW Bank') - EBW Bank">
         
         <meta property="og:locale" content="pt_BR" />
@@ -36,8 +36,8 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <link rel="manifest" href="">
-        <!-- swipercss 7 -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+        {{-- <!-- swipercss 7 --> --}}
+        {{-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"> --}}
         <!-- fontspartan -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

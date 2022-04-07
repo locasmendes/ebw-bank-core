@@ -372,6 +372,6 @@ x-init="
 </footer>
 <!-- end footer -->
 
-<!-- swiperjs 7 -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+{{-- <!-- swiperjs 7 --> --}}
+{{-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> --}}
 <script src="{{ asset('js/app.js') }}"></script>
