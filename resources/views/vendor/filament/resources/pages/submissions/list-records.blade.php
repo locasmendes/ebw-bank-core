@@ -31,4 +31,3 @@
         {{ $this->table }}
     </x-filament::page>
 </div>
-A

@@ -35,6 +35,7 @@ module.exports = {
             "size-2.75": "2.75rem",
             "size-4.06": "4.06rem",
             "size-5.5": "5.5rem",
+            "size-2.65": "2.65rem",
             "5.5xl": "3.25rem",
         },
         extend: {
@@ -47,6 +48,7 @@ module.exports = {
             },
             maxWidth: {
                 xs: "20.3rem",
+                xxs: "14rem",
             },
             spacing: {
                 112: "28rem",
@@ -56,6 +58,7 @@ module.exports = {
             width: {},
             backgroundPosition: {
                 "75%": "75%",
+                "center-top": "center top",
             },
             lineHeight: {
                 tightest: "1.15",

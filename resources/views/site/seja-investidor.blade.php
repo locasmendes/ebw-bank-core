@@ -36,15 +36,42 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
 
         <div class="flex flex-wrap -mx-8">
             @foreach ($sejaInvestidorSettings['who_invest'] as $item)
-                <article class="xl:w-1/3 md:w-1/2 w-full px-5 mb-16">
+                <article
+                class="xl:w-1/3 md:w-1/2 w-full px-5 mb-16"
+                x-data="{open: false, height: 0, hasButton: false}"
+                x-init="
+                    setTimeout(function() {
+                        $refs.text.style.maxHeight = `${$refs.text.clientHeight}px`;
+                        height = $refs.text.clientHeight;
+                        if( $refs.text.scrollHeight > 180) {
+                            hasButton = true;
+                        }
+                    }, 50);
+                    $watch('open', (value) => {
+                        if(value) {
+                            $refs.text.style.maxHeight = `${$refs.text.scrollHeight}px`;
+                        } else {
+                            $refs.text.style.maxHeight = `${height}px`;
+                        }
+                    })
+                ">
                     <img src="{{ image_url($item['investor_image']) }}" class="mb-9 w-full" alt="{{ $item['investor_name'] }}">
                     <h3 class="uppercase text-center text-2xl leading-none text-ebw-secondary font-bold">{{ $item['investor_name'] }}</h3>
                     <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">{{ $item['investor_occupation'] }}</h4>
-                    <p class="text-xl leading-tight text-ebw-third-grey">
+                    <p
+                    class="text-xl leading-tight text-ebw-third-grey  transition-all duration-200"
+                    x-bind:class="!open ? 'testimonials-text' : ''"
+                    x-ref="text">
                         {{ $item['investor_comment'] }}
                     </p>
                     <div class="pt-2 flex justify-end">
-                        <button type="button" class="w-14 h-14 rounded-full bg-ebw-primary flex justify-center items-center pt-1 hover:bg-opacity-90 transition-opacity duration-150">
+                        <button
+                        x-cloak
+                        x-show="hasButton"
+                        type="button"
+                        class="w-14 h-14 rounded-full bg-ebw-primary flex justify-center items-center pt-1 hover:bg-opacity-90 transition-all duration-500 transform rotate-0"
+                        x-bind:class="open ? 'rotate-180' : ''"
+                        x-on:click="open = !open">
                             <span class="triangle-down"></span>
                         </button>
                     </div>

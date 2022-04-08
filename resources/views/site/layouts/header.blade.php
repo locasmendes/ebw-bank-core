@@ -39,68 +39,71 @@
     <header
     class="absolute top-0 left-0 right-0 z-40 py-5">
         <nav class="container mx-auto px-4 hidden xl:block">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-center items-center">
                 <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
-                    <img src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
+                    <img class="max-w-xxs" src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
                 </a>
-    
-                <ul class="2xl:pl-20 lg:pl-8 flex flex-row items-center justify-center">
-                    
-                <li class="my-4 lg:my-8 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
-                            Home
-                        </a>
-                    </li>
-    
-                <li class="my-4 lg:my-8 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
-                            A EBW
-                        </a>
-                    </li>
-    
-                <li class="l-dropdown relative my-4 lg:my-8 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
-                            Para seu negócio
-                        </a>
-    
-                        <ul class="l-dropdown__menu">
+                <div class="flex items-center">
+
+                    <ul class="2xl:pl-20 lg:pl-8 flex flex-row items-center justify-center">
                             
-                            <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
-    
-                                <a class="font-medium text-white" href="{{ route('venda-internet') }}">
-                                    Venda pela internet
-                                </a>
-                            </li>
-    
-                            <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
-    
-                                <a class="font-medium text-white" href="{{ route('products') }}">
-                                    Peça sua maquininha
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-    
-                <li class="my-4 lg:my-8 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('seja-investidor') }}">
-                            Seja um investidor
-                        </a>
-                    </li>
-    
-                <li class="my-4 lg:my-8 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-    
-            <div class="my-4 lg:my-8 mx-3">
-                    <button
-                    type="button"
-                    class="w-44 bg-ebw-primary rounded-full flex justify-end py-2 px-6"
-                    x-on:click="openSearch = true">
-                        <i class="fas fa-search text-white text-2xl"></i>
-                    </button>
+                        <li class="my-4 lg:my-8 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
+                                Home
+                            </a>
+                        </li>
+            
+                        <li class="my-4 lg:my-8 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
+                                A EBW
+                            </a>
+                        </li>
+            
+                        <li class="l-dropdown relative my-4 lg:my-8 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
+                                Para seu negócio
+                            </a>
+        
+                            <ul class="l-dropdown__menu">
+                                
+                                <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+        
+                                    <a class="font-medium text-white" href="{{ route('venda-internet') }}">
+                                        Venda pela internet
+                                    </a>
+                                </li>
+        
+                                <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+        
+                                    <a class="font-medium text-white" href="{{ route('products') }}">
+                                        Peça sua maquininha
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+            
+                        <li class="my-4 lg:my-8 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('seja-investidor') }}">
+                                Seja um investidor
+                            </a>
+                        </li>
+            
+                        <li class="my-4 lg:my-8 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <div class="my-4 lg:my-8 mx-3">
+                        <button
+                        type="button"
+                        class="w-44 bg-ebw-primary rounded-full flex justify-between items-center font-bold text-white text-sm py-1 px-5"
+                        x-on:click="openSearch = true">
+                            Busca
+                            <i class="fas fa-search text-white text-xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>

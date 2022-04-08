@@ -468,15 +468,16 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             Transforme seus <br>
                             clientes em fãs com <br>
 
-                            <span class="flex items-center text-white mt-3">
-                                o App
-                                <img loading="lazy"
+                            <span class="text-white">
+                                o App <span class="font-poppins font-bold">Passou Ganhou</span> 
+
+                                {{-- <img loading="lazy"
                                 class="w-48 ml-3"
                                 src="{{ asset( 'images/passou-ganhou-white-brand-small.png' ) }}"
-                                alt="Passou Ganhou">
+                                alt="Passou Ganhou"> --}}
                             </span>
 
-                            em breve  <br>
+                            em breve 
                             lançamento nacional
                         </p>
                     </div>

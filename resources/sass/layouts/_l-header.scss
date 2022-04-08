@@ -12,13 +12,6 @@ $layout-name: "l-header";
     &__nav-link {
         font-size: 0.875rem;
 
-        @media screen and (min-width: 1600px) {
-            font-size: 1.125rem;
-        }
-
-        @media screen and (max-width: 991px) {
-            font-size: 1.25rem;
-        }
     }
 
     &__hamburger {

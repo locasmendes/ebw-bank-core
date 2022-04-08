@@ -79,8 +79,8 @@
 
             <div class="w-full flex justify-center mt-3">
                 <a
-                class="c-btn-pattern c-btn-icon-arrow u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
-                href="#">
+                class="c-btn-pattern c-btn-icon-arrow rounded-full u-border-color-primary relative inline-block font-bold uppercase u-color-folk-white hover:u-color-folk-primary u-bg-folk-primary hover:u-bg-folk-none mt-12 py-5 pl-7 pr-28"
+                href="{{ route('conheca-ebw') }}">
                     sobre nós
                 </a>
             </div>

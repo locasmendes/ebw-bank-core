@@ -9,19 +9,14 @@ $layout-name: 'l-social-media';
     }
 
     &__item {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: $color-folk-primary;
-
-        @media screen and (max-width: 1200px) {
-            width: 45px;
-            height: 45px;
-        }
 
         &:hover {
             opacity: .8;
@@ -33,9 +28,10 @@ $layout-name: 'l-social-media';
         font-size: 0;
 
         &::before {
-            font-size: 2rem;
+            font-size: 1.25rem;
             font-family: 'Font Awesome 5 Brands';
             color: $color-folk-white !important;
+            line-height: none;
             @media screen and (max-width: 1200px) {
                font-size: 1.5rem;
             }
