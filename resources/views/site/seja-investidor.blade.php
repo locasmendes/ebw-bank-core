@@ -7,15 +7,15 @@
 <!-- -->
 <!-- banner -->
 <section 
-class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center pt-52 bg-ebw-grey flex items-end pb-24"
-style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
+class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center pt-52 bg-ebw-grey flex items-center pb-24"
+style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }} );"
 >
+    <div class="shadow-custom absolute top-0 left-0 right-0 w-full sm:w-1/2"></div>
     <div class="container lg:block mx-auto px-4">
-        <div class="sm:w-7/12 lg:w-1/2">
-            <h1 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-medium-grey 2xl:leading-none xl:leading-none md:leading-none sm:leading-none leading-none">
-                <span class="text-ebw-medium-grey font-bold">Diferente</span> é fazer parte de uma das <span class="text-ebw-medium-grey font-bold">fintechs</span> que mais crescem no país.<br>
+        <div class="sm:w-7/12 mb-44">
+            <h1 class="font-light text-black text-5xl leading-tight">
+                Ser <span class="text-ebw-primary font-bold">diferente</span> é estar com quem faz a diferença. Seja um <span class="font-bold">sócio investidor EBW Bank</span>, a fintech que não para de <span class="font-bold">crescer.</span>
             </h1>
-            <h2 class="2xl:text-size-3.56 xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-ebw-primary font-bold 2xl:leading-none xl:leading-none sm:leading-none leading-none mb-16">Seja um sócio investidor!</h2>
         </div>
         {{-- <x-btn-primary href="#" data-set="oi" >
             <x-slot name="icon">
@@ -30,9 +30,65 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
 </section>
 <!-- end banner -->
 
-<section class="bg-ebw-lightest-grey pt-24">
+<section class="bg-center bg-no-repeat bg-cover pt-72 pb-44" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
+    <div class="container mx-auto px-10">
+        <div class="flex -mx-10 mb-20">
+            <div class="w-1/2 px-10">
+                <p class="text-black text-2xl mb-5 leading-tight">A <b>EBW Bank</b> acredita que empreender é fazer a diferença. Por isso, enxergamos mais que negócios nas relações com nossos clientes. Nós vemos propósitos de vida.</p>
+                <p class="text-black text-2xl mb-5 leading-tight">Queremos apoiar o crescimento do empreendedor e, nessa parceria, abrimos nossas portas para que você seja um investidor EBW Bank.</p>
+            </div>
+            <div class="w-1/2 px-10">
+                <h3 class="text-black font-bold text-2xl leading-tight">Conheça as vantagens de ser um sócio investidor:</h3>
+                <ul class="list-disc pl-5">
+                    <li class="text-black text-2xl leading-tight">A <b>EBW</b> é uma fintech que não para de crescer</li>
+                    <li class="text-black text-2xl leading-tight">Investindo na <b>EBW</b>, você amplia suas frentes de investimento</li>
+                    <li class="text-black text-2xl leading-tight">Só a <b>EBW</b> proporciona benefícios exclusivos para sócios investidores</li>
+                    <li class="text-black text-2xl leading-tight">Cotas limitadas, somente para quem quer fazer a diferença,com quem já sabe o caminho</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex -mx-4 justify-center">
+            <div class="w-5/6">
+                <h2 class="text-center font-light text-black tracking-wide text-5xl mb-8">
+                    <span class="text-ebw-primary font-bold">Invista</span> em uma empresa <span class="text-ebw-primary font-bold">certificada.</span>
+                </h2>
+                <p class="text-center text-black text-2xl mb-3">Somos uma fintech certificada pelo <b>PCI, Padrão de Segurança de Dados <br>da Indústria de Cartões de Pagamento.</b></p>
+                <p class="text-center text-black text-2xl mb-3">Possuímos padrões rígidos de controle contra fraudes e garantimos constante monitoramento sogre todas as transações realizadas através de nossos meios de pagamento.</p>
+                <p class="text-center text-black text-2xl mb-3">E o resultado é mais segurança para quem vende e para quem compra.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="bg-center bg-no-repeat bg-cover pt-52 pb-36" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
+    <div class="container mx-auto px-4">
+        <div class="flex -mx-4 justify-center">
+            <div class="w-10/12">
+                <p class="text-4xl text-center text-black mb-12">
+                    Em breve, a <b>EBW</b> dará mais um passo importante:
+                    <br>
+                    seu lançamento na <b>Bolsa de Valores da Nasdaq.</b>
+                </p>
+                <p class="text-4xl text-center text-black mb-20">
+                    E aqui fica o nosso convite: Seja <span>diferente.</span>
+                    <br>
+                    Seja exclusivo. Seja único. Seja um investidor da <b>EBW Bank.</b>
+                </p>
+                <div class="flex justify-center">
+                    <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 sm:pr-20 pr-12 sm:py-3 py-2 sm:text-xl text-sm uppercase tracking-wide text-white rounded-full leading-none">
+                        Quero ser <span class="text-white font-bold">sócio investidor</span> <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-center bg-no-repeat bg-cover pt-24 pb-16" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
     <div class="container mx-auto px-8">
-        <h2 class="xl:text-size-2.75 sm:text-4xl text-3xl text-center text-ebw-secondary leading-none tracking-wide mb-16">Quem investe na EBW Bank tem história pra contar!</h2>
+        <h2 class="xl:text-size-2.75 sm:text-4xl text-3xl text-center text-black font-light leading-none tracking-wide mb-10">Quem investe na <b>EBW Bank</b> tem <b>história</b> pra <b>contar!</b></h2>
 
         <div class="flex flex-wrap -mx-8">
             @foreach ($sejaInvestidorSettings['who_invest'] as $item)
@@ -43,7 +99,7 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
                     setTimeout(function() {
                         $refs.text.style.maxHeight = `${$refs.text.clientHeight}px`;
                         height = $refs.text.clientHeight;
-                        if( $refs.text.scrollHeight > 180) {
+                        if( $refs.text.scrollHeight > 90) {
                             hasButton = true;
                         }
                     }, 50);
@@ -55,11 +111,11 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
                         }
                     })
                 ">
-                    <img src="{{ image_url($item['investor_image']) }}" class="mb-9 w-full" alt="{{ $item['investor_name'] }}">
-                    <h3 class="uppercase text-center text-2xl leading-none text-ebw-secondary font-bold">{{ $item['investor_name'] }}</h3>
-                    <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">{{ $item['investor_occupation'] }}</h4>
+                    <img src="{{ image_url($item['investor_image']) }}" class="mb-4 w-full" alt="{{ $item['investor_name'] }}">
+                    <h3 class="text-2xl leading-none text-black font-bold mb-4">{{ $item['investor_name'] }}</h3>
+                    {{-- <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">{{ $item['investor_occupation'] }}</h4> --}}
                     <p
-                    class="text-xl leading-tight text-ebw-third-grey  transition-all duration-200"
+                    class="text-lg leading-tight text-black  transition-all duration-200"
                     x-bind:class="!open ? 'testimonials-text' : ''"
                     x-ref="text">
                         {{ $item['investor_comment'] }}
@@ -69,7 +125,7 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
                         x-cloak
                         x-show="hasButton"
                         type="button"
-                        class="w-14 h-14 rounded-full bg-ebw-primary flex justify-center items-center pt-1 hover:bg-opacity-90 transition-all duration-500 transform rotate-0"
+                        class="w-10 h-10 rounded-full bg-ebw-primary flex justify-center items-center pt-1 hover:bg-opacity-90 transition-all duration-500 transform rotate-0"
                         x-bind:class="open ? 'rotate-180' : ''"
                         x-on:click="open = !open">
                             <span class="triangle-down"></span>
@@ -80,7 +136,7 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
         </div>
     </div>
 </section>
-
+{{-- 
 <div class="bg-ebw-title pt-28 pb-32 px-5 flex justify-center items-center">
     <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 sm:pr-20 pr-12 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm uppercase tracking-wide text-white rounded-full leading-none">
         Quero ser <span class="text-white font-bold">sócio investidor</span> <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
@@ -120,7 +176,7 @@ style="background-image: url( {{ asset( 'images/seja-investidor.jpg' ) }} );"
             <p class="xl:text-5xl lg:text-4xl sm:text-3xl text-2xl text-black leading-none mb-4">Seja investidor da EBW Bank.</p>
         </div>
     </div>
-</section>
+</section> --}}
 <section class="bg-ebw-form pt-20 pb-32" id="form-investidor">
     <div class="max-w-6xl mx-auto px-3">
         <h2 class="xl:text-5xl lg:text-4xl sm:text-3xl text-2xl text-white leading-snug text-center mb-10 tracking-wider">Quero ser sócio investidor</h2>
