@@ -16,17 +16,11 @@ class CreateSubmissionsTable extends Migration
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('rg');
-            $table->string('cpf');
+            $table->string('phone');
             $table->string('email');
-            $table->string('cep');
-            $table->string('rua_quadra');
-            $table->string('numero');
-            $table->string('bairro');
-            $table->string('cidade');
-            $table->string('uf');
-            $table->string('telefone');
-            $table->string('documento');
+            $table->string('cpf_cnpj');
+            $table->boolean('allow_infomation_whatsapp_sms');
+            $table->boolean('allow_infomation_email');
             $table->timestamps();
         });
     }

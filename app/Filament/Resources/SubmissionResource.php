@@ -7,6 +7,9 @@ use App\Filament\Resources\SubmissionResource\RelationManagers;
 use App\Models\Submission;
 use Faker\Provider\ar_EG\Text;
 use Filament\Forms;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -30,59 +33,48 @@ class SubmissionResource extends Resource
     {
         return $form
             ->schema([
-                //                 name
-                // rg
-                // cpf
-                // email
-                // cep
-                // rua_quadra
-                // numero
-                // bairro
-                // cidade
-                // uf
-                // telefone
-                TextInput::make('name')
-                    ->label('Nome')
-                    ->disabled(),
-                TextInput::make('rg')
-                    ->label('RG')
-                    ->disabled(),
-                TextInput::make('cpf')
-                    ->label('CPF')
-                    ->disabled(),
-                TextInput::make('email')
-                    ->label('Email')
-                    ->disabled(),
-                TextInput::make('cep')
-                    ->label('CEP')
-                    ->disabled(),
-                TextInput::make('rua_quadra')
-                    ->label('Rua Quadra')
-                    ->disabled(),
-                TextInput::make('numero')
-                    ->label('Número')
-                    ->disabled(),
-                TextInput::make('bairro')
-                    ->label('Bairro')
-                    ->disabled(),
-                TextInput::make('cidade')
-                    ->label('Cidade')
-                    ->disabled(),
-                TextInput::make('uf')
-                    ->label('UF')
-                    ->disabled(),
-                TextInput::make('telefone')
-                    ->label('Telefone')
-                    ->disabled(),
-            ]);
+                Group::make([
+                    TextInput::make('name')
+                        ->label('Nome')
+                        ->disabled(),
+                    TextInput::make('phone')
+                        ->label('Telefone')
+                        ->disabled(),
+                    TextInput::make('email')
+                        ->label('E-mail')
+                        ->disabled(),
+                    TextInput::make('cpf_cnpj')
+                        ->label('CPF ou CNPJ')
+                        ->disabled(),
+                    Select::make('person_type')
+                        ->options([
+                            'pf' => 'Pessoa Física',
+                            'pj' => 'Pessoa Jurídica'
+                        ])
+                        ->label('Tipo de pessoa')
+                        ->disabled(),
+                ])->columns(2),
+                Group::make([
+                    Checkbox::make('allow_infomation_whatsapp_sms')
+                        ->label('Permite receber informações por Whatsapp e SMS')
+                        ->disabled(),
+                    Checkbox::make('allow_infomation_email')
+                        ->label('Permite receber informações por email')
+                        ->disabled(),
+                ])
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
+                TextColumn::make('name')
+                    ->label('Nome'),
+                TextColumn::make('phone')
+                    ->label('Telefone'),
                 TextColumn::make('email')
+                    ->label('E-mail')
             ])
             ->filters([
                 //

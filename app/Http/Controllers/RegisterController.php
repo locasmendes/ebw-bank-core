@@ -10,6 +10,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -20,39 +21,24 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $validate = $request->validate([
             'name'       => 'required|string|max:255',
-            'rg'         => 'required|string|max:255',
-            'cpf'        => 'required|string|max:255',
+            'phone'         => 'required|string|max:255',
             'email'      => 'required|email|max:255',
-            'cep'        => 'required|string|max:255',
-            'rua_quadra' => 'required|string|max:255',
-            'numero'     => 'required|string|max:255',
-            'bairro'     => 'required|string|max:255',
-            'cidade'     => 'required|string|max:255',
-            'uf'         => 'required|string|max:255',
-            'telefone'      => 'required|string|max:255',
-            'documento'  => 'required|file|max:1024|mimetypes:application/pdf,image/jpeg,image/png',
+            'cpf-cnpj'        => 'required|string|max:255',
+            'allow-infomation-whatsapp-sms' => 'boolean|nullable',
+            'allow-infomation-email' => 'boolean|nullable'
         ], [
-            'name.required'       => 'Nome é obrigatório!',
-            'rg.required'         => 'RG é obrigatório!',
-            'cpf.required'        => 'CPF é obrigatório!',
-            'email.required'      => 'E-mail é obrigatório!',
-            'cep.required'        => 'CEP é obrigatório!',
-            'rua_quadra.required' => 'Endereço é obrigatório!',
-            'numero.required'     => 'Número é obrigatório!',
-            'bairro.required'     => 'Bairro é obrigatório!',
-            'cidade.required'     => 'Cidade é obrigatório!',
-            'uf.required'         => 'UF é obrigatório!',
-            'telefone.required'      => 'Telefone é obrigatório!',
-            'documento.required'  => 'Documento é obrigatório!',
-            'documento.max'       => 'O documento ultrapassou o limite de 1MB!',
-            'documento.mimetypes' => 'Tipo de arquivo inválido!'
+            'name.required' => 'O nome é obrigatório',
+            'phone.required' => 'O telefone é obrigatório',
+            'email.required' => 'O email é obrigatório',
+            'email.email' => 'O email está com formato incorreto',
+            'cpf-cnpj.required' => 'O CPF ou CNPJ é obrigatório'
         ]);
 
-        $path = $request->file('documento')->store('documentos');
-
-        $data = Arr::set($data, 'documento', $path);
+        $data = collect($validate)->mapWithKeys(function ($item, $key) {
+            return [Str::replace('-', '_', $key) => $item];
+        })->toArray();
 
         // return view('test.image', \compact('base64'));
 
@@ -88,7 +74,7 @@ class RegisterController extends Controller
         }
 
         $filaname = function () use ($request) {
-            $filename = 'pre-cadastros-ebw';
+            $filename = 'peca-sua-maquininha';
 
             if (!is_null($request->input('start_date'))) {
                 $filename .= '-de-' . Carbon::createFromDate($request->input('start_date'))->format('d_m_Y');

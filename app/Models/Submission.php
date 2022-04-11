@@ -9,9 +9,17 @@ class Submission extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'name',
+        'phone',
+        'email',
+        'cpf_cnpj',
+        'allow_infomation_whatsapp_sms',
+        'allow_infomation_email'
+    ];
 
-    protected $hidden = [
-        'updated_at',
+    protected $casts = [
+        'allow_infomation_whatsapp_sms' => 'boolean',
+        'allow_infomation_email' => 'boolean'
     ];
 }

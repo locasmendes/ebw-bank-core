@@ -78,6 +78,7 @@ class PreRegistrationsExport implements FromQuery, WithHeadings, WithMapping, Sh
             Carbon::createFromDate($preRegistration->created_at)->format('d/m/Y'),
         ];
     }
+
     public function headings(): array
     {
         return [

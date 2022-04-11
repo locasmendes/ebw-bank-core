@@ -42,8 +42,8 @@ Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->n
 Route::get('/seja-um-investidor', [SejaInvestidorController::class, 'index'])->name('seja-investidor');
 Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
 Route::get('/search', [SearchController::class, 'index'])->name('search');
-Route::get('/cadastro-peca-minha-maquininha', [RegisterController::class, 'index'])->name('cadastro-peca-minha-maquininha');
-Route::post('/cadastro-peca-minha-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
+Route::get('/cadastro-peca-sua-maquininha', [RegisterController::class, 'index'])->name('cadastro-peca-minha-maquininha');
+Route::post('/cadastro-peca-sua-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
 
 Route::middleware('auth')->group(function () {
     Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
