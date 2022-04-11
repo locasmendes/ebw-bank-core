@@ -1,4 +1,18 @@
-<div x-data="{openMenu: false, openSearch: false}">
+<div
+x-data="{openMenu: false, openSearch: false, floatingMenu: false}"
+x-on:scroll.window.throttle.50ms="handleScroll"
+x-init="
+    $watch('openSearch', function(value) {
+        if(value) {
+            document.querySelector('body').overflowY = 'hidden'
+        } else {
+            document.querySelector('body').overflowY = 'auto'
+        }
+    });
+    $watch('floatingMenu', function(value) {
+
+    })
+">
     <div 
     class="fixed inset-0 bg-ebw-dark-grey flex-center z-50 flex justify-center items-center"
     x-show="openSearch"
@@ -11,14 +25,9 @@
     x-transition:leave-end="opacity-0"
     x-on:keyup.escape.window="openSearch = false"
     x-init="
-        $watch('openSearch', (value) => {
-            if(value) {
-                document.querySelector('body').overflowY = 'hidden'
-            } else {
-                document.querySelector('body').overflowY = 'auto'
-            }
-        })
-    ">
+        
+    "
+    >
         <button 
         type="submit" 
         class="absolute right-10 top-10 w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
@@ -37,29 +46,33 @@
         </div>
     </div>
     <header
-    class="absolute top-0 left-0 right-0 z-40 py-5">
+    x-ref="header-menu"
+    class="top-0 left-0 right-0 z-40 transition-all duration-300"
+    x-bind:class="floatingMenu ? 'fixed py-2 bg-white shadow-md' : 'absolute py-9'"
+    {{-- class="fixed top-0 left-0 right-0 z-40 py-2 bg-white shadow-md" --}}
+    >
         <nav class="container mx-auto px-4 hidden xl:block">
             <div class="flex justify-center items-center">
                 <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
-                    <img class="max-w-xxs" src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
+                    <img x-bind:class="floatingMenu ? 'max-w-ss' : 'max-w-xxs'" src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
                 </a>
                 <div class="flex items-center">
 
                     <ul class="2xl:pl-20 lg:pl-8 flex flex-row items-center justify-center">
                             
-                        <li class="my-4 lg:my-8 mx-3">
+                        <li class="my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block  {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('home') }}">
                                 Home
                             </a>
                         </li>
             
-                        <li class="my-4 lg:my-8 mx-3">
+                        <li class="my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('conheca-ebw') }}">
                                 A EBW
                             </a>
                         </li>
             
-                        <li class="l-dropdown relative my-4 lg:my-8 mx-3">
+                        <li class="l-dropdown relative my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="#">
                                 Para seu negócio
                             </a>
@@ -82,20 +95,20 @@
                             </ul>
                         </li>
             
-                        <li class="my-4 lg:my-8 mx-3">
+                        <li class="my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('seja-investidor') }}">
                                 Seja um investidor
                             </a>
                         </li>
             
-                        <li class="my-4 lg:my-8 mx-3">
+                        <li class="my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
                                 Blog
                             </a>
                         </li>
                     </ul>
         
-                    <div class="my-4 lg:my-8 mx-3">
+                    <div class="my-4 mx-3">
                         <button
                         type="button"
                         class="w-44 bg-ebw-primary rounded-full flex justify-between items-center font-bold text-white text-sm py-1 px-5"
@@ -186,6 +199,13 @@
         </button>    
     </header>
     
+    <script>
+        function handleScroll(evt) {
+            const top = window.pageYOffset || document.documentElement.scrollTop;
+
+            this.floatingMenu = top > 400;
+        }
+    </script>
 </div>
 
 

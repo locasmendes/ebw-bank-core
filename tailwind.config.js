@@ -15,6 +15,14 @@ module.exports = {
         "hover:bg-opacity-40",
         "bg-opacity-0",
         "text-ebw-fourth",
+        "max-w-ss",
+        "max-w-xxs",
+        "fixed",
+        "py-2",
+        "bg-white",
+        "shadow-md",
+        "absolute",
+        "py-9",
     ],
     theme: {
         screens: {
@@ -49,6 +57,7 @@ module.exports = {
             maxWidth: {
                 xs: "20.3rem",
                 xxs: "14rem",
+                ss: "12rem",
             },
             spacing: {
                 112: "28rem",
