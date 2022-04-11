@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\SubmissionReceived;
 use App\Exports\SubmissionsExport;
 use App\Models\Submission;
 use Illuminate\Contracts\Encryption\DecryptException;
@@ -40,11 +41,9 @@ class RegisterController extends Controller
             return [Str::replace('-', '_', $key) => $item];
         })->toArray();
 
-        // return view('test.image', \compact('base64'));
-
-        // salvar o documento
-
         $submission = Submission::create($data);
+
+        SubmissionReceived::dispatch($submission);
 
         return redirect()->back()->with('submission-succeeded', true);
     }

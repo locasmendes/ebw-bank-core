@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Events\PartnerInvestorReceived;
 use App\Events\PreRegistrationReceived;
+use App\Events\SubmissionReceived;
 use App\Listeners\NotifyCRMPartnerInvestorReceived;
 use App\Listeners\NotifyCRMPreRegistrationReceived;
+use App\Listeners\NotifyCRMSubmissionReceived;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -27,6 +29,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         PartnerInvestorReceived::class => [
             NotifyCRMPartnerInvestorReceived::class
+        ],
+        SubmissionReceived::class => [
+            NotifyCRMSubmissionReceived::class
         ]
     ];
 
