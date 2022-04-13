@@ -1,5 +1,5 @@
 .blog-content {
-    p, blockquote, li {
+    p,  li {
         color: black;
         font-size: 1.125rem;
         line-height: 1.25;
@@ -32,20 +32,15 @@
     }
   
     blockquote {
-        background: #f9f9f9;
-        border-left: 10px solid #ccc;
+        color: #222;
+        font-size: 1.115rem;
+        line-height: 1.25;
+        background: #f7f4f4;
+        border-left: 6px solid #ccc;
         margin: 1.5em 10px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
+        padding: 0.8rem 10px;
       }
-      blockquote:before {
-        color: #ccc;
-        content: open-quote;
-        font-size: 2.5em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-      }
+
     blockquote p {
      display: inline;
     }
@@ -62,16 +57,16 @@
         color: inherit;
     } 
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     h3 {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
     }
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     h5 {
         font-size: 1.25rem;
