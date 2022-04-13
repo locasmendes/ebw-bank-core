@@ -32,23 +32,24 @@
     }
   
     blockquote {
-        color: #222;
-        font-size: 1.115rem;
-        line-height: 1.25;
         background: #f7f4f4;
         border-left: 6px solid #ccc;
+        color: #222;
+        font-size: 1.115rem;
         margin: 1.5em 10px;
-        padding: 0.8rem 10px 0.8rem 35px;
+        padding: 0.8rem 40px 0.8rem 52px;
         position: relative;
-      }
+        font-style: italic;
+        line-height: 1.8;
+    }
     blockquote::before {
         font-family: Arial;
         content: "\201C";
         color: #78C0A8;
-        font-size: 2.5rem;
+        font-size: 4.5rem;
         position: absolute;
         left: 10px;
-        top: -10px;
+        top: -25px;
     }
 
     blockquote p {
