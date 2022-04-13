@@ -55,10 +55,10 @@
                                 class="h-64 object-cover object-center w-full"
                                 alt="Imagem de exemplo">
                                 <div class="pt-5 pb-10">
-                                    <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4 break-all">
+                                    <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
                                        {{ $post->title }}
                                     </h3>
-                                    <p class="text-ebw-title text-lg leading-tight text-center break-all">
+                                    <p class="text-ebw-title text-lg leading-tight text-center">
                                         {{ \Illuminate\Support\Str::words(strip_tags($post->body), 25, '...') }}
                                     </p>
                                 </div>

@@ -77,10 +77,10 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                             class="h-64 object-cover object-center w-full"
                             alt="Imagem de exemplo">
                             <div class="pt-5 pb-10">
-                                <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4 break-words">
+                                <h3 class="text-ebw-secondary font-bold text-center text-xl leading-none mb-4">
                                     {{ $post->title }}
                                 </h3>
-                                <p class="text-ebw-title text-lg leading-tight text-center break-words">
+                                <p class="text-ebw-title text-lg leading-tight text-center">
                                     {{ \Illuminate\Support\Str::words(strip_tags($post->body), 25, '...') }}
                                 </p>
                             </div>
