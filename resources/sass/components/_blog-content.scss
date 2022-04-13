@@ -38,8 +38,18 @@
         background: #f7f4f4;
         border-left: 6px solid #ccc;
         margin: 1.5em 10px;
-        padding: 0.8rem 10px;
+        padding: 0.8rem 10px 0.8rem 35px;
+        position: relative;
       }
+    blockquote::before {
+        font-family: Arial;
+        content: "\201C";
+        color: #78C0A8;
+        font-size: 2.5rem;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+    }
 
     blockquote p {
      display: inline;
