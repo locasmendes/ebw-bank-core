@@ -17,15 +17,26 @@ class PortalEmpreendedorController extends Controller
         //     dd($request->input('categoria'));
         // }
         $posts = Post::query()
-            ->tap(function (Builder $q) use ($request) {
+            // ->tap(function (Builder $q) use ($request) {
+            //     if (!is_null($request->input('categoria')) && $request->input('categoria') !== 'todas') {
+            //         $category = Category::where('category_slug', $request->input('categoria'))->first();
+            //         $q->whereBelongsTo($category);
+            //     }
+            // })
+            ->whereHas('category', function ($q) use ($request) {
+                $q->where('category_slug', '<>', 'imprensa');
                 if (!is_null($request->input('categoria')) && $request->input('categoria') !== 'todas') {
-                    $category = Category::where('category_slug', $request->input('categoria'))->first();
-                    $q->whereBelongsTo($category);
+                    $q->where('category_slug', $request->input('categoria'));
+                    // $category = Category::where('category_slug', $request->input('categoria'))->first();
+                    // $q->whereBelongsTo($category);
                 }
             })
             ->simplePaginate(9);
 
-        $categories = Category::all();
+        $categories = Category::query()
+            ->where('category_slug', '<>', 'imprensa')
+            ->has('posts')
+            ->get();
 
         $categoria = $request->input('categoria');
 

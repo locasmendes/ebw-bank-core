@@ -16,8 +16,8 @@ class Category extends Model
         'category_color'
     ];
 
-    public function courses()
+    public function posts()
     {
-        $this->hasMany(Course::class);
+        return $this->hasMany(Post::class);
     }
 }
