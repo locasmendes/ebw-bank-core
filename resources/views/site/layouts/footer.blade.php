@@ -122,7 +122,7 @@ x-init="
                             <li class="mx-1">    
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__linkedin"
-                                href="{{ $general?->linkedin ?? '#' }}"
+                                href="{{ $general?->social_linkedin ?? '#' }}"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                     Link Linkedin
@@ -131,7 +131,7 @@ x-init="
                             <li class="mx-1">    
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__facebook"
-                                href="{{ $general?->facebook ?? '#' }}"
+                                href="{{ $general?->social_facebook ?? '#' }}"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                     Link Facebook
@@ -140,7 +140,7 @@ x-init="
                             <li class="mx-1">    
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__instagram"
-                                href="{{ $general?->instagram ?? '#' }}"
+                                href="{{ $general?->social_instagram ?? '#' }}"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                     Link Instagram
@@ -149,7 +149,7 @@ x-init="
                             <li class="mx-1">    
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__youtube"
-                                href="{{ $general?->youtube ?? '#' }}"
+                                href="{{ $general?->social_youtube ?? '#' }}"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                     Link Youtube
@@ -158,7 +158,7 @@ x-init="
                             <li class="mx-1">    
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__twitter"
-                                href="{{ $general?->twitter ?? '#' }}"
+                                href="{{ $general?->social_twitter ?? '#' }}"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                     Link Twitter
