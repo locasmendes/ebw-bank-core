@@ -288,7 +288,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                         <div class="flex justify-center my-4">
                             <a
                             class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full inline-block relative sm:text-2xl text-lg font-bold uppercase u-color-folk-white hover:u-color-folk-dark-silver u-bg-folk-light-purple hover:u-bg-folk-cyan py-5 pl-12 pr-20"
-                            href="#">
+                            href="{{ route('cadastro-peca-minha-maquininha') }}">
                                 peça agora
                             </a>
 
@@ -304,7 +304,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             <div>
                                 <a
                                 class="c-btn-pattern c-btn-pattern__arrow-right font-poppins border-0 rounded-full relative inline-block sm:text-2xl text-lg font-bold uppercase u-color-folk-black hover:u-color-folk-white u-bg-folk-cyan hover:u-bg-folk-light-purple py-5 sm:pl-12 pl-10 sm:pr-28 pr-14"
-                                href="#">
+                                href="https://wa.me/5561996044061">
                                     chama no whats
                                 </a>
 
@@ -465,20 +465,19 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                     <div class="w-full 2xl:w-4/12  lg:w-5/12 md:w-1/2 px-4 flex md:justify-start justify-center">
 
                         <p class="xl:text-4xl text-3xl font-normal text-white">
-                            Transforme seus <br>
-                            clientes em fãs com <br>
-
+                            Transforme seus
+                            <br>
+                            clientes em fãs com
+                            <br>
                             <span class="text-white">
-                                o App <span class="font-poppins font-bold">Passou Ganhou</span> 
-
+                                o APP <span class="font-poppins font-bold">Passou Ganhou.</span> 
                                 {{-- <img loading="lazy"
                                 class="w-48 ml-3"
                                 src="{{ asset( 'images/passou-ganhou-white-brand-small.png' ) }}"
                                 alt="Passou Ganhou"> --}}
                             </span>
-
-                            em breve 
-                            lançamento nacional
+                            <br>
+                            Em breve, lançamento nacional.
                         </p>
                     </div>
 
@@ -501,7 +500,9 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                 <div class="flex justify-center">
 
                     <div class="pt-10">
-                        <a class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block sm:text-xl text-base font-poppins font-extrabold rounded-full uppercase u-color-folk-purple bg-ebw-cyan hover:bg-opacity-80 transition-opacity duration-150 hover:u-bg-folk-light-purple py-4 pl-8 pr-12" href="#">
+                        <a
+                        class="c-btn-pattern c-btn-pattern__arrow-right border-0 relative block sm:text-xl text-base font-poppins font-extrabold rounded-full uppercase u-color-folk-purple bg-ebw-cyan hover:bg-opacity-80 transition-opacity duration-150 hover:u-bg-folk-light-purple py-4 pl-8 pr-12" 
+                        href="{{ route('cadastro-peca-minha-maquininha') }}">
                             peça sua maquininha
                         </a>
                     </div>
@@ -639,7 +640,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} )">
                             </a>
                         </div>
                         <div class="mb-4">
-                            <a href="https://wa.me/556199604198" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
+                            <a href="https://wa.me/55996044061" target="_blank" rel="noopener noreferrer" class="flex w-full leading-none justify-center items-center border-2 border-ebw-whatsapp bg-ebw-whatsapp hover:bg-opacity-80 transition-opacity duration-300 text-white rounded-full py-5 font-bold text-lg font-poppins">
                                 Chame pelo WhatsApp!
                             </a>
                         </div>

@@ -7,6 +7,8 @@ use App\Exports\PartnerInvestorsExport;
 use App\Models\PartnerInvestor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -35,7 +37,8 @@ class PartnerInvestorController extends Controller
 
         PartnerInvestorReceived::dispatch($partnerInvestor);
 
-        return \redirect()->back()->with('success', true);
+        return Redirect::to(URL::previous() . '#form-investidor')->with('success', true);
+        // return \redirect()->back()->with('success', true);
     }
 
     public function export(Request $request)
