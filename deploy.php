@@ -21,6 +21,13 @@ add('shared_dirs', []);
 // Writable dirs by web server 
 add('writable_dirs', []);
 
+set('bin/php', function () {
+    return '/usr/local/bin/ea-php80';
+});
+
+set('bin/composer', function () {
+    return '/usr/local/bin/ea-php80 /opt/cpanel/composer/bin/composer';
+});
 
 // Hosts
 

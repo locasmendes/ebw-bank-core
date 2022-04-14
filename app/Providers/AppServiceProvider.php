@@ -34,28 +34,28 @@ class AppServiceProvider extends ServiceProvider
             return Http::asForm()->withToken(\config('ebw-crm.auth_token'))->baseUrl(\config('ebw-crm.base_url'));
         });
 
-        $general = Cache::rememberForever('general', function () {
-            return General::first();
-        });
-        $pages = Cache::rememberForever('pages', function () {
-            return Page::all();
-        });
+        // $general = Cache::rememberForever('general', function () {
+        //     return General::first();
+        // });
+        // $pages = Cache::rememberForever('pages', function () {
+        //     return Page::all();
+        // });
 
-        $homeSettings = $pages->first(function ($value) {
-            return $value->slug === 'home';
-        });
+        // $homeSettings = $pages->first(function ($value) {
+        //     return $value->slug === 'home';
+        // });
 
-        $aEbw = $pages->first(function ($value) {
-            return $value->slug === 'a-ebw';
-        });
+        // $aEbw = $pages->first(function ($value) {
+        //     return $value->slug === 'a-ebw';
+        // });
 
-        $sejaInvestidor = $pages->first(function ($value) {
-            return $value->slug === 'seja-um-investidor';
-        });
+        // $sejaInvestidor = $pages->first(function ($value) {
+        //     return $value->slug === 'seja-um-investidor';
+        // });
 
-        View::share('general', $general);
-        View::share('homeSettings', $homeSettings?->content[0]);
-        View::share('aEbwSettings', $aEbw?->content[0]);
-        View::share('sejaInvestidorSettings', $sejaInvestidor?->content[0]);
+        // View::share('general', $general);
+        // View::share('homeSettings', $homeSettings?->content[0]);
+        // View::share('aEbwSettings', $aEbw?->content[0]);
+        // View::share('sejaInvestidorSettings', $sejaInvestidor?->content[0]);
     }
 }
