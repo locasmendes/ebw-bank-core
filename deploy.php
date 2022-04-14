@@ -11,7 +11,7 @@ set('application', 'ebw_bank');
 set('repository', 'git@gitlab.com:evolutap/ebw-bank.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+set('git_tty', false);
 set('ssh_multiplexing', false);
 
 // Shared files/dirs between deploys 
@@ -24,10 +24,10 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->hostname('127.0.0.1')
-    ->user('runcloudio')
-    ->set('deploy_path', '~/{{application}}');
+host('162.240.42.149')
+    ->hostname('162.240.42.149')
+    ->user('passou73')
+    ->set('deploy_path', '/home/passou73/public_html/ebwbank.com.br');
 
 // Tasks
 
