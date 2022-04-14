@@ -18,6 +18,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Forms\Components\RichEditor;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 
 class PostResource extends Resource
 {
@@ -69,7 +70,8 @@ class PostResource extends Resource
                 TextColumn::make('category.category_name')->label('Categoria'),
             ])
             ->filters([
-                //
+                SelectFilter::make('category')->relationship('category', 'category_name')
+                    ->label('Categoria')
             ]);
     }
 
