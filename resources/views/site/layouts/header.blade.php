@@ -30,6 +30,7 @@ x-init="
     >
         <button 
         type="submit" 
+        aria-label="Search"
         class="absolute right-10 top-10 w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
         x-on:click="openSearch = false">
             <i class="fas fa-times text-white text-xl group-hover:text-ebw-primary transition-colors duration-300"></i>
@@ -37,8 +38,15 @@ x-init="
         <div class="max-w-2xl w-full">
             <div class="flex relative">
                 <form action="{{ route('search') }}" class="w-full">
-                    <input type="text" class="bg-transparent w-full text-4xl border-b-2 border-ebw-third-grey py-2 shadow-none outline-none text-white text-center px-12" autocomplete="off" aria-autocomplete="off" name="s">
-                    <button type="submit" class="absolute top-1/2 transform -translate-y-1/2 right-0  w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white">
+                    <input
+                    type="text"
+                    class="bg-transparent w-full text-4xl border-b-2 border-ebw-third-grey py-2 shadow-none outline-none text-white text-center px-12"
+                    autocomplete="off"
+                    aria-autocomplete="off" name="s">
+                    <button
+                    type="submit"
+                    class="absolute top-1/2 transform -translate-y-1/2 right-0  w-10 h-10 rounded-full border-2 border-white hover:border-ebw-primary transition-all duration-300 group bg-transparent hover:bg-opacity-10 bg-opacity-0 bg-white"
+                    aria-label="search">
                         <i class="fas fa-arrow-right text-white text-xl group-hover:text-ebw-primary transition-colors duration-300"></i>
                     </button>
                 </form>
@@ -111,6 +119,7 @@ x-init="
                     <div class="my-4 mx-3">
                         <button
                         type="button"
+                        aria-label="search button"
                         class="w-44 bg-ebw-primary rounded-full flex justify-between items-center font-bold text-white text-sm py-1 px-5"
                         x-on:click="openSearch = true">
                             Busca

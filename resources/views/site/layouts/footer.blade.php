@@ -93,9 +93,9 @@ x-init="
 
                     <div class="w-full lg:w-8/12 flex flex-col md:flex-row justify-around items-center px-4">
                         <div class="flex xl:flex-row flex-col items-center justify-center">
-                            <p class="text-2xl font-bold px-3 leading-none xl:mb-0 mb-3">
+                            <h3 class="text-2xl font-bold px-3 leading-none xl:mb-0 mb-3">
                                 Fale Conosco
-                            </p>
+                            </h3>
     
                             <div class="u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
                                 <!-- 0800 894 3000 <br>
@@ -201,9 +201,9 @@ x-init="
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
 
-                        <p class="font-bold mb-3 text-xl">
+                        <h3 class="font-bold mb-3 text-xl">
                             Para seu negócio
-                        </p>
+                        </h3>
 
                         <ul>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
@@ -243,9 +243,9 @@ x-init="
 
                     <div class="w-full md:w-4/12 lg:w-3/12 my-5 md:my-0 px-4">
 
-                        <p class="font-bold mb-3 text-xl">
+                        <h3 class="font-bold mb-3 text-xl">
                             EBW Bank
-                        </p>
+                        </h3>
                         <ul>
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('conheca-ebw') }}">A EBW</a>

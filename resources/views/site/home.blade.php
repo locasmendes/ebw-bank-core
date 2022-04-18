@@ -28,12 +28,12 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
             <div class="w-full lg:w-10/12">
 
-                <h3 class="text-size-2.65 leading-tightest text-center u-color-folk-primary mb-10">
+                <h1 class="text-size-2.65 leading-tightest text-center u-color-folk-primary mb-10">
                     {!! text_to_html($homeSettings['faixa_title']) !!}
                     {{-- Mais do que um banco digital, <br>
                     o parceiro no desenvolvimento de empresas. <br> 
                     Somos diferentes! --}}
-                </h3>
+                </h1>
 
                 <p class="l-digital__text leading-snug font-normal text-center text-black"> 
                     {!! text_to_html($homeSettings['faixa_subtitle']) !!}
@@ -56,20 +56,20 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             
             <div class="mb-12">
 
-                <h3 class="l-press__title font-bold text-center uppercase u-color-folk-primary">
+                <h2 class="l-press__title font-bold text-center uppercase u-color-folk-primary">
                     imprensa
-                </h3>
+                </h2>
 
-                <p class="l-press__text font-normal text-center">
+                <h3 class="l-press__text font-normal text-center">
                    {!! $homeSettings['imprensa_subtitle'] !!}
-                </p>
+                </h3>
             </div>
 
             <div class="flex flex-wrap -mx-4">
                 
                 <!-- loop -->
                 @foreach ($posts as $post)
-                    <div class="w-full md:w-6/12 lg:w-4/12 my-4 px-4">
+                    <article class="w-full md:w-6/12 lg:w-4/12 my-4 px-4">
                         <a href="{{ route('portal.show', ['id' => $post->id, 'slug' => \Illuminate\Support\Str::slug($post->title)]) }}" class="block hover:border-ebw-secondary border-opacity-50 transition-colors border-2 border-transparent">
                             <img
                             loading="lazy"
@@ -85,7 +85,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                                 </p>
                             </div>
                         </a>
-                    </div>
+                    </article>
                 @endforeach
                 <!-- end loop -->
             </div>
