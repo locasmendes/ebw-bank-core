@@ -42,9 +42,14 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
+task('fix:permissions', function () {
+    run('chmod -R 755 {{deploy_path}}/releases');
+});
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
 before('deploy:symlink', 'artisan:migrate');
+
+before('deploy:symlink', 'fix:permissions');

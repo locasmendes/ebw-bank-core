@@ -24,7 +24,7 @@
         <meta property="twitter:description" content="A EBW Bank é uma fintech que oferece soluções de pagamento digital e físico, com a maquininha Passou Ganhou. Nossos serviços são voltados para o empreendedor que quer ganhar tempo e impulsionar as vendas.">
         <meta property="twitter:image" content="{{ asset('images/ebw-share.jpg')  }}">
 
-        {{-- @production
+        @production
             <script async src="https://www.googletagmanager.com/gtag/js?id=AW-928223794"></script>
             <script>
             window.dataLayer = window.dataLayer || [];
@@ -55,7 +55,7 @@
             src="https://www.facebook.com/tr?id=206222104371563&ev=PageView&noscript=1"
             /></noscript>
             <!-- End Facebook Pixel Code -->
-        @endproduction --}}
+        @endproduction
     
         
         <meta name="robots" content="index,follow">
