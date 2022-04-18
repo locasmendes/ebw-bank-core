@@ -30,7 +30,7 @@ class NotifyCRMPreRegistrationReceived
     {
         $preRegistration = $event->preRegistration;
 
-        $response = Http::ebw_crm()->post('/ebw/target/register', [
+        $response = Http::ebw_crm()->post('/target/register', [
             'name' => $preRegistration->name,
             'email' => $preRegistration->email,
             'mobile' => $preRegistration->phone,

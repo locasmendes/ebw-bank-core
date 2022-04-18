@@ -89,7 +89,7 @@ class PagesSeeder extends Seeder
                     "mvv_values": "Ter preferência do cliente empreendedor, baseada em uma conduta firmemente focada na éticae transparência. Nosso gerenciamento deve ser em equipe.",
                     "mvv_vision": "Ser uma empresa referência e reconhecida pela excelência dos serviços prestados aos empreendedores, posicionando-se sempre entre as principais fintechs mundiais.",
                     "mvv_mission": "Contribuir para o desenvolvimento dos empreendedores e líderes de qualquer lugar do país e do mundo, oferendo soluções de ponta, com qualificação, orientação e foco no crescimento da economia.",
-                    "mvv_porpuse": "**Apoiar o empreendedor**, estimuar o<br>\nempreendedorismo e **promover o progresso da nação.**",
+                    "mvv_porpuse": "**Apoiar o empreendedor**, estimular o<br>\nempreendedorismo e **promover o progresso da nação.**",
                     "banner_texts": [
                         {
                             "text": "Diferente na forma de **olhar, perceber e pensar.**"

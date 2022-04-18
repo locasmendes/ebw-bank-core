@@ -319,7 +319,7 @@
                 <h3 class="text-center font-bold text-black 2xl:text-3xl text-2xl mb-5 uppercase">Propósito</h3>
                 <p class="text-center text-ebw-red 2xl:text-5xl sm:text-4xl text-2xl 2xl:leading-snug sm:leading-snug leading-snug">
                     {!! text_to_html($aEbwSettings['mvv_porpuse']) !!}
-                    {{-- <span class="font-bold text-ebw-red">Apoiar o empreendedor</span>, estimuar o<br class="hidden sm:block">empreendedorismo e <span class="font-bold text-ebw-red">promover o progresso da nação.</span> --}}
+                    {{-- <span class="font-bold text-ebw-red">Apoiar o empreendedor</span>, estimular o<br class="hidden sm:block">empreendedorismo e <span class="font-bold text-ebw-red">promover o progresso da nação.</span> --}}
                 </p>
             </div>
         </div>

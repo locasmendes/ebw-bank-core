@@ -31,7 +31,7 @@ class NotifyCRMSubmissionReceived
     {
         $submission = $event->submission;
 
-        $response = Http::ebw_crm()->post('/ebw/target/register', [
+        $response = Http::ebw_crm()->post('/target/register', [
             'name' => $submission->name,
             'email' => $submission->email,
             'mobile' => $submission->phone,

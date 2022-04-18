@@ -31,7 +31,7 @@ class NotifyCRMPartnerInvestorReceived
     {
         $partnerInvestor = $event->partnerInvestor;
 
-        $response = Http::ebw_crm()->post('/ebw/target/register', [
+        $response = Http::ebw_crm()->post('/target/register', [
             'name' => $partnerInvestor->name,
             'email' => $partnerInvestor->email,
             'mobile' => $partnerInvestor->phone,
