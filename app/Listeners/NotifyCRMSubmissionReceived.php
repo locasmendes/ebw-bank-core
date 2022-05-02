@@ -39,8 +39,8 @@ class NotifyCRMSubmissionReceived
             'whatsappOptIn' => $submission->allow_infomation_whatsapp_sms ? 'yes' : 'no',
             'emailOptIn' => $submission->allow_infomation_email ? 'yes' : 'no',
             'value' => 0,
-            'serviceId' => '0',
-            'landingPageId' => '0'
+            'serviceId' => '6b606634-b049-4aad-9e7e-d5e5198d9d72',
+            'landingPageId' => '42da989c-82f6-46cc-a10f-12265ec3c435'
         ]);
 
         if ($response->successful()) {
