@@ -45,8 +45,8 @@
             <ul>
                 @foreach ($recentPosts as $recentPost)
                     <li class="mb-3 py-3 border-b border-ebw-light-grey">
-                        <p class="pb-3 text-ebw-another-grey text-lg">{{ $post->created_at->locale('pt_BR')->translatedFormat('d \d\e F \d\e Y') }}</p>
-                        <a class="text-ebw-search text-lg font-bold hover:text-ebw-primary transition-colors duration-150" href="{{ route('portal.show', ['id' => $post->id, 'slug' => $post->slug]) }}">{{ $post->title }}</a>
+                        <p class="pb-3 text-ebw-another-grey text-lg">{{ $recentPost->created_at->locale('pt_BR')->translatedFormat('d \d\e F \d\e Y') }}</p>
+                        <a class="text-ebw-search text-lg font-bold hover:text-ebw-primary transition-colors duration-150" href="{{ route('portal.show', ['id' => $recentPost->id, 'slug' => $recentPost->slug]) }}">{{ $recentPost->title }}</a>
                     </li>
                 @endforeach
             </ul>
