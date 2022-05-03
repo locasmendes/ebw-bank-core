@@ -11,7 +11,7 @@
     </div>
     <section class="bg-ebw-form md:pt-36 pt-20 md:pb-32 pb-20">
         <div class="max-w-4xl mx-auto md:px-10 px-4">
-            <h2 class="lg:text-5xl md:text-4xl text-3xl text-ebw-title leading-snug text-center mb-10 tracking-wide">Preencha o formulário e faça<br>seu pré-cadastro na lista de espera!</h2>
+            <h2 class="lg:text-5xl md:text-4xl text-3xl text-ebw-title leading-snug text-center mb-10 tracking-wide">Preencha o formulário para<br>vender pela internet!</h2>
             <div class="border-white border-opacity-50 border-2 p-8">
                 @if (session()->has('success'))
                     <h2 class="text-4xl leading-tight font-bold text-center text-white mb-10">
