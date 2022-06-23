@@ -279,10 +279,10 @@
                     </div>
                     <div class="swiper-slide" data-hash="passo-12">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
-                            <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-6">Caso deseje, você pode anexar seu currículo.</h3>
-
+                            <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center ">Caso deseje, você pode anexar seu currículo.</h3>
+                            <p class="text-base font-medium mb-6 text-ebw-red text-center">(Apenas arquivos em PDF)</p>
                             <div class="pt-8 relative">
-                                <input type="file" name="curriculo" id="curriculo" class="hidden" accept=".pdf,image/*,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                                <input type="file" name="curriculo" id="curriculo" class="hidden" accept=".pdf,application/pdf">
                                 <div id="curriculo-filename" class=" text-center text-ebw-medium-grey font-medium"></div>
                                 <div class="flex justify-center">
                                     <label for="curriculo"class="cursor-pointer text-white bg-ebw-red md:py-4 py-3 md:px-10 sm:px-6 px-4 rounded-full hover:bg-opacity-80 transition-opacity duration-200">

@@ -97,10 +97,10 @@ const talentSwiper = () => {
     const swiper = new Swiper(".talent-swiper", {
         allowTouchMove: false,
         autoHeight: true,
-        // hashNavigation: {
-        //     watchState: true,
-        // },
-        // modules: [HashNavigation],
+        hashNavigation: {
+            watchState: true,
+        },
+        modules: [HashNavigation],
         on: {
             slideChange: (swiper) => {
                 if (swiper.realIndex >= 7) {
@@ -168,6 +168,7 @@ function filenameCurriculo() {
     fileinput.addEventListener("change", function () {
         const filename = this.files[0].name;
         const filesize = this.files[0].size;
+        const filetype = this.files[0].type;
 
         const maxFilesize = 1024 * 1024 * 4;
         if (filesize > maxFilesize) {
@@ -180,6 +181,13 @@ function filenameCurriculo() {
             filenameCurriculo.classList.add("text-ebw-medium-grey");
             filenameCurriculo.classList.remove("text-ebw-red");
             filenameCurriculo.innerText = filename;
+        }
+
+        if (filetype !== "application/pdf") {
+            filenameCurriculo.classList.remove("text-ebw-medium-grey");
+            filenameCurriculo.classList.add("text-ebw-red");
+            filenameCurriculo.innerText = "Utilize apenas arquivos em PDF";
+            this.value = "";
         }
     });
 }

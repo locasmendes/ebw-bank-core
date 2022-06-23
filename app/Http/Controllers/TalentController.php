@@ -45,7 +45,7 @@ class TalentController extends Controller
             'conhecimento_informatica.*' => 'nullable|string',
             'conhecimento_linguas' => 'nullable|string',
             'area_trabalho' => 'nullable|string',
-            'curriculo' => 'nullable|file',
+            'curriculo' => 'nullable|file|mimetypes:application/pdf',
         ]);
 
         if ($request->hasFile('curriculo')) {
@@ -117,20 +117,20 @@ class TalentController extends Controller
                 return 'Arquivo não encontrada!';
             }
 
-            return Storage::disk('local')->download($path);
+            $realPath = Storage::disk('local')->path($path);
 
-            // $type = pathinfo($realPath, PATHINFO_EXTENSION);
-            // $data = file_get_contents($realPath);
+            $type = pathinfo($realPath, PATHINFO_EXTENSION);
+            $data = file_get_contents($realPath);
 
-            // $base64 = null;
+            $base64 = null;
 
-            // if ($type === 'pdf') {
-            //     $base64 = 'data:application/' . $type . ';base64,' . base64_encode($data);
-            // } else {
-            //     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
-            // }
+            if ($type === 'pdf') {
+                $base64 = 'data:application/' . $type . ';base64,' . base64_encode($data);
+            } else {
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+            }
 
-            // return view('documents.image', \compact(['base64', 'type']));
+            return view('documents.image', \compact(['base64', 'type']));
         } catch (DecryptException $e) {
             return \abort(422);
         }
