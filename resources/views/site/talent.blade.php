@@ -37,13 +37,13 @@
                     <div class="swiper-slide" data-hash="passo-1">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-5">Cadastre o seu currículo agora mesmo:</h3>
-                            <x-input type="text" name="name" placeholder="Nome" data-name="Nome completo" validate="min:3" value="nome">
+                            <x-input type="text" name="name" placeholder="Nome" data-name="Nome completo" validate="min:3">
                                 Nome Completo
                             </x-input>
-                            <x-input type="email" name="email" placeholder="contato@email.com.br"  data-name="Email" validate="email" value="email@email.com">
+                            <x-input type="email" name="email" placeholder="contato@email.com.br"  data-name="Email" validate="email" >
                                Seu melhor e-mail
                             </x-input>
-                            <x-input type="text" name="phone" placeholder="(00) 00000-0000" data-name="Telefone" validate="min:14" value="(11) 32323-3232">
+                            <x-input type="text" name="phone" placeholder="(00) 00000-0000" data-name="Telefone" validate="min:14">
                                Telefone (Whatsapp)
                             </x-input>
 
@@ -58,10 +58,10 @@
                     <div class="swiper-slide" data-hash="passo-2">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-5">Agora, precisamos dos<br>seus dados pessoais:</h3>
-                            <x-input type="text" name="document_cpf" data-name="CPF" placeholder="Insira sem pontos ou traços" validate="required" value="312321">
+                            <x-input type="text" name="document_cpf" data-name="CPF" placeholder="Insira sem pontos ou traços" validate="required">
                                 CPF
                             </x-input>
-                            <x-input type="text" name="document_rg" data-name="RG" placeholder="Insira sem pontos ou traços" validate="required" value="312321">
+                            <x-input type="text" name="document_rg" data-name="RG" placeholder="Insira sem pontos ou traços" validate="required">
                                 RG com Órgão Expedidor
                             </x-input>
 
@@ -78,13 +78,13 @@
                     <div class="swiper-slide" data-hash="passo-3">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-5">Queremos saber em que<br>lugar do Brasil você está:</h3>
-                            <x-input type="text" name="state" data-name="Estado" placeholder="Estado" validate="required" value="eses">
+                            <x-input type="text" name="state" data-name="Estado" placeholder="Estado" validate="required">
                                 Estado
                             </x-input>
-                            <x-input type="text" name="city" data-name="Cidade" placeholder="Cidade" validate="required" value="esaese">
+                            <x-input type="text" name="city" data-name="Cidade" placeholder="Cidade" validate="required">
                                 Cidade
                             </x-input>
-                            <x-input type="text" name="cep" data-name="CEP" placeholder="00000-000" validate="equal:9" value="00000-000">
+                            <x-input type="text" name="cep" data-name="CEP" placeholder="00000-000" validate="equal:9">
                                 CEP
                             </x-input>
 
@@ -102,24 +102,24 @@
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-2">Chegou a hora de nos contar sobre as suas três experiências profissionais:</h3>
                             <p class="text-center sm:text-xl text-base leading-tight text-black mb-5">(Coloque o nome da empresa e um breve resumo das suas funções)</p>
-                            <x-input type="text" name="company_1" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required" value="dasdsa">
+                            <x-input type="text" name="company_1" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
                                Nome da empresa 1
                             </x-input>
-                            <x-input type="text" name="function_1" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required" value="dasdsa">
+                            <x-input type="text" name="function_1" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
                                 Função
                             </x-input>
                             <div class="w-24 h-1 bg-ebw-red mx-auto my-5"></div>
-                            <x-input type="text" name="company_2" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required" value="dasdsa">
+                            <x-input type="text" name="company_2" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
                                Nome da empresa 2
                             </x-input>
-                            <x-input type="text" name="function_2" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required" value="dasdsa">
+                            <x-input type="text" name="function_2" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
                                 Função
                             </x-input>
                             <div class="w-24 h-1 bg-ebw-red mx-auto my-5"></div>
-                            <x-input type="text" name="company_3" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required" value="dasdsa">
+                            <x-input type="text" name="company_3" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
                                Nome da empresa 3
                             </x-input>
-                            <x-input type="text" name="function_3" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required" value="dasdsa">
+                            <x-input type="text" name="function_3" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
                                 Função
                             </x-input>
 
