@@ -114,22 +114,23 @@ class TalentController extends Controller
             $exists = Storage::disk('local')->exists($path);
 
             if (!$exists) {
-                return 'Imagem não encontrada!';
+                return 'Arquivo não encontrada!';
             }
 
-            $realPath = Storage::disk('local')->path($path);
-            $type = pathinfo($realPath, PATHINFO_EXTENSION);
-            $data = file_get_contents($realPath);
+            return Storage::disk('local')->download($path);
 
-            $base64 = null;
+            // $type = pathinfo($realPath, PATHINFO_EXTENSION);
+            // $data = file_get_contents($realPath);
 
-            if ($type === 'pdf') {
-                $base64 = 'data:application/' . $type . ';base64,' . base64_encode($data);
-            } else {
-                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
-            }
+            // $base64 = null;
 
-            return view('documents.image', \compact(['base64', 'type']));
+            // if ($type === 'pdf') {
+            //     $base64 = 'data:application/' . $type . ';base64,' . base64_encode($data);
+            // } else {
+            //     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+            // }
+
+            // return view('documents.image', \compact(['base64', 'type']));
         } catch (DecryptException $e) {
             return \abort(422);
         }
