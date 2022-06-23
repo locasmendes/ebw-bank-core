@@ -100,7 +100,7 @@ class TalentsExport implements FromQuery, WithHeadings, WithMapping, ShouldAutoS
             $talent->conhecimento_linguas,
             $talent->area_trabalho,
             Carbon::createFromDate($talent->created_at)->format('d/m/Y'),
-            route('talent.curriculo', ['hash' => Crypt::encryptString($talent->curriculo)]),
+            $talent->curriculo ? route('talent.curriculo', ['hash' => Crypt::encryptString($talent->curriculo)]) : 'Não enviou currículo',
         ];
     }
     public function headings(): array
