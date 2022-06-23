@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js?id=12520b20412b9a0deb348fe7b96a3772",
-    "/css/app.css": "/css/app.css?id=eeddcd6ac60a6f4f60aaeffee209a8a0",
+    "/js/app.js": "/js/app.js?id=7236a629adb3d5f435b2c539c8f128f1",
+    "/css/app.css": "/css/app.css?id=1d9cb92dc75a704aa12952f34f7c3056",
     "/images/american-express-brand.png": "/images/american-express-brand.png?id=292b5cfb7bc9a1ce04de994153e6c55e",
     "/images/app-baground.png": "/images/app-baground.png?id=2f6e2a037f38b4b72b1b0a4fc52a65f0",
     "/images/aura-brand.png": "/images/aura-brand.png?id=0118f98d7d47abcf62f73835712d5748",
@@ -18,6 +18,7 @@
     "/images/banner-text.png": "/images/banner-text.png?id=68f80c7ae0e12d886cdab0113b398f50",
     "/images/banner-venda-internet.jpg": "/images/banner-venda-internet.jpg?id=2379ae95b390dff16238984c6967bc74",
     "/images/banner.png": "/images/banner.png?id=ace7e4e4c1a40930d8ae3878d7f161ce",
+    "/images/bg-banco-talentos.jpg": "/images/bg-banco-talentos.jpg?id=be0d6d192339159dcd3b87e1312ca741",
     "/images/business-background.png": "/images/business-background.png?id=85647f6028c58e25eabe7a65e469caa7",
     "/images/digital-icone-pagamento.png": "/images/digital-icone-pagamento.png?id=4b907dafb9afc181cdb979aa9df89ff9",
     "/images/digital-icone-qrcode.png": "/images/digital-icone-qrcode.png?id=361541adef175f08891ab97db301dda4",
@@ -31,6 +32,7 @@
     "/images/ebw-share.jpg": "/images/ebw-share.jpg?id=49fb0a0804bc199cd40e870ec3545933",
     "/images/eduardo.png": "/images/eduardo.png?id=ebe710f829ec411b3124b06eb6217d3f",
     "/images/elo-brand.png": "/images/elo-brand.png?id=789875546b325b8fe302acfcd09e01a8",
+    "/images/fingerprint.png": "/images/fingerprint.png?id=08460666538c3462bfb68e376e89a517",
     "/images/footer-logo.png": "/images/footer-logo.png?id=01d5c355c4ee8e3a4cb13f2e09b4cf48",
     "/images/g-green.png": "/images/g-green.png?id=46cc5c1111d08deb82342095470fbe7e",
     "/images/g-white.png": "/images/g-white.png?id=c30c5d580b9ee7bb0c2f74940c40de17",
@@ -55,6 +57,7 @@
     "/images/icon-transacao.png": "/images/icon-transacao.png?id=3051db4d9a25a9345ee6b3cb111c2f5e",
     "/images/icon-undertake.png": "/images/icon-undertake.png?id=6f6a0c3e145a2f7e69c096cb0a07a032",
     "/images/image-example.png": "/images/image-example.png?id=5c907298f48bd6324c432e6e7dfd2778",
+    "/images/img-banco-talentos.png": "/images/img-banco-talentos.png?id=0439827284ed76edc567d954787d1c1f",
     "/images/items-background.png": "/images/items-background.png?id=c1be7cb2eb4fbe33e32bac12cc6b2ad7",
     "/images/jcb-brand.png": "/images/jcb-brand.png?id=8e973f4e7a14424bda68abe55dea9d1f",
     "/images/logo-cerci.png": "/images/logo-cerci.png?id=8ac1ac8953a5483b3e20a88a2c9f3e90",
@@ -78,5 +81,6 @@
     "/images/seja-investidor.jpg": "/images/seja-investidor.jpg?id=7b6b2ac2e0735b7d6e264796bc7a8a10",
     "/images/single-banner.png": "/images/single-banner.png?id=04b8e8b7862936c5d6fdbe849c98854d",
     "/images/single-illustration-1.png": "/images/single-illustration-1.png?id=e7b9ec3d997163ab0b93dd900527b662",
+    "/images/talent-success.png": "/images/talent-success.png?id=b8481843bd9c7109b247a6ec594bf246",
     "/images/visa-brand.png": "/images/visa-brand.png?id=b69b981dd739dec05af2ec428b48bcd7"
 }

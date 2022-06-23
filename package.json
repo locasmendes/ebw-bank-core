@@ -19,7 +19,6 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.44.0",
         "sass-loader": "^12.1.0",
-        "swiper": "^5.2.1",
         "tailwindcss": "^2.2.16"
     },
     "dependencies": {
@@ -27,6 +26,7 @@
         "alpinejs": "^3.9.5",
         "jquery": "^3.6.0",
         "jquery-mask-plugin": "^1.14.16",
-        "rellax": "^1.12.1"
+        "rellax": "^1.12.1",
+        "swiper": "^8.2.4"
     }
 }

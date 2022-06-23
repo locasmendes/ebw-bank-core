@@ -23,6 +23,8 @@ module.exports = {
         "shadow-md",
         "absolute",
         "py-9",
+        "text-ebw-medium-grey",
+        "text-ebw-red",
     ],
     theme: {
         screens: {
@@ -41,6 +43,7 @@ module.exports = {
             "size-1.3": "1.3rem",
             "size-3.56": "3.56rem",
             "size-2.75": "2.75rem",
+            "size-2.5": "2.5rem",
             "size-4.06": "4.06rem",
             "size-5.5": "5.5rem",
             "size-2.65": "2.65rem",
@@ -61,6 +64,7 @@ module.exports = {
             },
             spacing: {
                 112: "28rem",
+                118: "29.5rem",
                 135: "33.5rem",
                 166: "41.5rem",
             },

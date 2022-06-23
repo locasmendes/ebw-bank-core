@@ -1,0 +1,103 @@
+.fingerprint {
+    background-image: url(../../images/fingerprint.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 156px;
+    position: absolute;
+
+    @media screen and (max-width: 1400px) {
+        width: 80px;
+        height: 122px;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 60px;
+        height: 92px;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 40px;
+        height: 61px;
+    }
+
+    &__left-1 {
+        left: 4%;
+        top: 13%;
+        transform: rotate(-35deg);
+        @media screen and (max-width: 1200px) {
+            top: 10%;
+        }
+    }
+    &__left-2 {
+        left: 23%;
+        top: 33%;
+        transform: rotate(20deg);
+        @media screen and (max-width: 1400px) {
+            left: 18%;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 30%;
+        }
+        // @media screen and (max-width: 1200px) {
+        //     top: 15%;
+        // }
+    }
+    &__left-3 {
+        left: 4%;
+        top: 52%;
+        transform: rotate(4deg);
+        @media screen and (max-width: 1200px) {
+            top: 49%;
+        }
+    }
+    &__left-4 {
+        left: 15%;
+        top: 77%;
+        transform: rotate(-14deg);
+        @media screen and (max-width: 1400px) {
+            left: 12%;
+            top: 71%;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 68%;
+        }
+    }
+    &__right-1 {
+        right: 4%;
+        transform: rotate(3deg);
+        @media screen and (max-width: 1400px) {
+            right: 8%;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 13%;
+        }
+    }
+    &__right-2 {
+        right: 24%;
+        top: 34%;
+        transform: rotate(-22deg);
+    }
+    &__right-3 {
+        right: 4%;
+        top: 55%;
+        transform: rotate(32deg);
+        @media screen and (max-width: 1400px) {
+            right: 8%;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 52%;
+        }
+    }
+    &__right-4 {
+        right: 16%;
+        top: 79%;
+        transform: rotate(-14deg);
+        @media screen and (max-width: 1400px) {
+            right: 8%;
+            top: 76%;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 71%;
+        }
+    }
+}

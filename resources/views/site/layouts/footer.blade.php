@@ -28,8 +28,8 @@ x-init="
                 x-on:click="createCookie">
                     Ok, Entendi!
                 </button>
-                <button 
-                class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all" 
+                <button
+                class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all"
                 type="button"
                 x-on:click="open = false">
                     Fechar
@@ -37,8 +37,8 @@ x-init="
                 <a target="_blank" class="bg-ebw-fourth px-3 py-2 rounded-sm block text-xs text-white m-1 hover:bg-opacity-80 transition-all" href="{{ route('privacidade') }}">Política de Privacidade</a>
             </div>
         </div>
-        <button 
-        type="button" 
+        <button
+        type="button"
         class="absolute right-5 top-1/2 transform -translate-y-1/2 p-3 hidden sm:block"
         x-on:click="open = false">
             <i class="fas fa-times text-lg text-ebw-form"></i>
@@ -96,30 +96,30 @@ x-init="
                             <h3 class="text-2xl font-bold px-3 leading-none xl:mb-0 mb-3">
                                 Fale Conosco
                             </h3>
-    
+
                             <div class="u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
                                 <!-- 0800 894 3000 <br>
                                 cac@ebwbank.com.br -->
-                            
+
                                 @if( $general?->contact_phone )
                                     <a href="tel:{{ str($general->contact_phone)->replace(' ', '') }}">
                                         {{ $general->contact_phone }}
                                     </a>
                                 @endif
-                           
-    
+
+
                                 <br>
-    
+
                                 @if( $general?->contact_email )
                                     <a href="mailto:{{ $general->contact_email }}">
                                         {{ $general->contact_email }}
                                     </a>
                                 @endif
-                            </div>    
+                            </div>
                         </div>
 
                         <ul class="l-social-media xl:pl-12 pl-5 pt-5 md:pt-0">
-                            <li class="mx-1">    
+                            <li class="mx-1">
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__linkedin"
                                 href="{{ $general?->social_linkedin ?? '#' }}"
@@ -128,7 +128,7 @@ x-init="
                                     Link Linkedin
                                 </a>
                             </li>
-                            <li class="mx-1">    
+                            <li class="mx-1">
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__facebook"
                                 href="{{ $general?->social_facebook ?? '#' }}"
@@ -137,7 +137,7 @@ x-init="
                                     Link Facebook
                                 </a>
                             </li>
-                            <li class="mx-1">    
+                            <li class="mx-1">
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__instagram"
                                 href="{{ $general?->social_instagram ?? '#' }}"
@@ -146,7 +146,7 @@ x-init="
                                     Link Instagram
                                 </a>
                             </li>
-                            <li class="mx-1">    
+                            <li class="mx-1">
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__youtube"
                                 href="{{ $general?->social_youtube ?? '#' }}"
@@ -155,7 +155,7 @@ x-init="
                                     Link Youtube
                                 </a>
                             </li>
-                            <li class="mx-1">    
+                            <li class="mx-1">
                                 <a
                                 class="l-social-media__item l-social-media__link l-social-media__twitter"
                                 href="{{ $general?->social_twitter ?? '#' }}"
@@ -164,7 +164,7 @@ x-init="
                                     Link Twitter
                                 </a>
                             </li>
-                          
+
                         </ul>
                     </div>
 
@@ -194,7 +194,7 @@ x-init="
                             @endforeach
                         @endif
 
-                  
+
                 </div>
 
                 <div class="flex flex-wrap ">
@@ -219,12 +219,12 @@ x-init="
                             </li> --}}
                         </ul>
 
-                        {{-- @if( !empty( $general ) ) 
+                        {{-- @if( !empty( $general ) )
                             @if( isset($general->menu_footer_product) )
                                 <ul>
-                                    @foreach( $general->menu_footer_product as $item ) 
+                                    @foreach( $general->menu_footer_product as $item )
                                         <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
-                                            <a 
+                                            <a
                                             class="text-lg"
                                             href="{{ $item[ 'menu_footer_product_link' ] }}"
                                             @if( $item[ 'menu_footer_product_new_tab'] )
@@ -264,7 +264,7 @@ x-init="
                                     @foreach( $general->menu_footer_ebw as $item )
                                         <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                             <!-- Quem Somos -->
-                                            <a 
+                                            <a
                                             class="text-lg"
                                             href="{{ $item[ 'menu_footer_ebw_link' ] }}"
                                             @if( $item[ 'menu_footer_ebw_new_tab' ] )
@@ -306,7 +306,7 @@ x-init="
                         {{-- <ul>
                             <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <!-- Quem Somos -->
-                                <a 
+                                <a
                                 class="text-lg"
                                 href="tel:08008943000">
                                     Help Desk
@@ -314,7 +314,7 @@ x-init="
                             </li>
                             <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <!-- Quem Somos -->
-                                <a 
+                                <a
                                 class="text-lg"
                                 href="mailto:cac@ebwbank.com.br">
                                    E-mail
@@ -322,7 +322,7 @@ x-init="
                             </li>
                             <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <!-- Quem Somos -->
-                                <a 
+                                <a
                                 class="text-lg"
                                 href="{{ route('privacidade') }}">
                                  Política de privacidade
@@ -337,7 +337,7 @@ x-init="
 
     <div class="flex flex-wrap justify-center u-bg-folk-white pb-6 pt-20">
         <div class="w-full lg:w-8/12 flex flex-col lg:flex-row justify-center items-center mb-4 px-4">
-            <a 
+            <a
             class="w-6/12 lg:w-3/12 my-4 lg:my-0 mx-5"
             href="https://www.cerc.inf.br/"
             target="_blank"
@@ -348,7 +348,7 @@ x-init="
                 alt="Logo Cerci">
             </a>
 
-            <a 
+            <a
             class="w-6/12 lg:w-3/12 my-4 lg:my-0 mx-5"
             href="https://www.pcisecuritystandards.org/"
             target="_blank"
@@ -359,7 +359,7 @@ x-init="
                 alt="Logo PCI">
             </a>
         </div>
-    </div> 
+    </div>
 
     <div class="flex">
 
@@ -371,7 +371,4 @@ x-init="
     </div>
 </footer>
 <!-- end footer -->
-
-{{-- <!-- swiperjs 7 --> --}}
-{{-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> --}}
 <script src="{{ mix('js/app.js') }}"></script>

@@ -1,0 +1,46 @@
+.talent-radio {
+    input {
+        display: none;
+    }
+    label {
+        font-size: 1.125rem;
+        color: black;
+        position: relative;
+        display: inline-block;
+        padding-left: 32px;
+        &::before {
+            content: "";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            width: 18px;
+            height: 18px;
+            background-color: #afafb4;
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            border-radius: 3px;
+            color: white;
+            font-size: 15px;
+            line-height: 20px;
+            padding-left: 2px;
+        }
+    }
+    input:checked + label::before {
+        content: "\f00c";
+    }
+}
+
+.input-wrapper  {
+    border-color: #727276;
+}
+.input-wrapper.input-error  {
+    border-color: #e23226;
+}
+.error-message {
+    display: none;
+}
+
+.input-wrapper.input-error .error-message {
+    display: block;
+}
+
