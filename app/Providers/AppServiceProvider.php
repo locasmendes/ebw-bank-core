@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\General;
 use App\Models\Page;
+use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Schema;
@@ -31,6 +32,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        Filament::serving(function () {
+            Filament::registerStyles([public_path('css/app.css')]);
+        });
+
         Schema::defaultStringLength(191);
 
         if ($this->app->environment('production')) {
