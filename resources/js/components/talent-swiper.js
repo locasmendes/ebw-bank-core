@@ -97,10 +97,10 @@ const talentSwiper = () => {
     const swiper = new Swiper(".talent-swiper", {
         allowTouchMove: false,
         autoHeight: true,
-        hashNavigation: {
-            watchState: true,
-        },
-        modules: [HashNavigation],
+        // hashNavigation: {
+        //     watchState: true,
+        // },
+        // modules: [HashNavigation],
         on: {
             slideChange: (swiper) => {
                 if (swiper.realIndex >= 7) {

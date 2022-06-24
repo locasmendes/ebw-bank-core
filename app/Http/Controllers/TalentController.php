@@ -24,9 +24,9 @@ class TalentController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'nullable|string',
-            'email' => 'nullable|string',
-            'phone' => 'nullable|string',
+            'name' => 'required|string',
+            'email' => 'required|string',
+            'phone' => 'required|string',
             'document_cpf' => 'nullable|string',
             'document_rg' => 'nullable|string',
             'state' => 'nullable|string',
