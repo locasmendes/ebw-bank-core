@@ -45,10 +45,10 @@ Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privac
 Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::get('/cadastro-peca-sua-maquininha', [RegisterController::class, 'index'])->name('cadastro-peca-minha-maquininha');
 Route::post('/cadastro-peca-sua-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
-Route::get('/banco-talentos-dev', [TalentController::class, 'index'])->name('talent.index');
-Route::post('/banco-talentos-dev', [TalentController::class, 'store'])->name('talent.store');
-Route::post('/banco-talentos-dev/export', [TalentController::class, 'export'])->name('talent.export');
-Route::get('/banco-talentos-dev/cadastro-concluido', [TalentController::class, 'success'])->name('talent.success');
+Route::get('/banco-talentos', [TalentController::class, 'index'])->name('talent.index');
+Route::post('/banco-talentos', [TalentController::class, 'store'])->name('talent.store');
+Route::post('/banco-talentos/export', [TalentController::class, 'export'])->name('talent.export');
+Route::get('/banco-talentos/cadastro-concluido', [TalentController::class, 'success'])->name('talent.success');
 
 
 Route::middleware('auth')->group(function () {

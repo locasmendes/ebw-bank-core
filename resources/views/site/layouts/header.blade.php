@@ -63,7 +63,7 @@ x-init="
     x-bind:class="floatingMenu || alwaysOpen ? 'fixed bg-white shadow-md' : 'absolute py-9'"
     {{-- class="fixed top-0 left-0 right-0 z-40 py-2 bg-white shadow-md" --}}
     >
-        <nav class="container mx-auto px-4 hidden xl:block py-2">
+        <nav class="container xl:max-w-7xl 2xl:max-w-8xl mx-auto px-4 hidden xl:block py-2">
             <div class="flex justify-center items-center">
                 <a class="l-header__logo flex justify-center" href="{{ route('home') }}">
                     <img x-bind:class="floatingMenu || alwaysOpen ? 'max-w-ss' : 'max-w-xxs'" src="{{ Request::is('passou-ganhou') ? asset('images/header-logo.png') :  asset('images/haeder-logo-black.png')  }}" alt="EBW Bank Logo">
@@ -114,6 +114,11 @@ x-init="
                         </li>
 
                         <li class="my-4 mx-3">
+                            <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('talent.index') }}">
+                                Banco de Talentos
+                            </a>
+                        </li>
+                        <li class="my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('portal') }}">
                                 Blog
                             </a>
@@ -124,7 +129,7 @@ x-init="
                         <button
                         type="button"
                         aria-label="search button"
-                        class="w-44 bg-ebw-primary rounded-full flex justify-between items-center font-bold text-white text-sm py-1 px-5"
+                        class="w-36 bg-ebw-primary rounded-full flex justify-between items-center font-bold text-white text-sm py-1 px-5"
                         x-on:click="openSearch = true">
                             Busca
                             <i class="fas fa-search text-white text-xl"></i>
@@ -177,11 +182,16 @@ x-init="
 
 
                 <li class="my-1 mx-3">
-                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('seja-investidor') }}">
-                            Seja um investidor
+                    <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('seja-investidor') }}">
+                        Seja um investidor
+                    </a>
+                </li>
+                <li class="my-1 mx-3">
+                        <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('talent.index') }}">
+                            Banco de Talentos
                         </a>
                     </li>
-
+                </ul>
                 <li class="my-1 mx-3">
                         <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('portal') }}">
                             Blog
