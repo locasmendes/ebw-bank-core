@@ -151,7 +151,7 @@
                     </div>
                     <div class="swiper-slide" data-hash="passo-6">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
-                            <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-6">Cite uma situação profissional em<br>que você exerceu liderança.</h3>
+                            <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-2">Cite uma situação profissional em<br>que você exerceu liderança.</h3>
                             <p class="text-center sm:text-xl text-base leading-tight text-black mb-5">(Essa pergunta não é obrigatória, mas pode ser um diferencial)</p>
                             <x-textarea name="exerceu_lideranca" data-name="campo" placeholder="Digite aqui sua resposta" rows="14" />
 
