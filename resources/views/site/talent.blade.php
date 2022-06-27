@@ -102,24 +102,24 @@
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-2">Chegou a hora de nos contar sobre as suas três experiências profissionais:</h3>
                             <p class="text-center sm:text-xl text-base leading-tight text-black mb-5">(Coloque o nome da empresa e um breve resumo das suas funções)</p>
-                            <x-input type="text" name="company_1" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
+                            <x-input type="text" name="company_1" data-name="Nome da empresa" placeholder="Nome da empresa">
                                Nome da empresa 1
                             </x-input>
-                            <x-input type="text" name="function_1" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
+                            <x-input type="text" name="function_1" data-name="Resumo das Funções" placeholder="Resumo das Funções">
                                 Função
                             </x-input>
                             <div class="w-24 h-1 bg-ebw-red mx-auto my-5"></div>
-                            <x-input type="text" name="company_2" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
+                            <x-input type="text" name="company_2" data-name="Nome da empresa" placeholder="Nome da empresa">
                                Nome da empresa 2
                             </x-input>
-                            <x-input type="text" name="function_2" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
+                            <x-input type="text" name="function_2" data-name="Resumo das Funções" placeholder="Resumo das Funções">
                                 Função
                             </x-input>
                             <div class="w-24 h-1 bg-ebw-red mx-auto my-5"></div>
-                            <x-input type="text" name="company_3" data-name="Nome da empresa" placeholder="Nome da empresa" validate="required">
+                            <x-input type="text" name="company_3" data-name="Nome da empresa" placeholder="Nome da empresa">
                                Nome da empresa 3
                             </x-input>
-                            <x-input type="text" name="function_3" data-name="Resumo das Funções" placeholder="Resumo das Funções" validate="required">
+                            <x-input type="text" name="function_3" data-name="Resumo das Funções" placeholder="Resumo das Funções">
                                 Função
                             </x-input>
 
@@ -152,7 +152,8 @@
                     <div class="swiper-slide" data-hash="passo-6">
                         <div class="border-2 border-black lg:px-40 md:px-28 sm:px-16 px-3 pt-12 pb-16">
                             <h3 class="md:text-3xl sm:text-2xl text-lg font-medium leading-tight text-black text-center mb-6">Cite uma situação profissional em<br>que você exerceu liderança.</h3>
-                            <x-textarea name="exerceu_lideranca" data-name="campo" placeholder="Digite aqui sua resposta" rows="14" validate="required" />
+                            <p class="text-center sm:text-xl text-base leading-tight text-black mb-5">(Essa pergunta não é obrigatória, mas pode ser um diferencial)</p>
+                            <x-textarea name="exerceu_lideranca" data-name="campo" placeholder="Digite aqui sua resposta" rows="14" />
 
                             <div class="pt-8 flex justify-center">
                               <x-button-left type="button" class="prev-button">
@@ -214,7 +215,8 @@
 
                             <div class="flex justify-center">
                                 <div class="xl:w-4/12 md:w-5/12 sm:w-1/2 w-10/12">
-                                    <div class="checkbox-wrapper input-wrapper relative" data-name="-" validate="checkbox:required">
+                                    <div class="checkbox-wrapper input-wrapper relative">
+                                        <input type="hidden" name="conhecimento_informatica[]" value="">
                                         <x-checkbox name="conhecimento_informatica[]" value="E-mail" />
                                         <x-checkbox name="conhecimento_informatica[]" value="Redes Sociais" />
                                         <x-checkbox name="conhecimento_informatica[]" value="Pacote Office" />
@@ -262,6 +264,7 @@
                                         <x-radio name="area_trabalho" value="Comunicação e Marketing" />
                                         <x-radio name="area_trabalho" value="RH" />
                                         <x-radio name="area_trabalho" value="Engenheria e TI" />
+                                        <x-radio name="area_trabalho" value="Outra" />
                                         <div class="error-message absolute -top-5 left-0 whitespace-nowrap text-sm text-ebw-red font-medium "></div>
                                     </div>
                                 </div>
