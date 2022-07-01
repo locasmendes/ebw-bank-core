@@ -107,7 +107,7 @@ x-init="
                             </ul>
                         </li>
 
-                        <li class="my-4 mx-3">
+                        <li class="hidden my-4 mx-3">
                             <a class="l-header__nav-link font-bold uppercase p-2 inline-block {{ Request::is('passou-ganhou') ? 'text-white' : 'text-black' }}" href="{{ route('seja-investidor') }}">
                                 Seja um investidor
                             </a>
@@ -181,7 +181,7 @@ x-init="
                 </li>
 
 
-                <li class="my-1 mx-3">
+                <li class="hidden my-1 mx-3">
                     <a class="l-header__nav-link font-bold uppercase p-2 inline-block text-white" href="{{ route('seja-investidor') }}">
                         Seja um investidor
                     </a>
