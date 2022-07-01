@@ -30,7 +30,7 @@ class PortalEmpreendedorController extends Controller
                     // $category = Category::where('category_slug', $request->input('categoria'))->first();
                     // $q->whereBelongsTo($category);
                 }
-            })
+            })->orderBy('created_at', 'desc')
             ->simplePaginate(9);
 
         $categories = Category::query()
