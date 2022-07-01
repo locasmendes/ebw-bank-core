@@ -80,7 +80,7 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
     </div>
 </section>
 
-<section class="bg-center bg-no-repeat bg-cover pt-24 pb-16" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
+<section class="hidden bg-center bg-no-repeat bg-cover pt-24 pb-16" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
     <div class="container mx-auto px-8">
         <h2 class="xl:text-size-2.75 sm:text-4xl text-3xl text-center text-black font-light leading-none tracking-wide mb-10">Quem investe na <b>EBW Bank</b> tem <b>história</b> pra <b>contar!</b></h2>
 
