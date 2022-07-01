@@ -6,7 +6,7 @@
 
 <!-- -->
 <!-- banner -->
-<section 
+<section
 class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center pt-52 bg-ebw-grey flex items-center pb-24"
 style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }} );"
 >
@@ -80,7 +80,7 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
     </div>
 </section>
 
-<section class="hidden bg-center bg-no-repeat bg-cover pt-24 pb-16" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
+{{-- <section class="hidden bg-center bg-no-repeat bg-cover pt-24 pb-16" style="background-image: url({{ asset('images/background-seja-investidor-faixa-2.jpg') }})">
     <div class="container mx-auto px-8">
         <h2 class="xl:text-size-2.75 sm:text-4xl text-3xl text-center text-black font-light leading-none tracking-wide mb-10">Quem investe na <b>EBW Bank</b> tem <b>história</b> pra <b>contar!</b></h2>
 
@@ -107,7 +107,6 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                 ">
                     <img src="{{ image_url($item['investor_image']) }}" class="mb-4 w-full" alt="{{ $item['investor_name'] }}">
                     <h3 class="text-2xl leading-none text-black font-bold mb-4">{{ $item['investor_name'] }}</h3>
-                    {{-- <h4 class="text-center text-2xl leading-none text-ebw-secondary font-bold mb-7">{{ $item['investor_occupation'] }}</h4> --}}
                     <p
                     class="text-lg leading-tight text-black  transition-all duration-200"
                     x-bind:class="!open ? 'testimonials-text' : ''"
@@ -129,8 +128,8 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
             @endforeach
         </div>
     </div>
-</section>
-{{-- 
+</section> --}}
+{{--
 <div class="bg-ebw-title pt-28 pb-32 px-5 flex justify-center items-center">
     <a href="#form-investidor" class="page-scroller relative inline-block bg-ebw-primary sm:pl-10 pl-4 sm:pr-20 pr-12 sm:py-4 py-2 xl:text-2xl sm:text-xl text-sm uppercase tracking-wide text-white rounded-full leading-none">
         Quero ser <span class="text-white font-bold">sócio investidor</span> <i class="fas fa-chevron-right text-white sm:text-lg text-sm absolute right-6 top-1/2 transform -translate-y-1/2"></i>
@@ -189,11 +188,11 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                         <div class="md:w-7/12 w-full sm:px-5 px-0">
                             <div class="bg-ebw-input relative p-2 mb-3">
                                 <label for="name" class="block text-lg text-black">Nome</label>
-                                <input 
-                                type="text" 
-                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1" 
-                                name="name" 
-                                id="name" 
+                                <input
+                                type="text"
+                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1"
+                                name="name"
+                                id="name"
                                 autocomplete="off"
                                 placeholder="Nome"
                                 value="{{ old('name') ?? '' }}">
@@ -201,16 +200,16 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                                     <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                         <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
                                     </div>
-                                @enderror   
+                                @enderror
                             </div>
                             <div class="bg-ebw-input relative p-2 mb-3">
                                 <label for="phone" class="block text-lg text-black">Cel</label>
-                                <input 
-                                type="text" 
-                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1" 
-                                name="phone" 
-                                id="phone" 
-                                autocomplete="off" 
+                                <input
+                                type="text"
+                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1"
+                                name="phone"
+                                id="phone"
+                                autocomplete="off"
                                 required
                                 placeholder="(00) 00000-0000"
                                 value="{{ old('phone') ?? '' }}">
@@ -218,16 +217,16 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                                     <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                         <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
                                     </div>
-                                @enderror   
+                                @enderror
                             </div>
                             <div class="bg-ebw-input relative p-2 mb-3">
                                 <label for="email" class="block text-lg text-black">E-mail</label>
-                                <input 
-                                type="email" 
-                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1" 
-                                name="email" 
-                                id="email" 
-                                autocomplete="off" 
+                                <input
+                                type="email"
+                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1"
+                                name="email"
+                                id="email"
+                                autocomplete="off"
                                 required
                                 placeholder="contato@email.com.br"
                                 value="{{ old('email') ?? '' }}">
@@ -235,16 +234,16 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                                     <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                         <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
                                     </div>
-                                @enderror   
+                                @enderror
                             </div>
                             <div class="bg-ebw-input relative p-2 mb-5">
                                 <label for="cpf-cnpj" class="block text-lg text-black">CPF / CNPJ</label>
-                                <input 
-                                type="text" 
-                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1" 
-                                name="cpf-cnpj" 
-                                id="cpf-cnpj" 
-                                autocomplete="off" 
+                                <input
+                                type="text"
+                                class="bg-transparent w-full shadow-none outline-none focus:border-black  border-b border-transparent pl-1"
+                                name="cpf-cnpj"
+                                id="cpf-cnpj"
+                                autocomplete="off"
                                 required
                                 placeholder="000.000.000-00 / 00.000.000/0001-00"
                                 value="{{ old('name') ?? '' }}">
@@ -252,7 +251,7 @@ style="background-image: url( {{ asset( 'images/banner-seja-investidor.jpg' ) }}
                                     <div class="absolute inset-0 border-red-700 pointer-events-none border-2">
                                         <span class="absolute top-1 left-0 right-0 w-full text-center pt-1 text-xs text-red-700 font-medium">{{ $message }}</span>
                                     </div>
-                                @enderror   
+                                @enderror
                             </div>
                         </div>
                         <div class="md:w-5/12 w-full px-5">
