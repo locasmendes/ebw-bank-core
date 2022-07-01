@@ -96,7 +96,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 <!-- end press -->
 
 <!-- investor -->
-<section class="l-investor py-20">    
+<section class="l-investor hidden py-20">    
 
     <div class="container mx-auto px-4">
 
