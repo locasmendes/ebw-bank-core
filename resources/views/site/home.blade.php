@@ -5,13 +5,13 @@
 @section( 'content' )
 <!-- -->
 <!-- banner -->
-<section 
+<section
 class="h-screen md:min-h-620px min-h-400px relative bg-no-repeat bg-cover sm:bg-center-top bg-75% pt-52"
 style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
 
     <div class="container lg:block mx-auto px-4">
         <img class="mb-10 2xl:w-auto sm:w-112 w-72" loading="lazy" src="{{ asset('images/banner-text.png') }}" alt="Para quem pensa diferente, o agora é digital.">
-        
+
         <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary sm:px-8 px-4 sm:py-3 py-2 md:text-lg leading-none text-sm font-bold uppercase tracking-wider text-white rounded-full">
             Faça seu pré-cadastro <i class="fas fa-chevron-right ml-4 text-white sm:text-lg text-sm"></i>
         </a>
@@ -31,11 +31,11 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                 <h1 class="text-size-2.65 leading-tightest text-center u-color-folk-primary mb-10">
                     {!! text_to_html($homeSettings['faixa_title']) !!}
                     {{-- Mais do que um banco digital, <br>
-                    o parceiro no desenvolvimento de empresas. <br> 
+                    o parceiro no desenvolvimento de empresas. <br>
                     Somos diferentes! --}}
                 </h1>
 
-                <p class="l-digital__text leading-snug font-normal text-center text-black"> 
+                <p class="l-digital__text leading-snug font-normal text-center text-black">
                     {!! text_to_html($homeSettings['faixa_subtitle']) !!}
                     {{-- Nascemos com o propósito de promover o progresso dos brasileiros. <br>
                     Crescemos porque acreditamos que empreender faz a diferença.   <br>
@@ -53,7 +53,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
     <div class="container mx-auto px-4">
 
         <div class="flex flex-wrap justify-center -mx-4">
-            
+
             <div class="mb-12">
 
                 <h2 class="l-press__title font-bold text-center uppercase u-color-folk-primary">
@@ -66,7 +66,7 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
             </div>
 
             <div class="flex flex-wrap -mx-4">
-                
+
                 <!-- loop -->
                 @foreach ($posts as $post)
                     <article class="w-full md:w-6/12 lg:w-4/12 my-4 px-4">
@@ -89,14 +89,14 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                 @endforeach
                 <!-- end loop -->
             </div>
-            
+
         </div>
     </div>
 </section>
 <!-- end press -->
 
 <!-- investor -->
-<section class="l-investor hidden py-20">    
+{{-- <section class="l-investor hidden py-20">
 
     <div class="container mx-auto px-4">
 
@@ -119,9 +119,9 @@ style="background-image: url( {{ asset( 'images/banner-home.jpg' ) }} );">
                 </div>
 
             </div>
-        </div>  
+        </div>
     </div>
-</section>
+</section> --}}
 <!-- end investor -->
 
 @endsection
