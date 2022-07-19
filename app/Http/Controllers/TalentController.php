@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
@@ -56,7 +57,11 @@ class TalentController extends Controller
 
         $talent = Talent::create($data);
 
-        // Mail::to(\config('mail.admin_mail'))->send(new TalentsMail($talent));
+        try {
+            Mail::to(\config('mail.admin_mail'))->send(new TalentsMail($talent));
+        } catch (\Throwable $th) {
+            Log::error(json_encode($th));
+        }
 
         return redirect()->route('talent.success');
     }
