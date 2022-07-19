@@ -46,13 +46,13 @@
                 <b>Experiência: Função na Empresa 3:</b> {{ $talent->function_3 }}
             </p>
             <p>
-                <b>Maior realização profissional ou desafio:</b> {{ $talent->maior_realizacao }}
+                <b>Maior realização profissional ou desafio:</b> <br/> {{ $talent->maior_realizacao }}
             </p>
             <p>
-                <b>Situação em que exerceu liderança:</b> {{ $talent->exerceu_lideranca }}
+                <b>Situação em que exerceu liderança:</b><br/> {{ $talent->exerceu_lideranca }}
             </p>
             <p>
-                <b>Ambiente de trabalho preferido:</b> {{ $talent->tipo_ambiente }}
+                <b>Ambiente de trabalho preferido:</b> <br/>{{ $talent->tipo_ambiente }}
             </p>
             <p>
                 <b>Escolaridade:</b> {{ $talent->escolaridade }}
@@ -61,7 +61,7 @@
                 <b>Conhecimento em informática:</b> {{  implode(', ', $talent->conhecimento_informatica) }}
             </p>
             <p>
-                <b>Conhecimento em outras linguas:</b> {{ $talent->conhecimento_linguas }}
+                <b>Conhecimento em outras linguas:</b><br/> {{ $talent->conhecimento_linguas }}
             </p>
             <p>
                 <b>Área de trabalho desejada:</b> {{ $talent->area_trabalho }}
