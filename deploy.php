@@ -14,11 +14,11 @@ set('repository', 'git@gitlab.com:evolutap/ebw-bank.git');
 set('git_tty', false);
 set('ssh_multiplexing', false);
 
-// Shared files/dirs between deploys 
+// Shared files/dirs between deploys
 add('shared_files', []);
 add('shared_dirs', []);
 
-// Writable dirs by web server 
+// Writable dirs by web server
 add('writable_dirs', []);
 
 set('bin/php', function () {
