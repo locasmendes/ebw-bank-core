@@ -10,7 +10,6 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\VendaInternetController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TalentController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +29,7 @@ use App\Http\Controllers\TalentController;
 //     dd(image_url('images/eduardo.png'));
 // });
 Route::get('/', [SiteController::class, 'index'])->name('home');
+
 Route::get('/aebw', [SiteController::class, 'ebwbank'])->name('conheca-ebw');
 Route::get('/peca-sua-maquininha', [SiteController::class, 'passedwon'])->name('products');
 // Route::get('/peca-sua-maquininha', [SiteController::class, 'products'])->name('products');
@@ -47,11 +47,12 @@ Route::get('/cadastro-peca-sua-maquininha', [RegisterController::class, 'index']
 Route::post('/cadastro-peca-sua-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
 Route::get('/banco-talentos', [TalentController::class, 'index'])->name('talent.index');
 Route::post('/banco-talentos', [TalentController::class, 'store'])->name('talent.store');
-Route::post('/banco-talentos/export', [TalentController::class, 'export'])->name('talent.export');
 Route::get('/banco-talentos/cadastro-concluido', [TalentController::class, 'success'])->name('talent.success');
 
 
 Route::middleware('auth')->group(function () {
+    Route::post('/banco-talentos/export', [TalentController::class, 'export'])->name('talent.export');
+    Route::get('/banco-talentos/pdf/{id}', [TalentController::class, 'pdfExport'])->name('talent.pdf');
     Route::post('/socio-investidor/export', [PartnerInvestorController::class, 'export'])->name('partner-investor.export');
     Route::post('/pre-cadastro/export', [PreRegistrationController::class, 'export'])->name('pre-registratation.export');
 
@@ -68,12 +69,3 @@ Route::middleware('auth')->group(function () {
 //Route::get('/cadastro', [SiteController::class, 'cadastro'])->name( 'cadastro' );
 
 // Route::get('/cursos/{category:category_slug}/{course:course_slug}')->name()
-
-// $table->string('title');
-// $table->longText('content');
-// $table->string('slug')->unique();
-
-// $table->integer('user_id')->unsigned()->index()->comment('author of the post');
-// $table->foreign('user_id')->references('id')->on('users');
-
-// $table->timestamps();

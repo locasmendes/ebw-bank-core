@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\TalentsExport;
 use App\Mail\TalentsMail;
 use App\Models\Talent;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Str;
 
 class TalentController extends Controller
 {
@@ -139,5 +141,20 @@ class TalentController extends Controller
         } catch (DecryptException $e) {
             return \abort(422);
         }
+    }
+
+    public function pdfExport($id)
+    {
+        $talent = Talent::find($id);
+
+        if (!$talent) {
+            return redirect()->route('filament.resources.talent.index');
+        }
+
+        $slugName = Str::slug($talent->name);
+
+        $pdf = Pdf::loadView('pdf.talents', ['talent' => $talent]);
+
+        return $pdf->download($slugName . '-banco-de-talentos.pdf');
     }
 }

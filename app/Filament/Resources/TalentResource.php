@@ -34,7 +34,7 @@ class TalentResource extends Resource
                 TextInput::make('email')->label('Email')->disabled(),
                 TextInput::make('escolaridade')->label('Escolaridade')->disabled(),
                 TextInput::make('area_trabalho')->label('Área de trabalho desejada')->disabled(),
-                DocumentLink::make('curriculo')->label('Currículo'),
+                DocumentLink::make('id')->label('Currículo')->dehydrated(false),
                 TextInput::make('phone')->label('Telefone (Whatsapp)')->disabled(),
                 TextInput::make('document_cpf')->label('CPF')->disabled(),
                 TextInput::make('document_rg')->label('RG')->disabled(),
