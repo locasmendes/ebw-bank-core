@@ -1,0 +1,10 @@
+[data="gallery-attachments"] {
+    ul.filepond--list {
+        display: flex;
+        flex-wrap: wrap;
+        .filepond--item {
+            width: 32%;
+            margin: 6px;
+        }
+    }
+}

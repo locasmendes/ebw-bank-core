@@ -1,7 +1,6 @@
 import Swiper, { HashNavigation } from "swiper";
 import jQuery from "jquery";
 // import Swiper styles
-import "swiper/css";
 
 const validationRules = {
     min: function (input, min) {

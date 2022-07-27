@@ -40,22 +40,36 @@ class PostResource extends Resource
             ->schema([
                 Grid::make()
                     ->schema([
+                        Section::make('Categoria')
+                            ->schema([
+                                BelongsToSelect::make('category_id')->label('Categoria')
+                                    ->relationship('category', 'category_name')
+                                    ->required()
+                            ]),
                         Section::make('Post')
                             ->schema([
                                 TextInput::make('title')->label('Título')->required(),
                                 FileUpload::make('image')->label('Thumbnail')->required(),
                                 RichEditor::make('body')->label('Conteúdo')
                                     ->disableToolbarButtons([
-                                        'attachFiles'
+                                        // 'attachFiles'
                                     ])
                                     ->required(),
                             ]),
 
-                        Section::make('Categoria')
+
+                        Section::make('Galeria')
                             ->schema([
-                                BelongsToSelect::make('category_id')->label('Categoria')
-                                    ->relationship('category', 'category_name')
-                                    ->required()
+                                FileUpload::make('attachments')
+                                    ->extraAttributes([
+                                        'data' => 'gallery-attachments'
+                                    ])
+                                    ->disk('public')
+                                    ->imagePreviewHeight(220)
+                                    ->label('Galeria')
+                                    ->image()
+                                    ->multiple()
+                                    ->enableReordering()
                             ]),
 
                     ])

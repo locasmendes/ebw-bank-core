@@ -20,10 +20,12 @@ class Post extends Model
         'image',
         'body',
         'category_id',
+        'attachments'
     ];
 
     protected $casts = [
-        'created_at' => 'datetime'
+        'created_at' => 'datetime',
+        'attachments' => 'array'
     ];
 
     /**

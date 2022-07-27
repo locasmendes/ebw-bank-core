@@ -112,6 +112,7 @@ module.exports = {
             boxShadow: {
                 custom: "0 0 65px 50px rgb(0 0 0 / 35%)",
                 "custom-small": "4px 4px 8px 2px rgb(0 0 0 / 40%)",
+                gallery: "3px 3px 5px 0 rgba(0,0,0,0.5)",
             },
         },
     },
