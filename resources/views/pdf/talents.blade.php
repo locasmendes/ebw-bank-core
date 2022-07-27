@@ -1,4 +1,4 @@
-@extends('mail.base')
+@extends('pdf.base')
 
 @section('main')
     <tr>

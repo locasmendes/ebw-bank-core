@@ -54,9 +54,9 @@
         display: block;
         margin: 0 auto !important;
         /* makes it centered */
-        max-width: 580px;
+        /* max-width: 580px; */
         padding: 10px;
-        width: 580px;
+        /* width: 580px; */
       }
 
       /* This should also be a block element, so that it will fill 100% of the .container */
@@ -252,7 +252,6 @@
     </style>
   </head>
   <body>
-    <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
         <td>&nbsp;</td>
