@@ -368,7 +368,7 @@ x-init="
 
         <div class="w-full pt-10">
             <p class="u-font-size-12 u-font-weight-regular text-center">
-                © EBW Bank - Um banco feito e pensado para o empreendedor.
+                © EBW Bank - Um banco feito e pensado para todos os brasileiros.
             </p>
         </div>
     </div>
