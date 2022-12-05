@@ -40,6 +40,8 @@ module.exports = {
         fontSize: {
             ...defaultTheme.fontSize,
             "size-1.375": "1.375rem",
+            "size-1.7": "1.7rem",
+            "size-2": "2rem",
             "size-1.3": "1.3rem",
             "size-3.56": "3.56rem",
             "size-2.75": "2.75rem",
