@@ -41,13 +41,14 @@ Route::post('/pre-cadastro', [PreRegistrationController::class, 'store'])->name(
 Route::get('/socio-investidor', [PartnerInvestorController::class, 'index'])->name('partner-investor');
 Route::post('/socio-investidor', [PartnerInvestorController::class, 'store'])->name('partner-investor.store');
 Route::get('/seja-um-investidor', [SejaInvestidorController::class, 'index'])->name('seja-investidor');
-Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
 Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::get('/cadastro-peca-sua-maquininha', [RegisterController::class, 'index'])->name('cadastro-peca-minha-maquininha');
 Route::post('/cadastro-peca-sua-maquininha', [RegisterController::class, 'store'])->name('cadastro-peca-minha-maquininha.store');
 Route::get('/banco-talentos', [TalentController::class, 'index'])->name('talent.index');
 Route::post('/banco-talentos', [TalentController::class, 'store'])->name('talent.store');
 Route::get('/banco-talentos/cadastro-concluido', [TalentController::class, 'success'])->name('talent.success');
+Route::get('/privacidade', [SiteController::class, 'privacidade'])->name('privacidade');
+Route::get('/termos-e-condicoes-de-uso', [SiteController::class, 'termos'])->name('termos');
 
 
 Route::middleware('auth')->group(function () {

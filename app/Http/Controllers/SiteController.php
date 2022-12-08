@@ -45,6 +45,12 @@ class SiteController extends Controller
     {
         return view('site.privacidade');
     }
+
+    public function termos()
+    {
+        return view('site.termos-e-condicoes');
+    }
+
     public function products()
     {
         return view('site.products');

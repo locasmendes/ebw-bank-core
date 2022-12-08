@@ -303,6 +303,10 @@ x-init="
                         <a href="{{ route('privacidade') }}" class="font-bold mb-3 text-xl">
                             Política de privacidade
                         </a>
+                        <br>
+                        <a href="{{ route('termos') }}" class="font-bold mb-3 text-xl">
+                            Termos e condições
+                        </a>
 
                         {{-- <ul>
                             <li class="u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
