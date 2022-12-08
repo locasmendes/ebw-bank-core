@@ -100,21 +100,19 @@ x-init="
                             <div class="u-font-weight-regular text-center md:text-left sm:my-5 md:my-0 px-3">
                                 <!-- 0800 894 3000 <br>
                                 cac@ebwbank.com.br -->
-
-                                @if( $general?->contact_phone )
-                                    <a href="tel:{{ str($general->contact_phone)->replace(' ', '') }}">
-                                        {{ $general->contact_phone }}
-                                    </a>
-                                @endif
-
-
-                                <br>
-
                                 @if( $general?->contact_email )
                                     <a href="mailto:{{ $general->contact_email }}">
                                         {{ $general->contact_email }}
                                     </a>
                                 @endif
+                                <br>
+                                <a href="tel:0800000619">
+                                    SAC 0800-000-619
+                                </a>
+                                <br>
+                                <a href="tel:08000001651">
+                                    Ouvidoria 0800-0001-651
+                                </a>
                             </div>
                         </div>
 
