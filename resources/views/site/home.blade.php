@@ -28,7 +28,7 @@ style="background-image: url( {{ asset( 'images/banner_natal.jpg' ) }} );">
                 <button
                 x-data="{open: false}"
                 x-on:click="open = true"
-                type="button" aria-label="Abrir modal para baixar o app" class="inline-block focus:shadow-none focus:outline-none bg-white pr-8 rounded-full">
+                type="button" aria-label="Abrir modal para baixar o app" class="inline-block focus:shadow-none focus:outline-none bg-white hover:bg-ebw-primary transition-all duration-300 pr-8 rounded-full">
                     <div class="inline-flex bg-ebw-primary px-5 h-11 items-center leading-none uppercase tracking-wider text-white rounded-full">
                        Baixe o app e abra sua conta
                     </div>
