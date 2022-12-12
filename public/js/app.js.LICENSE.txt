@@ -22,3 +22,8 @@
  *
  * Date: 2021-03-02T17:08Z
  */
+
+/*!
+* focus-trap 6.6.1
+* @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
+*/

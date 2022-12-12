@@ -10,12 +10,12 @@ class="md:min-h-720px min-h-400px bg-no-repeat bg-cover bg-center xl:pt-40 pt-24
 style="background-image: url( {{ asset( 'images/banner_natal.jpg' ) }} );">
 
     <div class="container mx-auto px-4 relative">
-        <div class="xl:ml-52 lg:ml-40 md:ml-10 xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-7/12 w-10/12 mb-32">
-            <img class="mb-3" src="{{ asset('images/promocao-conta-premiada.png') }}" alt="Promoção Conta Premiada">
-            <div class="pl-5 pr-2">
-                <h3 class="text-center text-black font-bold md:text-size-2 md:text-2xl text-xl mb-3">Esse banco é diferente!</h3>
-                <p class="text-center md:text-size-1.7 md:text-2xl text-xl text-black leading-tight mb-4">Abra sua conta e concorra a <b>8 motos elétricas</b></p>
-                <h4 class="text-center text-ebw-primary font-medium md:text-5xl text-4xl">Participe!</h4>
+        <div class="2xl:ml-52 lg:ml-40 md:ml-10 2xl:pr-20 2xl:w-5/12 xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-7/12 w-10/12 mb-64">
+            <img class="mb-5 w-full" src="{{ asset('images/promocao-conta-premiada.png') }}" alt="Promoção Conta Premiada">
+            <div class="2xl:pl-12 pl-5">
+                <h3 class="text-center text-black font-bold 2xl:text-size-2.5 xl:text-3xl md:text-2xl text-xl mb-5">Esse banco é diferente!</h3>
+                <p class="text-center 2xl:text-4xl md:text-2xl text-xl text-black leading-tight mb-5">Abra sua conta e concorra a <b>8 motos elétricas</b></p>
+                <h4 class="text-center text-ebw-primary font-medium 2xl:text-6xl md:text-5xl text-4xl">Participe!</h4>
             </div>
         </div>
         {{-- <a href="{{ route('pre-registratation') }}" class="inline-block bg-ebw-primary sm:px-8 px-4 sm:py-3 py-2 md:text-lg leading-none text-sm font-bold uppercase tracking-wider text-white rounded-full">
@@ -25,23 +25,58 @@ style="background-image: url( {{ asset( 'images/banner_natal.jpg' ) }} );">
     <div class="container px-4 mx-auto">
         <div class="flex justify-between flex-wrap">
             <div class="order-2 lg:order-1">
-                <div class="inline-block bg-white pr-8 rounded-full">
-                    <div class="inline-block bg-ebw-primary px-5 py-5 leading-none sm:text-lg uppercase tracking-wider text-white rounded-full">
+                <button
+                x-data="{open: false}"
+                x-on:click="open = true"
+                type="button" aria-label="Abrir modal para baixar o app" class="inline-block focus:shadow-none focus:outline-none bg-white pr-8 rounded-full">
+                    <div class="inline-flex bg-ebw-primary px-5 h-11 items-center leading-none uppercase tracking-wider text-white rounded-full">
                        Baixe o app e abra sua conta
                     </div>
-                </div>
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 bg-black bg-opacity-75 z-50" x-trap.inert.noscroll="open"
+                        x-transition:enter="transition-all ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition-all ease-in delay-200 duration-200"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        >
+                            <div
+                            x-show="open"
+                            x-transition:enter="transform transition-all ease-out duration-200 delay-200"
+                            x-transition:enter-start="translate-x-full"
+                            x-transition:enter-end="translate-x-0"
+                            x-transition:leave="transform transition-all ease-in duration-200"
+                            x-transition:leave-start="translate-x-0"
+                            x-transition:leave-end="translate-x-full"
+                            class="bg-ebw-red h-full overflow-y-auto absolute top-0 bottom-0 right-0 text-white rounded-tl-2xl rounded-bl-2xl sm:px-12 px-5 pt-12 flex flex-col justify-between pb-16 2xl:pb-28">
+                                <div class="flex justify-end">
+                                    <button type="button" x-on:click="open = false" aria-label="Fechar modal para baixar app" class="font-light text-sm">FECHAR</button>
+                                </div>
+                                <div class="max-w-lg">
+                                    <h2 class="2xl:text-5xl 2xl:leading-snug text-4xl font-light mb-4 leading-snug">Olá,</h2>
+                                    <p class="font-light 2xl:text-xl 2xl:leading-snug focus-within:text-lg mb-4 leading-snug">você está a um passo de se tornar um cliente EBW Bank</p>
+                                    <p class="font-light 2xl:text-xl 2xl:leading-snug text-lg leading-snug mb-12">Aponte a câmera do seu celular para o QR Code abaixo e pronto! Você será direcionado para a sua loja de aplicativos. Aí é só baixar o APP e abrir sua conta <b>DE GRAÇA.</b></p>
+                                    <div class="flex justify-center">
+                                        <img src="{{ asset('images/qrcode-abra-sua-conta.png') }}" class="block" alt="QRCode abrir conta">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </button>
                 <div class="flex pt-6">
                     <a href="https://apps.apple.com/br/app/ebw-bank/id1634854368" class="mr-8" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ asset('images/app-store.png') }}" class="w-40" alt="App Store">
+                        <img src="{{ asset('images/app-store.png') }}" class="w-size-9.375" alt="App Store">
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=br.com.bankeiro.ebwbank" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ asset('images/google-play-store.png') }}" class="w-40" alt="Google Play Store">
+                        <img src="{{ asset('images/google-play-store.png') }}" class="w-size-9.375" alt="Google Play Store">
                     </a>
                 </div>
             </div>
             <div class="order-1 lg:order-2 mb-5 lg:mb-0">
                 <a href="{{ asset('images/Regulamento_EBW.pdf') }}" target="_blank" rel="noopener noreferrer" class="inline-block bg-white hover:bg-ebw-primary transition-all duration-300 pr-8 rounded-full relative">
-                    <div class="inline-block bg-ebw-primary px-5 py-5 leading-none sm:text-lg uppercase tracking-wider relative text-white rounded-full">
+                    <div class="inline-flex bg-ebw-primary px-5 leading-none h-11 items-center uppercase tracking-wider relative text-white rounded-full">
                         Consulte o regulamento
                     </div>
                 </a>

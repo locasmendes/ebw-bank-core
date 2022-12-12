@@ -50,6 +50,7 @@ module.exports = {
             "size-5.5": "5.5rem",
             "size-2.65": "2.65rem",
             "5.5xl": "3.25rem",
+            "size-2.65": "2.65rem",
         },
         extend: {
             minHeight: {
@@ -71,7 +72,9 @@ module.exports = {
                 135: "33.5rem",
                 166: "41.5rem",
             },
-            width: {},
+            width: {
+                "size-9.375": "9.375rem",
+            },
             backgroundPosition: {
                 "75%": "75%",
                 "center-top": "center top",
