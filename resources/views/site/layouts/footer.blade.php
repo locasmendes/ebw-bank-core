@@ -204,9 +204,9 @@ x-init="
                         </h3>
 
                         <ul>
-                            <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
+                            {{-- <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('venda-internet') }}">Venda pela Internet</a>
-                            </li>
+                            </li> --}}
 
                             <li class="u-font-size-13 u-font-weight-regular hover:u-font-weight-semibold u-color-folk-gray hover:u-color-folk-black mb-2">
                                 <a class="text-lg" href="{{ route('products') }}">Peça sua maquininha</a>
@@ -370,7 +370,7 @@ x-init="
 
         <div class="w-full pt-10">
             <p class="u-font-size-12 u-font-weight-regular text-center">
-                © EBW Bank - Um banco feito e pensado para todos os brasileiros.
+               EBW Bank
             </p>
         </div>
     </div>
