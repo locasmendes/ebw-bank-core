@@ -91,12 +91,12 @@ x-init="
 
                             <ul class="l-dropdown__menu">
 
-                                <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
+                                {{-- <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
                                     <a class="font-medium text-white" href="{{ route('venda-internet') }}">
                                         Venda pela internet
                                     </a>
-                                </li>
+                                </li> --}}
 
                                 <li class="l-dropdown__item u-icon__free u-icon__arrow-right hover:opacity:08 relative all:u-color-folk-white my-4">
 
